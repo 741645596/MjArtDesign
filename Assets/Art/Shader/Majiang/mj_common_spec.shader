@@ -1,4 +1,4 @@
-﻿Shader "MJ/Model/MJ_MJCommonSpec"
+Shader "MJ/MJCommonSpec"
 {
 	Properties
 	{
@@ -31,8 +31,6 @@
 			Name "ForwardLit"
 			Tags{"LightMode" = "UniversalForward"}
 
-			//Cull off
-			
 			HLSLPROGRAM
 
 			#pragma prefer_hlslcc gles
@@ -62,8 +60,6 @@
 				float3 normalOS					: NORMAL;
 				float4 tangentOS				: TANGENT;
 				float2 texcoord					: TEXCOORD0;
-				float2 lightmapUV				: TEXCOORD1;
-
 				UNITY_VERTEX_INPUT_INSTANCE_ID
 			};
 			struct Varyings
