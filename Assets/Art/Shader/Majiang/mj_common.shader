@@ -1,4 +1,4 @@
-﻿Shader "MJ/Model/MJ_MJCommon"
+Shader "MJ/Model/MJ_MJCommon"
 {
 		Properties
 	{
@@ -121,10 +121,6 @@
 
 					output.viewDirDS = 1/sqrt(dot(lightDir2_1, lightDir2_1));
 
-
-				//	half3 viewDirWS = normalize(GetCameraPositionWS() - output.posWS);//正负相反光源
- 
-				//	output.viewpos = normalize(TransformWorldToView(_CustomView.xyz));
 					 
 					output.normal = half4(normalInput.normalWS, output.viewDirWS.x);
 					output.tangent = half4(normalInput.tangentWS, output.viewDirWS.y);

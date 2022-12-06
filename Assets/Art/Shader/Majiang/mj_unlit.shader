@@ -1,4 +1,4 @@
-﻿Shader "MJ/Unlit"
+Shader "MJ/Unlit"
 {
     Properties
     {
@@ -64,6 +64,4 @@
             ENDHLSL
         }
     }
-    FallBack "Hidden/Universal Render Pipeline/FallbackError"
-    CustomEditor ""
 }
