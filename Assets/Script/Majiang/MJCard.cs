@@ -7,10 +7,6 @@ using DG.Tweening;
     public class MJCard :MonoBehaviour
     {
         [SerializeField] public GameObject card;//牌身gameObject
-        [SerializeField] private SpriteRenderer _markLeft;//左侧角标
-        [SerializeField] private SpriteRenderer _markRight;//右侧角标
-        [SerializeField] private SpriteRenderer _markHint;//胡牌提示标签
-        [SerializeField] private GameObject _huEffect;//胡牌特效
         [SerializeField] private MeshRenderer _renderer;// 渲染器组件
 
         public int cardValue;// 麻将牌值
