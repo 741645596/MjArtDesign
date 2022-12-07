@@ -34,9 +34,9 @@ public class MJAction : MonoBehaviour
     /// <summary>
     /// 设定麻将的旋转
     /// </summary>
-    public void SetDir()
+    public void SetRotation(float angle)
     {
-        
+        transform.localEulerAngles = new Vector3(angle, 0,0);
     }
     /// <summary>
     /// 是否显示影子
