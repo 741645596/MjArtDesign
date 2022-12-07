@@ -28,7 +28,8 @@ public class MJAction : MonoBehaviour
     /// </summary>
     /// <param name="pos"></param>
     public void SetPos(Vector3 pos)
-    { 
+    {
+        transform.localPosition = pos;
     }
     /// <summary>
     /// 设定麻将的旋转
@@ -51,5 +52,18 @@ public class MJAction : MonoBehaviour
     public void SetMajiangNum()
     {
         
+    }
+    /// <summary>
+    /// 设置layer
+    /// </summary>
+    /// <param name="layer"></param>
+    public void SetLayer(int layer)
+    {
+        int count = transform.childCount;
+        for (int i = 0; i < count; i++)
+        {
+            transform.GetChild(i).gameObject.layer = layer;
+
+        }
     }
 }
