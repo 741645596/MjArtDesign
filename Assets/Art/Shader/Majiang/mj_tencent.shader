@@ -1,4 +1,4 @@
-Shader "Unlit/mj_tencent"
+Shader "MJ/mj_tencent"
 {
     Properties
     {
@@ -48,8 +48,15 @@ Shader "Unlit/mj_tencent"
 
             };
 
+
+            CBUFFER_START(UnityPerMaterial)
+                float4 _MainTex_ST;
+                half4  _u_MainColor;
+                float _u_Intensity, _u_Intensity2, _u_DiffuseIntensity, _u_Exp, _u_Exp2;
+                float4 _Offset, _Offset2;
+            CBUFFER_END
             sampler2D _MainTex;
-            float4 _MainTex_ST;
+            
 
             v2f vert (appdata v)
             {
@@ -59,8 +66,8 @@ Shader "Unlit/mj_tencent"
                 o.normal = TransformObjectToWorldNormal(v.normalOS);
                 o.viewDirWS = normalize(GetCameraPositionWS() - positionWS);//正负相反光源
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-                output.offset1 = mul(_Offset, UNITY_MATRIX_V).xyz;
-                output.offset2 = mul(_Offset2, UNITY_MATRIX_V).xyz;
+                o.offset1 = mul(_Offset, UNITY_MATRIX_V).xyz;
+                o.offset2 = mul(_Offset2, UNITY_MATRIX_V).xyz;
                 return o;
             }
 
@@ -73,10 +80,10 @@ Shader "Unlit/mj_tencent"
               float3 customSpecView2 = normalize(i.offset2);
               // 高光1
               float ndv1 = saturate(dot(normalWS, customSpecView));
-              float spec1 = pow(ndv, _u_Exp) * _u_Intensity;
+              float spec1 = pow(ndv1, _u_Exp) * _u_Intensity;
               // 高光2
               float ndv2 = saturate(dot(normalWS, customSpecView2));
-              float spec2 = pow(ndv2, _u_Exp2) * _u_Intensit2;
+              float spec2 = pow(ndv2, _u_Exp2) * _u_Intensity2;
               // 得到最综颜色
               float3 albedo = tex2D(_MainTex, i.uv).rgb * _u_DiffuseIntensity;
               float3 spec = spec1 + spec2;
