@@ -1,5 +1,6 @@
 Shader "Unlit/mj_tuyoo"
 {
+    // https://zhuanlan.zhihu.com/p/478462422
     Properties
     {
         _MainTex("MainTex", 2D) = "white" {}
@@ -73,7 +74,7 @@ Shader "Unlit/mj_tuyoo"
                     float4 _SubMatCapDiffuse_ST;
                     float3 _SecondLight;
                     float _SubLightRadius;
-                    int _SubMatCapRotation
+                    int _SubMatCapRotation;
                     float4 _SubSecondColor;
                     float4 _SubSpecularColor;
                     float _SubShininess;
@@ -87,54 +88,37 @@ Shader "Unlit/mj_tuyoo"
                 v2f vert(appdata v)
                 {
                     v2f o;
-                    float3 CumstomDir;
-                    //
-                    CumstomDir.xyz = hlslcc_mtx4x4unity_WorldToObject[1].xyz * hlslcc_mtx4x4unity_MatrixInvV[2].yyy;
-                    CumstomDir.xyz = hlslcc_mtx4x4unity_WorldToObject[0].xyz * hlslcc_mtx4x4unity_MatrixInvV[2].xxx + CumstomDir.xyz;
-                    CumstomDir.xyz = hlslcc_mtx4x4unity_WorldToObject[2].xyz * hlslcc_mtx4x4unity_MatrixInvV[2].zzz + CumstomDir.xyz;
-                    CumstomDir.xyz = hlslcc_mtx4x4unity_WorldToObject[3].xyz * hlslcc_mtx4x4unity_MatrixInvV[2].www + CumstomDir.xyz;
-                    CumstomDir.z = dot(u_xlat0.xyz, in_NORMAL0.xyz);
-
-                    float3 temp;
-                    temp.xyz = hlslcc_mtx4x4unity_WorldToObject[1].xyz * hlslcc_mtx4x4unity_MatrixInvV[0].yyy;
-                    temp.xyz = hlslcc_mtx4x4unity_WorldToObject[0].xyz * hlslcc_mtx4x4unity_MatrixInvV[0].xxx + temp.xyz;
-                    temp.xyz = hlslcc_mtx4x4unity_WorldToObject[2].xyz * hlslcc_mtx4x4unity_MatrixInvV[0].zzz + temp.xyz;
-                    temp.xyz = hlslcc_mtx4x4unity_WorldToObject[3].xyz * hlslcc_mtx4x4unity_MatrixInvV[0].www + temp.xyz;
-                    CumstomDir.x = dot(temp.xyz, in_NORMAL0.xyz);
-                    temp.xyz = hlslcc_mtx4x4unity_WorldToObject[1].xyz * hlslcc_mtx4x4unity_MatrixInvV[1].yyy;
-                    temp.xyz = hlslcc_mtx4x4unity_WorldToObject[0].xyz * hlslcc_mtx4x4unity_MatrixInvV[1].xxx + temp.xyz;
-                    temp.xyz = hlslcc_mtx4x4unity_WorldToObject[2].xyz * hlslcc_mtx4x4unity_MatrixInvV[1].zzz + temp.xyz;
-                    temp.xyz = hlslcc_mtx4x4unity_WorldToObject[3].xyz * hlslcc_mtx4x4unity_MatrixInvV[1].www + temp.xyz;
-                    CumstomDir.y = dot(u_xlat1.xyz, in_NORMAL0.xyz);
-                    //
-                    CumstomDir  = normalize(CumstomDir);
-                    //float3 center = float3(unity_ObjectToWorld[0].w, unity_ObjectToWorld[1].w, unity_ObjectToWorld[2].w);
-                    // 得到一个单位向量
-
+                    // matcap 需法向量采样。
+                    float3 normalOS = normalize(v.normalOS);
+                    float3 normalWS = TransformObjectToWorldNormal(normalOS);
+                    float3 normalVS = TransformWorldToViewDir(normalWS, true);
                     // 计算uv
                     float2 Mainuv;
                     Mainuv.xy = TRANSFORM_TEX(v.uv, _MainTex);
-                    u_xlatb1.xyz = greaterThanEqual(float4(0.0908203125, 0.185546875, 0.45703125, 0.0), Mainuv.yyxy).xyz;
-                    u_xlat1.xyz = mix(float3(0.0, 0.0, 0.0), float3(1.0, 1.0, 1.0), float3(u_xlatb1.xyz));
+                    //float3 u_xlatb1 = greaterThanEqual(float4(0.0908203125, 0.185546875, 0.45703125, 0.0), Mainuv.yyxy).xyz;
+                    float3 u_xlatb1 = step(float4(0.0908203125, 0.185546875, 0.45703125, 0.0), Mainuv.yyxy).xyz;
+                    float3 u_xlat1 = saturate(u_xlatb1);
                     u_xlat1.x = u_xlat1.y * u_xlat1.z + u_xlat1.x;
                     u_xlat1.x = min(u_xlat1.x, 1.0);
-                    u_xlatb7 = Mainuv.x >= 0.3125;
+                    float u_xlatb7 = Mainuv.x >= 0.3125;
                     o.uv.xy = Mainuv.xy;
                     // 确定是否正面
                     Mainuv.x = u_xlatb7 ? 1.0 : float(0.0);
                     Mainuv.y = Mainuv.x * u_xlat1.x;
                     Mainuv.x = (-u_xlat1.x) * Mainuv.x + 1.0;
-                    // uv 绕中心旋转
+                    // 法向量采样uv，这里采取进行旋转。
                     float Deg2Rad = 0.0174532924f;  // 角度转弧度
                     float2 Rotation = float2(_MatCapRotation, _SubMatCapRotation) * Mainuv.xy;
                     float RotationAngle = Rotation.x * Deg2Rad + Rotation.y * Deg2Rad;
-                    u_xlat16_2 = sin(RotationAngle);
-                    u_xlat16_3 = cos(RotationAngle);
+                    float u_xlat16_2 = sin(RotationAngle);
+                    float u_xlat16_3 = cos(RotationAngle);
+                    float3 u_xlat16_4;
                     u_xlat16_4.x = (-u_xlat16_2);
                     u_xlat16_4.y = u_xlat16_3;
                     u_xlat16_4.z = u_xlat16_2;
-                    u_xlat13.y = dot(u_xlat16_4.zy, CumstomDir.xy);
-                    u_xlat13.x = dot(u_xlat16_4.yx, CumstomDir.xy);
+                    float2 u_xlat13;
+                    u_xlat13.y = dot(u_xlat16_4.zy, normalVS.xy);
+                    u_xlat13.x = dot(u_xlat16_4.yx, normalVS.xy);
                     o.uv.zw = u_xlat13.xy * float2(0.5, 0.5) + float2(0.5, 0.5);
                     // 灯光方向
                     o.lightDir = (-_FirstLight.xyz);
@@ -144,7 +128,7 @@ Shader "Unlit/mj_tuyoo"
                     o.vertex = TransformWorldToHClip(positionWS);
                     // secondlight 入射方向
                     float3 secondLightDir = (-positionWS) + _SecondLight;
-                    float lenght = Length(secondLightDir);
+                    float lenght = length(secondLightDir);
                     secondLightDir = normalize(secondLightDir);
                     float NdotL = saturate(dot(secondLightDir, o.normal));
 
@@ -154,7 +138,7 @@ Shader "Unlit/mj_tuyoo"
                     r1 = 1.0 - r1 * r1;
                     float controlValue = Mainuv.x * r1 + Mainuv.y * r2;
                     // 灯光方向相关
-                    o.cumsTomData.xyz = float3(NdotL) * controlValue;
+                    o.cumsTomData = NdotL * controlValue;
                     return o;
                 }
 
@@ -164,8 +148,9 @@ Shader "Unlit/mj_tuyoo"
                     float3 mainColor = tex2D(_MainTex, i.uv.xy).rgb;
                     float3 subColor = tex2D(_SubTex, i.uv.xy * float2(1.0, 4.0)).rgb;
                     // 采样次纹理
-                    float4 u_xlatb2 = greaterThanEqual(float4(0.0322265625, 0.185546875, 0.45703125, 0.189999998), i.uv.yyxy);
-                    float4 u_xlat2 = mix(float4(0.0, 0.0, 0.0, 0.0), float4(1.0, 1.0, 1.0, 1.0), float4(u_xlatb2));
+                    //float4 u_xlatb2 = greaterThanEqual(float4(0.0322265625, 0.185546875, 0.45703125, 0.189999998), i.uv.yyxy);
+                    float4 u_xlatb2 = step(float4(0.0322265625, 0.185546875, 0.45703125, 0.189999998), i.uv.yyxy);
+                    float4 u_xlat2 = saturate(u_xlatb2);
                     // 通过uv判断是否麻将正面了, 先通过uv 判断，采样到正确的主次纹理
                     float u_xlat18 = step(0.3125, i.uv.x);// x >= 0.3125 ? 1: 0;
                     float3 mainDiffuseColor = lerp(subColor, mainColor, u_xlat18 * u_xlat2.w);// 混合主次纹理
@@ -174,7 +159,7 @@ Shader "Unlit/mj_tuyoo"
                     u_xlat2.x = min(u_xlat2.x, 1.0);
                     float isSub = u_xlat18 * u_xlat2.x;// 1 :Sub 0: no Sub
                     float isMain = (-u_xlat2.x) * u_xlat18 + 1.0; // 1 :main 0: no main
-                    float controlMainColor = isSub * _SubSecondColor.xyz + isMain * _SecondColor.xyz;
+                    float3 controlMainColor = isSub * _SubSecondColor.xyz + isMain * _SecondColor.xyz;
                     mainDiffuseColor = mainDiffuseColor * controlMainColor;
                     /*******************采样diffuse matCap*******************/
                     // 采样submatcap
@@ -196,6 +181,7 @@ Shader "Unlit/mj_tuyoo"
                     float4 color;
                     color.rgb = diffuse + spec + subSpec;
                     color.a = 1.0f;
+                    return color;
                   }
                   ENDHLSL
               }
