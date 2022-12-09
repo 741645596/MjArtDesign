@@ -1,4 +1,4 @@
-Shader "Unlit/mj_tuyoo"
+Shader "mj/mj_tuyoo"
 {
     // https://zhuanlan.zhihu.com/p/478462422
     Properties
