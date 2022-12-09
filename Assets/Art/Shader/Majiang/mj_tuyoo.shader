@@ -100,7 +100,9 @@ Shader "mj/mj_tuyoo"
                     float3 u_xlat1 = saturate(u_xlatb1);
                     u_xlat1.x = u_xlat1.y * u_xlat1.z + u_xlat1.x;
                     u_xlat1.x = min(u_xlat1.x, 1.0);
-                    float u_xlatb7 = Mainuv.x >= 0.3125;
+                    //float u_xlatb7 = Mainuv.x >= 0.3125;
+                    //float u_xlatb7 = Mainuv.x >= 0.1125;
+                    float u_xlatb7 = Mainuv.x >= 0;
                     o.uv.xy = Mainuv.xy;
                     // 确定是否正面
                     Mainuv.x = u_xlatb7 ? 1.0 : float(0.0);
@@ -152,7 +154,8 @@ Shader "mj/mj_tuyoo"
                     float4 u_xlatb2 = step(float4(0.0322265625, 0.185546875, 0.45703125, 0.189999998), i.uv.yyxy);
                     float4 u_xlat2 = saturate(u_xlatb2);
                     // 通过uv判断是否麻将正面了, 先通过uv 判断，采样到正确的主次纹理
-                    float u_xlat18 = step(0.3125, i.uv.x);// x >= 0.3125 ? 1: 0;
+                    //float u_xlat18 = step(0.3125, i.uv.x);// x >= 0.3125 ? 1: 0;
+                    float u_xlat18 = step(0, i.uv.x);
                     float3 mainDiffuseColor = lerp(subColor, mainColor, u_xlat18 * u_xlat2.w);// 混合主次纹理
                     // 加入控制颜色。
                     u_xlat2.x = u_xlat2.y * u_xlat2.z + u_xlat2.x;

@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235bae25b21d84dcd85e3bfab623966a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maJiangPrefab: {fileID: 580099416100564174, guid: 34d151b7be364c24eb037e0a7d65378a, type: 3}
+  maJiangPrefab: {fileID: 2587419194997037134, guid: 728e7bfcf1d054940b4d57a137d55b50, type: 3}
   ListmajiangWallNode:
   - {fileID: 1098431439}
   - {fileID: 1933011518}

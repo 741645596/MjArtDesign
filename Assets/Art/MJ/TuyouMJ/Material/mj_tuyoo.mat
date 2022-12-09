@@ -21,19 +21,19 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: a65f6003c3fc92144948a108dab107ec, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MatCapDiffuse:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: c6e8fac21fc8ad44287b427003220d84, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SubMatCapDiffuse:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: c6e8fac21fc8ad44287b427003220d84, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SubTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 6b60107b722dd9543aa518688f845a14, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -46,7 +46,7 @@ Material:
     - _SubShininess: 24
     m_Colors:
     - _FirstLight: {r: 0.1, g: -0.47, b: 0.74, a: 0}
-    - _MainColor: {r: 0.50289, g: 0.50289, b: 0.50289, a: 1}
+    - _MainColor: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
     - _SecondColor: {r: 1, g: 1, b: 1, a: 1}
     - _SecondLight: {r: 0, g: 2.92, b: -10.95, a: 0}
     - _SpecularColor: {r: 0.5972, g: 0.69387, b: 0.47353, a: 1}
