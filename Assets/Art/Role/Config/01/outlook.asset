@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0f407af534352944aeddfbdf62e5129, type: 3}
+  m_Name: outlook
+  m_EditorClassIdentifier: Assembly-CSharp:Metaverse:AvatarOutlookConfig
+  data:
+  - thumb: {fileID: 21300000, guid: 4ddb0aa178adc1044bf8ef40ab28b345, type: 3}
+    headMesh: {fileID: 4300000, guid: 0caa4c1c92f9e124f9fd40dfbc6a0620, type: 2}
+    headMaterial: {fileID: 2100000, guid: f0848569e1e85db44b839612a3a5077d, type: 2}
+    bodyMesh: {fileID: 4300000, guid: d41187bb98e4bce4597c159fa47583f0, type: 2}
+    bodyMaterial: {fileID: 2100000, guid: 82994c4bd91872541a72035716044ef1, type: 2}
+    topMesh: {fileID: 4300000, guid: acc619a7e4741474dac8bc4e07091673, type: 2}
+    topMaterial: {fileID: 2100000, guid: 74536753787dd9e4280d5d2495ea20a2, type: 2}
+    bottomMesh: {fileID: 4300000, guid: efef12b67f14d534a919219cd7be4d3a, type: 2}
+    bottomMaterial: {fileID: 2100000, guid: 4cb9dd328f5233d499729a70dd927756, type: 2}
+    footwearMesh: {fileID: 4300000, guid: 299b4e8a38bd6494996ad8c9d34f34b5, type: 2}
+    footwearMaterial: {fileID: 2100000, guid: a25b6b674a135144baff1520fbf4f83b, type: 2}
+  - thumb: {fileID: 21300000, guid: 149a0b8105050f94a8eb1746b55b18c7, type: 3}
+    headMesh: {fileID: 4300000, guid: 32e4a4dd306b015448e8de79d40c48a9, type: 2}
+    headMaterial: {fileID: 2100000, guid: 7dd53d088f5e6474b9afb8da6ac8cc8c, type: 2}
+    bodyMesh: {fileID: 4300000, guid: 39b6024c516a992469a485f49843329f, type: 2}
+    bodyMaterial: {fileID: 2100000, guid: 430b6ba18397c0c49a52cfd5e9beb448, type: 2}
+    topMesh: {fileID: 4300000, guid: 685d5a6bd478aa641a752a79fb8664d3, type: 2}
+    topMaterial: {fileID: 2100000, guid: c35ee23da81055b4cb892cbe02ee8d3d, type: 2}
+    bottomMesh: {fileID: 4300000, guid: 5d81d6bb6e33f944281b3412573707fb, type: 2}
+    bottomMaterial: {fileID: 2100000, guid: 885b806571d431e409c9c115573eadbf, type: 2}
+    footwearMesh: {fileID: 4300000, guid: 77988f64f3514fc44a49a0247bd14e25, type: 2}
+    footwearMaterial: {fileID: 2100000, guid: 915f4e8c60a5deb4d987029f8113d699, type: 2}
+  - thumb: {fileID: 21300000, guid: c5cd2da62c1644d4d8524f55fe0eeb14, type: 3}
+    headMesh: {fileID: 4300000, guid: 118afef9dcc881d4ea336aff8fe28ca6, type: 2}
+    headMaterial: {fileID: 2100000, guid: f5c6ad7d01c5c9241b2260c2b4031ec7, type: 2}
+    bodyMesh: {fileID: 4300000, guid: ba19d26f199ba564ab605c5458ceb841, type: 2}
+    bodyMaterial: {fileID: 2100000, guid: b5ca221a8f4e37e4bb6055d2807c65b3, type: 2}
+    topMesh: {fileID: 4300000, guid: a7d03e90922cc604e9ed3adf22348cfc, type: 2}
+    topMaterial: {fileID: 2100000, guid: 0991c0297034a9048b4b6956bee02e06, type: 2}
+    bottomMesh: {fileID: 4300000, guid: 7a4246570e824cc468b70dd0d63d5c08, type: 2}
+    bottomMaterial: {fileID: 2100000, guid: f6203e27b6d4e6c4cb4e273cb24215f3, type: 2}
+    footwearMesh: {fileID: 4300000, guid: b7e11ea6896d7d0479b2e04b1f726b86, type: 2}
+    footwearMaterial: {fileID: 2100000, guid: feff80d3d9a12614ea6de2aa5c99d893, type: 2}
