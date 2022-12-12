@@ -68,7 +68,6 @@ public class UIGrabPassRenderPass : ScriptableRenderPass
     private RenderTargetIdentifier m_Source;
     private RenderTargetHandle m_Destination;
     private const string m_ProfileTag = "UI Grab Pass";
-    private int m_UIGrabPassVerticalRT = Shader.PropertyToID("_UIGrabPassVerticalBlurredRT");
     private int m_UIGrabPassHorizontalRT = Shader.PropertyToID("_UIGrabPassHorizontalBlurredRT");
     private int m_UIGrabPassCacheRT = Shader.PropertyToID("_UIGrabPassCacheRT");
 
@@ -91,7 +90,6 @@ public class UIGrabPassRenderPass : ScriptableRenderPass
         descriptor.height = (int)(descriptor.height * settings.renderScale);
 
         cmd.GetTemporaryRT(m_UIGrabPassCacheRT, descriptor, FilterMode.Bilinear);
-        cmd.GetTemporaryRT(m_UIGrabPassVerticalRT, descriptor, FilterMode.Bilinear);
         cmd.GetTemporaryRT(m_UIGrabPassHorizontalRT, descriptor, FilterMode.Bilinear);
     }
 
@@ -99,9 +97,8 @@ public class UIGrabPassRenderPass : ScriptableRenderPass
     {
         CommandBuffer cmd = CommandBufferPool.Get(m_ProfileTag);
         //Lower Resolution
-        cmd.Blit(m_Source, m_UIGrabPassVerticalRT);
-        cmd.Blit(m_UIGrabPassVerticalRT, m_UIGrabPassHorizontalRT, settings.blurredMaterial, 0);
-        cmd.Blit(m_UIGrabPassHorizontalRT, m_UIGrabPassCacheRT, settings.blurredMaterial, 1);
+        cmd.Blit(m_Source, m_UIGrabPassCacheRT);
+        //cmd.Blit(m_UIGrabPassCacheRT, m_UIGrabPassHorizontalRT, settings.blurredMaterial);
         context.ExecuteCommandBuffer(cmd);
         cmd.Clear();
         CommandBufferPool.Release(cmd);
@@ -109,7 +106,6 @@ public class UIGrabPassRenderPass : ScriptableRenderPass
 
     public override void FrameCleanup(CommandBuffer cmd)
     {
-        cmd.ReleaseTemporaryRT(m_UIGrabPassVerticalRT);
-        cmd.ReleaseTemporaryRT(m_UIGrabPassHorizontalRT);
+        cmd.ReleaseTemporaryRT(m_UIGrabPassCacheRT);
     }
 }

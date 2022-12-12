@@ -1,6 +1,7 @@
 Shader "WB/SimpleBlur" {
     Properties{
         _Size("Size", Range(0, 100)) = 1
+        _Alpha("alpha", Range(0, 1)) = 1
     }
 
     SubShader{
@@ -11,7 +12,6 @@ Shader "WB/SimpleBlur" {
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            #pragma fragmentoption ARB_precision_hint_fastest
             #include "UnityCG.cginc"
 
             struct appdata_t {
@@ -36,15 +36,18 @@ Shader "WB/SimpleBlur" {
                 o.uvgrab.zw = o.vertex.zw;
                 return o;
             }
-
-            sampler2D _UIGrabPassCacheRT;
-            float4 _UIGrabPassCacheRT_TexelSize;
+            
+            sampler2D _CameraColorAttachmentA;
+            float4 _CameraColorAttachmentA_TexelSize;
+            //sampler2D _UIGrabPassCacheRT;
+            //float4 _UIGrabPassCacheRT_TexelSize;
             float _Size;
+            float _Alpha;
 
             half4 frag(v2f i) : COLOR 
             {
                     half4 sum = half4(0,0,0,0);
-                    #define GRABPIXEL(weight,kernelx) tex2Dproj( _UIGrabPassCacheRT, UNITY_PROJ_COORD(float4(i.uvgrab.x + _UIGrabPassCacheRT_TexelSize.x * kernelx*_Size, i.uvgrab.y, i.uvgrab.z, i.uvgrab.w))) * weight
+                    #define GRABPIXEL(weight,kernelx) tex2Dproj( _CameraColorAttachmentA, UNITY_PROJ_COORD(float4(i.uvgrab.x + _CameraColorAttachmentA_TexelSize.x * kernelx*_Size, i.uvgrab.y, i.uvgrab.z, i.uvgrab.w))) * weight
                     sum += GRABPIXEL(0.05, -4.0);
                     sum += GRABPIXEL(0.09, -3.0);
                     sum += GRABPIXEL(0.12, -2.0);
@@ -55,6 +58,7 @@ Shader "WB/SimpleBlur" {
                     sum += GRABPIXEL(0.09, +3.0);
                     sum += GRABPIXEL(0.05, +4.0);
 
+                    sum.rgb = _Alpha* sum.rgb;
                     return sum;
             }
             ENDCG
