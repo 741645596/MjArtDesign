@@ -5,7 +5,7 @@ Shader "WB/SimpleBlur" {
     }
 
     SubShader{
-        Tags{"RenderType" = "Opaque" "RenderPipeline" = "UniversalPipeline"}
+        Tags{"RenderType" = "Opaque" "RenderPipeline" = "UniversalPipeline" "Queue" = "Transparent+100"}
         Pass {
             Tags{"LightMode" = "UniversalForward"}
 
@@ -24,9 +24,6 @@ Shader "WB/SimpleBlur" {
                 float2 uv : TEXCOORD0;
                 float4 uvgrab : TEXCOORD1;
             };
-
-            //sampler2D _UIGrabPassCacheRT;
-            //float4 _UIGrabPassCacheRT_TexelSize;
             sampler2D _CameraColorAttachmentA;
             float4 _CameraColorAttachmentA_TexelSize;
             sampler2D _MaskTex;
@@ -57,6 +54,7 @@ Shader "WB/SimpleBlur" {
                     #define GRABPIXEL(weight,kernelx) tex2Dproj( _CameraColorAttachmentA, UNITY_PROJ_COORD(float4(i.uvgrab.x + _CameraColorAttachmentA_TexelSize.x * kernelx*_BlurSize, i.uvgrab.y, i.uvgrab.z, i.uvgrab.w))) * weight
                     blurColor += GRABPIXEL(0.05, -4.0);
                     blurColor += GRABPIXEL(0.09, -3.0);
+                    blurColor += GRABPIXEL(0.12, -2.0);
                     blurColor += GRABPIXEL(0.12, -2.0);
                     blurColor += GRABPIXEL(0.15, -1.0);
                     blurColor += GRABPIXEL(0.18, 0.0);
@@ -89,8 +87,6 @@ Shader "WB/SimpleBlur" {
                 float2 uv : TEXCOORD0;
                 float4 uvgrab : TEXCOORD1;
             };
-            //sampler2D _UIGrabPassCacheRT;
-            //float4 _UIGrabPassCacheRT_TexelSize;
             sampler2D _CameraColorAttachmentA;
             float4 _CameraColorAttachmentA_TexelSize;
             sampler2D _MaskTex;
