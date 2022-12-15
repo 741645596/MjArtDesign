@@ -8,7 +8,7 @@ using System.Collections.Generic;
 public class RoleBaseData
 {
     public Sprite thumb;
-    public RoleData Data;
+    public GameObject go;
 }
 
 

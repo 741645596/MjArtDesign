@@ -14,5 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoleDataConfig
   data:
   - thumb: {fileID: 21300000, guid: f317a334a59d82e449ae1cbfb36e4e12, type: 3}
-    Data:
-      go: {fileID: 0}
+    go: {fileID: 974870281817346754, guid: 3ad72786de26d6045838e1fb8d2350f5, type: 3}
+  - thumb: {fileID: 21300000, guid: f317a334a59d82e449ae1cbfb36e4e12, type: 3}
+    go: {fileID: 2883582905369682151, guid: 30096f34777edd948ac49b6ee38c2e9d, type: 3}
+  - thumb: {fileID: 21300000, guid: f317a334a59d82e449ae1cbfb36e4e12, type: 3}
+    go: {fileID: 7256546325696875110, guid: b7e2f0eacb1e8ec43bf3efbac8235136, type: 3}
+  - thumb: {fileID: 21300000, guid: f317a334a59d82e449ae1cbfb36e4e12, type: 3}
+    go: {fileID: 2883582905369682151, guid: 77f0f06b41043e74c8c8534339851243, type: 3}
+  - thumb: {fileID: 21300000, guid: f317a334a59d82e449ae1cbfb36e4e12, type: 3}
+    go: {fileID: 7256546325696875110, guid: 99109fd6788a85546b3f486dd431a958, type: 3}
