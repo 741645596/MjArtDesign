@@ -39,16 +39,24 @@ Shader "FeiYun/Scene/MaJiangZi"
 
         [HideInInspector] _Cutoff("Alpha Cutoff", Range(0.0, 1.0)) = 0.5
 
-        // Blending state
-        [HideInInspector] _Surface("__surface", Float) = 0.0
-        [HideInInspector] _BlendOp("__blendop", Float) = 0.0
-        [HideInInspector] _Blend("__blend", Float) = 0.0
-        [HideInInspector] _AlphaClip("__clip", Float) = 0.0
-        [HideInInspector] _SrcBlend("__src", Float) = 1.0
-        [HideInInspector] _DstBlend("__dst", Float) = 0.0
-        [HideInInspector] _ZWrite("__zw", Float) = 1.0
-        [HideInInspector] _Cull("__cull", Float) = 2.0
-        [HideInInspector] _ReceiveShadows("Receive Shadows", Float) = 1.0
+            // Blending state
+                 [Enum(UnityEngine.Rendering.BlendOp)] _BlendOp("__blendop", Float) = 0.0
+                 [Enum(UnityEngine.Rendering.BlendMode)] _SrcBlend("__src", Float) = 1.0
+                 [Enum(UnityEngine.Rendering.BlendMode)] _DstBlend("__dst", Float) = 0.0
+                 [Enum(Off, 0, On, 1)] _ZWrite("ZWriteMode", Float) = 1.0
+                 [Enum(UnityEngine.Rendering.CompareFunction)]_ZTestMode("ZTestMode", Float) = 4
+                 [Enum(UnityEngine.Rendering.CullMode)] _Cull("CullMode", Float) = 2.0
+            //[Enum(UnityEngine.Rendering.ColorWriteMask)]_ColorMask("ColorMask", Float) = 15
+           /*
+           [Header(Stencil)]
+           [Enum(UnityEngine.Rendering.CompareFunction)]_StencilComp("Stencil Comparison", Float) = 8
+           [IntRange]_StencilWriteMask("Stencil Write Mask", Range(0,255)) = 255
+           [IntRange]_StencilReadMask("Stencil Read Mask", Range(0,255)) = 255
+           [IntRange]_Stencil("Stencil ID", Range(0,255)) = 0
+           [Enum(UnityEngine.Rendering.StencilOp)]_StencilPass("Stencil Pass", Float) = 0
+           [Enum(UnityEngine.Rendering.StencilOp)]_StencilFail("Stencil Fail", Float) = 0
+           [Enum(UnityEngine.Rendering.StencilOp)]_StencilZFail("Stencil ZFail", Float) = 0
+           */
     }
 
     HLSLINCLUDE
@@ -57,8 +65,8 @@ Shader "FeiYun/Scene/MaJiangZi"
     #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
 
     #include "./MaJiangZiSkinFunction.hlsl"
-    #include "CommonFunction.hlsl"
-    #include "GlobalIllumination.hlsl"
+    #include "../Common/CommonFunction.hlsl"
+    #include "../Common/GlobalIllumination.hlsl"
 
     ENDHLSL
 

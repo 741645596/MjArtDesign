@@ -1,7 +1,7 @@
 #ifndef SGAME_PBRINPUT_INCLUDE
 	#define SGAME_PBRINPUT_INCLUDE
 
-	#include "CommonFunction.hlsl"
+	#include "../Common/CommonFunction.hlsl"
 
 	CBUFFER_START(UnityPerMaterial)
 		int	_Col;

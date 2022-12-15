@@ -1,9 +1,9 @@
 #ifndef SGAME_PBRINPUT_INCLUDE
 	#define SGAME_PBRINPUT_INCLUDE
 
-	#include "CommonFunction.hlsl"
-	#include "ShadingModel.hlsl"
-	#include "GlobalIllumination.hlsl"
+	#include "../Common/CommonFunction.hlsl"
+	#include "../Common/ShadingModel.hlsl"
+	#include "../Common/GlobalIllumination.hlsl"
 
 	CBUFFER_START(UnityPerMaterial)
 
@@ -75,23 +75,6 @@
 
 		// Anisotropy
 		half _Anisotropy;
-
-		// shadow
-		half4  _ShadowColor;		//阴影颜色 目前由外部脚本设定 UpdateShadowPlane.cs
-		
-		float  _ShadowHeight;		//阴影平面的高度 目前由外部脚本设定 UpdateShadowPlane.cs
-		
-		float  _ShadowOffsetX;		//XZ平面的偏移
-		float  _ShadowOffsetZ;
-
-		float  _MeshHight;			//模型高度 由外部脚本设定 UpdateShadowPlane.cs
-		float4 _WorldPos;			//模型位置 由外部脚本设定 UpdateShadowPlane.cs
-		
-		half  _AlphaVal;			//影子透明度
-
-		half3 _ProGameOutDir;
-
-		half _ReceiveShadows;
 	CBUFFER_END
 
 	TEXTURE2D(_BaseMap);	SAMPLER(sampler_BaseMap);

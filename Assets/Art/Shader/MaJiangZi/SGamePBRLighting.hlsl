@@ -1,8 +1,8 @@
-﻿#ifndef SGAME_PBRLIGHTING_INCLUDE
+#ifndef SGAME_PBRLIGHTING_INCLUDE
     #define SGAME_PBRLIGHTING_INCLUDE
 
     #include "SGamePBRInput.hlsl"
-    #include "PBRFunction.hlsl"
+    #include "../Common/PBRFunction.hlsl"
 
     void SGamePhysicallyBased(SurfaceData_SGame surfaceData,BRDFData_PBR brdfData, Light light, InputData_SGame inputData,half3 energyCompensation,inout half3 DirectDiffuse,inout half3 DirectSpecular)
     {
