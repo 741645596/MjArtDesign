@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: RoleHair
-  m_EditorClassIdentifier: Assembly-CSharp::RoleDataConfig
+  m_Script: {fileID: 11500000, guid: 4067cf1ba88e15f4c8941b58ac4020ed, type: 3}
+  m_Name: Role Data Config
+  m_EditorClassIdentifier: 
   data:
   - thumb: {fileID: 21300000, guid: f317a334a59d82e449ae1cbfb36e4e12, type: 3}
     go: {fileID: 974870281817346754, guid: 3ad72786de26d6045838e1fb8d2350f5, type: 3}
@@ -19,6 +19,8 @@ MonoBehaviour:
     go: {fileID: 2883582905369682151, guid: 30096f34777edd948ac49b6ee38c2e9d, type: 3}
   - thumb: {fileID: 21300000, guid: f317a334a59d82e449ae1cbfb36e4e12, type: 3}
     go: {fileID: 7256546325696875110, guid: b7e2f0eacb1e8ec43bf3efbac8235136, type: 3}
+  - thumb: {fileID: 21300000, guid: f317a334a59d82e449ae1cbfb36e4e12, type: 3}
+    go: {fileID: 974870281817346754, guid: af35dce910af91a4fbc5d93740fd6e8f, type: 3}
   - thumb: {fileID: 21300000, guid: f317a334a59d82e449ae1cbfb36e4e12, type: 3}
     go: {fileID: 2883582905369682151, guid: 77f0f06b41043e74c8c8534339851243, type: 3}
   - thumb: {fileID: 21300000, guid: f317a334a59d82e449ae1cbfb36e4e12, type: 3}

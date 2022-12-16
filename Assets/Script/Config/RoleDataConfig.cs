@@ -12,14 +12,6 @@ public class RoleBaseData
 }
 
 
-[Serializable]
-public class RoleData
-{
-    public GameObject go;
-    //public Mesh mesh;
-    //public List<Material> materials;
-}
-
 
 [CreateAssetMenu]
 public class RoleDataConfig : ScriptableObject

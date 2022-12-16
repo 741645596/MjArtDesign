@@ -2220,13 +2220,14 @@ GameObject:
   m_Component:
   - component: {fileID: 931799150}
   - component: {fileID: 931799151}
+  - component: {fileID: 931799152}
   m_Layer: 0
   m_Name: Example
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &931799150
 Transform:
   m_ObjectHideFlags: 0
@@ -2249,7 +2250,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931799149}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5961f9e75a84f245a2685c1763f21e7, type: 3}
   m_Name: 
@@ -2270,6 +2271,21 @@ MonoBehaviour:
   hair: {fileID: 1778089221}
   glasses: {fileID: 1664146843}
   beard: {fileID: 321640980}
+--- !u!114 &931799152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931799149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26e2cf9456714e49ae884062d6a9d09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hairConfig: {fileID: 11400000, guid: a287c21e07b47014680db57a22a3b5ed, type: 2}
+  hairNode: {fileID: 2014054682}
+  hairItemPrefab: {fileID: 80190731}
 --- !u!1 &933701791
 GameObject:
   m_ObjectHideFlags: 0
@@ -3336,7 +3352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000061035156}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1263301057
