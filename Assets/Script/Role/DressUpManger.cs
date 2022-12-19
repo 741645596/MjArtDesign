@@ -83,6 +83,7 @@ public class DressUpManger : MonoBehaviour
                         {
                             g.transform.parent = parentNode;
                             g.transform.localPosition = Vector3.zero;
+                            g.transform.localRotation = Quaternion.identity;
                             g.transform.localScale = Vector3.one;
                         }
                     }
