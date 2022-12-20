@@ -2,10 +2,7 @@ Shader "Glass/CommonGlass"
 {
     Properties
     {
-
         [Space(15)]
-        //[Enum(UnityEngine.Rendering.CullMode)] _Cull("Cull Mode", Float) = 2
-        //[Enum(Off,0,On,1)] _ZWrite("ZWrite", Float) = 1.0 //"On"
         _ColorCubemap("ColorCubemap(环境反射颜色)", Color) = (1,1,1,1)
         _PowerFresnel("FresnelPower(菲尼尔Pow)", Float) = 1
         _GlobalIlluminationIns("GlobalIlluminationIns(环境强度)", range(0,5)) = 1
@@ -15,21 +12,19 @@ Shader "Glass/CommonGlass"
 
         //PBR
         _SpecIntensity("SpecIntensity(高光强度)", Range(0 , 1)) = 0.3
-
-        //[MaterialToggle(_PS_ON)] _PSON("PSON(明度饱和度)", int) = 0
-
         [MaterialToggle(_PBR_ON)] _PBRON("PBRON(PBR高光)", int) = 0
 
         [Header(MainTex)]
-        //_Brightness("Brightness(明度)", Range(1 , 16)) = 1
-        //_Saturation("Saturation(饱和度)",range(-1,100)) = 0
         [NoScaleOffset] [MainTexture] _BaseMap("MainTex(A:透明度)", 2D) = "white" {}
         [MainColor] _BaseColor("MainColor", Color) = (0,0,0,0)
         _BaseMap_TilingOffset("TilingOffset", vector) = (1,1,0,0)
+
         _NormalScale("NormalScale", Float) = 1.0
         [NoScaleOffset]_NormalMap("NormalMap", 2D) = "bump" {}
+
         [HDR]_MainEmissionColor("MainEmissionColor", Color) = (0,0,0,1)
         [NoScaleOffset]_MainEmission("MainEmission", 2D) = "white" {}
+
         _MainMetallicStrength("MainMetallicStrength(金属度)", range(0,1)) = 0
         _MainSmoothnessStrength("MainSmoothnessStrength(光滑度)", range(0,1)) = 1
         _MainAOStrength("MainAOStrength(AO)", range(0,1)) = 1
@@ -38,8 +33,6 @@ Shader "Glass/CommonGlass"
         //_DECAL_ON
         [MaterialToggle(_DECAL_ON)] _DECALON("DECALON(细节)", int) = 0
         [Space(25)]
-        //_SaturationDecal("SaturationDecal(饱和度)",range(-1,100)) = 0
-        //_BrightnessDecal("Brightness(明度)", Range(1 , 16)) = 1
         _DetailColor("DetailColor", Color) = (0,0,0,0)
         [NoScaleOffset]_DetailAlbedo("DetailAlbedo(A:透明度)", 2D) = "white" {}
         [NoScaleOffset]_DetailAlbedoMask("DetailAlbedo(R:细节纹理范围遮罩)", 2D) = "black" {}
@@ -153,8 +146,6 @@ Shader "Glass/CommonGlass"
 
             #pragma multi_compile _ _PBR_ON //PBR高光
             #pragma multi_compile _ _DECAL_ON //细节
-            #pragma multi_compile _ ENABLE_HQ_SHADOW ENABLE_HQ_AND_UNITY_SHADOW
-            //#pragma multi_compile _ _PS_ON //明度 饱和度调节
 
             // -------------------------------------
             // -------------------------------------
@@ -227,13 +218,6 @@ Shader "Glass/CommonGlass"
                 output.normalWS = TransformObjectToWorldNormal(input.normalOS);
                 output.projection = ComputeScreenPos(output.positionCS);
 
-                //shadow
-                #if defined(_MAIN_LIGHT_SHADOWS) || defined(_MAIN_LIGHT_SHADOWS_CASCADE) && !defined(_RECEIVE_SHADOWS_OFF) && (!defined(ENABLE_HQ_SHADOW) && !defined(ENABLE_HQ_AND_UNITY_SHADOW))
-                    //shadow
-                    output.shadowCoord = TransformWorldToShadowCoord(output.positionWS);
-                #else
-                    output.shadowCoord = float4(0, 0, 0, 0);
-                #endif
                 return output;
             }
 
@@ -295,11 +279,6 @@ Shader "Glass/CommonGlass"
                 float4 mainTex = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, input.uv0.xy)* _BaseColor;
                 half alpha = mainTex.a;
 
-                //#if defined(_PS_ON)
-                //    float saturationDot = dot(mainTex.rgb, float3(0.299, 0.587, 0.114));
-                //    mainTex.rgb = lerp(mainTex.rgb, saturationDot.xxx, -_Saturation);
-                //    mainTex = CalculateContrast(_Brightness, mainTex);
-                //#endif
 
                 //法线1
                 half4 n = SAMPLE_TEXTURE2D(_NormalMap, sampler_NormalMap, input.uv0.xy);
@@ -311,11 +290,6 @@ Shader "Glass/CommonGlass"
                     detailAlbedoTex = detailAlbedoTex * _DetailColor;
                     float4 detailAlbedoMaskTex = SAMPLE_TEXTURE2D(_DetailAlbedoMask, sampler_DetailAlbedoMask, input.uv0.zw);
 
-                    //#if defined(_PS_ON)
-                    //    float saturationDecalDot = dot(detailAlbedoTex.rgb, float3(0.299, 0.587, 0.114));
-                    //    detailAlbedoTex.rgb = lerp(detailAlbedoTex.rgb, saturationDecalDot.xxx, -_SaturationDecal);
-                    //    detailAlbedoTex = CalculateContrast(_BrightnessDecal, detailAlbedoTex);
-                    //#endif
 
                     alpha = lerp(alpha, detailAlbedoTex.a, detailAlbedoMaskTex.r);
                     //细节法线2
@@ -363,11 +337,7 @@ Shader "Glass/CommonGlass"
                 half3 brdfSpecular = lerp(kDieletricSpec.rgb, albedo, metallic);
 
                 #if defined(_MAIN_LIGHT_SHADOWS) || defined(_MAIN_LIGHT_SHADOWS_CASCADE) && !defined(_RECEIVE_SHADOWS_OFF)
-                    #if defined(ENABLE_HQ_SHADOW) || defined(ENABLE_HQ_AND_UNITY_SHADOW) 
-                        input.shadowCoord.x = HighQualityRealtimeShadow(positionWS);
-                    #else
                         input.shadowCoord = input.shadowCoord;
-                    #endif
                 #else
                     input.shadowCoord = float4(0, 0, 0, 0);
                 #endif

@@ -1,9 +1,6 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
-using UnityEngine.Experimental.Rendering;
-using System.Collections.Generic;
-using UnityEngine.Rendering.Universal.Internal;
 
 public class FurPass : ScriptableRenderPass
 {
