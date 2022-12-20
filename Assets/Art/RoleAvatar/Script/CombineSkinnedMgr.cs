@@ -108,7 +108,8 @@ public class UCombineSkinnedMgr {
 			{
 				combineInstances[i].mesh.uv = oldUV[i];
 			}
-		}else
+		}
+		else
 		{
 			r.materials = materials.ToArray();
 		}

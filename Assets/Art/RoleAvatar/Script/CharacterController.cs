@@ -108,7 +108,10 @@ public class UCharacterController {
 	{
 		ChangeEquipment (3, equipment, combine);
 	}
-	
+	/// <summary>
+	/// 更换武器，武器本身没有动画，只要挂载在绑点上就可。
+	/// </summary>
+	/// <param name="weapon"></param>
 	public void ChangeWeapon (string weapon)
 	{
 		Object res = Resources.Load ("Prefab/" + weapon);
