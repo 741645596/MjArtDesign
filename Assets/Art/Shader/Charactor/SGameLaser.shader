@@ -1,16 +1,15 @@
-Shader "Charactor/SGameLaser"  
+Shader "Charactor/BlinnPhong_Laser"  
 {
     Properties{
         _BaseColor("颜色", Color) = (1.0,1.0,1.0,1.0)
         _MainTexture("颜色贴图",2D) = "white"{}
         [normal]_NormalTex("法线贴图",2D) = "bump"{}
-        _AOSmoothTex("PBR Mask",2D) = "white"{}
+        _AOSmoothTex("Smooth AO Mask",2D) = "white"{}
         _AOIntensity("AO 强度", Range(0,1)) = 1
+
         _LaserRampMap("镭射Ramp图", 2D) = "Black"{}
         _LaserTilling("镭射Tilling",Range(0.5, 3)) = 1
         _LaserIntensity("镭射强度", Range(0, 10)) = 1
-       
-    
         _LaserRampID("镭射ID", Range(0, 1)) = 1
         _LaserAngle("镭射角度", Range(0, 1)) = 1
         [Header(______________________________SPECULAR__________________________________)]
@@ -26,10 +25,7 @@ Shader "Charactor/SGameLaser"
     }
     SubShader
     {
-        Tags{
-            "RenderPipeline" = "UniversalRenderPipeline"
-            "RenderType"="Opaque"
-        }
+        Tags{"RenderPipeline" = "UniversalRenderPipeline" "RenderType"="Opaque"}
         pass
         {
 
@@ -41,17 +37,11 @@ Shader "Charactor/SGameLaser"
       
             #pragma vertex vert
             #pragma fragment frag
-            #pragma multi_compile _ _MAIN_LIGHT_SHADOWS
-            #pragma multi_compile _ _MAIN_LIGHT_SHADOWS_CASCADE
-            #pragma multi_compile _ _SHADOW_SOFT
 
-            sampler2D _ShiftTex;
             sampler2D _MainTexture;
             sampler2D _NormalTex;
             sampler2D _AOSmoothTex;
             sampler2D _LaserRampMap;
-    
-            sampler2D _LaserOffsetMask;
 
             CBUFFER_START(UnityPerMaterial) 
 
@@ -99,11 +89,6 @@ Shader "Charactor/SGameLaser"
                 specular = max(0, specular);
                 
                 return (specular);
-            }
-
-            half remap(half x, half t1, half t2, half s1, half s2)
-            {
-                return (x - t1) / (t2 - t1) * (s2 - s1) + s1;
             }
 
             v2f vert(a2v i)
@@ -158,7 +143,7 @@ Shader "Charactor/SGameLaser"
                 // Mix Diffuse
                 half3 var_MainTexture = tex2D(_MainTexture, i.uv0) * _BaseColor;
                 half3 color = var_MainTexture * clamp( ndotl * (0.9 - LaserIntensity * 0.0), LaserIntensity * 0.2 + 0.1 ,1); 
-                color += laserColor;//* max(ndotv * 0.8 + 0.2, 0.2) * ((ndotl * 0.5 + 0.5) ) * lightColor  * (3 * LaserIntensity) * max(BlinnPhong + Aspec, 0.0) ;
+                color += laserColor;
 
                 // Add Specular
                 color += ( saturate(BlinnPhong * 0.2 + Aspec * 0.2) * lerp(lightColor, var_MainTexture, saturate(  LaserIntensity * 2)) ) *( LaserIntensity );
