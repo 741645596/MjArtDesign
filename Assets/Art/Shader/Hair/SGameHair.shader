@@ -122,15 +122,6 @@ Shader "Charactor/SGameHair"
                 o.bDirWS = normalize(cross(o.tDirWS, o.nDirWS) * i.tangent.w * unity_WorldTransformParams.w);
                 o.uv0 = i.uv0;
 
-                #if defined(_MAIN_LIGHT_SHADOWS) || defined(_MAIN_LIGHT_SHADOWS_CASCADE) && !defined(_RECEIVE_SHADOWS_OFF) && (!defined(ENABLE_HQ_SHADOW) && !defined(ENABLE_HQ_AND_UNITY_SHADOW))
-                    //shadow
-                    //output.shadowCoord    = TransformWorldToShadowCoord(output.positionWS);
-                    #if !defined(ENABLE_HQ_SHADOW) && !defined(ENABLE_HQ_AND_UNITY_SHADOW)
-                        o.shadowCoord           = TransformWorldToShadowCoord(o.posWS);
-                    #else
-                        o.shadowCoord.x         = HighQualityRealtimeShadow(o.posWS);
-                    #endif
-                #endif
 
                 OUTPUT_LIGHTMAP_UV(i.lightmapUV, unity_LightmapST, o.lightmapUV);
                 OUTPUT_SH(o.nDirWS, o.vertexSH);
@@ -140,32 +131,10 @@ Shader "Charactor/SGameHair"
 
             half4 frag(v2f i) :SV_TARGET
             {
-                #if defined(_MAIN_LIGHT_SHADOWS) || defined(_MAIN_LIGHT_SHADOWS_CASCADE) && !defined(_RECEIVE_SHADOWS_OFF)
-                    #if defined(ENABLE_HQ_SHADOW) || defined(ENABLE_HQ_AND_UNITY_SHADOW) 
-                        i.shadowCoord.x = HighQualityRealtimeShadow(i.posWS);
-                    #endif
-                #endif
-
                 float shadowMask = float4(1.0,1.0,1.0,1.0);
 
                 #if defined(_MAIN_LIGHT_SHADOWS) || defined(_MAIN_LIGHT_SHADOWS_CASCADE) && !defined(_RECEIVE_SHADOWS_OFF)
-                    #if defined(ENABLE_HQ_SHADOW)
-                        Light mainLight = GetMainLight(float4(0,0,0,0), i.posWS, shadowMask);
-                        #if defined(_RECEIVE_SHADOWS_OFF)
-                            mainLight.shadowAttenuation = 1;
-                        #else
-                            mainLight.shadowAttenuation = i.shadowCoord.x;
-                        #endif
-                    #elif defined(ENABLE_HQ_AND_UNITY_SHADOW)
-                        Light mainLight = GetMainLight(i.shadowCoord);
-                        #if defined(_RECEIVE_SHADOWS_OFF)
-                            mainLight.shadowAttenuation = 1;
-                        #else
-                            mainLight.shadowAttenuation = i.shadowCoord.x * mainLight.shadowAttenuation;
-                        #endif
-                    #else
-                        Light mainLight = GetMainLight(i.shadowCoord, i.posWS, shadowMask);
-                    #endif
+                    Light mainLight = GetMainLight(i.shadowCoord, i.posWS, shadowMask);
                 #else
                     Light mainLight = GetMainLight();
                 #endif
