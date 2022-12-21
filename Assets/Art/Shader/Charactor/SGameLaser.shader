@@ -78,7 +78,7 @@ Shader "Charactor/BlinnPhong_Laser"
              
                 
             };
-
+            // 计算头发用的各异向高光
             half HairSpecular(float3 hDirWS, float3 nDirWS,  half specularWidth){
                 
                 half hdotn = saturate(abs(dot(hDirWS, nDirWS)));
@@ -129,7 +129,6 @@ Shader "Charactor/BlinnPhong_Laser"
               
 
                 half BlinnPhong = pow(ndoth, smoothness * 52) ;
-                
                 half Aspec = HairSpecular(hDirWS, lerp(bDirWS ,i.tDirWS,_SpecularAngle), _SpecularWidth * _SpecularWidth * smoothness);
                 
                 // Ramp Laser
@@ -155,3 +154,9 @@ Shader "Charactor/BlinnPhong_Laser"
         }
     }
 }
+// 参考文章：https://zhuanlan.zhihu.com/p/487204843
+// 核心shading model = BlinnPhong + Laser model 混合模式add
+// BlinnPhong = diffuse + specular
+// Laser model = laser diffuse + laser specular
+// laser diffuse[染色层] = ramp Texture 基于 观察角度的采样：dot（N, V）,这里采用了 lerp（b， t， angle）进行计算
+// laser specular= HairSpecular[头发的各向异性高光]
