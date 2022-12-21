@@ -2,20 +2,19 @@
 
 struct VertexInput
 {
-    float4 in_POSITION0 : POSITION;
-    float3 in_NORMAL0   : NORMAL;
-    float2 in_TEXCOORD0 : TEXCOORD0;//UV
+    float4 vertex : POSITION;
+    float3 normal   : NORMAL;
+    float2 uv : TEXCOORD0;//UV
 };
 
 struct VertexOutput
 {
     float4 gl_Position  : SV_POSITION;
-    float4 vs_TEXCOORD0 : TEXCOORD0;//WorldPos
-    float4 vs_TEXCOORD1 : TEXCOORD1;//Diffuse
+    float4 uv : TEXCOORD0;//WorldPos
+    float4 BlendLightColor : TEXCOORD1;//Diffuse
 };
 
 CBUFFER_START(UnityPerMaterial)
-
     float4 _SubTexUV;
     half _EnvironmentLightInt;
     half _FresnelLV;
@@ -23,14 +22,10 @@ CBUFFER_START(UnityPerMaterial)
     float4 _BaseColor;
     float _FarSpacing;
     float _FurTickness;
-
-    sampler2D _FlowTex;
-  
-    sampler2D _MainTex;
     float4  _MainTex_ST;
-
 CBUFFER_END
-
+sampler2D _FlowTex;
+sampler2D _MainTex;
 
 
 //顶点着色
@@ -38,59 +33,48 @@ VertexOutput vert(VertexInput v)
 {   
     VertexOutput o = (VertexOutput)0;
 
-    float4 posWorld0 = mul(unity_ObjectToWorld, v.in_POSITION0);
-    float len0 = length(posWorld0.xyz - _WorldSpaceCameraPos); 
+    // 计算毛发收重力影响的位置
     float spacing = _FarSpacing * 0.1;
     half4 positionLS;
-
-
-    positionLS.xyz = normalize(mul(unity_WorldToObject, float3(0,-FUROFFSETVX*2*_FurGravity,0)) + v.in_NORMAL0.xyz) * FUROFFSETVX; //添加简单重力
-
-    positionLS.xyz = positionLS.xyz * spacing * 0.1 + v.in_POSITION0.xyz;
+    positionLS.xyz = normalize(mul(unity_WorldToObject, float3(0,-FUROFFSETVX*2*_FurGravity,0)) + v.normal.xyz) * FUROFFSETVX; //添加简单重力
+    positionLS.xyz = positionLS.xyz * spacing * 0.1 + v.vertex.xyz;
     positionLS.w = 1.0;
 
     float4 posWorld = mul(unity_ObjectToWorld, positionLS);
     o.gl_Position = mul(UNITY_MATRIX_VP, posWorld);
+    // uv
+    half2 uv = TRANSFORM_TEX(v.uv, _MainTex);
+    o.uv.xy = uv;
+    o.uv.zw = v.uv * _SubTexUV.xy;
 
-    half2 uv = TRANSFORM_TEX(v.in_TEXCOORD0, _MainTex);
-    o.vs_TEXCOORD0.xy = uv;
-    o.vs_TEXCOORD0.zw = (v.in_TEXCOORD0 * _SubTexUV.xy);
-
-    half3 normalWorld = TransformObjectToWorldNormal(v.in_NORMAL0); 
+    // 毛发diffuse 的处理
+    half3 normalWorld = TransformObjectToWorldNormal(v.normal);
     float3 eyeVec = normalize(posWorld.xyz - _WorldSpaceCameraPos); 
     float nv = saturate(dot(normalWorld, -eyeVec));  
 
     float3 lightDir = _MainLightPosition.xyz;
     float3 nl = dot(normalWorld, lightDir);
-    nl = nl + (FUROFFSETVX * 0.1 - 0.2)* (1 - _EnvironmentLightInt); 
-    Light mainLight = GetMainLight();
-    
-    half3 sh = SampleSHVertex(normalWorld);
+    nl = nl - (0.2 - FUROFFSETVX * 0.1)* (1 - _EnvironmentLightInt); //模拟光穿过毛发
 
-  
+    Light mainLight = GetMainLight();
+    half3 sh = SampleSHVertex(normalWorld);
     half FurSSS = sh * pow(1 - nv,4) * (FUROFFSETVX * FUROFFSETVX * FUROFFSETVX * FUROFFSETVX) * 10 * _FresnelLV;
     half3 ambient =  sh  * lerp((FUROFFSETVX * 2 + 0.3), 1.3,  _EnvironmentLightInt);
     half shadowAtten = max(0.1, nl) * mainLight.color;
-
-    o.vs_TEXCOORD1.xyz = shadowAtten  + (ambient + FurSSS);
-    
-    o.vs_TEXCOORD1.w = 1.0;
+    o.BlendLightColor.rgb = shadowAtten  + ambient + FurSSS;
+    o.BlendLightColor.a = 1.0;
 
     return o;
 }
 
 half4 frag(VertexOutput v) : SV_Target
 {
-    half4 SV_Target0;
-    half3 mainColor = (tex2D(_MainTex, v.vs_TEXCOORD0.xy).xyz) * _BaseColor.xyz;
-    half3 finalColor = mainColor * v.vs_TEXCOORD1.xyz;
-    half flowTex = tex2D(_FlowTex, v.vs_TEXCOORD0.zw).x;
+    half4 Color;
+    Color.rgb = tex2D(_MainTex, v.uv.xy).rgb * _BaseColor.rgb * v.BlendLightColor.rgb;
+    half flowTex = tex2D(_FlowTex, v.uv.zw).r;
     half furAlphaOffset = pow(FUROFFSETVX , 0.8 + _FurTickness); 
-    finalColor.rgb = (finalColor.rgb);
-    SV_Target0.xyz = finalColor;// / (finalColor + 0.155);
-    SV_Target0.w = saturate(flowTex.x - pow(furAlphaOffset ,  1 + _FurTickness * 3)) ;
-    SV_Target0.w *= _BaseColor.a;
-    return SV_Target0;
+    Color.a = saturate(flowTex.r - pow(furAlphaOffset ,  1 + _FurTickness * 3)) * _BaseColor.a;
+    return Color;
 }
 
 
@@ -100,35 +84,31 @@ VertexOutput vertFirst(VertexInput v)
 {   
     VertexOutput o = (VertexOutput)0;
 
-    float4 posWorld = mul(unity_ObjectToWorld, v.in_POSITION0);
+    float4 posWorld = mul(unity_ObjectToWorld, v.vertex);
     o.gl_Position = mul(UNITY_MATRIX_VP, posWorld);
-    half2 uv = TRANSFORM_TEX(v.in_TEXCOORD0, _MainTex);
-    o.vs_TEXCOORD0.xy = uv;
-    o.vs_TEXCOORD0.zw = v.in_TEXCOORD0 * _SubTexUV.xy;
-    half3 normalWorld = TransformObjectToWorldNormal(v.in_NORMAL0);  //normalWorld
-    float3 eyeVec = normalize(posWorld.xyz - _WorldSpaceCameraPos); //eyeVec
-    float nv = saturate(dot(normalWorld, -eyeVec));  //nv
+
+    half2 uv = TRANSFORM_TEX(v.uv, _MainTex);
+    o.uv.xy = uv;
+
+    half3 normalWorld = TransformObjectToWorldNormal(v.normal);  //normalWorld
     float3 lightDir = _MainLightPosition.xyz;
     float3 nl = saturate(dot(normalWorld, lightDir));
     nl = nl  - 0.2 * (1 - _EnvironmentLightInt); //模拟光穿过毛发
+
     half3 sh = SampleSHVertex(normalWorld);
     Light mainLight = GetMainLight();
     half3 ambient =  sh  * lerp(0.3, 1.3, _EnvironmentLightInt);
-    o.vs_TEXCOORD1.xyz = max(0, nl) * mainLight.color  + ambient;
-    
-    o.vs_TEXCOORD1.w = 1.0;
+
+    o.BlendLightColor.rgb = max(0, nl) * mainLight.color  + ambient;
+    o.BlendLightColor.a = 1.0;
 
     return o;
 }
 
 half4 fragFirst(VertexOutput v) : SV_Target
 {
-    half4 SV_Target0;
-    half3 mainColor = (tex2D(_MainTex, v.vs_TEXCOORD0.xy).xyz) * _BaseColor.xyz;
-    half3 finalColor = mainColor * v.vs_TEXCOORD1.xyz;
-    finalColor.rgb = (finalColor.rgb);
-
-    SV_Target0.xyz = (finalColor.rgb);
-    SV_Target0.w = 1;
-    return SV_Target0;
+    half4 Color;
+    Color.rgb = tex2D(_MainTex, v.uv.xy).xyz * _BaseColor.rgb * v.BlendLightColor.rgb;
+    Color.a = 1;
+    return Color;
 }

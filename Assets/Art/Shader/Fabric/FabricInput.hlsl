@@ -33,25 +33,6 @@ float _FuzzStrength;
 
 float4 _preIntegratedFGD_TexelSize;
 
-// shadow
-//阴影颜色 目前由外部脚本设定 UpdateShadowPlane.cs
-float4 _ShadowColor;
-//阴影平面的高度 目前由外部脚本设定 UpdateShadowPlane.cs
-float _ShadowHeight;
-//XZ平面的偏移
-float _ShadowOffsetX;
-float _ShadowOffsetZ;
-
-//模型高度 由外部脚本设定 UpdateShadowPlane.cs
-float _MeshHight;
-//模型位置 由外部脚本设定 UpdateShadowPlane.cs
-float4 _WorldPos;
-//影子透明度
-float _AlphaVal;
-
-float3 _ProGameOutDir;
-float _ShadowStr=1;
-
 CBUFFER_END
 
 TEXTURE2D(_preIntegratedFGD);

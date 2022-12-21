@@ -54,25 +54,12 @@ Shader "FB/Fabric"
         [HideInInspector] _Cull("__cull", Float) = 0.0
         [HideInInspector] _ReceiveShadows("Receive Shadows", Float) = 1.0
 
-        //平面阴影
-        [KeywordEnum(Off,Shadow,And_Unity_Shadow)] ENABLE_HQ("ShadowType",Int) = 0
-        _ShadowColor("Shadow Color", Color) = (0.83,0.89,0.97,0.25)
-        _ShadowHeight("Shadow Height", float) = 0
-        _ShadowOffsetX("Shadow Offset X", float) = 0.0
-        _ShadowOffsetZ("Shadow Offset Y", float) = 0.0
-
-        [HideInInspector]_MeshHight("_MeshHight", float) = 0.0
-        [HideInInspector]_WorldPos("_WorldPos", vector) = (0,0,0,0)
-
-        _ProGameOutDir("ProGameOutDir", vector) = (-1.04, 1.9, 1.61,0)
-        [HideInInspector]_PlantShadowOpen("PlantShadowOpen", float) = 1
     }
 
     SubShader
     {
         Tags { 
-            "RenderPipeline"="UniversalRenderPipline"
-            "RenderType"="Opaque" 
+            "RenderPipeline"="UniversalRenderPipline" "RenderType"="Opaque" 
         }
 
         Pass{
@@ -87,10 +74,6 @@ Shader "FB/Fabric"
             Cull[_Cull]
 
             HLSLPROGRAM
-
-            // Material Keywords
-            #pragma multi_compile _ ENABLE_HQ_SHADOW ENABLE_HQ_AND_UNITY_SHADOW
-
             // Universal Pipeline keywords
             #pragma multi_compile _ _MAIN_LIGHT_SHADOWS
             #pragma multi_compile _ _ADDITIONAL_LIGHTS_VERTEX _ADDITIONAL_LIGHTS
