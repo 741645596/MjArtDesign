@@ -65,7 +65,7 @@ VertexOutput vert(VertexInput v)
     o.BlendLightColor.a = 1.0;
 
     return o;
-}
+} 
 
 half4 frag(VertexOutput v) : SV_Target
 {

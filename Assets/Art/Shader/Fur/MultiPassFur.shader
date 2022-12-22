@@ -3,10 +3,8 @@ Shader "Standard/SGameFur"
 	Properties
 	{	
 		_BaseColor("颜色",Color) = (1.0 ,1.0 ,1.0 ,1.0)
-		//_Color("ShadowColor",Color) = (1.0 ,0.85 ,0.7 ,1.0)
 		_MainTex ("颜色贴图", 2D) = "white" {} 
 		_FlowTex("毛发长度图",2D) = "white" {}
-		//	_SubTex("SubTex",2D) = "white" {}   
 		_SubTexUV("毛发缩放", Vector) = (4.0 ,8.0 ,1.0 ,1.0)
 
 		[Space(10)]
