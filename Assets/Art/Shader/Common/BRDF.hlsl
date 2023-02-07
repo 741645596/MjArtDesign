@@ -91,7 +91,7 @@ float D_InvGGX( float a2, float NoH )
 	return rcp( PI * (1 + A*a2) ) * ( 1 + 4 * a2*a2 / ( d*d ) );
 }
 
-// Anisotropic GGX
+// Anisotropic GGX 各项异性高光，用于处理头发，丝绸等材质的。
 // [Burley 2012, "Physically-Based Shading at Disney"]
 float D_GGXaniso( float ax, float ay, float NoH, float XoH, float YoH )
 {

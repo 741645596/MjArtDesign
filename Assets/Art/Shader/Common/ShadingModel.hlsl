@@ -240,6 +240,7 @@
         return F * Vis * D;
     }
 
+    // 丝绸高光
     half3 Silk_Specular(half TdotH,half TdotL,half BdotH,half BdotL,half NdotL,half LdotH,half NdotH,half clampedNdotV,half3 fresnel0,half roughnessT,half roughnessB,half partLambdaV)
     {
         // TODO: Do comparison between this correct version and the one from isotropic and see if there is any visual difference
