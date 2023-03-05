@@ -102,13 +102,13 @@
 
         //specGloss
         half4 specGloss = SAMPLE_TEXTURE2D(_MetallicGlossMap, sampler_LinearRepeat, uv);
-        outSurfaceData.metallic = specGloss.r * _Metallic;
-        outSurfaceData.smoothness = specGloss.b * _Smoothness * 0.95;
+        outSurfaceData.metallic = specGloss.g * _Metallic;
+        outSurfaceData.smoothness = specGloss.r * _Smoothness * 0.95;
 
         outSurfaceData.reflectance = _Reflectance;
 
         //ao
-        outSurfaceData.occlusion = LerpWhiteTo(specGloss.g, _OcclusionStrength);
+        outSurfaceData.occlusion = LerpWhiteTo(specGloss.b, _OcclusionStrength);
 
         //emission
         #if defined(_EMISSION_ON)

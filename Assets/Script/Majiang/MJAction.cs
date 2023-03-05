@@ -1,17 +1,20 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MJAction : MonoBehaviour
 {
     /// <summary>
-    /// 正面材质
+    /// 本体
     /// </summary>
-    public Material fontMaterial;
+    public List<GameObject> listMJ = new List<GameObject>();
     /// <summary>
-    /// 背面材质
+    /// 影子
     /// </summary>
-    public Material backMaterial;
+    public List<GameObject> listShadowMJ = new List<GameObject>();
+    /// <summary>
+    /// 选中颜色
+    /// </summary>
+    public Color selectCol = new Color(0.44118f, 0.69183f, 0.75f, 1.00f);
     // Start is called before the first frame update
     void Start()
     {
@@ -63,7 +66,131 @@ public class MJAction : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             transform.GetChild(i).gameObject.layer = layer;
-
+        }
+    }
+    /// <summary>
+    /// 设置麻将显示数据
+    /// </summary>
+    /// <param name="a"></param>
+    /// <param name="b"></param>
+    /// <param name="c"></param>
+    public void SetMJViewData(MJConfigData data, bool isShowShadow = true, bool isSeclect = false)
+    {
+        SetMjBody(data, isSeclect);
+        SetMjShadow(data, isShowShadow);
+    }
+    /// <summary>
+    /// 设置麻将本体
+    /// </summary>
+    private void SetMjBody(MJConfigData data, bool isSeclect = false)
+    {
+        if (listMJ != null && listMJ.Count > 0)
+        {
+            foreach (GameObject go in listMJ)
+            {
+                go.SetActive(false);
+            }
+            int index = 0;
+            if (data.a == MJMesh.Back)
+            {
+                if (data.b == MJGesture.Lie)
+                {
+                    if (data.c == MJDir.Horizontal)
+                        index = 7;
+                    else index = 8;
+                }
+                else
+                {
+                    if (data.c == MJDir.Horizontal)
+                        index = 4;
+                    else 
+                    {
+                        if (data.c == MJDir.VerticalLeft)
+                            index = 5;
+                        else index = 6;
+                    }
+                }
+            }
+            else
+            {
+                if (data.b == MJGesture.Lie)
+                {
+                    if (data.c == MJDir.Horizontal)
+                        index = 2;
+                    else index = 3;
+                }
+                else
+                {
+                    if (data.c == MJDir.Horizontal)
+                        index = 0;
+                    else index = 1;
+                }
+            }
+            listMJ[index].SetActive(data.isShowMjBody);
+            MeshFilter mf = listMJ[index].gameObject.GetComponent<MeshFilter>();
+            mf.mesh = data.mjMesh;
+            MeshRenderer mr = listMJ[index].gameObject.GetComponent<MeshRenderer>();
+            mr.material = data.mjMaterial;
+            if (isSeclect == true)
+            {
+                mr.material.SetColor("_u_MainColor", selectCol);
+            }
+        }
+    }
+    /// <summary>
+    /// 设置麻将影子
+    /// </summary>
+    /// <param name="b"></param>
+    /// <param name="c"></param>
+    /// <param name="isShowShadow"></param>
+    private void SetMjShadow(MJConfigData data, bool isShowShadow = true)
+    {
+        if (listShadowMJ != null && listShadowMJ.Count > 0)
+        {
+            foreach (GameObject go in listShadowMJ)
+            {
+                go.SetActive(false);
+            }
+            if (isShowShadow == true && data.isShowMjShadow == true)
+            {
+                int index = 0;
+                if (data.b == MJGesture.Lie)
+                {
+                    if (data.c == MJDir.Horizontal)
+                        index = 2;
+                    else index = 3;
+                }
+                else
+                {
+                    if (data.c == MJDir.Horizontal)
+                        index = 0;
+                    else index = 1;
+                }
+                listShadowMJ[index].SetActive(true);
+            }
         }
     }
 }
+
+
+public enum MJMesh
+{
+    Back,       // 背面显示麻将
+    Font        // 字面显示麻将
+}
+
+public enum MJDir
+{
+    Horizontal,     // 水平
+    VerticalLeft,   // 垂直左
+    VerticalRight,  // 垂直右
+
+}
+
+public enum MJGesture
+{
+    Stand,     // 站立
+    Lie        // 躺着
+}
+
+

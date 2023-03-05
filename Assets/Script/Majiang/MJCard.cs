@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
-using DG.Tweening;
+//using DG.Tweening;
     /// <summary>
     /// 单张麻将牌
     /// </summary>
@@ -80,7 +80,7 @@ using DG.Tweening;
             float y = 0f;
             transform.localPosition = new Vector3(pos.x, y, pos.z);
         }
-        public Tween CardFilp(CardFilpDirct filpDirct)
+        /*public Tween CardFilp(CardFilpDirct filpDirct)
         {
             Tween tween = null;
             switch (filpDirct)
@@ -96,7 +96,7 @@ using DG.Tweening;
                     break;
             }
             return tween;
-        }
+        }*/
         public void SetDarkColor()
         {
             for (int i = 0; i < _renderer.materials.Length; i++)
