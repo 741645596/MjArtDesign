@@ -2,14 +2,14 @@ Shader "HappyMJ/ZiJia"
 {
 	Properties
 	{
-		[Foldout] _BaseName("»ù´¡¿ØÖÆÃæ°å",Range(0,1)) = 0
+		[Foldout] _BaseName("åŸºç¡€æ§åˆ¶é¢æ¿",Range(0,1)) = 0
 		[FoldoutItem][Enum(UnityEngine.Rendering.CullMode)] _CullMode("CullMode", float) = 2
 		[FoldoutItem][Enum(UnityEngine.Rendering.BlendMode)] _SourceBlend("Source Blend Mode", Float) = 5
 		[FoldoutItem][Enum(UnityEngine.Rendering.BlendMode)] _DestBlend("Dest Blend Mode", Float) = 10
 		[FoldoutItem][Enum(Off, 0, On, 1)]_ZWriteMode("ZWriteMode", float) = 1
 		[FoldoutItem][Enum(UnityEngine.Rendering.CompareFunction)] _ZTestMode("ZTestMode", float) = 4
 
-		[Foldout] _StencilName("Ä£°å»º³å¿ØÖÆÃæ°å",Range(0,1)) = 0
+		[Foldout] _StencilName("æ¨¡æ¿ç¼“å†²æ§åˆ¶é¢æ¿",Range(0,1)) = 0
 		[FoldoutItem] _Stencil("Stencil ID[ref]", Float) = 0
 		[FoldoutItem] _StencilWriteMask("Stencil Write Mask", Float) = 255
 		[FoldoutItem] _StencilReadMask("Stencil Read Mask", Float) = 255
@@ -20,24 +20,22 @@ Shader "HappyMJ/ZiJia"
 		[FoldoutItem]_OffsetFactor("_OffsetFactor", Float) = 0
 		[FoldoutItem]_OffsetUnits("_OffsetUnits", Float) = 0
 
-
-		[Foldout] _PBRName("PBR¿ØÖÆÃæ°å",Range(0,1)) = 0
+		[Foldout] _PBRName("PBRæ§åˆ¶é¢æ¿",Range(0,1)) = 0
 		[FoldoutItem] _u_Color("_u_Color", Color) = (0.82353, 0.91237, 1.00, 1.00)
 		[FoldoutItem] _u_DirectLightIntensity("_u_DirectLightIntensity", Float) = 1.0
 		[FoldoutItem] _u_DirectSpecularScale("_u_DirectSpecularScale", Float) = 0.35
 		[FoldoutItem] _u_GiColor("_u_GiColor", Color) = (1.0, 1.0, 1.00, 1.00)
-		[FoldoutItem] _u_Glossiness("_u_Glossiness", Float) = 0.814   // ¹â»¬¶È
-		[FoldoutItem] _u_InDirectLightIntensity("_u_InDirectLightIntensity", Float) = 3   // Ö±½Ó¹â¸ß¹â¿ØÖÆ
+		[FoldoutItem] _u_Glossiness("_u_Glossiness", Float) = 0.814   // å…‰æ»‘åº¦
+		[FoldoutItem] _u_InDirectLightIntensity("_u_InDirectLightIntensity", Float) = 3   // ç›´æ¥å…‰é«˜å…‰æ§åˆ¶
 		[FoldoutItem] _u_IndirectDiffuseIntensity("_u_IndirectDiffuseIntensity", Float) = 0.7
-		[FoldoutItem] _u_Metallic("_u_Metallic", Float) =  0  // ½ğÊô¶È
+		[FoldoutItem] _u_Metallic("_u_Metallic", Float) =  0  // é‡‘å±åº¦
 		[FoldoutItem] _u_MetallicMapIndirectDiffuseIntensity("_u_MetallicMapIndirectDiffuseIntensity", Float) = 1.53
 
 		[FoldoutItem] _u_Albedo("_u_Albedo", 2D) = "white" {}
 		[FoldoutItem] _u_Bump("_u_Bump", 2D) = "bump" {}
 		[FoldoutItem][NoScaleOffset] _ucustom_SpecCube("_ucustom_SpecCube   (HDR)", Cube) = "grey" {}
 
-
-		[Foldout] _RimName("RIM±ßÔµ¹â¿ØÖÆÃæ°å",Range(0,1)) = 0
+		[Foldout] _RimName("RIMè¾¹ç¼˜å…‰æ§åˆ¶é¢æ¿",Range(0,1)) = 0
 		[FoldoutItem] _u_RimVector("_u_RimVector", Vector) = (0.00, 0.30, -1.00, 1.00)
 		[FoldoutItem] _u_RimColor("_u_RimColor", Color) = (1.00, 1.00, 1.00, 1.00)
 		[FoldoutItem] _u_RimIntensity("_u_RimIntensity", Range(0 , 50)) = 1
@@ -60,7 +58,7 @@ Shader "HappyMJ/ZiJia"
 
 			ZTest[_ZTestMode]   //LEqual
 			Cull[_CullMode]     //Cull off
-			Blend[_SourceBlend][_DestBlend] //alpha Í¸Ìù
+			Blend[_SourceBlend][_DestBlend] //alpha é€è´´
 			ZWrite[_ZWriteMode] //ZWrite off
 			Offset[_OffsetFactor],[_OffsetUnits]
 
@@ -224,11 +222,11 @@ Shader "HappyMJ/ZiJia"
 
 					float3 normalWS = TransformTangentToWorld(Normal, half3x3(WorldTangent, WorldBiTangent, WorldNormal));
 
-					// °ëlanbert 
-					float3 lightDir = _MainLightPosition; // Æ½ĞĞ¹â¾ÍÊÇ·½ÏòÁË
+					// åŠlanbert 
+					float3 lightDir = _MainLightPosition; // å¹³è¡Œå…‰å°±æ˜¯æ–¹å‘äº†
 					float3 worldView = IN.worldView;
 
-					float3 shadowColor = float3(1, 1, 1); // ¿¼ÂÇÍ¶Ó°
+					float3 shadowColor = float3(1, 1, 1); // è€ƒè™‘æŠ•å½±
 
 					float3 H = normalize(worldView + lightDir);
 					float HoL= saturate(dot(lightDir, H));
@@ -247,21 +245,21 @@ Shader "HappyMJ/ZiJia"
 					
 					float D = D_GGX_UE4(roughness2, NoH);
 					float V = Vis_SmithJointApprox_Plus(roughness, NoV, NoL);
-					// ¸ß¹â
+					// é«˜å…‰
 					float3 directSpecCol = max(NoL * D * V * PI, 0.0) * _u_DirectSpecularScale * _uu_xlat16_3;
 
 					float diffuseTerm = NoL * 0.5 + 0.5;
 					float giColor = _u_GiColor.xyz * _u_IndirectDiffuseIntensity * _u_MetallicMapIndirectDiffuseIntensity;
 					float3 diffuseCol = giColor + diffuseTerm * _u_DirectLightIntensity;
 					float3 directColor = _uu_xlat16_2.xyz * diffuseCol + directSpecCol;
-					// ±ßÔµ¹â
+					// è¾¹ç¼˜å…‰
 					float NdotRim = saturate(dot(normalWS, IN.rimDirView));
 					NdotRim = NdotRim * (1.0f - NoL);
 					float rim= min(pow(abs(NdotRim), _u_RimPower), 1.0f);
 					float3 rimColor = saturate(rim * _u_RimIntensity) * _u_RimColor.rgb;
 
 					directColor = directColor + rimColor;
-					// ¼ä½Ó¸ß¹â
+					// é—´æ¥é«˜å…‰
 					float3 reflectVector = reflect(-worldView, normalWS);
 					float4 encodedIrradiance = texCUBE(_ucustom_SpecCube, reflectVector);
 					float3 irradiance = DecodeHDREnvironment(encodedIrradiance, _ucustom_SpecCube_HDR);

@@ -109,7 +109,7 @@ Material:
     - _AlphaClip: 1
     - _AlphaTest: 0
     - _AlphaTestName: 0
-    - _BaseName: 1
+    - _BaseName: 0
     - _Blend: 0
     - _BumpScale: 1
     - _BumpStrength: 1

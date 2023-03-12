@@ -137,7 +137,7 @@ Material:
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 0
-    - _RimName: 1
+    - _RimName: 0
     - _RimSpread: 1
     - _Smoothness: 0.235
     - _SmoothnessRemapMax: 1

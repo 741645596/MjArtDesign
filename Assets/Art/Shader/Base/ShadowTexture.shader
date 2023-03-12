@@ -92,7 +92,8 @@ Shader "MJ/ShadowTexture"
             {
                 float4 resultColor;
                 float4 mainColor = tex2D(_MainTex, input.uv);
-                resultColor = mainColor * input.color * _u_TintColor;
+                //resultColor = mainColor * input.color * _u_TintColor;
+                resultColor = mainColor * _u_TintColor;
                 return resultColor;
             }
             ENDHLSL

@@ -133,7 +133,7 @@ Material:
     - _OcclusionStrength: 0.058
     - _OffsetFactor: 0
     - _OffsetUnits: 0
-    - _PBRName: 0
+    - _PBRName: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 0
@@ -160,12 +160,12 @@ Material:
     - _ZWrite: 1
     - _ZWriteMode: 1
     - _u_DirectLightIntensity: 1
-    - _u_DirectSpecularScale: 0.35
-    - _u_GlossMapScale: 1.45
-    - _u_InDirectLightIntensity: 6.33
+    - _u_DirectSpecularScale: 0.2
+    - _u_GlossMapScale: 0.908
+    - _u_InDirectLightIntensity: 1.92
     - _u_IndirectDiffuseIntensity: 0.7
     - _u_MetalMapScale: 1
-    - _u_MetallicMapIndirectDiffuseIntensity: 1.53
+    - _u_MetallicMapIndirectDiffuseIntensity: 1.6
     - _u_RimIntensity: 1
     - _u_RimPower: 0.4
     m_Colors:

@@ -80,15 +80,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _u_Albedo:
-        m_Texture: {fileID: 2800000, guid: 396fb3c3ea2820a4782cc00ac2f407fd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 395b28a1f1715744aa7916d95800e727, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _u_Bump:
-        m_Texture: {fileID: 2800000, guid: 8a1486d043fda3d46bc5631489973706, type: 3}
+        m_Texture: {fileID: 2800000, guid: 57408245dc59a4c4d9af97872ee70649, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _u_UV2Tex:
-        m_Texture: {fileID: 2800000, guid: 958af10e04cb8b64ebb535fd44fc19f3, type: 3}
+        m_Texture: {fileID: 2800000, guid: d79a75e0ed255f246855d2bbf9b407da, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -145,6 +145,7 @@ Material:
     - _ZWriteMode: 1
     - _u_Blend: 0
     - _u_BumpScale: 1
+    - _u_Cutoff: 0.99
     - _u_IndirectDiffuseIntensity: 1.02
     - _u_MPrimaryShift: 0.06
     - _u_RimIntensity: 0.1
@@ -165,5 +166,5 @@ Material:
     - _u_RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _u_RimVector: {r: 0, g: 0.3, b: -1, a: 1}
     - _u_SpecColor1: {r: 1, g: 0.9089161, b: 0.8443396, a: 1}
-    - _u_SpecColor3: {r: 1, g: 0.58562654, b: 0.3607843, a: 1}
+    - _u_SpecColor3: {r: 1, g: 0.84355825, b: 0.759434, a: 1}
   m_BuildTextureStacks: []

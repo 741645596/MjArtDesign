@@ -146,13 +146,13 @@ Material:
     - _OcclusionStrength: 0.058
     - _OffsetFactor: 0
     - _OffsetUnits: 0
-    - _PBRName: 1
+    - _PBRName: 0
     - _Parallax: 0.005
     - _Power1: 22.4
     - _Power2: 20
     - _QueueOffset: 0
     - _ReceiveShadows: 0
-    - _RimName: 1
+    - _RimName: 0
     - _RimSpread: 1
     - _Smoothness: 0.235
     - _SmoothnessRemapMax: 1

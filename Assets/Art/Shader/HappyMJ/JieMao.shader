@@ -3,7 +3,7 @@ Shader "HappyMJ/JieMao"
     Properties
     {
         [Foldout] _CtrlName("控制面板",Range(0,1)) = 0
-        [FoldoutItem] _CutOff("_CutOff", Float) = 0.99
+        [FoldoutItem] _u_Cutoff("_CutOff", Float) = 0.99
         [FoldoutItem] _u_Albedo("_u_Albedo", 2D) = "white" {}
         [Foldout] _ShadowName("影子面板",Range(0,1)) = 0
         [FoldoutItem] _u_LightShadowData("_u_LightShadowData", Vector) = (0.60, 20.00, 0.50, -4.00)
@@ -20,11 +20,10 @@ Shader "HappyMJ/JieMao"
             Tags
             {
                 //"LIGHTMODE" = "UniversalForward"
-                "LIGHTMODE" = "Fpass0"
+                "LIGHTMODE" = "AlphaTest0"
                 "QUEUE" = "AlphaTest+1"
                 "RenderType" = "AlphaTest"
             }
-            Cull Off
 
 
             HLSLPROGRAM
@@ -66,24 +65,26 @@ Shader "HappyMJ/JieMao"
                 float4 mainColor = tex2D(_u_Albedo, input.uv) ;
                 float Alpha = mainColor.a;
                 clip(Alpha - _u_Cutoff);
-                return float4(mainColor.rgb, 1.0f);
+                return float4(mainColor.rgb * 0.4f, 0.4f);
             }
             ENDHLSL
         }
+        
         Pass
         {
             Name "ALPHA BLENDING"
             Tags
             {
                 //"LIGHTMODE" = "UniversalForward"
-                "LIGHTMODE" = "Fpass1"
-                "QUEUE" = "Transparent+2"
+                "LIGHTMODE" = "AlphaTest1"
+                "QUEUE" = "AlphaTest+2"
                 "RenderType" = "Transparent"
             }
             ZTest Less
             ZWrite Off
             Cull Front
-            Blend SrcAlpha OneMinusSrcAlpha, SrcAlpha One
+            //Blend SrcAlpha OneMinusSrcAlpha, SrcAlpha One
+            Blend SrcAlpha OneMinusSrcAlpha
 
 
             HLSLPROGRAM
@@ -122,7 +123,7 @@ Shader "HappyMJ/JieMao"
 
                 float4 frag(Varyings input) : SV_Target
                 {
-                    float4 mainColor = tex2D(_u_Albedo, input.uv);
+                    float4 mainColor = tex2D(_u_Albedo, input.uv) * 0.4f;
                     return float4(mainColor);
                 }
                 ENDHLSL
@@ -133,13 +134,14 @@ Shader "HappyMJ/JieMao"
             Tags
             {
                 //"LIGHTMODE" = "UniversalForward"
-                "LIGHTMODE" = "Fpass2"
-                "QUEUE" = "Transparent+3"
+                "LIGHTMODE" = "AlphaTest2"
+                "QUEUE" = "AlphaTest+3"
                 "RenderType" = "Transparent"
             }
             ZTest Less
             ZWrite Off
-            Blend SrcAlpha OneMinusSrcAlpha, SrcAlpha One
+            //Blend SrcAlpha OneMinusSrcAlpha, SrcAlpha One
+            Blend SrcAlpha OneMinusSrcAlpha
 
 
             HLSLPROGRAM
@@ -177,7 +179,7 @@ Shader "HappyMJ/JieMao"
 
             float4 frag(Varyings input) : SV_Target
             {
-                float4 mainColor = tex2D(_u_Albedo, input.uv);
+                float4 mainColor = tex2D(_u_Albedo, input.uv) * 0.4f;
                 return float4(mainColor);
             }
             ENDHLSL

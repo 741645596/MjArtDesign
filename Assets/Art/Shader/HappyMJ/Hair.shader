@@ -3,7 +3,7 @@ Shader "HappyMJ/Hair"
     Properties
     {
         [Foldout] _CtrlName("控制面板",Range(0,1)) = 0
-        [FoldoutItem] _CutOff("_CutOff", Float) = 0.99
+        [FoldoutItem] _u_Cutoff("_CutOff", Float) = 0.99
         [FoldoutItem] _u_Albedo("_u_Albedo", 2D) = "white" {}
         [FoldoutItem] _u_Bump("_u_Bump", 2D) = "white" {}
         [FoldoutItem] _u_UV2Tex("_u_UV2Tex", 2D) = "white" {}

@@ -92,7 +92,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
-    - _BaseName: 1
+    - _BaseName: 0
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
@@ -123,6 +123,7 @@ Material:
     - _Stencil: 0
     - _StencilComp: 3
     - _StencilFailOp: 0
+    - _StencilName: 0
     - _StencilOp: 3
     - _StencilReadMask: 255
     - _StencilWriteMask: 255
