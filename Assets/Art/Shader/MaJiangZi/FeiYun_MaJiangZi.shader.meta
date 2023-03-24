@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: da552bdcae803f044ba693e46c3684dd
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _BaseMap: {instanceID: 0}
+  - _NormalMap: {instanceID: 0}
+  - _SkinMap: {instanceID: 0}
+  - _SSSLUT: {fileID: 2800000, guid: 2343eac7da529fc418fa72bb861ca1b2, type: 3}
+  - _ThickMap: {instanceID: 0}
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,259 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 1018_ear_01_d
+  m_Shader: {fileID: 4800000, guid: 8e7ea32f494b88c438de0409a288d1b1, type: 3}
+  m_ShaderKeywords: CHANNEL_ON MAIN_COLOR_ADD _WRAP_DIFFUSE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: Detail0
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail1
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail2
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail3
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Illum
+      second:
+        m_Texture: {fileID: 2800000, guid: d9b372b71b475aa4aa7b7e6414238803, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: db0c1c26ee5787f42909621b3d039ad7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Normal
+      second:
+        m_Texture: {fileID: 2800000, guid: e332216c964ae6349b5f0113a7eef7c8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _OcclusionMap
+      second:
+        m_Texture: {fileID: 2800000, guid: e516433a723ac654f9ec4adc35f0fcb4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _RampTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 22bf9d232d5c4fc4b8e3a2ad202dd176, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: DEBUG_DIFFUSE
+      second: 0
+    - first:
+        name: Detail0ColorScale
+      second: 1
+    - first:
+        name: Detail0Gloss
+      second: 0
+    - first:
+        name: Detail0Metallic
+      second: 0
+    - first:
+        name: Detail0UVScale
+      second: 1
+    - first:
+        name: Detail0UVX
+      second: 0
+    - first:
+        name: Detail0UVY
+      second: 0
+    - first:
+        name: Detail1ColorScale
+      second: 1
+    - first:
+        name: Detail1Gloss
+      second: 0
+    - first:
+        name: Detail1Metallic
+      second: 0
+    - first:
+        name: Detail1UVScale
+      second: 1
+    - first:
+        name: Detail1UVX
+      second: 0
+    - first:
+        name: Detail1UVY
+      second: 0
+    - first:
+        name: Detail2ColorScale
+      second: 1
+    - first:
+        name: Detail2Gloss
+      second: 0
+    - first:
+        name: Detail2Metallic
+      second: 0
+    - first:
+        name: Detail2UVScale
+      second: 1
+    - first:
+        name: Detail2UVX
+      second: 0
+    - first:
+        name: Detail2UVY
+      second: 0
+    - first:
+        name: Detail3ColorScale
+      second: 1
+    - first:
+        name: Detail3Gloss
+      second: 0
+    - first:
+        name: Detail3Metallic
+      second: 0
+    - first:
+        name: Detail3UVScale
+      second: 1
+    - first:
+        name: Detail3UVX
+      second: 0
+    - first:
+        name: Detail3UVY
+      second: 0
+    - first:
+        name: Main0Gloss
+      second: 1
+    - first:
+        name: Main0Metallic
+      second: 1
+    - first:
+        name: Main1Gloss
+      second: 1
+    - first:
+        name: Main1Metallic
+      second: 1
+    - first:
+        name: Main2Gloss
+      second: 1
+    - first:
+        name: Main2Metallic
+      second: 1
+    - first:
+        name: Main3Gloss
+      second: 1
+    - first:
+        name: Main3Metallic
+      second: 1
+    - first:
+        name: MainColorAdd
+      second: 1
+    - first:
+        name: MainColorScale0
+      second: 3.3
+    - first:
+        name: MainColorScale1
+      second: 1
+    - first:
+        name: MainColorScale2
+      second: 1
+    - first:
+        name: MainColorScale3
+      second: 1
+    - first:
+        name: WRAP_DIFFUSE
+      second: 1
+    - first:
+        name: _AnisoGloss
+      second: 0.7
+    - first:
+        name: _BumpScale
+      second: 1
+    - first:
+        name: _DiffuseScale
+      second: 1
+    - first:
+        name: _FresnelPower
+      second: 1
+    - first:
+        name: _FresnelScale
+      second: 0
+    - first:
+        name: _OcclusionPower
+      second: 1
+    - first:
+        name: _OcclusionScale
+      second: 0
+    - first:
+        name: _OcclusionStrength
+      second: 1
+    - first:
+        name: _UniqueShadowLocalDepthBias
+      second: 0
+    - first:
+        name: _WrapOffset
+      second: 0.5
+    - first:
+        name: _WrapPower
+      second: 1
+    - first:
+        name: _WrapScale
+      second: 0.5
+    m_Colors:
+    - first:
+        name: Detail0Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: Detail1Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: Detail2Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: Detail3Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: MainColor0
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: MainColor1
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: MainColor2
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: MainColor3
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _FresnelColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _OcclusionColor
+      second: {r: 1, g: 1, b: 1, a: 1}

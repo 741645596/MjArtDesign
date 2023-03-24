@@ -1,0 +1,238 @@
+fileFormatVersion: 2
+guid: 4d11eae901f3a6e489be8ade4b25f0ae
+timeCreated: 1489394909
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: 1000_body01
+    100002: 1000_body012
+    100004: 1000_body013
+    100006: 1000_body016
+    100008: 1000_body017
+    100010: 1000_body02
+    100012: 1015_ear
+    100014: 1015_ear001
+    100016: 1015_ear010
+    100018: 1015_ear011
+    100020: 1015_ear016
+    100022: 1015_ear017
+    100024: 1015_hair_01
+    100026: 1015_hair_011
+    100028: 1015_hair_012
+    100030: 1015_hair_017
+    100032: 1015_hair_018
+    100034: 1015_hair_02
+    100036: 1015_necklace_01
+    100038: 1015_shoes_006
+    100040: 1015_shoes_009
+    100042: 1015_shoes_01
+    100044: 1015_upper1_006
+    100046: 1015_upper1_009
+    100048: 1015_upper1_01
+    100050: //RootNode
+    100052: face
+    100054: face005
+    100056: face014
+    100058: head
+    100060: head 1
+    100062: head006
+    100064: head013
+    400000: 1000_body01
+    400002: 1000_body012
+    400004: 1000_body013
+    400006: 1000_body016
+    400008: 1000_body017
+    400010: 1000_body02
+    400012: 1015_ear
+    400014: 1015_ear001
+    400016: 1015_ear010
+    400018: 1015_ear011
+    400020: 1015_ear016
+    400022: 1015_ear017
+    400024: 1015_hair_01
+    400026: 1015_hair_011
+    400028: 1015_hair_012
+    400030: 1015_hair_017
+    400032: 1015_hair_018
+    400034: 1015_hair_02
+    400036: 1015_necklace_01
+    400038: 1015_shoes_006
+    400040: 1015_shoes_009
+    400042: 1015_shoes_01
+    400044: 1015_upper1_006
+    400046: 1015_upper1_009
+    400048: 1015_upper1_01
+    400050: //RootNode
+    400052: face
+    400054: face005
+    400056: face014
+    400058: head
+    400060: head 1
+    400062: head006
+    400064: head013
+    2300000: 1000_body01
+    2300002: 1000_body012
+    2300004: 1000_body013
+    2300006: 1000_body016
+    2300008: 1000_body017
+    2300010: 1000_body02
+    2300012: 1015_ear
+    2300014: 1015_ear001
+    2300016: 1015_ear010
+    2300018: 1015_ear011
+    2300020: 1015_ear016
+    2300022: 1015_ear017
+    2300024: 1015_hair_01
+    2300026: 1015_hair_011
+    2300028: 1015_hair_012
+    2300030: 1015_hair_017
+    2300032: 1015_hair_018
+    2300034: 1015_hair_02
+    2300036: 1015_necklace_01
+    2300038: 1015_shoes_006
+    2300040: 1015_shoes_009
+    2300042: 1015_shoes_01
+    2300044: 1015_upper1_006
+    2300046: 1015_upper1_009
+    2300048: 1015_upper1_01
+    2300050: face
+    2300052: face005
+    2300054: face014
+    2300056: head
+    2300058: head 1
+    2300060: head006
+    2300062: head013
+    3300000: 1000_body01
+    3300002: 1000_body012
+    3300004: 1000_body013
+    3300006: 1000_body016
+    3300008: 1000_body017
+    3300010: 1000_body02
+    3300012: 1015_ear
+    3300014: 1015_ear001
+    3300016: 1015_ear010
+    3300018: 1015_ear011
+    3300020: 1015_ear016
+    3300022: 1015_ear017
+    3300024: 1015_hair_01
+    3300026: 1015_hair_011
+    3300028: 1015_hair_012
+    3300030: 1015_hair_017
+    3300032: 1015_hair_018
+    3300034: 1015_hair_02
+    3300036: 1015_necklace_01
+    3300038: 1015_shoes_006
+    3300040: 1015_shoes_009
+    3300042: 1015_shoes_01
+    3300044: 1015_upper1_006
+    3300046: 1015_upper1_009
+    3300048: 1015_upper1_01
+    3300050: face
+    3300052: face005
+    3300054: face014
+    3300056: head
+    3300058: head 1
+    3300060: head006
+    3300062: head013
+    4300000: face
+    4300002: head
+    4300004: 1000_body02
+    4300006: 1000_body01
+    4300008: face005
+    4300010: 1000_body012
+    4300012: 1000_body013
+    4300014: head006
+    4300016: 1000_body016
+    4300018: 1000_body017
+    4300020: face014
+    4300022: head013
+    4300024: 1015_hair_02
+    4300026: 1015_necklace_01
+    4300028: 1015_shoes_01
+    4300030: 1015_upper1_01
+    4300032: 1015_hair_01
+    4300034: 1015_ear
+    4300036: head
+    4300038: 1015_ear001
+    4300040: 1015_hair_011
+    4300042: 1015_hair_012
+    4300044: 1015_ear010
+    4300046: 1015_ear011
+    4300048: 1015_upper1_006
+    4300050: 1015_shoes_006
+    4300052: 1015_upper1_009
+    4300054: 1015_shoes_009
+    4300056: 1015_ear016
+    4300058: 1015_hair_017
+    4300060: 1015_ear017
+    4300062: 1015_hair_018
+    11100000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 1
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

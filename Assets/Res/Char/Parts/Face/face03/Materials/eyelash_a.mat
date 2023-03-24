@@ -1,0 +1,472 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: eyelash_a
+  m_Shader: {fileID: 4800000, guid: 666c34291e54695418e3fb06744c0cf7, type: 3}
+  m_ShaderKeywords: MAIN_COLOR_ADD _WRAP_DIFFUSE _WRAP_GI
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: Detail0
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail0Normal
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail1
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail1Normal
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail2
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail2Normal
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail3
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail3Normal
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Flow
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Illum
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 0dadd03ecfdc4ca4999495f9734c6b59, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Normal
+      second:
+        m_Texture: {fileID: 2800000, guid: 095d4af33b646f04694b193e6bb783fa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _OcclusionMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _RampTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 22bf9d232d5c4fc4b8e3a2ad202dd176, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: COLOR_MODE
+      second: 0
+    - first:
+        name: DEBUG_DIFFUSE
+      second: 0
+    - first:
+        name: DETAIL_MIRROR_X
+      second: 0
+    - first:
+        name: Detail0Alpha
+      second: 0
+    - first:
+        name: Detail0Brightness
+      second: 0
+    - first:
+        name: Detail0ColorScale
+      second: 1
+    - first:
+        name: Detail0Gloss
+      second: 0
+    - first:
+        name: Detail0Hue
+      second: 0
+    - first:
+        name: Detail0Metallic
+      second: 0
+    - first:
+        name: Detail0Saturation
+      second: 0
+    - first:
+        name: Detail0UVRot
+      second: 0
+    - first:
+        name: Detail0UVScale
+      second: 1
+    - first:
+        name: Detail0UVX
+      second: 0
+    - first:
+        name: Detail0UVY
+      second: 0
+    - first:
+        name: Detail0Wrap
+      second: 10
+    - first:
+        name: Detail0WrapX
+      second: 10
+    - first:
+        name: Detail0WrapY
+      second: 10
+    - first:
+        name: Detail1Alpha
+      second: 0
+    - first:
+        name: Detail1Brightness
+      second: 0
+    - first:
+        name: Detail1ColorScale
+      second: 1
+    - first:
+        name: Detail1Gloss
+      second: 0
+    - first:
+        name: Detail1Hue
+      second: 0
+    - first:
+        name: Detail1Metallic
+      second: 0
+    - first:
+        name: Detail1Saturation
+      second: 0
+    - first:
+        name: Detail1UVRot
+      second: 0
+    - first:
+        name: Detail1UVScale
+      second: 1
+    - first:
+        name: Detail1UVX
+      second: 0
+    - first:
+        name: Detail1UVY
+      second: 0
+    - first:
+        name: Detail1Wrap
+      second: 10
+    - first:
+        name: Detail1WrapX
+      second: 10
+    - first:
+        name: Detail1WrapY
+      second: 10
+    - first:
+        name: Detail2Alpha
+      second: 0
+    - first:
+        name: Detail2Brightness
+      second: 0
+    - first:
+        name: Detail2ColorScale
+      second: 1
+    - first:
+        name: Detail2Gloss
+      second: 0
+    - first:
+        name: Detail2Hue
+      second: 0
+    - first:
+        name: Detail2Metallic
+      second: 0
+    - first:
+        name: Detail2Saturation
+      second: 0
+    - first:
+        name: Detail2UVRot
+      second: 0
+    - first:
+        name: Detail2UVScale
+      second: 1
+    - first:
+        name: Detail2UVX
+      second: 0
+    - first:
+        name: Detail2UVY
+      second: 0
+    - first:
+        name: Detail2Wrap
+      second: 10
+    - first:
+        name: Detail2WrapX
+      second: 10
+    - first:
+        name: Detail2WrapY
+      second: 10
+    - first:
+        name: Detail3Alpha
+      second: 0
+    - first:
+        name: Detail3Brightness
+      second: 0
+    - first:
+        name: Detail3Channel
+      second: 3
+    - first:
+        name: Detail3ColorScale
+      second: 1
+    - first:
+        name: Detail3Gloss
+      second: 0
+    - first:
+        name: Detail3Hue
+      second: 0
+    - first:
+        name: Detail3Metallic
+      second: 0
+    - first:
+        name: Detail3Saturation
+      second: 0
+    - first:
+        name: Detail3UVRot
+      second: 0
+    - first:
+        name: Detail3UVScale
+      second: 1
+    - first:
+        name: Detail3UVX
+      second: 0
+    - first:
+        name: Detail3UVY
+      second: 0
+    - first:
+        name: Detail3Wrap
+      second: 10
+    - first:
+        name: Detail3WrapX
+      second: 10
+    - first:
+        name: Detail3WrapY
+      second: 10
+    - first:
+        name: HSB
+      second: 0
+    - first:
+        name: Main0Brightness
+      second: 0
+    - first:
+        name: Main0Gloss
+      second: 1
+    - first:
+        name: Main0Hue
+      second: 0
+    - first:
+        name: Main0Metallic
+      second: 1
+    - first:
+        name: Main0Saturation
+      second: 0
+    - first:
+        name: Main1Brightness
+      second: 0
+    - first:
+        name: Main1Gloss
+      second: 1
+    - first:
+        name: Main1Hue
+      second: 0
+    - first:
+        name: Main1Metallic
+      second: 1
+    - first:
+        name: Main1Saturation
+      second: 0
+    - first:
+        name: Main2Brightness
+      second: 0
+    - first:
+        name: Main2Gloss
+      second: 1
+    - first:
+        name: Main2Hue
+      second: 0
+    - first:
+        name: Main2Metallic
+      second: 1
+    - first:
+        name: Main2Saturation
+      second: 0
+    - first:
+        name: Main3Brightness
+      second: 0
+    - first:
+        name: Main3Gloss
+      second: 1
+    - first:
+        name: Main3Hue
+      second: 0
+    - first:
+        name: Main3Metallic
+      second: 1
+    - first:
+        name: Main3Saturation
+      second: 0
+    - first:
+        name: MainColorAdd
+      second: 1
+    - first:
+        name: MainColorScale0
+      second: 1
+    - first:
+        name: MainColorScale1
+      second: 1
+    - first:
+        name: MainColorScale2
+      second: 1
+    - first:
+        name: MainColorScale3
+      second: 1
+    - first:
+        name: NEW_DETAIL
+      second: 0
+    - first:
+        name: TintColorUI
+      second: 0
+    - first:
+        name: WRAP_DIFFUSE
+      second: 1
+    - first:
+        name: WRAP_GI
+      second: 1
+    - first:
+        name: _
+      second: 0
+    - first:
+        name: _ALPHA_DEPTH_WRITE
+      second: 0
+    - first:
+        name: _AnisoGloss
+      second: 0.7
+    - first:
+        name: _AnisoSpec
+      second: 3
+    - first:
+        name: _BumpScale
+      second: 1
+    - first:
+        name: _DEBUG_DIFFUSE
+      second: 0
+    - first:
+        name: _DiffuseScale
+      second: 1
+    - first:
+        name: _FlowColorScale
+      second: 0
+    - first:
+        name: _FlowUVScale
+      second: 1
+    - first:
+        name: _FresnelPower
+      second: 1
+    - first:
+        name: _FresnelScale
+      second: 0
+    - first:
+        name: _LightScale
+      second: 1
+    - first:
+        name: _OcclusionPower
+      second: 1
+    - first:
+        name: _OcclusionScale
+      second: 0
+    - first:
+        name: _OcclusionStrength
+      second: 1
+    - first:
+        name: _StencilMask
+      second: 1
+    - first:
+        name: _StencilPassOp
+      second: 0
+    - first:
+        name: _TangentDir
+      second: 0
+    - first:
+        name: _UniqueShadowLocalDepthBias
+      second: 0
+    - first:
+        name: _WrapOffset
+      second: 0.5
+    - first:
+        name: _WrapPower
+      second: 1
+    - first:
+        name: _WrapScale
+      second: 0.5
+    m_Colors:
+    - first:
+        name: Detail0Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: Detail1Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: Detail2Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: Detail3Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: MainColor0
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: MainColor1
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: MainColor2
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: MainColor3
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _FresnelColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _OcclusionColor
+      second: {r: 1, g: 1, b: 1, a: 1}

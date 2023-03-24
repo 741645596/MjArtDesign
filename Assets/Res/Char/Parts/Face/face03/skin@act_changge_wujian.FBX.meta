@@ -1,0 +1,227 @@
+fileFormatVersion: 2
+guid: c153ace03361d364491a8587b0a5c72f
+timeCreated: 1503314246
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Cheek_L
+    100002: Cheek_L_Deform_nub
+    100004: Cheek_R
+    100006: Cheek_R_Deform_nub
+    100008: Eye_L
+    100010: Eye_L_Deform
+    100012: Eye_L_nub
+    100014: Eye_R
+    100016: Eye_R_Deform
+    100018: Eye_R_nub
+    100020: Eyebrow_L
+    100022: Eyebrow_L_nub
+    100024: Eyebrow_R
+    100026: Eyebrow_R_nub
+    100028: Eyecrow_L
+    100030: Eyecrow_L_nub
+    100032: Eyecrow_R
+    100034: Eyecrow_R_nub
+    100036: Eyelid_Lower_L
+    100038: Eyelid_Lower_L_nub
+    100040: Eyelid_Lower_R
+    100042: Eyelid_Lower_R_nub
+    100044: Eyelid_Upper_L
+    100046: Eyelid_Upper_L_nub
+    100048: Eyelid_Upper_R
+    100050: Eyelid_Upper_R_nub
+    100052: Face_L
+    100054: Face_L_nub
+    100056: Face_R
+    100058: Face_R_nub
+    100060: Faceroot
+    100062: Glabella_L
+    100064: Glabella_L_nub
+    100066: Glabella_R
+    100068: Glabella_R_nub
+    100070: Jaw
+    100072: Jaw_End
+    100074: Jaw_End_nub
+    100076: Lip_Lower_L
+    100078: Lip_Lower_L_nub
+    100080: Lip_Lower_R
+    100082: Lip_Lower_R_nub
+    100084: Lip_Upper_L
+    100086: Lip_Upper_L_nub
+    100088: Lip_Upper_R
+    100090: Lip_Upper_R_nub
+    100092: Mouth_L
+    100094: Mouth_L_nub
+    100096: Mouth_R
+    100098: Mouth_R_nub
+    100100: Mouthopen
+    100102: Nose
+    100104: Nose_L
+    100106: Nose_L_nub
+    100108: Nose_nub
+    100110: Nose_R
+    100112: Nose_R_nub
+    100114: Nosehead
+    100116: Nosehead_nub
+    100118: Pupil_L
+    100120: Pupil_R
+    100122: Ridge_L
+    100124: Ridge_L_nub
+    100126: Ridge_R
+    100128: Ridge_R_nub
+    100130: //RootNode
+    100132: Smile_L
+    100134: Smile_L_nub
+    100136: Smile_R
+    100138: Smile_R_nub
+    100140: Tongue
+    100142: Tongue_nub
+    100144: eyelash_a001
+    100146: Faceroot2
+    400000: Cheek_L
+    400002: Cheek_L_Deform_nub
+    400004: Cheek_R
+    400006: Cheek_R_Deform_nub
+    400008: Eye_L
+    400010: Eye_L_Deform
+    400012: Eye_L_nub
+    400014: Eye_R
+    400016: Eye_R_Deform
+    400018: Eye_R_nub
+    400020: Eyebrow_L
+    400022: Eyebrow_L_nub
+    400024: Eyebrow_R
+    400026: Eyebrow_R_nub
+    400028: Eyecrow_L
+    400030: Eyecrow_L_nub
+    400032: Eyecrow_R
+    400034: Eyecrow_R_nub
+    400036: Eyelid_Lower_L
+    400038: Eyelid_Lower_L_nub
+    400040: Eyelid_Lower_R
+    400042: Eyelid_Lower_R_nub
+    400044: Eyelid_Upper_L
+    400046: Eyelid_Upper_L_nub
+    400048: Eyelid_Upper_R
+    400050: Eyelid_Upper_R_nub
+    400052: Face_L
+    400054: Face_L_nub
+    400056: Face_R
+    400058: Face_R_nub
+    400060: Faceroot
+    400062: Glabella_L
+    400064: Glabella_L_nub
+    400066: Glabella_R
+    400068: Glabella_R_nub
+    400070: Jaw
+    400072: Jaw_End
+    400074: Jaw_End_nub
+    400076: Lip_Lower_L
+    400078: Lip_Lower_L_nub
+    400080: Lip_Lower_R
+    400082: Lip_Lower_R_nub
+    400084: Lip_Upper_L
+    400086: Lip_Upper_L_nub
+    400088: Lip_Upper_R
+    400090: Lip_Upper_R_nub
+    400092: Mouth_L
+    400094: Mouth_L_nub
+    400096: Mouth_R
+    400098: Mouth_R_nub
+    400100: Mouthopen
+    400102: Nose
+    400104: Nose_L
+    400106: Nose_L_nub
+    400108: Nose_nub
+    400110: Nose_R
+    400112: Nose_R_nub
+    400114: Nosehead
+    400116: Nosehead_nub
+    400118: Pupil_L
+    400120: Pupil_R
+    400122: Ridge_L
+    400124: Ridge_L_nub
+    400126: Ridge_R
+    400128: Ridge_R_nub
+    400130: //RootNode
+    400132: Smile_L
+    400134: Smile_L_nub
+    400136: Smile_R
+    400138: Smile_R_nub
+    400140: Tongue
+    400142: Tongue_nub
+    400144: eyelash_a001
+    400146: Faceroot2
+    4300000: eyelash_a001
+    7400000: act_changge_wujian
+    9500000: //RootNode
+    13700000: eyelash_a001
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

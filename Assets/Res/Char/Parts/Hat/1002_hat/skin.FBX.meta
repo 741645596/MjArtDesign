@@ -1,0 +1,164 @@
+fileFormatVersion: 2
+guid: 10ce8ca0a44d841499ed2125c11add52
+timeCreated: 1489394814
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: 1002_head_01
+    100002: 1002_head_02_a
+    100004: bone_hat_00
+    100006: bone_hat_00(mirrored)
+    100008: bone_hat_01
+    100010: bone_hat_01(mirrored)
+    100012: bone_hat_02
+    100014: bone_hat_02(mirrored)
+    100016: bone_hat_03
+    100018: bone_hat_03(mirrored)
+    100020: bone_hat_04
+    100022: bone_hat_04(mirrored)
+    100024: bone_hat_05
+    100026: bone_hat_05(mirrored)
+    100028: bone_hat_06
+    100030: bone_hat_06(mirrored)
+    100032: bone_hat_07
+    100034: bone_hat_07(mirrored)
+    100036: bone_hat_08
+    100038: bone_hat_08(mirrored)
+    100040: bone_hat_09
+    100042: bone_hat_09(mirrored)
+    100044: bone_hat_10
+    100046: bone_hat_10(mirrored)
+    100048: bone_hat_11
+    100050: bone_hat_11(mirrored)
+    100052: bone_hat_12
+    100054: bone_hat_12(mirrored)
+    100056: bone_hat_13
+    100058: bone_hat_13(mirrored)
+    100060: bone_hat_14
+    100062: bone_hat_14(mirrored)
+    100064: bone_hat_15
+    100066: bone_hat_15(mirrored)
+    100068: bone_hat_16
+    100070: bone_hat_16(mirrored)
+    100072: bone_hat_17
+    100074: bone_hat_17(mirrored)
+    100076: bone_hat_18
+    100078: bone_hat_18(mirrored)
+    100080: hatroot
+    100082: //RootNode
+    400000: 1002_head_01
+    400002: 1002_head_02_a
+    400004: bone_hat_00
+    400006: bone_hat_00(mirrored)
+    400008: bone_hat_01
+    400010: bone_hat_01(mirrored)
+    400012: bone_hat_02
+    400014: bone_hat_02(mirrored)
+    400016: bone_hat_03
+    400018: bone_hat_03(mirrored)
+    400020: bone_hat_04
+    400022: bone_hat_04(mirrored)
+    400024: bone_hat_05
+    400026: bone_hat_05(mirrored)
+    400028: bone_hat_06
+    400030: bone_hat_06(mirrored)
+    400032: bone_hat_07
+    400034: bone_hat_07(mirrored)
+    400036: bone_hat_08
+    400038: bone_hat_08(mirrored)
+    400040: bone_hat_09
+    400042: bone_hat_09(mirrored)
+    400044: bone_hat_10
+    400046: bone_hat_10(mirrored)
+    400048: bone_hat_11
+    400050: bone_hat_11(mirrored)
+    400052: bone_hat_12
+    400054: bone_hat_12(mirrored)
+    400056: bone_hat_13
+    400058: bone_hat_13(mirrored)
+    400060: bone_hat_14
+    400062: bone_hat_14(mirrored)
+    400064: bone_hat_15
+    400066: bone_hat_15(mirrored)
+    400068: bone_hat_16
+    400070: bone_hat_16(mirrored)
+    400072: bone_hat_17
+    400074: bone_hat_17(mirrored)
+    400076: bone_hat_18
+    400078: bone_hat_18(mirrored)
+    400080: hatroot
+    400082: //RootNode
+    4300000: 1002_head_01
+    4300002: 1002_head_02_a
+    11100000: //RootNode
+    13700000: 1002_head_01
+    13700002: 1002_head_02_a
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 1
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

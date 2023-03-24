@@ -1,0 +1,664 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: face
+  m_Shader: {fileID: 4800000, guid: f2eaf2ee64f13664b971f9b133712cfb, type: 3}
+  m_ShaderKeywords: FACE_ON _WRAP_DIFFUSE _WRAP_GI
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: Detail0
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail0Normal
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail1
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail1Normal
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail2
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail2Normal
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail3
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail3Normal
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _BlusherMoustacheTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _BrowTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 71443a49b57edb54bac262b129c9772f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DecalFlow
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DecalTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _EyeLightTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _EyeLineFlow
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _EyeLineTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 315570db033fbdf4d80625b3100700a0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Flow
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Illum
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _IrisLeftTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _IrisRightTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _LipGlossFlow
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _LipGlossTex
+      second:
+        m_Texture: {fileID: 2800000, guid: cfac089183ad3f64298e998359395a8f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: deff6b8a0ae38cc4b9427f8d495454fc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Normal
+      second:
+        m_Texture: {fileID: 2800000, guid: 0ad4103897b7931439dcd55f2efa1811, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _OcclusionMap
+      second:
+        m_Texture: {fileID: 2800000, guid: 21c5aecbacd1ffd45a178efce98b82a0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _RampTex
+      second:
+        m_Texture: {fileID: 2800000, guid: f2dedd0914b52b841a6baf4e9b7f5dec, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _diff
+      second:
+        m_Texture: {fileID: 2800000, guid: 3e1360f1a13b5184f967caac0c724d32, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _norm
+      second:
+        m_Texture: {fileID: 2800000, guid: a757f09540784c948b0fe7e983bc72a8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _sss
+      second:
+        m_Texture: {fileID: 2800000, guid: 57ab8ced9dfe8604488c006d53393b1d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: COLOR_MODE
+      second: 0
+    - first:
+        name: DEBUG_DIFFUSE
+      second: 0
+    - first:
+        name: DETAIL_MIRROR_X
+      second: 0
+    - first:
+        name: Detail0Brightness
+      second: 0
+    - first:
+        name: Detail0ColorScale
+      second: 1
+    - first:
+        name: Detail0Gloss
+      second: 0
+    - first:
+        name: Detail0Hue
+      second: 0
+    - first:
+        name: Detail0Metallic
+      second: 0
+    - first:
+        name: Detail0Saturation
+      second: 0
+    - first:
+        name: Detail0UVRot
+      second: 0
+    - first:
+        name: Detail0UVScale
+      second: 1
+    - first:
+        name: Detail0UVX
+      second: 0
+    - first:
+        name: Detail0UVY
+      second: 0
+    - first:
+        name: Detail0WrapX
+      second: 10
+    - first:
+        name: Detail0WrapY
+      second: 10
+    - first:
+        name: Detail1Brightness
+      second: 0
+    - first:
+        name: Detail1ColorScale
+      second: 1
+    - first:
+        name: Detail1Gloss
+      second: 0
+    - first:
+        name: Detail1Hue
+      second: 0
+    - first:
+        name: Detail1Metallic
+      second: 0
+    - first:
+        name: Detail1Saturation
+      second: 0
+    - first:
+        name: Detail1UVRot
+      second: 0
+    - first:
+        name: Detail1UVScale
+      second: 1
+    - first:
+        name: Detail1UVX
+      second: 0
+    - first:
+        name: Detail1UVY
+      second: 0
+    - first:
+        name: Detail1WrapX
+      second: 10
+    - first:
+        name: Detail1WrapY
+      second: 10
+    - first:
+        name: Detail2Brightness
+      second: 0
+    - first:
+        name: Detail2ColorScale
+      second: 1
+    - first:
+        name: Detail2Gloss
+      second: 0
+    - first:
+        name: Detail2Hue
+      second: 0
+    - first:
+        name: Detail2Metallic
+      second: 0
+    - first:
+        name: Detail2Saturation
+      second: 0
+    - first:
+        name: Detail2UVRot
+      second: 0
+    - first:
+        name: Detail2UVScale
+      second: 1
+    - first:
+        name: Detail2UVX
+      second: 0
+    - first:
+        name: Detail2UVY
+      second: 0
+    - first:
+        name: Detail2WrapX
+      second: 10
+    - first:
+        name: Detail2WrapY
+      second: 10
+    - first:
+        name: Detail3Brightness
+      second: 0
+    - first:
+        name: Detail3ColorScale
+      second: 1
+    - first:
+        name: Detail3Gloss
+      second: 0
+    - first:
+        name: Detail3Hue
+      second: 0
+    - first:
+        name: Detail3Metallic
+      second: 0
+    - first:
+        name: Detail3Saturation
+      second: 0
+    - first:
+        name: Detail3UVRot
+      second: 0
+    - first:
+        name: Detail3UVScale
+      second: 1
+    - first:
+        name: Detail3UVX
+      second: 0
+    - first:
+        name: Detail3UVY
+      second: 0
+    - first:
+        name: Detail3WrapX
+      second: 10
+    - first:
+        name: Detail3WrapY
+      second: 10
+    - first:
+        name: Main0Brightness
+      second: 0
+    - first:
+        name: Main0Gloss
+      second: 1
+    - first:
+        name: Main0Hue
+      second: 0
+    - first:
+        name: Main0Metallic
+      second: 1
+    - first:
+        name: Main0Saturation
+      second: 0
+    - first:
+        name: Main1Brightness
+      second: 0
+    - first:
+        name: Main1Gloss
+      second: 1
+    - first:
+        name: Main1Hue
+      second: 0
+    - first:
+        name: Main1Metallic
+      second: 1
+    - first:
+        name: Main1Saturation
+      second: 0
+    - first:
+        name: Main2Brightness
+      second: 0
+    - first:
+        name: Main2Gloss
+      second: 1
+    - first:
+        name: Main2Hue
+      second: 0
+    - first:
+        name: Main2Metallic
+      second: 1
+    - first:
+        name: Main2Saturation
+      second: 0
+    - first:
+        name: Main3Brightness
+      second: 0
+    - first:
+        name: Main3Gloss
+      second: 1
+    - first:
+        name: Main3Hue
+      second: 0
+    - first:
+        name: Main3Metallic
+      second: 1
+    - first:
+        name: Main3Saturation
+      second: 0
+    - first:
+        name: MainColorAdd
+      second: 0
+    - first:
+        name: MainColorScale0
+      second: 1
+    - first:
+        name: MainColorScale1
+      second: 1
+    - first:
+        name: MainColorScale2
+      second: 1
+    - first:
+        name: MainColorScale3
+      second: 1
+    - first:
+        name: NEW_DETAIL
+      second: 0
+    - first:
+        name: TintColorUI
+      second: 0
+    - first:
+        name: WRAP_DIFFUSE
+      second: 1
+    - first:
+        name: WRAP_GI
+      second: 1
+    - first:
+        name: _
+      second: 0
+    - first:
+        name: _AnisoGloss
+      second: 0.7
+    - first:
+        name: _BlusherMoustacheBrightness
+      second: 0
+    - first:
+        name: _BlusherMoustacheHue
+      second: 0
+    - first:
+        name: _BlusherMoustacheSaturation
+      second: 0
+    - first:
+        name: _BrowBrightness
+      second: 0
+    - first:
+        name: _BrowHue
+      second: 0
+    - first:
+        name: _BrowSaturation
+      second: 0
+    - first:
+        name: _BumpScale
+      second: 1
+    - first:
+        name: _DEBUG_DIFFUSE
+      second: 0
+    - first:
+        name: _DecalBrightness
+      second: 0
+    - first:
+        name: _DecalFlowScale
+      second: 0
+    - first:
+        name: _DecalHue
+      second: 0
+    - first:
+        name: _DecalSaturation
+      second: 0
+    - first:
+        name: _DiffuseScale
+      second: 1
+    - first:
+        name: _EyeLineBrightness
+      second: 0
+    - first:
+        name: _EyeLineFlowScale
+      second: 0
+    - first:
+        name: _EyeLineHue
+      second: 0
+    - first:
+        name: _EyeLineSaturation
+      second: 0
+    - first:
+        name: _FACE_ON
+      second: 1
+    - first:
+        name: _FlowColorScale
+      second: 1
+    - first:
+        name: _FlowUVScale
+      second: 1
+    - first:
+        name: _FresnelPower
+      second: 0.97
+    - first:
+        name: _FresnelScale
+      second: 0.49
+    - first:
+        name: _HDRScale
+      second: 10
+    - first:
+        name: _IrisLeftBrightness
+      second: 0
+    - first:
+        name: _IrisLeftHue
+      second: 0
+    - first:
+        name: _IrisLeftSaturation
+      second: 0
+    - first:
+        name: _IrisRightBrightness
+      second: 0
+    - first:
+        name: _IrisRightHue
+      second: 0
+    - first:
+        name: _IrisRightSaturation
+      second: 0
+    - first:
+        name: _LightScale
+      second: 1
+    - first:
+        name: _LipGlossBrightness
+      second: 0
+    - first:
+        name: _LipGlossFlowScale
+      second: 0
+    - first:
+        name: _LipGlossHue
+      second: 0
+    - first:
+        name: _LipGlossSaturation
+      second: 0
+    - first:
+        name: _OcclusionPower
+      second: 1
+    - first:
+        name: _OcclusionScale
+      second: 0
+    - first:
+        name: _OcclusionStrength
+      second: 0
+    - first:
+        name: _StencilMask
+      second: 1
+    - first:
+        name: _StencilPassOp
+      second: 0
+    - first:
+        name: _UniqueShadowLocalDepthBias
+      second: 0
+    - first:
+        name: _WrapOffset
+      second: 0.5
+    - first:
+        name: _WrapPower
+      second: 0.68
+    - first:
+        name: _WrapScale
+      second: 0.27
+    - first:
+        name: _ao
+      second: 0.273
+    - first:
+        name: _diffpow
+      second: 1.3
+    - first:
+        name: _gloss
+      second: 0
+    - first:
+        name: _me
+      second: 0
+    - first:
+        name: _node_2476
+      second: 0
+    - first:
+        name: _node_2838
+      second: 0.295
+    - first:
+        name: _node_3001
+      second: 0
+    - first:
+        name: _node_5013
+      second: 0
+    - first:
+        name: _node_526
+      second: 0.642
+    - first:
+        name: _node_7027
+      second: 0.46
+    - first:
+        name: _node_7928
+      second: 0
+    - first:
+        name: _spec
+      second: 0
+    m_Colors:
+    - first:
+        name: Detail0Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: Detail1Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: Detail2Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: Detail3Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: MainColor0
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: MainColor1
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: MainColor2
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: MainColor3
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _BlusherMoustachePos
+      second: {r: 69, g: 288.5, b: 148, a: 148}
+    - first:
+        name: _BrowPos
+      second: {r: 122.5, g: 202, b: 133, a: 133}
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _DecalPos
+      second: {r: 192, g: 185, b: 128, a: 128}
+    - first:
+        name: _EyeLightPos
+      second: {r: 416, g: 192, b: 96, a: 96}
+    - first:
+        name: _EyeLinePos
+      second: {r: 122.5, g: 245, b: 122.5, a: 123}
+    - first:
+        name: _FresnelColor
+      second: {r: 0.29411766, g: 0.14509805, b: 0.27058825, a: 1}
+    - first:
+        name: _IrisLeftPos
+      second: {r: 0, g: 192, b: 96, a: 96}
+    - first:
+        name: _IrisRightPos
+      second: {r: 416, g: 192, b: 96, a: 96}
+    - first:
+        name: _LipGlossPos
+      second: {r: 215, g: 370.5, b: 82.5, a: 82}
+    - first:
+        name: _OcclusionColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _node_1034
+      second: {r: 0.75735295, g: 0.34526387, b: 0.57546544, a: 1}
+    - first:
+        name: _node_6771
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _node_8092
+      second: {r: 1, g: 0, b: 0, a: 1}

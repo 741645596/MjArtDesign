@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: "Girl_Hair_03_01"
+  m_Shader: {fileID: 4800000, guid: fce9731276b047dc987e3ec723d01ee0, type: 3}
+  m_ShaderKeywords: "_ALPHATEST_ON _NORMALMAP"
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: aebefa7b0d174839a567742afb54ffd9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Bump:
+        m_Texture: {fileID: 2800000, guid: ab2aad3240844c769d6b3102bdb2816d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaScale: 1
+    - _BackfaceSpecular: 0
+    - _BumpScale: 1
+    - _Cutoff: 0
+    - _HairSpecFreq1: 0
+    - _HairSpecFreq2: 0
+    - _HairSpecFreq3: 0
+    - _MPrimaryShift: 0.1
+    - _MSecondaryShift: -0.1
+    - _Shift: 0.098
+    - _SpecPower1: 17
+    - _SpecPower2: 237
+    - _SpecPower3: 117
+    - _SpecStrength: 1.32
+    - _SpecStrength2: 10
+    - _SpecStrength3: 1.04
+    - _ThirdShift: -0.007
+    m_Colors:
+    - _Color: {r: 0.1691176, g: 0.1255947, b: 0.1255947, a: 1}
+    - _SpecColor1: {r: 0.7573529, g: 0.8092292, b: 1, a: 1}
+    - _SpecColor2: {r: 1, g: 0.7962474, b: 0.6397059, a: 1}
+    - _SpecColor3: {r: 0.8161765, g: 0.8326572, b: 1, a: 1}
+    - custom_SHAb: {r: 0, g: 0, b: 0, a: 0}
+    - custom_SHAg: {r: 0, g: 0, b: 0, a: 0}
+    - custom_SHAr: {r: 0, g: 0, b: 0, a: 0}
+    - custom_SHBb: {r: 0, g: 0, b: 0, a: 0}
+    - custom_SHBg: {r: 0, g: 0, b: 0, a: 0}
+    - custom_SHBr: {r: 0, g: 0, b: 0, a: 0}
+    - custom_SHC: {r: 0, g: 0, b: 0, a: 0}

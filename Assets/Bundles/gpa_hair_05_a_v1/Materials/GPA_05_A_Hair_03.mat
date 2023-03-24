@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GPA_05_A_Hair_03
+  m_Shader: {fileID: 4800000, guid: 990d049b9c044625a5fafbae3ac6fcb4, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _CUSTOMCUBE_OFF
+  - _SPECULAR_OFF
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: 2c9d7471dd7b4f97be1b13ae82385450, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Bump:
+        m_Texture: {fileID: 2800000, guid: 6331f10932244c5b9c9acd669e5813c5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cubemap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Emission:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GM:
+        m_Texture: {fileID: 2800000, guid: 36019975cc6b476a84b035219000b726, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SmoothMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaScale: 1
+    - _BackfaceSpecular: 0
+    - _BumpScale: 1
+    - _Cull: 0
+    - _Customcube: 0
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DirectLightIntensity: 1
+    - _DirectSpecularExp: 10
+    - _DirectSpecularScale: 1
+    - _DstBlend: 0
+    - _EmissionScale: 1
+    - _GlossMapScale: 0.535
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _HairSpecFreq1: 1
+    - _HairSpecFreq2: 1
+    - _HairSpecFreq3: 1
+    - _InDirectLightIntensity: 2.557
+    - _MPrimaryShift: 0.1
+    - _MSecondaryShift: 0.05
+    - _MaxSpecScale: 1
+    - _MetalMapScale: 1
+    - _Metallic: 0
+    - _MetallicMapIndirectDiffuseIntensity: 1
+    - _MinSmooth: 1
+    - _MinSpecScale: 1
+    - _Mode: 0
+    - _NormalBias: -2
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _ScatteringShadowIntensity: 0.25
+    - _Shift: 0.324
+    - _SmoothSpecial: 0.2
+    - _SmoothnessTextureChannel: 0
+    - _SpecPower1: 1000
+    - _SpecPower2: 1000
+    - _SpecPower3: 1000
+    - _SpecStrength: 1
+    - _SpecStrength2: 1
+    - _SpecStrength3: 1
+    - _Specular: 1
+    - _SpecularHighlights: 1
+    - _SpecularScale: 1
+    - _SrcBlend: 1
+    - _ThirdShift: 0.1
+    - _UVSec: 0
+    - _ZWrite: 1
+    - _cutoff: 0.5
+    m_Colors:
+    - _AOColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor1: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecColor2: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecColor3: {r: 1, g: 1, b: 1, a: 1}
+    - custom_SHAb: {r: 0, g: 0, b: 0, a: 0}
+    - custom_SHAg: {r: 0, g: 0, b: 0, a: 0}
+    - custom_SHAr: {r: 0, g: 0, b: 0, a: 0}
+    - custom_SHBb: {r: 0, g: 0, b: 0, a: 0}
+    - custom_SHBg: {r: 0, g: 0, b: 0, a: 0}
+    - custom_SHBr: {r: 0, g: 0, b: 0, a: 0}
+    - custom_SHC: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

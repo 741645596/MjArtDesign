@@ -1,0 +1,5333 @@
+fileFormatVersion: 2
+guid: d304014952f4b084f93f43e1dcb7bf02
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: 1000_body01
+  - first:
+      1: 100002
+    second: 1000_body02
+  - first:
+      1: 100004
+    second: Bip001
+  - first:
+      1: 100006
+    second: Bip001 Head
+  - first:
+      1: 100008
+    second: Bip001 L Calf
+  - first:
+      1: 100010
+    second: Bip001 L Clavicle
+  - first:
+      1: 100012
+    second: Bip001 L Clavicle 1
+  - first:
+      1: 100014
+    second: Bip001 L Finger0
+  - first:
+      1: 100016
+    second: Bip001 L Finger01
+  - first:
+      1: 100018
+    second: Bip001 L Finger02
+  - first:
+      1: 100020
+    second: Bip001 L Finger1
+  - first:
+      1: 100022
+    second: Bip001 L Finger11
+  - first:
+      1: 100024
+    second: Bip001 L Finger12
+  - first:
+      1: 100026
+    second: Bip001 L Finger2
+  - first:
+      1: 100028
+    second: Bip001 L Finger21
+  - first:
+      1: 100030
+    second: Bip001 L Finger22
+  - first:
+      1: 100032
+    second: Bip001 L Finger3
+  - first:
+      1: 100034
+    second: Bip001 L Finger31
+  - first:
+      1: 100036
+    second: Bip001 L Finger32
+  - first:
+      1: 100038
+    second: Bip001 L Finger4
+  - first:
+      1: 100040
+    second: Bip001 L Finger41
+  - first:
+      1: 100042
+    second: Bip001 L Finger42
+  - first:
+      1: 100044
+    second: Bip001 L Foot
+  - first:
+      1: 100046
+    second: Bip001 L Forearm
+  - first:
+      1: 100048
+    second: Bip001 L ForeTwist
+  - first:
+      1: 100050
+    second: Bip001 L ForeTwist1
+  - first:
+      1: 100052
+    second: Bip001 L Hand
+  - first:
+      1: 100054
+    second: Bip001 L Thigh
+  - first:
+      1: 100056
+    second: Bip001 L Toe0
+  - first:
+      1: 100058
+    second: Bip001 L UpperArm
+  - first:
+      1: 100060
+    second: Bip001 LUpArmTwist
+  - first:
+      1: 100062
+    second: Bip001 LUpArmTwist1
+  - first:
+      1: 100064
+    second: Bip001 Neck
+  - first:
+      1: 100066
+    second: Bip001 Pelvis
+  - first:
+      1: 100068
+    second: Bip001 Pelvis 1
+  - first:
+      1: 100070
+    second: Bip001 R Calf
+  - first:
+      1: 100072
+    second: Bip001 R Clavicle
+  - first:
+      1: 100074
+    second: Bip001 R Clavicle 1
+  - first:
+      1: 100076
+    second: Bip001 R Finger0
+  - first:
+      1: 100078
+    second: Bip001 R Finger01
+  - first:
+      1: 100080
+    second: Bip001 R Finger02
+  - first:
+      1: 100082
+    second: Bip001 R Finger1
+  - first:
+      1: 100084
+    second: Bip001 R Finger11
+  - first:
+      1: 100086
+    second: Bip001 R Finger12
+  - first:
+      1: 100088
+    second: Bip001 R Finger2
+  - first:
+      1: 100090
+    second: Bip001 R Finger21
+  - first:
+      1: 100092
+    second: Bip001 R Finger22
+  - first:
+      1: 100094
+    second: Bip001 R Finger3
+  - first:
+      1: 100096
+    second: Bip001 R Finger31
+  - first:
+      1: 100098
+    second: Bip001 R Finger32
+  - first:
+      1: 100100
+    second: Bip001 R Finger4
+  - first:
+      1: 100102
+    second: Bip001 R Finger41
+  - first:
+      1: 100104
+    second: Bip001 R Finger42
+  - first:
+      1: 100106
+    second: Bip001 R Foot
+  - first:
+      1: 100108
+    second: Bip001 R Forearm
+  - first:
+      1: 100110
+    second: Bip001 R ForeTwist
+  - first:
+      1: 100112
+    second: Bip001 R ForeTwist1
+  - first:
+      1: 100114
+    second: Bip001 R Hand
+  - first:
+      1: 100116
+    second: Bip001 R Thigh
+  - first:
+      1: 100118
+    second: Bip001 R Toe0
+  - first:
+      1: 100120
+    second: Bip001 R UpperArm
+  - first:
+      1: 100122
+    second: Bip001 RUpArmTwist
+  - first:
+      1: 100124
+    second: Bip001 RUpArmTwist1
+  - first:
+      1: 100126
+    second: Bip001 Spine
+  - first:
+      1: 100128
+    second: Bip001 Spine 1
+  - first:
+      1: 100130
+    second: Bip001 Spine1
+  - first:
+      1: 100132
+    second: Bone001
+  - first:
+      1: 100134
+    second: Bone001(mirrored)
+  - first:
+      1: 100136
+    second: Bone032
+  - first:
+      1: 100138
+    second: Bone032(mirrored)
+  - first:
+      1: 100140
+    second: Bone033
+  - first:
+      1: 100142
+    second: Bone033(mirrored)
+  - first:
+      1: 100144
+    second: Bone034
+  - first:
+      1: 100146
+    second: Bone034(mirrored)
+  - first:
+      1: 100148
+    second: Bone035
+  - first:
+      1: 100150
+    second: Bone035(mirrored)
+  - first:
+      1: 100152
+    second: Bone036
+  - first:
+      1: 100154
+    second: Bone036(mirrored)
+  - first:
+      1: 100156
+    second: Bone037
+  - first:
+      1: 100158
+    second: Bone037(mirrored)
+  - first:
+      1: 100160
+    second: Bone038
+  - first:
+      1: 100162
+    second: Bone038(mirrored)
+  - first:
+      1: 100164
+    second: Bone039
+  - first:
+      1: 100166
+    second: Bone039(mirrored)
+  - first:
+      1: 100168
+    second: Bone040
+  - first:
+      1: 100170
+    second: Bone040(mirrored)
+  - first:
+      1: 100172
+    second: Bone041
+  - first:
+      1: 100174
+    second: Bone041(mirrored)
+  - first:
+      1: 100176
+    second: Bone043
+  - first:
+      1: 100178
+    second: Bone043(mirrored)
+  - first:
+      1: 100180
+    second: Bone044
+  - first:
+      1: 100182
+    second: Bone044(mirrored)
+  - first:
+      1: 100184
+    second: Bone045
+  - first:
+      1: 100186
+    second: Bone045(mirrored)
+  - first:
+      1: 100188
+    second: Bone046
+  - first:
+      1: 100190
+    second: Bone046(mirrored)
+  - first:
+      1: 100192
+    second: Bone047
+  - first:
+      1: 100194
+    second: Bone047(mirrored)
+  - first:
+      1: 100196
+    second: Bone048
+  - first:
+      1: 100198
+    second: Bone048(mirrored)
+  - first:
+      1: 100200
+    second: Bone049
+  - first:
+      1: 100202
+    second: Bone049(mirrored)
+  - first:
+      1: 100204
+    second: Bone050
+  - first:
+      1: 100206
+    second: Bone050(mirrored)
+  - first:
+      1: 100208
+    second: Bone051
+  - first:
+      1: 100210
+    second: Bone051(mirrored)
+  - first:
+      1: 100212
+    second: Bone052
+  - first:
+      1: 100214
+    second: Bone052(mirrored)
+  - first:
+      1: 100216
+    second: Bone053
+  - first:
+      1: 100218
+    second: Bone053(mirrored)
+  - first:
+      1: 100220
+    second: Bone054
+  - first:
+      1: 100222
+    second: Bone054(mirrored)
+  - first:
+      1: 100224
+    second: Bone055
+  - first:
+      1: 100226
+    second: Bone055(mirrored)
+  - first:
+      1: 100228
+    second: Bone056
+  - first:
+      1: 100230
+    second: Bone056(mirrored)
+  - first:
+      1: 100232
+    second: Bone057
+  - first:
+      1: 100234
+    second: Bone057(mirrored)
+  - first:
+      1: 100236
+    second: Bone058
+  - first:
+      1: 100238
+    second: Bone058(mirrored)
+  - first:
+      1: 100240
+    second: Bone067
+  - first:
+      1: 100242
+    second: Bone068
+  - first:
+      1: 100244
+    second: Bone069
+  - first:
+      1: 100246
+    second: Bone070
+  - first:
+      1: 100248
+    second: Bone071
+  - first:
+      1: 100250
+    second: Bone072
+  - first:
+      1: 100252
+    second: Bone073
+  - first:
+      1: 100254
+    second: Bone073(mirrored)
+  - first:
+      1: 100256
+    second: Bone074
+  - first:
+      1: 100258
+    second: Bone074(mirrored)
+  - first:
+      1: 100260
+    second: Bone075
+  - first:
+      1: 100262
+    second: Bone075(mirrored)
+  - first:
+      1: 100264
+    second: Bone076
+  - first:
+      1: 100266
+    second: Bone076(mirrored)
+  - first:
+      1: 100268
+    second: Bone077
+  - first:
+      1: 100270
+    second: Bone077(mirrored)
+  - first:
+      1: 100272
+    second: Bone078
+  - first:
+      1: 100274
+    second: Bone078(mirrored)
+  - first:
+      1: 100276
+    second: Bone079
+  - first:
+      1: 100278
+    second: Bone079(mirrored)
+  - first:
+      1: 100280
+    second: Bone080
+  - first:
+      1: 100282
+    second: Bone080(mirrored)
+  - first:
+      1: 100284
+    second: Bone081
+  - first:
+      1: 100286
+    second: Bone081(mirrored)
+  - first:
+      1: 100288
+    second: Bone082
+  - first:
+      1: 100290
+    second: Bone082(mirrored)
+  - first:
+      1: 100292
+    second: Bone083
+  - first:
+      1: 100294
+    second: Bone083(mirrored)
+  - first:
+      1: 100296
+    second: Bone084
+  - first:
+      1: 100298
+    second: Bone084(mirrored)
+  - first:
+      1: 100300
+    second: Bone085
+  - first:
+      1: 100302
+    second: Bone085(mirrored)
+  - first:
+      1: 100304
+    second: Bone086
+  - first:
+      1: 100306
+    second: Bone086(mirrored)
+  - first:
+      1: 100308
+    second: Bone087
+  - first:
+      1: 100310
+    second: Bone087(mirrored)
+  - first:
+      1: 100312
+    second: Bone089
+  - first:
+      1: 100314
+    second: Bone090
+  - first:
+      1: 100316
+    second: Bone102
+  - first:
+      1: 100318
+    second: Bone102(mirrored)
+  - first:
+      1: 100320
+    second: Bone104
+  - first:
+      1: 100322
+    second: Bone104(mirrored)
+  - first:
+      1: 100324
+    second: Bone105
+  - first:
+      1: 100326
+    second: Bone105(mirrored)
+  - first:
+      1: 100328
+    second: Bone106
+  - first:
+      1: 100330
+    second: Bone106(mirrored)
+  - first:
+      1: 100332
+    second: Bone107
+  - first:
+      1: 100334
+    second: Bone107(mirrored)
+  - first:
+      1: 100336
+    second: Bone108
+  - first:
+      1: 100338
+    second: Bone108(mirrored)
+  - first:
+      1: 100340
+    second: Bone109
+  - first:
+      1: 100342
+    second: Bone109(mirrored)
+  - first:
+      1: 100344
+    second: Bone118
+  - first:
+      1: 100346
+    second: Bone118(mirrored)
+  - first:
+      1: 100348
+    second: Bone119
+  - first:
+      1: 100350
+    second: Bone119(mirrored)
+  - first:
+      1: 100352
+    second: Bone120
+  - first:
+      1: 100354
+    second: Bone120(mirrored)
+  - first:
+      1: 100356
+    second: Bone121
+  - first:
+      1: 100358
+    second: Bone121(mirrored)
+  - first:
+      1: 100360
+    second: Bone122
+  - first:
+      1: 100362
+    second: Bone122(mirrored)
+  - first:
+      1: 100364
+    second: Bone123
+  - first:
+      1: 100366
+    second: Bone123(mirrored)
+  - first:
+      1: 100368
+    second: Bone124
+  - first:
+      1: 100370
+    second: Bone124(mirrored)
+  - first:
+      1: 100372
+    second: Bone125
+  - first:
+      1: 100374
+    second: Bone125(mirrored)
+  - first:
+      1: 100376
+    second: Bone126
+  - first:
+      1: 100378
+    second: Bone126(mirrored)
+  - first:
+      1: 100380
+    second: Bone127
+  - first:
+      1: 100382
+    second: Bone127(mirrored)
+  - first:
+      1: 100384
+    second: Bone128
+  - first:
+      1: 100386
+    second: Bone128(mirrored)
+  - first:
+      1: 100388
+    second: Bone129
+  - first:
+      1: 100390
+    second: Bone129(mirrored)
+  - first:
+      1: 100392
+    second: Bone130
+  - first:
+      1: 100394
+    second: Bone130(mirrored)
+  - first:
+      1: 100396
+    second: Bone131
+  - first:
+      1: 100398
+    second: Bone131(mirrored)
+  - first:
+      1: 100400
+    second: Bone132
+  - first:
+      1: 100402
+    second: Bone132(mirrored)
+  - first:
+      1: 100404
+    second: Bone133
+  - first:
+      1: 100406
+    second: Bone133(mirrored)
+  - first:
+      1: 100408
+    second: Bone134
+  - first:
+      1: 100410
+    second: Bone134(mirrored)
+  - first:
+      1: 100412
+    second: Bone135
+  - first:
+      1: 100414
+    second: Bone135(mirrored)
+  - first:
+      1: 100416
+    second: Bone136
+  - first:
+      1: 100418
+    second: Bone136(mirrored)
+  - first:
+      1: 100420
+    second: Bone137
+  - first:
+      1: 100422
+    second: Bone137(mirrored)
+  - first:
+      1: 100424
+    second: Bone138
+  - first:
+      1: 100426
+    second: Bone138(mirrored)
+  - first:
+      1: 100428
+    second: Bone139
+  - first:
+      1: 100430
+    second: Bone139(mirrored)
+  - first:
+      1: 100432
+    second: Bone140
+  - first:
+      1: 100434
+    second: Bone140(mirrored)
+  - first:
+      1: 100436
+    second: Bone141
+  - first:
+      1: 100438
+    second: Bone141(mirrored)
+  - first:
+      1: 100440
+    second: Bone142
+  - first:
+      1: 100442
+    second: Bone142(mirrored)
+  - first:
+      1: 100444
+    second: Bone143
+  - first:
+      1: 100446
+    second: Bone143(mirrored)
+  - first:
+      1: 100448
+    second: Bone144
+  - first:
+      1: 100450
+    second: Bone144(mirrored)
+  - first:
+      1: 100452
+    second: Bone145
+  - first:
+      1: 100454
+    second: Bone145(mirrored)
+  - first:
+      1: 100456
+    second: Bone146
+  - first:
+      1: 100458
+    second: Bone146(mirrored)
+  - first:
+      1: 100460
+    second: Bone147
+  - first:
+      1: 100462
+    second: Bone147(mirrored)
+  - first:
+      1: 100464
+    second: Bone148
+  - first:
+      1: 100466
+    second: Bone148(mirrored)
+  - first:
+      1: 100468
+    second: Bone149
+  - first:
+      1: 100470
+    second: Bone149(mirrored)
+  - first:
+      1: 100472
+    second: Bone150
+  - first:
+      1: 100474
+    second: Bone150(mirrored)
+  - first:
+      1: 100476
+    second: Bone151
+  - first:
+      1: 100478
+    second: Bone151(mirrored)
+  - first:
+      1: 100480
+    second: Bone152
+  - first:
+      1: 100482
+    second: Bone153
+  - first:
+      1: 100484
+    second: Bone154
+  - first:
+      1: 100486
+    second: Bone155
+  - first:
+      1: 100488
+    second: Bone156
+  - first:
+      1: 100490
+    second: Bone157
+  - first:
+      1: 100492
+    second: Bone158
+  - first:
+      1: 100494
+    second: Bone159
+  - first:
+      1: 100496
+    second: Bone160
+  - first:
+      1: 100498
+    second: Bone161
+  - first:
+      1: 100500
+    second: Bone161(mirrored)
+  - first:
+      1: 100502
+    second: Bone162
+  - first:
+      1: 100504
+    second: Bone162(mirrored)
+  - first:
+      1: 100506
+    second: Bone163
+  - first:
+      1: 100508
+    second: Bone163(mirrored)
+  - first:
+      1: 100510
+    second: Bone164
+  - first:
+      1: 100512
+    second: Bone164(mirrored)
+  - first:
+      1: 100514
+    second: Bone165
+  - first:
+      1: 100516
+    second: Bone165(mirrored)
+  - first:
+      1: 100518
+    second: Bone166
+  - first:
+      1: 100520
+    second: Bone166(mirrored)
+  - first:
+      1: 100522
+    second: Bone167
+  - first:
+      1: 100524
+    second: Bone167(mirrored)
+  - first:
+      1: 100526
+    second: Bone168
+  - first:
+      1: 100528
+    second: Bone168(mirrored)
+  - first:
+      1: 100530
+    second: Bone169
+  - first:
+      1: 100532
+    second: Bone169(mirrored)
+  - first:
+      1: 100534
+    second: Bone182
+  - first:
+      1: 100536
+    second: Bone183
+  - first:
+      1: 100538
+    second: Bone184
+  - first:
+      1: 100540
+    second: Bone184(mirrored)
+  - first:
+      1: 100542
+    second: Bone188
+  - first:
+      1: 100544
+    second: Bone188(mirrored)
+  - first:
+      1: 100546
+    second: Bone189
+  - first:
+      1: 100548
+    second: Bone189(mirrored)
+  - first:
+      1: 100550
+    second: Bone190
+  - first:
+      1: 100552
+    second: Bone190(mirrored)
+  - first:
+      1: 100554
+    second: Bone191
+  - first:
+      1: 100556
+    second: Bone191(mirrored)
+  - first:
+      1: 100558
+    second: Bone192
+  - first:
+      1: 100560
+    second: Bone192(mirrored)
+  - first:
+      1: 100562
+    second: Bone193
+  - first:
+      1: 100564
+    second: Bone193(mirrored)
+  - first:
+      1: 100566
+    second: Bone194
+  - first:
+      1: 100568
+    second: Bone194(mirrored)
+  - first:
+      1: 100570
+    second: Bone195
+  - first:
+      1: 100572
+    second: Bone195(mirrored)
+  - first:
+      1: 100574
+    second: Bone196
+  - first:
+      1: 100576
+    second: Bone196(mirrored)
+  - first:
+      1: 100578
+    second: Bone197
+  - first:
+      1: 100580
+    second: Bone197(mirrored)
+  - first:
+      1: 100582
+    second: Bone198
+  - first:
+      1: 100584
+    second: Bone198(mirrored)
+  - first:
+      1: 100586
+    second: Bone199
+  - first:
+      1: 100588
+    second: Bone199(mirrored)
+  - first:
+      1: 100590
+    second: Bone200
+  - first:
+      1: 100592
+    second: Bone200(mirrored)
+  - first:
+      1: 100594
+    second: Bone201
+  - first:
+      1: 100596
+    second: Bone201(mirrored)
+  - first:
+      1: 100598
+    second: Bone202
+  - first:
+      1: 100600
+    second: Bone202(mirrored)
+  - first:
+      1: 100602
+    second: Bone203
+  - first:
+      1: 100604
+    second: Bone203(mirrored)
+  - first:
+      1: 100606
+    second: Bone204
+  - first:
+      1: 100608
+    second: Bone204(mirrored)
+  - first:
+      1: 100610
+    second: Bone205
+  - first:
+      1: 100612
+    second: Bone205(mirrored)
+  - first:
+      1: 100614
+    second: Bone206
+  - first:
+      1: 100616
+    second: Bone206(mirrored)
+  - first:
+      1: 100618
+    second: Bone207
+  - first:
+      1: 100620
+    second: Bone207(mirrored)
+  - first:
+      1: 100622
+    second: Bone208
+  - first:
+      1: 100624
+    second: Bone208(mirrored)
+  - first:
+      1: 100626
+    second: Bone209
+  - first:
+      1: 100628
+    second: Bone209(mirrored)
+  - first:
+      1: 100630
+    second: Bone210
+  - first:
+      1: 100632
+    second: Bone210(mirrored)
+  - first:
+      1: 100634
+    second: Bone211
+  - first:
+      1: 100636
+    second: Bone211(mirrored)
+  - first:
+      1: 100638
+    second: Bone212
+  - first:
+      1: 100640
+    second: Bone212(mirrored)
+  - first:
+      1: 100642
+    second: Bone213
+  - first:
+      1: 100644
+    second: Bone213(mirrored)
+  - first:
+      1: 100646
+    second: Bone214
+  - first:
+      1: 100648
+    second: Bone214(mirrored)
+  - first:
+      1: 100650
+    second: Bone215
+  - first:
+      1: 100652
+    second: Bone215(mirrored)
+  - first:
+      1: 100654
+    second: Bone216
+  - first:
+      1: 100656
+    second: Bone216(mirrored)
+  - first:
+      1: 100658
+    second: Bone217
+  - first:
+      1: 100660
+    second: Bone217(mirrored)
+  - first:
+      1: 100662
+    second: Bone218
+  - first:
+      1: 100664
+    second: Bone218(mirrored)
+  - first:
+      1: 100666
+    second: Bone219
+  - first:
+      1: 100668
+    second: Bone220
+  - first:
+      1: 100670
+    second: Bone221
+  - first:
+      1: 100672
+    second: Bone222
+  - first:
+      1: 100674
+    second: Bone223
+  - first:
+      1: 100676
+    second: Bone224
+  - first:
+      1: 100678
+    second: Bone225
+  - first:
+      1: 100680
+    second: Bone245
+  - first:
+      1: 100682
+    second: Bone245(mirrored)
+  - first:
+      1: 100684
+    second: Bone246
+  - first:
+      1: 100686
+    second: Bone247
+  - first:
+      1: 100688
+    second: Bone248
+  - first:
+      1: 100690
+    second: Bone249
+  - first:
+      1: 100692
+    second: Bone250
+  - first:
+      1: 100694
+    second: Bone251
+  - first:
+      1: 100696
+    second: Bone252
+  - first:
+      1: 100698
+    second: bone_sleeve_00
+  - first:
+      1: 100700
+    second: bone_sleeve_00(mirrored)
+  - first:
+      1: 100702
+    second: bone_sleeve_01
+  - first:
+      1: 100704
+    second: bone_sleeve_01(mirrored)
+  - first:
+      1: 100706
+    second: bone_sleeve_02
+  - first:
+      1: 100708
+    second: bone_sleeve_02(mirrored)
+  - first:
+      1: 100710
+    second: bone_sleeve_03
+  - first:
+      1: 100712
+    second: bone_sleeve_03(mirrored)
+  - first:
+      1: 100714
+    second: bone_sleeve_04
+  - first:
+      1: 100716
+    second: bone_sleeve_04(mirrored)
+  - first:
+      1: 100718
+    second: bone_sleeve_05
+  - first:
+      1: 100720
+    second: bone_sleeve_05(mirrored)
+  - first:
+      1: 100722
+    second: bone_sleeve_06
+  - first:
+      1: 100724
+    second: bone_sleeve_06(mirrored)
+  - first:
+      1: 100726
+    second: bone_sleeve_07
+  - first:
+      1: 100728
+    second: bone_sleeve_07(mirrored)
+  - first:
+      1: 100730
+    second: bone_sleeve_08
+  - first:
+      1: 100732
+    second: bone_sleeve_08(mirrored)
+  - first:
+      1: 100734
+    second: bone_sleeve_09
+  - first:
+      1: 100736
+    second: bone_sleeve_09(mirrored)
+  - first:
+      1: 100738
+    second: bone_sleeve_10
+  - first:
+      1: 100740
+    second: bone_sleeve_10(mirrored)
+  - first:
+      1: 100742
+    second: bone_sleeve_11
+  - first:
+      1: 100744
+    second: bone_sleeve_11(mirrored)
+  - first:
+      1: 100746
+    second: bone_sleeve_12
+  - first:
+      1: 100748
+    second: bone_sleeve_12(mirrored)
+  - first:
+      1: 100750
+    second: bone_sleeve_13
+  - first:
+      1: 100752
+    second: bone_sleeve_13(mirrored)
+  - first:
+      1: 100754
+    second: bone_sleeve_14
+  - first:
+      1: 100756
+    second: bone_sleeve_14(mirrored)
+  - first:
+      1: 100758
+    second: bone_sleeve_15
+  - first:
+      1: 100760
+    second: bone_sleeve_15(mirrored)
+  - first:
+      1: 100762
+    second: bone_sleeve_16
+  - first:
+      1: 100764
+    second: bone_sleeve_16(mirrored)
+  - first:
+      1: 100766
+    second: bone_sleeve_17
+  - first:
+      1: 100768
+    second: bone_sleeve_17(mirrored)
+  - first:
+      1: 100770
+    second: bone_sleeve_18
+  - first:
+      1: 100772
+    second: bone_sleeve_18(mirrored)
+  - first:
+      1: 100774
+    second: bone_sleeve_19
+  - first:
+      1: 100776
+    second: bone_sleeve_19(mirrored)
+  - first:
+      1: 100778
+    second: bone_sleeve_20
+  - first:
+      1: 100780
+    second: bone_sleeve_20(mirrored)
+  - first:
+      1: 100782
+    second: bone_sleeve_21
+  - first:
+      1: 100784
+    second: bone_sleeve_21(mirrored)
+  - first:
+      1: 100786
+    second: bone_sleeve_22
+  - first:
+      1: 100788
+    second: bone_sleeve_22(mirrored)
+  - first:
+      1: 100790
+    second: bone_sleeve_23
+  - first:
+      1: 100792
+    second: bone_sleeve_23(mirrored)
+  - first:
+      1: 100794
+    second: bone_sleeve_24
+  - first:
+      1: 100796
+    second: bone_sleeve_24(mirrored)
+  - first:
+      1: 100798
+    second: bone_sleeve_25
+  - first:
+      1: 100800
+    second: bone_sleeve_25(mirrored)
+  - first:
+      1: 100802
+    second: bone_sleeve_26
+  - first:
+      1: 100804
+    second: bone_sleeve_26(mirrored)
+  - first:
+      1: 100806
+    second: eyeleft
+  - first:
+      1: 100808
+    second: eyeright
+  - first:
+      1: 100810
+    second: gd_head
+  - first:
+      1: 100812
+    second: gd_leftprop
+  - first:
+      1: 100814
+    second: gd_lshoulder
+  - first:
+      1: 100816
+    second: gd_mantle
+  - first:
+      1: 100818
+    second: gd_mask
+  - first:
+      1: 100820
+    second: gd_rightprop
+  - first:
+      1: 100822
+    second: gd_rshoulder
+  - first:
+      1: 100824
+    second: //RootNode
+  - first:
+      1: 100826
+    second: t_Bip001 L Calf
+  - first:
+      1: 100828
+    second: t_Bip001 L Thigh
+  - first:
+      1: 100830
+    second: t_Bip001 R Calf
+  - first:
+      1: 100832
+    second: t_Bip001 R Thigh
+  - first:
+      1: 100834
+    second: t_Bip001 L Clavicle
+  - first:
+      1: 100836
+    second: t_Bip001 Pelvis
+  - first:
+      1: 100838
+    second: t_Bip001 R Clavicle
+  - first:
+      1: 100840
+    second: t_Bip001 Spine
+  - first:
+      1: 100842
+    second: t_Bip001
+  - first:
+      1: 100844
+    second: t_Bip001 Neck
+  - first:
+      1: 100846
+    second: Bip001 Footsteps
+  - first:
+      1: 100848
+    second: bone_sleeve_27
+  - first:
+      1: 100850
+    second: bone_sleeve_28
+  - first:
+      1: 100852
+    second: bone_sleeve_29
+  - first:
+      1: 100854
+    second: bone_sleeve_30
+  - first:
+      1: 100856
+    second: bone_sleeve_31
+  - first:
+      1: 100858
+    second: bone_sleeve_32
+  - first:
+      1: 100860
+    second: bone_sleeve_33
+  - first:
+      1: 100862
+    second: bone_sleeve_33(mirrored)
+  - first:
+      1: 100864
+    second: bone_sleeve_34
+  - first:
+      1: 100866
+    second: bone_sleeve_34(mirrored)
+  - first:
+      1: 100868
+    second: bone_sleeve_35
+  - first:
+      1: 100870
+    second: bone_sleeve_35(mirrored)
+  - first:
+      1: 100872
+    second: bone_sleeve_36
+  - first:
+      1: 100874
+    second: bone_sleeve_36(mirrored)
+  - first:
+      1: 100876
+    second: bone_yuwei01_00
+  - first:
+      1: 100878
+    second: bone_yuwei01_00(mirrored)
+  - first:
+      1: 100880
+    second: bone_yuwei01_01
+  - first:
+      1: 100882
+    second: bone_yuwei01_01(mirrored)
+  - first:
+      1: 100884
+    second: bone_yuwei01_02
+  - first:
+      1: 100886
+    second: bone_yuwei01_02(mirrored)
+  - first:
+      1: 100888
+    second: bone_yuwei01_03
+  - first:
+      1: 100890
+    second: bone_yuwei01_03(mirrored)
+  - first:
+      1: 100892
+    second: bone_yuwei01_04
+  - first:
+      1: 100894
+    second: bone_yuwei01_04(mirrored)
+  - first:
+      1: 100896
+    second: bone_yuwei02_00
+  - first:
+      1: 100898
+    second: bone_yuwei02_00(mirrored)
+  - first:
+      1: 100900
+    second: bone_yuwei02_01
+  - first:
+      1: 100902
+    second: bone_yuwei02_01(mirrored)
+  - first:
+      1: 100904
+    second: bone_yuwei02_02
+  - first:
+      1: 100906
+    second: bone_yuwei02_02(mirrored)
+  - first:
+      1: 100908
+    second: bone_yuwei02_03
+  - first:
+      1: 100910
+    second: bone_yuwei02_03(mirrored)
+  - first:
+      1: 100912
+    second: bone_yuwei02_04
+  - first:
+      1: 100914
+    second: bone_yuwei02_04(mirrored)
+  - first:
+      1: 100916
+    second: bone_yuwei02_05
+  - first:
+      1: 100918
+    second: bone_yuwei02_05(mirrored)
+  - first:
+      1: 100920
+    second: bone_yuwei03_00
+  - first:
+      1: 100922
+    second: bone_yuwei03_00(mirrored)
+  - first:
+      1: 100924
+    second: bone_yuwei03_01
+  - first:
+      1: 100926
+    second: bone_yuwei03_01(mirrored)
+  - first:
+      1: 100928
+    second: bone_yuwei03_02
+  - first:
+      1: 100930
+    second: bone_yuwei03_02(mirrored)
+  - first:
+      1: 100932
+    second: bone_yuwei03_03
+  - first:
+      1: 100934
+    second: bone_yuwei03_03(mirrored)
+  - first:
+      1: 100936
+    second: bone_yuwei03_04
+  - first:
+      1: 100938
+    second: bone_yuwei03_04(mirrored)
+  - first:
+      1: 100940
+    second: bone_yuwei03_05
+  - first:
+      1: 100942
+    second: bone_yuwei03_05(mirrored)
+  - first:
+      1: 100944
+    second: bone_yuwei03_06
+  - first:
+      1: 100946
+    second: bone_yuwei03_06(mirrored)
+  - first:
+      1: 100948
+    second: gd_lpendant
+  - first:
+      1: 100950
+    second: gd_rpendant
+  - first:
+      1: 100952
+    second: gd_tail
+  - first:
+      4: 400000
+    second: 1000_body01
+  - first:
+      4: 400002
+    second: 1000_body02
+  - first:
+      4: 400004
+    second: Bip001
+  - first:
+      4: 400006
+    second: Bip001 Head
+  - first:
+      4: 400008
+    second: Bip001 L Calf
+  - first:
+      4: 400010
+    second: Bip001 L Clavicle
+  - first:
+      4: 400012
+    second: Bip001 L Clavicle 1
+  - first:
+      4: 400014
+    second: Bip001 L Finger0
+  - first:
+      4: 400016
+    second: Bip001 L Finger01
+  - first:
+      4: 400018
+    second: Bip001 L Finger02
+  - first:
+      4: 400020
+    second: Bip001 L Finger1
+  - first:
+      4: 400022
+    second: Bip001 L Finger11
+  - first:
+      4: 400024
+    second: Bip001 L Finger12
+  - first:
+      4: 400026
+    second: Bip001 L Finger2
+  - first:
+      4: 400028
+    second: Bip001 L Finger21
+  - first:
+      4: 400030
+    second: Bip001 L Finger22
+  - first:
+      4: 400032
+    second: Bip001 L Finger3
+  - first:
+      4: 400034
+    second: Bip001 L Finger31
+  - first:
+      4: 400036
+    second: Bip001 L Finger32
+  - first:
+      4: 400038
+    second: Bip001 L Finger4
+  - first:
+      4: 400040
+    second: Bip001 L Finger41
+  - first:
+      4: 400042
+    second: Bip001 L Finger42
+  - first:
+      4: 400044
+    second: Bip001 L Foot
+  - first:
+      4: 400046
+    second: Bip001 L Forearm
+  - first:
+      4: 400048
+    second: Bip001 L ForeTwist
+  - first:
+      4: 400050
+    second: Bip001 L ForeTwist1
+  - first:
+      4: 400052
+    second: Bip001 L Hand
+  - first:
+      4: 400054
+    second: Bip001 L Thigh
+  - first:
+      4: 400056
+    second: Bip001 L Toe0
+  - first:
+      4: 400058
+    second: Bip001 L UpperArm
+  - first:
+      4: 400060
+    second: Bip001 LUpArmTwist
+  - first:
+      4: 400062
+    second: Bip001 LUpArmTwist1
+  - first:
+      4: 400064
+    second: Bip001 Neck
+  - first:
+      4: 400066
+    second: Bip001 Pelvis
+  - first:
+      4: 400068
+    second: Bip001 Pelvis 1
+  - first:
+      4: 400070
+    second: Bip001 R Calf
+  - first:
+      4: 400072
+    second: Bip001 R Clavicle
+  - first:
+      4: 400074
+    second: Bip001 R Clavicle 1
+  - first:
+      4: 400076
+    second: Bip001 R Finger0
+  - first:
+      4: 400078
+    second: Bip001 R Finger01
+  - first:
+      4: 400080
+    second: Bip001 R Finger02
+  - first:
+      4: 400082
+    second: Bip001 R Finger1
+  - first:
+      4: 400084
+    second: Bip001 R Finger11
+  - first:
+      4: 400086
+    second: Bip001 R Finger12
+  - first:
+      4: 400088
+    second: Bip001 R Finger2
+  - first:
+      4: 400090
+    second: Bip001 R Finger21
+  - first:
+      4: 400092
+    second: Bip001 R Finger22
+  - first:
+      4: 400094
+    second: Bip001 R Finger3
+  - first:
+      4: 400096
+    second: Bip001 R Finger31
+  - first:
+      4: 400098
+    second: Bip001 R Finger32
+  - first:
+      4: 400100
+    second: Bip001 R Finger4
+  - first:
+      4: 400102
+    second: Bip001 R Finger41
+  - first:
+      4: 400104
+    second: Bip001 R Finger42
+  - first:
+      4: 400106
+    second: Bip001 R Foot
+  - first:
+      4: 400108
+    second: Bip001 R Forearm
+  - first:
+      4: 400110
+    second: Bip001 R ForeTwist
+  - first:
+      4: 400112
+    second: Bip001 R ForeTwist1
+  - first:
+      4: 400114
+    second: Bip001 R Hand
+  - first:
+      4: 400116
+    second: Bip001 R Thigh
+  - first:
+      4: 400118
+    second: Bip001 R Toe0
+  - first:
+      4: 400120
+    second: Bip001 R UpperArm
+  - first:
+      4: 400122
+    second: Bip001 RUpArmTwist
+  - first:
+      4: 400124
+    second: Bip001 RUpArmTwist1
+  - first:
+      4: 400126
+    second: Bip001 Spine
+  - first:
+      4: 400128
+    second: Bip001 Spine 1
+  - first:
+      4: 400130
+    second: Bip001 Spine1
+  - first:
+      4: 400132
+    second: Bone001
+  - first:
+      4: 400134
+    second: Bone001(mirrored)
+  - first:
+      4: 400136
+    second: Bone032
+  - first:
+      4: 400138
+    second: Bone032(mirrored)
+  - first:
+      4: 400140
+    second: Bone033
+  - first:
+      4: 400142
+    second: Bone033(mirrored)
+  - first:
+      4: 400144
+    second: Bone034
+  - first:
+      4: 400146
+    second: Bone034(mirrored)
+  - first:
+      4: 400148
+    second: Bone035
+  - first:
+      4: 400150
+    second: Bone035(mirrored)
+  - first:
+      4: 400152
+    second: Bone036
+  - first:
+      4: 400154
+    second: Bone036(mirrored)
+  - first:
+      4: 400156
+    second: Bone037
+  - first:
+      4: 400158
+    second: Bone037(mirrored)
+  - first:
+      4: 400160
+    second: Bone038
+  - first:
+      4: 400162
+    second: Bone038(mirrored)
+  - first:
+      4: 400164
+    second: Bone039
+  - first:
+      4: 400166
+    second: Bone039(mirrored)
+  - first:
+      4: 400168
+    second: Bone040
+  - first:
+      4: 400170
+    second: Bone040(mirrored)
+  - first:
+      4: 400172
+    second: Bone041
+  - first:
+      4: 400174
+    second: Bone041(mirrored)
+  - first:
+      4: 400176
+    second: Bone043
+  - first:
+      4: 400178
+    second: Bone043(mirrored)
+  - first:
+      4: 400180
+    second: Bone044
+  - first:
+      4: 400182
+    second: Bone044(mirrored)
+  - first:
+      4: 400184
+    second: Bone045
+  - first:
+      4: 400186
+    second: Bone045(mirrored)
+  - first:
+      4: 400188
+    second: Bone046
+  - first:
+      4: 400190
+    second: Bone046(mirrored)
+  - first:
+      4: 400192
+    second: Bone047
+  - first:
+      4: 400194
+    second: Bone047(mirrored)
+  - first:
+      4: 400196
+    second: Bone048
+  - first:
+      4: 400198
+    second: Bone048(mirrored)
+  - first:
+      4: 400200
+    second: Bone049
+  - first:
+      4: 400202
+    second: Bone049(mirrored)
+  - first:
+      4: 400204
+    second: Bone050
+  - first:
+      4: 400206
+    second: Bone050(mirrored)
+  - first:
+      4: 400208
+    second: Bone051
+  - first:
+      4: 400210
+    second: Bone051(mirrored)
+  - first:
+      4: 400212
+    second: Bone052
+  - first:
+      4: 400214
+    second: Bone052(mirrored)
+  - first:
+      4: 400216
+    second: Bone053
+  - first:
+      4: 400218
+    second: Bone053(mirrored)
+  - first:
+      4: 400220
+    second: Bone054
+  - first:
+      4: 400222
+    second: Bone054(mirrored)
+  - first:
+      4: 400224
+    second: Bone055
+  - first:
+      4: 400226
+    second: Bone055(mirrored)
+  - first:
+      4: 400228
+    second: Bone056
+  - first:
+      4: 400230
+    second: Bone056(mirrored)
+  - first:
+      4: 400232
+    second: Bone057
+  - first:
+      4: 400234
+    second: Bone057(mirrored)
+  - first:
+      4: 400236
+    second: Bone058
+  - first:
+      4: 400238
+    second: Bone058(mirrored)
+  - first:
+      4: 400240
+    second: Bone067
+  - first:
+      4: 400242
+    second: Bone068
+  - first:
+      4: 400244
+    second: Bone069
+  - first:
+      4: 400246
+    second: Bone070
+  - first:
+      4: 400248
+    second: Bone071
+  - first:
+      4: 400250
+    second: Bone072
+  - first:
+      4: 400252
+    second: Bone073
+  - first:
+      4: 400254
+    second: Bone073(mirrored)
+  - first:
+      4: 400256
+    second: Bone074
+  - first:
+      4: 400258
+    second: Bone074(mirrored)
+  - first:
+      4: 400260
+    second: Bone075
+  - first:
+      4: 400262
+    second: Bone075(mirrored)
+  - first:
+      4: 400264
+    second: Bone076
+  - first:
+      4: 400266
+    second: Bone076(mirrored)
+  - first:
+      4: 400268
+    second: Bone077
+  - first:
+      4: 400270
+    second: Bone077(mirrored)
+  - first:
+      4: 400272
+    second: Bone078
+  - first:
+      4: 400274
+    second: Bone078(mirrored)
+  - first:
+      4: 400276
+    second: Bone079
+  - first:
+      4: 400278
+    second: Bone079(mirrored)
+  - first:
+      4: 400280
+    second: Bone080
+  - first:
+      4: 400282
+    second: Bone080(mirrored)
+  - first:
+      4: 400284
+    second: Bone081
+  - first:
+      4: 400286
+    second: Bone081(mirrored)
+  - first:
+      4: 400288
+    second: Bone082
+  - first:
+      4: 400290
+    second: Bone082(mirrored)
+  - first:
+      4: 400292
+    second: Bone083
+  - first:
+      4: 400294
+    second: Bone083(mirrored)
+  - first:
+      4: 400296
+    second: Bone084
+  - first:
+      4: 400298
+    second: Bone084(mirrored)
+  - first:
+      4: 400300
+    second: Bone085
+  - first:
+      4: 400302
+    second: Bone085(mirrored)
+  - first:
+      4: 400304
+    second: Bone086
+  - first:
+      4: 400306
+    second: Bone086(mirrored)
+  - first:
+      4: 400308
+    second: Bone087
+  - first:
+      4: 400310
+    second: Bone087(mirrored)
+  - first:
+      4: 400312
+    second: Bone089
+  - first:
+      4: 400314
+    second: Bone090
+  - first:
+      4: 400316
+    second: Bone102
+  - first:
+      4: 400318
+    second: Bone102(mirrored)
+  - first:
+      4: 400320
+    second: Bone104
+  - first:
+      4: 400322
+    second: Bone104(mirrored)
+  - first:
+      4: 400324
+    second: Bone105
+  - first:
+      4: 400326
+    second: Bone105(mirrored)
+  - first:
+      4: 400328
+    second: Bone106
+  - first:
+      4: 400330
+    second: Bone106(mirrored)
+  - first:
+      4: 400332
+    second: Bone107
+  - first:
+      4: 400334
+    second: Bone107(mirrored)
+  - first:
+      4: 400336
+    second: Bone108
+  - first:
+      4: 400338
+    second: Bone108(mirrored)
+  - first:
+      4: 400340
+    second: Bone109
+  - first:
+      4: 400342
+    second: Bone109(mirrored)
+  - first:
+      4: 400344
+    second: Bone118
+  - first:
+      4: 400346
+    second: Bone118(mirrored)
+  - first:
+      4: 400348
+    second: Bone119
+  - first:
+      4: 400350
+    second: Bone119(mirrored)
+  - first:
+      4: 400352
+    second: Bone120
+  - first:
+      4: 400354
+    second: Bone120(mirrored)
+  - first:
+      4: 400356
+    second: Bone121
+  - first:
+      4: 400358
+    second: Bone121(mirrored)
+  - first:
+      4: 400360
+    second: Bone122
+  - first:
+      4: 400362
+    second: Bone122(mirrored)
+  - first:
+      4: 400364
+    second: Bone123
+  - first:
+      4: 400366
+    second: Bone123(mirrored)
+  - first:
+      4: 400368
+    second: Bone124
+  - first:
+      4: 400370
+    second: Bone124(mirrored)
+  - first:
+      4: 400372
+    second: Bone125
+  - first:
+      4: 400374
+    second: Bone125(mirrored)
+  - first:
+      4: 400376
+    second: Bone126
+  - first:
+      4: 400378
+    second: Bone126(mirrored)
+  - first:
+      4: 400380
+    second: Bone127
+  - first:
+      4: 400382
+    second: Bone127(mirrored)
+  - first:
+      4: 400384
+    second: Bone128
+  - first:
+      4: 400386
+    second: Bone128(mirrored)
+  - first:
+      4: 400388
+    second: Bone129
+  - first:
+      4: 400390
+    second: Bone129(mirrored)
+  - first:
+      4: 400392
+    second: Bone130
+  - first:
+      4: 400394
+    second: Bone130(mirrored)
+  - first:
+      4: 400396
+    second: Bone131
+  - first:
+      4: 400398
+    second: Bone131(mirrored)
+  - first:
+      4: 400400
+    second: Bone132
+  - first:
+      4: 400402
+    second: Bone132(mirrored)
+  - first:
+      4: 400404
+    second: Bone133
+  - first:
+      4: 400406
+    second: Bone133(mirrored)
+  - first:
+      4: 400408
+    second: Bone134
+  - first:
+      4: 400410
+    second: Bone134(mirrored)
+  - first:
+      4: 400412
+    second: Bone135
+  - first:
+      4: 400414
+    second: Bone135(mirrored)
+  - first:
+      4: 400416
+    second: Bone136
+  - first:
+      4: 400418
+    second: Bone136(mirrored)
+  - first:
+      4: 400420
+    second: Bone137
+  - first:
+      4: 400422
+    second: Bone137(mirrored)
+  - first:
+      4: 400424
+    second: Bone138
+  - first:
+      4: 400426
+    second: Bone138(mirrored)
+  - first:
+      4: 400428
+    second: Bone139
+  - first:
+      4: 400430
+    second: Bone139(mirrored)
+  - first:
+      4: 400432
+    second: Bone140
+  - first:
+      4: 400434
+    second: Bone140(mirrored)
+  - first:
+      4: 400436
+    second: Bone141
+  - first:
+      4: 400438
+    second: Bone141(mirrored)
+  - first:
+      4: 400440
+    second: Bone142
+  - first:
+      4: 400442
+    second: Bone142(mirrored)
+  - first:
+      4: 400444
+    second: Bone143
+  - first:
+      4: 400446
+    second: Bone143(mirrored)
+  - first:
+      4: 400448
+    second: Bone144
+  - first:
+      4: 400450
+    second: Bone144(mirrored)
+  - first:
+      4: 400452
+    second: Bone145
+  - first:
+      4: 400454
+    second: Bone145(mirrored)
+  - first:
+      4: 400456
+    second: Bone146
+  - first:
+      4: 400458
+    second: Bone146(mirrored)
+  - first:
+      4: 400460
+    second: Bone147
+  - first:
+      4: 400462
+    second: Bone147(mirrored)
+  - first:
+      4: 400464
+    second: Bone148
+  - first:
+      4: 400466
+    second: Bone148(mirrored)
+  - first:
+      4: 400468
+    second: Bone149
+  - first:
+      4: 400470
+    second: Bone149(mirrored)
+  - first:
+      4: 400472
+    second: Bone150
+  - first:
+      4: 400474
+    second: Bone150(mirrored)
+  - first:
+      4: 400476
+    second: Bone151
+  - first:
+      4: 400478
+    second: Bone151(mirrored)
+  - first:
+      4: 400480
+    second: Bone152
+  - first:
+      4: 400482
+    second: Bone153
+  - first:
+      4: 400484
+    second: Bone154
+  - first:
+      4: 400486
+    second: Bone155
+  - first:
+      4: 400488
+    second: Bone156
+  - first:
+      4: 400490
+    second: Bone157
+  - first:
+      4: 400492
+    second: Bone158
+  - first:
+      4: 400494
+    second: Bone159
+  - first:
+      4: 400496
+    second: Bone160
+  - first:
+      4: 400498
+    second: Bone161
+  - first:
+      4: 400500
+    second: Bone161(mirrored)
+  - first:
+      4: 400502
+    second: Bone162
+  - first:
+      4: 400504
+    second: Bone162(mirrored)
+  - first:
+      4: 400506
+    second: Bone163
+  - first:
+      4: 400508
+    second: Bone163(mirrored)
+  - first:
+      4: 400510
+    second: Bone164
+  - first:
+      4: 400512
+    second: Bone164(mirrored)
+  - first:
+      4: 400514
+    second: Bone165
+  - first:
+      4: 400516
+    second: Bone165(mirrored)
+  - first:
+      4: 400518
+    second: Bone166
+  - first:
+      4: 400520
+    second: Bone166(mirrored)
+  - first:
+      4: 400522
+    second: Bone167
+  - first:
+      4: 400524
+    second: Bone167(mirrored)
+  - first:
+      4: 400526
+    second: Bone168
+  - first:
+      4: 400528
+    second: Bone168(mirrored)
+  - first:
+      4: 400530
+    second: Bone169
+  - first:
+      4: 400532
+    second: Bone169(mirrored)
+  - first:
+      4: 400534
+    second: Bone182
+  - first:
+      4: 400536
+    second: Bone183
+  - first:
+      4: 400538
+    second: Bone184
+  - first:
+      4: 400540
+    second: Bone184(mirrored)
+  - first:
+      4: 400542
+    second: Bone188
+  - first:
+      4: 400544
+    second: Bone188(mirrored)
+  - first:
+      4: 400546
+    second: Bone189
+  - first:
+      4: 400548
+    second: Bone189(mirrored)
+  - first:
+      4: 400550
+    second: Bone190
+  - first:
+      4: 400552
+    second: Bone190(mirrored)
+  - first:
+      4: 400554
+    second: Bone191
+  - first:
+      4: 400556
+    second: Bone191(mirrored)
+  - first:
+      4: 400558
+    second: Bone192
+  - first:
+      4: 400560
+    second: Bone192(mirrored)
+  - first:
+      4: 400562
+    second: Bone193
+  - first:
+      4: 400564
+    second: Bone193(mirrored)
+  - first:
+      4: 400566
+    second: Bone194
+  - first:
+      4: 400568
+    second: Bone194(mirrored)
+  - first:
+      4: 400570
+    second: Bone195
+  - first:
+      4: 400572
+    second: Bone195(mirrored)
+  - first:
+      4: 400574
+    second: Bone196
+  - first:
+      4: 400576
+    second: Bone196(mirrored)
+  - first:
+      4: 400578
+    second: Bone197
+  - first:
+      4: 400580
+    second: Bone197(mirrored)
+  - first:
+      4: 400582
+    second: Bone198
+  - first:
+      4: 400584
+    second: Bone198(mirrored)
+  - first:
+      4: 400586
+    second: Bone199
+  - first:
+      4: 400588
+    second: Bone199(mirrored)
+  - first:
+      4: 400590
+    second: Bone200
+  - first:
+      4: 400592
+    second: Bone200(mirrored)
+  - first:
+      4: 400594
+    second: Bone201
+  - first:
+      4: 400596
+    second: Bone201(mirrored)
+  - first:
+      4: 400598
+    second: Bone202
+  - first:
+      4: 400600
+    second: Bone202(mirrored)
+  - first:
+      4: 400602
+    second: Bone203
+  - first:
+      4: 400604
+    second: Bone203(mirrored)
+  - first:
+      4: 400606
+    second: Bone204
+  - first:
+      4: 400608
+    second: Bone204(mirrored)
+  - first:
+      4: 400610
+    second: Bone205
+  - first:
+      4: 400612
+    second: Bone205(mirrored)
+  - first:
+      4: 400614
+    second: Bone206
+  - first:
+      4: 400616
+    second: Bone206(mirrored)
+  - first:
+      4: 400618
+    second: Bone207
+  - first:
+      4: 400620
+    second: Bone207(mirrored)
+  - first:
+      4: 400622
+    second: Bone208
+  - first:
+      4: 400624
+    second: Bone208(mirrored)
+  - first:
+      4: 400626
+    second: Bone209
+  - first:
+      4: 400628
+    second: Bone209(mirrored)
+  - first:
+      4: 400630
+    second: Bone210
+  - first:
+      4: 400632
+    second: Bone210(mirrored)
+  - first:
+      4: 400634
+    second: Bone211
+  - first:
+      4: 400636
+    second: Bone211(mirrored)
+  - first:
+      4: 400638
+    second: Bone212
+  - first:
+      4: 400640
+    second: Bone212(mirrored)
+  - first:
+      4: 400642
+    second: Bone213
+  - first:
+      4: 400644
+    second: Bone213(mirrored)
+  - first:
+      4: 400646
+    second: Bone214
+  - first:
+      4: 400648
+    second: Bone214(mirrored)
+  - first:
+      4: 400650
+    second: Bone215
+  - first:
+      4: 400652
+    second: Bone215(mirrored)
+  - first:
+      4: 400654
+    second: Bone216
+  - first:
+      4: 400656
+    second: Bone216(mirrored)
+  - first:
+      4: 400658
+    second: Bone217
+  - first:
+      4: 400660
+    second: Bone217(mirrored)
+  - first:
+      4: 400662
+    second: Bone218
+  - first:
+      4: 400664
+    second: Bone218(mirrored)
+  - first:
+      4: 400666
+    second: Bone219
+  - first:
+      4: 400668
+    second: Bone220
+  - first:
+      4: 400670
+    second: Bone221
+  - first:
+      4: 400672
+    second: Bone222
+  - first:
+      4: 400674
+    second: Bone223
+  - first:
+      4: 400676
+    second: Bone224
+  - first:
+      4: 400678
+    second: Bone225
+  - first:
+      4: 400680
+    second: Bone245
+  - first:
+      4: 400682
+    second: Bone245(mirrored)
+  - first:
+      4: 400684
+    second: Bone246
+  - first:
+      4: 400686
+    second: Bone247
+  - first:
+      4: 400688
+    second: Bone248
+  - first:
+      4: 400690
+    second: Bone249
+  - first:
+      4: 400692
+    second: Bone250
+  - first:
+      4: 400694
+    second: Bone251
+  - first:
+      4: 400696
+    second: Bone252
+  - first:
+      4: 400698
+    second: bone_sleeve_00
+  - first:
+      4: 400700
+    second: bone_sleeve_00(mirrored)
+  - first:
+      4: 400702
+    second: bone_sleeve_01
+  - first:
+      4: 400704
+    second: bone_sleeve_01(mirrored)
+  - first:
+      4: 400706
+    second: bone_sleeve_02
+  - first:
+      4: 400708
+    second: bone_sleeve_02(mirrored)
+  - first:
+      4: 400710
+    second: bone_sleeve_03
+  - first:
+      4: 400712
+    second: bone_sleeve_03(mirrored)
+  - first:
+      4: 400714
+    second: bone_sleeve_04
+  - first:
+      4: 400716
+    second: bone_sleeve_04(mirrored)
+  - first:
+      4: 400718
+    second: bone_sleeve_05
+  - first:
+      4: 400720
+    second: bone_sleeve_05(mirrored)
+  - first:
+      4: 400722
+    second: bone_sleeve_06
+  - first:
+      4: 400724
+    second: bone_sleeve_06(mirrored)
+  - first:
+      4: 400726
+    second: bone_sleeve_07
+  - first:
+      4: 400728
+    second: bone_sleeve_07(mirrored)
+  - first:
+      4: 400730
+    second: bone_sleeve_08
+  - first:
+      4: 400732
+    second: bone_sleeve_08(mirrored)
+  - first:
+      4: 400734
+    second: bone_sleeve_09
+  - first:
+      4: 400736
+    second: bone_sleeve_09(mirrored)
+  - first:
+      4: 400738
+    second: bone_sleeve_10
+  - first:
+      4: 400740
+    second: bone_sleeve_10(mirrored)
+  - first:
+      4: 400742
+    second: bone_sleeve_11
+  - first:
+      4: 400744
+    second: bone_sleeve_11(mirrored)
+  - first:
+      4: 400746
+    second: bone_sleeve_12
+  - first:
+      4: 400748
+    second: bone_sleeve_12(mirrored)
+  - first:
+      4: 400750
+    second: bone_sleeve_13
+  - first:
+      4: 400752
+    second: bone_sleeve_13(mirrored)
+  - first:
+      4: 400754
+    second: bone_sleeve_14
+  - first:
+      4: 400756
+    second: bone_sleeve_14(mirrored)
+  - first:
+      4: 400758
+    second: bone_sleeve_15
+  - first:
+      4: 400760
+    second: bone_sleeve_15(mirrored)
+  - first:
+      4: 400762
+    second: bone_sleeve_16
+  - first:
+      4: 400764
+    second: bone_sleeve_16(mirrored)
+  - first:
+      4: 400766
+    second: bone_sleeve_17
+  - first:
+      4: 400768
+    second: bone_sleeve_17(mirrored)
+  - first:
+      4: 400770
+    second: bone_sleeve_18
+  - first:
+      4: 400772
+    second: bone_sleeve_18(mirrored)
+  - first:
+      4: 400774
+    second: bone_sleeve_19
+  - first:
+      4: 400776
+    second: bone_sleeve_19(mirrored)
+  - first:
+      4: 400778
+    second: bone_sleeve_20
+  - first:
+      4: 400780
+    second: bone_sleeve_20(mirrored)
+  - first:
+      4: 400782
+    second: bone_sleeve_21
+  - first:
+      4: 400784
+    second: bone_sleeve_21(mirrored)
+  - first:
+      4: 400786
+    second: bone_sleeve_22
+  - first:
+      4: 400788
+    second: bone_sleeve_22(mirrored)
+  - first:
+      4: 400790
+    second: bone_sleeve_23
+  - first:
+      4: 400792
+    second: bone_sleeve_23(mirrored)
+  - first:
+      4: 400794
+    second: bone_sleeve_24
+  - first:
+      4: 400796
+    second: bone_sleeve_24(mirrored)
+  - first:
+      4: 400798
+    second: bone_sleeve_25
+  - first:
+      4: 400800
+    second: bone_sleeve_25(mirrored)
+  - first:
+      4: 400802
+    second: bone_sleeve_26
+  - first:
+      4: 400804
+    second: bone_sleeve_26(mirrored)
+  - first:
+      4: 400806
+    second: eyeleft
+  - first:
+      4: 400808
+    second: eyeright
+  - first:
+      4: 400810
+    second: gd_head
+  - first:
+      4: 400812
+    second: gd_leftprop
+  - first:
+      4: 400814
+    second: gd_lshoulder
+  - first:
+      4: 400816
+    second: gd_mantle
+  - first:
+      4: 400818
+    second: gd_mask
+  - first:
+      4: 400820
+    second: gd_rightprop
+  - first:
+      4: 400822
+    second: gd_rshoulder
+  - first:
+      4: 400824
+    second: //RootNode
+  - first:
+      4: 400826
+    second: t_Bip001 L Calf
+  - first:
+      4: 400828
+    second: t_Bip001 L Thigh
+  - first:
+      4: 400830
+    second: t_Bip001 R Calf
+  - first:
+      4: 400832
+    second: t_Bip001 R Thigh
+  - first:
+      4: 400834
+    second: t_Bip001 L Clavicle
+  - first:
+      4: 400836
+    second: t_Bip001 Pelvis
+  - first:
+      4: 400838
+    second: t_Bip001 R Clavicle
+  - first:
+      4: 400840
+    second: t_Bip001 Spine
+  - first:
+      4: 400842
+    second: t_Bip001
+  - first:
+      4: 400844
+    second: t_Bip001 Neck
+  - first:
+      4: 400846
+    second: Bip001 Footsteps
+  - first:
+      4: 400848
+    second: bone_sleeve_27
+  - first:
+      4: 400850
+    second: bone_sleeve_28
+  - first:
+      4: 400852
+    second: bone_sleeve_29
+  - first:
+      4: 400854
+    second: bone_sleeve_30
+  - first:
+      4: 400856
+    second: bone_sleeve_31
+  - first:
+      4: 400858
+    second: bone_sleeve_32
+  - first:
+      4: 400860
+    second: bone_sleeve_33
+  - first:
+      4: 400862
+    second: bone_sleeve_33(mirrored)
+  - first:
+      4: 400864
+    second: bone_sleeve_34
+  - first:
+      4: 400866
+    second: bone_sleeve_34(mirrored)
+  - first:
+      4: 400868
+    second: bone_sleeve_35
+  - first:
+      4: 400870
+    second: bone_sleeve_35(mirrored)
+  - first:
+      4: 400872
+    second: bone_sleeve_36
+  - first:
+      4: 400874
+    second: bone_sleeve_36(mirrored)
+  - first:
+      4: 400876
+    second: bone_yuwei01_00
+  - first:
+      4: 400878
+    second: bone_yuwei01_00(mirrored)
+  - first:
+      4: 400880
+    second: bone_yuwei01_01
+  - first:
+      4: 400882
+    second: bone_yuwei01_01(mirrored)
+  - first:
+      4: 400884
+    second: bone_yuwei01_02
+  - first:
+      4: 400886
+    second: bone_yuwei01_02(mirrored)
+  - first:
+      4: 400888
+    second: bone_yuwei01_03
+  - first:
+      4: 400890
+    second: bone_yuwei01_03(mirrored)
+  - first:
+      4: 400892
+    second: bone_yuwei01_04
+  - first:
+      4: 400894
+    second: bone_yuwei01_04(mirrored)
+  - first:
+      4: 400896
+    second: bone_yuwei02_00
+  - first:
+      4: 400898
+    second: bone_yuwei02_00(mirrored)
+  - first:
+      4: 400900
+    second: bone_yuwei02_01
+  - first:
+      4: 400902
+    second: bone_yuwei02_01(mirrored)
+  - first:
+      4: 400904
+    second: bone_yuwei02_02
+  - first:
+      4: 400906
+    second: bone_yuwei02_02(mirrored)
+  - first:
+      4: 400908
+    second: bone_yuwei02_03
+  - first:
+      4: 400910
+    second: bone_yuwei02_03(mirrored)
+  - first:
+      4: 400912
+    second: bone_yuwei02_04
+  - first:
+      4: 400914
+    second: bone_yuwei02_04(mirrored)
+  - first:
+      4: 400916
+    second: bone_yuwei02_05
+  - first:
+      4: 400918
+    second: bone_yuwei02_05(mirrored)
+  - first:
+      4: 400920
+    second: bone_yuwei03_00
+  - first:
+      4: 400922
+    second: bone_yuwei03_00(mirrored)
+  - first:
+      4: 400924
+    second: bone_yuwei03_01
+  - first:
+      4: 400926
+    second: bone_yuwei03_01(mirrored)
+  - first:
+      4: 400928
+    second: bone_yuwei03_02
+  - first:
+      4: 400930
+    second: bone_yuwei03_02(mirrored)
+  - first:
+      4: 400932
+    second: bone_yuwei03_03
+  - first:
+      4: 400934
+    second: bone_yuwei03_03(mirrored)
+  - first:
+      4: 400936
+    second: bone_yuwei03_04
+  - first:
+      4: 400938
+    second: bone_yuwei03_04(mirrored)
+  - first:
+      4: 400940
+    second: bone_yuwei03_05
+  - first:
+      4: 400942
+    second: bone_yuwei03_05(mirrored)
+  - first:
+      4: 400944
+    second: bone_yuwei03_06
+  - first:
+      4: 400946
+    second: bone_yuwei03_06(mirrored)
+  - first:
+      4: 400948
+    second: gd_lpendant
+  - first:
+      4: 400950
+    second: gd_rpendant
+  - first:
+      4: 400952
+    second: gd_tail
+  - first:
+      43: 4300000
+    second: 1000_body02
+  - first:
+      43: 4300002
+    second: 1000_body01
+  - first:
+      111: 11100000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: 1000_body01
+  - first:
+      137: 13700002
+    second: 1000_body02
+  externalObjects: {}
+  materials:
+    materialImportMode: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 1
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: skin(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0.000000551441, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: 1000_body01
+      parentName: skin(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: 1000_body02
+      parentName: skin(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: Bip001
+      parentName: skin(Clone)
+      position: {x: -0, y: 1.048706, z: 0}
+      rotation: {x: -0.50000036, y: 0.49999964, z: 0.49999964, w: 0.50000036}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 Footsteps
+      parentName: Bip001
+      position: {x: -0, y: 0, z: -1.0461936}
+      rotation: {x: 0, y: 0, z: -0.7071063, w: 0.70710725}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 Pelvis
+      parentName: Bip001
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 Spine
+      parentName: Bip001 Pelvis
+      position: {x: -0.08000004, y: -0.000113470705, z: 0.00000011110137}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 Spine1
+      parentName: Bip001 Spine
+      position: {x: -0.14256406, y: -0.00011352007, z: -3.1485925e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: Bip001 Neck
+      parentName: Bip001 Spine1
+      position: {x: -0.17207861, y: -0.018512068, z: -0.000000051345076}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 Head
+      parentName: Bip001 Neck
+      position: {x: -0.06275487, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000006}
+    - name: gd_mask
+      parentName: Bip001 Head
+      position: {x: -0.024724364, y: 0.025944412, z: 0.000000001862702}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000004}
+    - name: eyeleft
+      parentName: Bip001 Head
+      position: {x: -0.08560431, y: 0.058173135, z: 0.03529003}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0028502, y: 0.99716437, z: 0.9999998}
+    - name: eyeright
+      parentName: Bip001 Head
+      position: {x: -0.08560526, y: 0.05817336, z: -0.03528675}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0168759, y: 0.982203, z: 1.0012201}
+    - name: gd_head
+      parentName: Bip001 Head
+      position: {x: -0, y: -0.000000029802322, z: -5.684342e-14}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1.0000001}
+    - name: t_Bip001 Neck
+      parentName: Bip001 Neck
+      position: {x: -0, y: 0.000000014901161, z: -0.000000007944607}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: Bone001
+      parentName: Bip001 Spine1
+      position: {x: -0.05218947, y: 0.044252858, z: -0.04557294}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000008, y: 1.0000005, z: 1.0000013}
+    - name: Bone246
+      parentName: Bip001 Spine1
+      position: {x: -0.0677135, y: -0.056772348, z: -0.00000011920929}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Bone247
+      parentName: Bone246
+      position: {x: -0.16428566, y: 0.00000017881393, z: -0.000000026275174}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Bone248
+      parentName: Bone247
+      position: {x: -0.18471259, y: 0.000000059604645, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: Bone249
+      parentName: Bone248
+      position: {x: -0.18027246, y: -0.00000011920929, z: -7.1054274e-14}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.9999998, z: 1}
+    - name: Bone250
+      parentName: Bone249
+      position: {x: -0.20368642, y: 0, z: 8.348877e-14}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Bone251
+      parentName: Bone250
+      position: {x: -0.19925344, y: 0, z: 7.1054274e-15}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Bone252
+      parentName: Bone251
+      position: {x: -0.22526085, y: 0.000000059604645, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: gd_mantle
+      parentName: Bip001 Spine1
+      position: {x: -0.018235683, y: -0.17276217, z: -0.00000022538005}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999964, y: 1.0000002, z: 1.0000004}
+    - name: Bone001(mirrored)
+      parentName: Bip001 Spine1
+      position: {x: -0.05218947, y: 0.04425272, z: 0.045570087}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000005}
+    - name: Bip001 L Clavicle
+      parentName: Bip001 Spine1
+      position: {x: -0.13725328, y: -0.018401852, z: 0.027056947}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: -0.7071068, w: 0.000000030908623}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000001}
+    - name: Bip001 L UpperArm
+      parentName: Bip001 L Clavicle
+      position: {x: -0.076325, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 L Forearm
+      parentName: Bip001 L UpperArm
+      position: {x: -0.23569196, y: 0, z: 0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Bip001 L Hand
+      parentName: Bip001 L Forearm
+      position: {x: -0.252242, y: 0.000000059604645, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+      scale: {x: 1.0000004, y: 1.0000006, z: 1.0000006}
+    - name: Bip001 L Finger0
+      parentName: Bip001 L Hand
+      position: {x: -0.020075023, y: 0.0113669485, z: -0.026450038}
+      rotation: {x: 0, y: 0.3826835, z: 0, w: -0.9238795}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1.0000004}
+    - name: Bip001 L Finger01
+      parentName: Bip001 L Finger0
+      position: {x: -0.019326985, y: -0.00000011920929, z: -0.000000029802322}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: Bip001 L Finger02
+      parentName: Bip001 L Finger01
+      position: {x: -0.030405998, y: 0.00000011920929, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1.0000004, z: 0.9999998}
+    - name: Bip001 L Finger1
+      parentName: Bip001 L Hand
+      position: {x: -0.06250605, y: 0.0039379597, z: -0.02139604}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1.0000008, z: 1.0000001}
+    - name: Bip001 L Finger11
+      parentName: Bip001 L Finger1
+      position: {x: -0.03035, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Bip001 L Finger12
+      parentName: Bip001 L Finger11
+      position: {x: -0.020779967, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000002}
+    - name: Bip001 L Finger2
+      parentName: Bip001 L Hand
+      position: {x: -0.060342997, y: 0.0014384538, z: -0.0057041645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000007, y: 1.0000007, z: 1.0000004}
+    - name: Bip001 L Finger21
+      parentName: Bip001 L Finger2
+      position: {x: -0.035192937, y: 0.000000014901161, z: -0.00000011920929}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000005, z: 1.0000005}
+    - name: Bip001 L Finger22
+      parentName: Bip001 L Finger21
+      position: {x: -0.02076301, y: -0.000000022351742, z: -0.00000011920929}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1}
+    - name: Bip001 L Finger3
+      parentName: Bip001 L Hand
+      position: {x: -0.06037104, y: 0.0027537048, z: 0.0071778297}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1.0000008}
+    - name: Bip001 L Finger31
+      parentName: Bip001 L Finger3
+      position: {x: -0.031197935, y: 0, z: 0.00000011920929}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Bip001 L Finger32
+      parentName: Bip001 L Finger31
+      position: {x: -0.018481016, y: 0, z: 0.00000011920929}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 L Finger4
+      parentName: Bip001 L Hand
+      position: {x: -0.05973202, y: 0.0058553666, z: 0.020545363}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1.0000007}
+    - name: Bip001 L Finger41
+      parentName: Bip001 L Finger4
+      position: {x: -0.026304007, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000002}
+    - name: Bip001 L Finger42
+      parentName: Bip001 L Finger41
+      position: {x: -0.01663497, y: 0.000000014901161, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000006, z: 1.0000002}
+    - name: gd_leftprop
+      parentName: Bip001 L Hand
+      position: {x: -0.073364675, y: 0.024184398, z: 0.0024398565}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000004}
+    - name: Bone245(mirrored)
+      parentName: Bip001 L Forearm
+      position: {x: -0.012112558, y: -0.030532837, z: -0.0046877265}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1}
+    - name: Bip001 L ForeTwist
+      parentName: Bip001 L UpperArm
+      position: {x: -0.23569196, y: 0, z: 0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000007, z: 1.0000005}
+    - name: Bip001 L ForeTwist1
+      parentName: Bip001 L ForeTwist
+      position: {x: -0.12612098, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 0.9999991, z: 0.99999934}
+    - name: bone_sleeve_00(mirrored)
+      parentName: Bip001 L ForeTwist1
+      position: {x: -0.10032496, y: 0.040064454, z: 0.013138741}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1}
+    - name: bone_sleeve_01(mirrored)
+      parentName: bone_sleeve_00(mirrored)
+      position: {x: -0.14952946, y: 0, z: -0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999998, z: 1.0000001}
+    - name: bone_sleeve_02(mirrored)
+      parentName: bone_sleeve_01(mirrored)
+      position: {x: -0.1640634, y: 0, z: 0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bone_sleeve_03(mirrored)
+      parentName: bone_sleeve_02(mirrored)
+      position: {x: -0.17298621, y: -0.0000023245811, z: 0.00000011827797}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: bone_sleeve_04(mirrored)
+      parentName: bone_sleeve_03(mirrored)
+      position: {x: -0.1787191, y: 0.000000059604645, z: 0.00000006053597}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: bone_sleeve_05(mirrored)
+      parentName: bone_sleeve_04(mirrored)
+      position: {x: -0.1520881, y: 0.000000059604645, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 0.99999976, z: 1}
+    - name: bone_sleeve_06(mirrored)
+      parentName: Bip001 L ForeTwist
+      position: {x: -0.088279545, y: 0.048992157, z: -0.012115359}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000002}
+    - name: bone_sleeve_07(mirrored)
+      parentName: bone_sleeve_06(mirrored)
+      position: {x: -0.18816304, y: -0.00000008940697, z: -9.313226e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 0.99999976, z: 0.9999999}
+    - name: bone_sleeve_08(mirrored)
+      parentName: bone_sleeve_07(mirrored)
+      position: {x: -0.17718631, y: -0.00000071525574, z: -0.000000117346644}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: bone_sleeve_09(mirrored)
+      parentName: bone_sleeve_08(mirrored)
+      position: {x: -0.16456032, y: 0.000000059604645, z: 0.000000117346644}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1, z: 1}
+    - name: bone_sleeve_10(mirrored)
+      parentName: bone_sleeve_09(mirrored)
+      position: {x: -0.16974118, y: 0, z: -0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: bone_sleeve_11(mirrored)
+      parentName: bone_sleeve_10(mirrored)
+      position: {x: -0.2049017, y: 0, z: 0.00000008754432}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.99999994, z: 1}
+    - name: bone_sleeve_12(mirrored)
+      parentName: Bip001 L ForeTwist
+      position: {x: 0.018579483, y: 0.057731688, z: -0.036764562}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000004}
+    - name: bone_sleeve_13(mirrored)
+      parentName: bone_sleeve_12(mirrored)
+      position: {x: -0.18355161, y: -0.00000071525574, z: 0.000000115484}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999964, y: 0.9999999, z: 0.9999998}
+    - name: bone_sleeve_14(mirrored)
+      parentName: bone_sleeve_13(mirrored)
+      position: {x: -0.20103866, y: -0.000001847744, z: -0.000000117346644}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: bone_sleeve_15(mirrored)
+      parentName: bone_sleeve_14(mirrored)
+      position: {x: -0.16540158, y: 0.0000017881393, z: 0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: bone_sleeve_16(mirrored)
+      parentName: bone_sleeve_15(mirrored)
+      position: {x: -0.1697262, y: -0.00000023841858, z: 0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
+    - name: bone_sleeve_17(mirrored)
+      parentName: bone_sleeve_16(mirrored)
+      position: {x: -0.21519916, y: 0.00000014901161, z: 0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1}
+    - name: bone_sleeve_33(mirrored)
+      parentName: Bip001 L UpperArm
+      position: {x: -0.08287799, y: -0.006315291, z: 0.016720235}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 0.99999994}
+    - name: bone_sleeve_34(mirrored)
+      parentName: bone_sleeve_33(mirrored)
+      position: {x: -0.087307334, y: 0, z: 0.00000023841858}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: bone_sleeve_35(mirrored)
+      parentName: bone_sleeve_34(mirrored)
+      position: {x: -0.09384322, y: 0.0000008940697, z: -0.0000003427267}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000004}
+    - name: bone_sleeve_36(mirrored)
+      parentName: bone_sleeve_35(mirrored)
+      position: {x: -0.0952543, y: 0.00000029802322, z: 0.00000011920929}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
+    - name: Bip001 LUpArmTwist
+      parentName: Bip001 L Clavicle
+      position: {x: -0.076325, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000001}
+    - name: Bip001 LUpArmTwist1
+      parentName: Bip001 LUpArmTwist
+      position: {x: -0.11784601, y: 0.0000000037252903, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: bone_sleeve_18(mirrored)
+      parentName: Bip001 LUpArmTwist1
+      position: {x: -0.05665636, y: 0.0047616065, z: 0.03070128}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000002}
+    - name: bone_sleeve_19(mirrored)
+      parentName: bone_sleeve_18(mirrored)
+      position: {x: -0.21115673, y: -0.000000059604645, z: -0.00000010430813}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: bone_sleeve_20(mirrored)
+      parentName: bone_sleeve_19(mirrored)
+      position: {x: -0.20900303, y: -0.000000059604645, z: 0.00000008940697}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1}
+    - name: bone_sleeve_21(mirrored)
+      parentName: bone_sleeve_20(mirrored)
+      position: {x: -0.2147291, y: 0.00000011920929, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: bone_sleeve_22(mirrored)
+      parentName: bone_sleeve_21(mirrored)
+      position: {x: -0.17600712, y: -0.000000059604645, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999997, z: 0.99999994}
+    - name: bone_sleeve_23(mirrored)
+      parentName: bone_sleeve_22(mirrored)
+      position: {x: -0.18069667, y: -0.00000029802322, z: 0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: bone_sleeve_24(mirrored)
+      parentName: bone_sleeve_23(mirrored)
+      position: {x: -0.19478208, y: 0, z: -0.000000074505806}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 0.9999999, z: 0.9999998}
+    - name: bone_sleeve_25(mirrored)
+      parentName: bone_sleeve_24(mirrored)
+      position: {x: -0.15165943, y: -0.00000023841858, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1.0000002, z: 1}
+    - name: bone_sleeve_26(mirrored)
+      parentName: bone_sleeve_25(mirrored)
+      position: {x: -0.12584436, y: 0, z: 0.00000020861626}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1, z: 1.0000001}
+    - name: gd_lshoulder
+      parentName: Bip001 L Clavicle
+      position: {x: -0.0526919, y: 0.0008853674, z: 0.034166098}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000007}
+    - name: Bip001 R Clavicle
+      parentName: Bip001 Spine1
+      position: {x: -0.13725328, y: -0.018401703, z: -0.027057052}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: 0.7071068, w: -0.000000030908623}
+      scale: {x: 1.0000006, y: 1.0000001, z: 1.0000001}
+    - name: Bip001 R UpperArm
+      parentName: Bip001 R Clavicle
+      position: {x: -0.076325, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 R Forearm
+      parentName: Bip001 R UpperArm
+      position: {x: -0.23569202, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: Bip001 R Hand
+      parentName: Bip001 R Forearm
+      position: {x: -0.25224194, y: 0.000000059604645, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+      scale: {x: 1.0000006, y: 1.0000004, z: 1.0000005}
+    - name: Bip001 R Finger0
+      parentName: Bip001 R Hand
+      position: {x: -0.020074993, y: 0.0113669485, z: 0.026450038}
+      rotation: {x: 0, y: 0.38268346, z: 0, w: 0.9238795}
+      scale: {x: 1, y: 1.0000005, z: 0.9999997}
+    - name: Bip001 R Finger01
+      parentName: Bip001 R Finger0
+      position: {x: -0.019327044, y: -0.00000011920929, z: 0.000000029802322}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.9999996, z: 1}
+    - name: Bip001 R Finger02
+      parentName: Bip001 R Finger01
+      position: {x: -0.030405998, y: 0, z: -0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: Bip001 R Finger1
+      parentName: Bip001 R Hand
+      position: {x: -0.06250602, y: 0.0039379746, z: 0.02139604}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999996, y: 1.0000008, z: 0.9999997}
+    - name: Bip001 R Finger11
+      parentName: Bip001 R Finger1
+      position: {x: -0.03035, y: -0.000000014901161, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000007, y: 1.0000002, z: 1.0000005}
+    - name: Bip001 R Finger12
+      parentName: Bip001 R Finger11
+      position: {x: -0.020779938, y: 0.000000029802322, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: Bip001 R Finger2
+      parentName: Bip001 R Hand
+      position: {x: -0.060342968, y: 0.0014384836, z: 0.0057040453}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000007, z: 0.99999994}
+    - name: Bip001 R Finger21
+      parentName: Bip001 R Finger2
+      position: {x: -0.035192996, y: -0.000000007450581, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: Bip001 R Finger22
+      parentName: Bip001 R Finger21
+      position: {x: -0.02076298, y: -0.000000014901161, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: Bip001 R Finger3
+      parentName: Bip001 R Hand
+      position: {x: -0.06037101, y: 0.0027537197, z: -0.0071778297}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000002}
+    - name: Bip001 R Finger31
+      parentName: Bip001 R Finger3
+      position: {x: -0.031197995, y: 0.000000007450581, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000004}
+    - name: Bip001 R Finger32
+      parentName: Bip001 R Finger31
+      position: {x: -0.018481135, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.99999994}
+    - name: Bip001 R Finger4
+      parentName: Bip001 R Hand
+      position: {x: -0.05973199, y: 0.0058553666, z: -0.020545363}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: Bip001 R Finger41
+      parentName: Bip001 R Finger4
+      position: {x: -0.026303947, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1, z: 1.0000001}
+    - name: Bip001 R Finger42
+      parentName: Bip001 R Finger41
+      position: {x: -0.01663497, y: 0, z: 0.00000011920929}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000007, y: 1.0000005, z: 1.0000004}
+    - name: gd_rightprop
+      parentName: Bip001 R Hand
+      position: {x: -0.072571546, y: 0.025272243, z: -0.002380371}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000005, z: 1.0000004}
+    - name: Bone245
+      parentName: Bip001 R Forearm
+      position: {x: -0.012089074, y: -0.030534029, z: 0.0047121644}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 0.9999999, z: 1.0000002}
+    - name: Bip001 R ForeTwist
+      parentName: Bip001 R UpperArm
+      position: {x: -0.23569202, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000002}
+    - name: Bip001 R ForeTwist1
+      parentName: Bip001 R ForeTwist
+      position: {x: -0.12612098, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999997, y: 0.9999998, z: 1}
+    - name: bone_sleeve_00
+      parentName: Bip001 R ForeTwist1
+      position: {x: -0.10032305, y: 0.040065885, z: -0.013139278}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 0.9999999}
+    - name: bone_sleeve_01
+      parentName: bone_sleeve_00
+      position: {x: -0.14952928, y: 0, z: 0.0000000121071935}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1}
+    - name: bone_sleeve_02
+      parentName: bone_sleeve_01
+      position: {x: -0.1640634, y: 0, z: 0.000000026077032}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: bone_sleeve_03
+      parentName: bone_sleeve_02
+      position: {x: -0.17298627, y: 0.0000023245811, z: 0.000000015832484}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1}
+    - name: bone_sleeve_04
+      parentName: bone_sleeve_03
+      position: {x: -0.17871907, y: -0.000000029802322, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: bone_sleeve_05
+      parentName: bone_sleeve_04
+      position: {x: -0.15208817, y: 0.000000029802322, z: 0.000000013038516}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: bone_sleeve_06
+      parentName: Bip001 R ForeTwist
+      position: {x: -0.08828136, y: 0.048992097, z: 0.012113571}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1.0000005}
+    - name: bone_sleeve_07
+      parentName: bone_sleeve_06
+      position: {x: -0.18816262, y: 0.00000008940697, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1}
+    - name: bone_sleeve_08
+      parentName: bone_sleeve_07
+      position: {x: -0.17718643, y: 0.00000074505806, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bone_sleeve_09
+      parentName: bone_sleeve_08
+      position: {x: -0.16456032, y: -0.000000029802322, z: 0.000000015832484}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: bone_sleeve_10
+      parentName: bone_sleeve_09
+      position: {x: -0.16974112, y: 0, z: 0.000000016763806}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: bone_sleeve_11
+      parentName: bone_sleeve_10
+      position: {x: -0.20490165, y: 0, z: 0.000000019557774}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bone_sleeve_12
+      parentName: Bip001 R ForeTwist
+      position: {x: 0.01858282, y: 0.057733476, z: 0.036766052}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: bone_sleeve_13
+      parentName: bone_sleeve_12
+      position: {x: -0.18355155, y: 0.00000071525574, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bone_sleeve_14
+      parentName: bone_sleeve_13
+      position: {x: -0.20103854, y: 0.0000018179417, z: 0.000000029802322}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: bone_sleeve_15
+      parentName: bone_sleeve_14
+      position: {x: -0.16540158, y: -0.0000018179417, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: bone_sleeve_16
+      parentName: bone_sleeve_15
+      position: {x: -0.16972613, y: 0.00000020861626, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.9999998, z: 1}
+    - name: bone_sleeve_17
+      parentName: bone_sleeve_16
+      position: {x: -0.21519907, y: -0.00000011920929, z: 0.000000020489097}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bone_sleeve_33
+      parentName: Bip001 R UpperArm
+      position: {x: -0.082874954, y: -0.006312728, z: -0.01671815}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: bone_sleeve_34
+      parentName: bone_sleeve_33
+      position: {x: -0.087307334, y: 0.00000011920929, z: -0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bone_sleeve_35
+      parentName: bone_sleeve_34
+      position: {x: -0.09384322, y: -0.000000834465, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bone_sleeve_36
+      parentName: bone_sleeve_35
+      position: {x: -0.09525406, y: -0.00000011920929, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Bip001 RUpArmTwist
+      parentName: Bip001 R Clavicle
+      position: {x: -0.076325, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1}
+    - name: Bip001 RUpArmTwist1
+      parentName: Bip001 RUpArmTwist
+      position: {x: -0.11784601, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: bone_sleeve_18
+      parentName: Bip001 RUpArmTwist1
+      position: {x: -0.056655407, y: 0.00476256, z: -0.030701399}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000001}
+    - name: bone_sleeve_19
+      parentName: bone_sleeve_18
+      position: {x: -0.21115667, y: -0.000000059604645, z: -0.00000023841858}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000001}
+    - name: bone_sleeve_20
+      parentName: bone_sleeve_19
+      position: {x: -0.20900297, y: 0.000000059604645, z: 0.00000013411045}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bone_sleeve_21
+      parentName: bone_sleeve_20
+      position: {x: -0.21472916, y: 0.000000059604645, z: -0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: bone_sleeve_22
+      parentName: bone_sleeve_21
+      position: {x: -0.17600709, y: 0.00000011920929, z: -0.000000074505806}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: bone_sleeve_23
+      parentName: bone_sleeve_22
+      position: {x: -0.18069655, y: 0, z: 0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1.0000001}
+    - name: bone_sleeve_24
+      parentName: bone_sleeve_23
+      position: {x: -0.19478217, y: 0.00000011920929, z: -0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: bone_sleeve_25
+      parentName: bone_sleeve_24
+      position: {x: -0.1516594, y: 0.000000059604645, z: -0.000000044703484}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: bone_sleeve_26
+      parentName: bone_sleeve_25
+      position: {x: -0.1258443, y: 0.00000035762787, z: 0.0000001937151}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999996, y: 0.9999989, z: 0.9999995}
+    - name: gd_rshoulder
+      parentName: Bip001 R Clavicle
+      position: {x: -0.0528272, y: 0.000879921, z: -0.0341779}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000002}
+    - name: bone_sleeve_27
+      parentName: Bip001 Spine1
+      position: {x: -0.11845732, y: -0.011009003, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bone_sleeve_28
+      parentName: bone_sleeve_27
+      position: {x: -0.034706414, y: 0, z: -0.0000000026421674}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: bone_sleeve_29
+      parentName: bone_sleeve_28
+      position: {x: -0.061921835, y: 0.00000023841858, z: -1.4495072e-12}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1}
+    - name: bone_sleeve_30
+      parentName: bone_sleeve_29
+      position: {x: -0.07212776, y: 0.00000011920929, z: 0.0000000043318664}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.9999998, z: 1}
+    - name: bone_sleeve_31
+      parentName: bone_sleeve_30
+      position: {x: -0.07665956, y: -0.0000009536743, z: 0.000000004237961}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: bone_sleeve_32
+      parentName: bone_sleeve_31
+      position: {x: -0.08304596, y: 0, z: 0.0000000047477897}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: t_Bip001 Spine
+      parentName: Bip001 Spine
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.9999999}
+    - name: Bone073(mirrored)
+      parentName: Bip001 Pelvis
+      position: {x: -0.10211635, y: 0.10730812, z: 0.056000017}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1, z: 1.0000001}
+    - name: Bone075(mirrored)
+      parentName: Bone073(mirrored)
+      position: {x: -0.13123089, y: 0.000000059604645, z: -0.00000012665987}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000001}
+    - name: Bone076(mirrored)
+      parentName: Bone075(mirrored)
+      position: {x: -0.1333943, y: 0.000000059604645, z: 0.000000115484}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 0.9999999}
+    - name: Bone077(mirrored)
+      parentName: Bone076(mirrored)
+      position: {x: -0.15304244, y: 0.000000059604645, z: 0.00000017508864}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 0.9999999, z: 1.0000001}
+    - name: Bone078(mirrored)
+      parentName: Bone077(mirrored)
+      position: {x: -0.16633731, y: 0, z: 0.000000070780516}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999997, z: 0.99999964}
+    - name: Bone079(mirrored)
+      parentName: Bone078(mirrored)
+      position: {x: -0.12371197, y: -0.000000029802322, z: 0.00000008195639}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000001}
+    - name: Bone080(mirrored)
+      parentName: Bone079(mirrored)
+      position: {x: -0.14995356, y: -0.000000029802322, z: -0.000000026077032}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1.0000001, z: 1}
+    - name: Bone074(mirrored)
+      parentName: Bone080(mirrored)
+      position: {x: -0.16645555, y: 0.00000011920929, z: 0.00000010430813}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999946, y: 1.0000002, z: 1}
+    - name: Bone067
+      parentName: Bip001 Pelvis
+      position: {x: -0.09243631, y: 0.11734905, z: -0.00000009530504}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Bone069
+      parentName: Bone067
+      position: {x: -0.11860299, y: 0.000000059604645, z: -5.684342e-14}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Bone070
+      parentName: Bone069
+      position: {x: -0.12769896, y: 0.000000059604645, z: -1.1368684e-13}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Bone071
+      parentName: Bone070
+      position: {x: -0.12508482, y: 0, z: 0.000000069190946}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Bone072
+      parentName: Bone071
+      position: {x: -0.15891963, y: 0.00000008940697, z: 5.684342e-14}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.9999998, z: 1}
+    - name: Bone089
+      parentName: Bone072
+      position: {x: -0.17090452, y: 0.000000029802322, z: 0.00000009543564}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Bone090
+      parentName: Bone089
+      position: {x: -0.16135873, y: 0.000000059604645, z: 5.684342e-14}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: Bone068
+      parentName: Bone090
+      position: {x: -0.14988981, y: -0.00000011920929, z: -0.00000015301816}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.000001, y: 1.000001, z: 1}
+    - name: Bone073
+      parentName: Bip001 Pelvis
+      position: {x: -0.102116585, y: 0.10730782, z: -0.05553005}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000004, z: 0.9999999}
+    - name: Bone075
+      parentName: Bone073
+      position: {x: -0.13123077, y: 0, z: 0.0000000037252903}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1.0000001}
+    - name: Bone076
+      parentName: Bone075
+      position: {x: -0.13339436, y: -0.000000029802322, z: 0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: Bone077
+      parentName: Bone076
+      position: {x: -0.15304255, y: -0.000000029802322, z: 0.00000013038516}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+    - name: Bone078
+      parentName: Bone077
+      position: {x: -0.16633731, y: 0, z: 0.000000070780516}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999998}
+    - name: Bone079
+      parentName: Bone078
+      position: {x: -0.123711884, y: 0, z: 0.000000063329935}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: Bone080
+      parentName: Bone079
+      position: {x: -0.14995362, y: -0.000000059604645, z: 0.000000022351742}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Bone074
+      parentName: Bone080
+      position: {x: -0.1664556, y: 0, z: 0.000000067055225}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999996, y: 1.0000006, z: 0.99999946}
+    - name: Bone041
+      parentName: Bip001 Pelvis
+      position: {x: -0.074094534, y: 0.09297864, z: -0.040435795}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: Bone043
+      parentName: Bone041
+      position: {x: -0.13436258, y: 0, z: 0.000000022351742}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999997, z: 1}
+    - name: Bone044
+      parentName: Bone043
+      position: {x: -0.107750416, y: -0.000000029802322, z: 0.00000012665987}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000002}
+    - name: Bone045
+      parentName: Bone044
+      position: {x: -0.15065569, y: 0, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.9999997}
+    - name: Bone046
+      parentName: Bone045
+      position: {x: -0.15981835, y: -0.000000029802322, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.99999976, z: 1.0000002}
+    - name: Bone047
+      parentName: Bone046
+      position: {x: -0.16367179, y: 0.000000029802322, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: Bone048
+      parentName: Bone047
+      position: {x: -0.14353266, y: -0.000000029802322, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1.0000001, z: 0.99999994}
+    - name: Bone049
+      parentName: Bone048
+      position: {x: -0.15256579, y: 0.00000008940697, z: 0.000000007450581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1.0000002, z: 1.0000002}
+    - name: Bone102
+      parentName: Bone049
+      position: {x: -0.18956542, y: 0.000000029802322, z: -0.000000037252903}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1}
+    - name: Bone183
+      parentName: Bone102
+      position: {x: -0.19842008, y: 0.0000000037252903, z: -0.000000022351742}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+    - name: Bone032
+      parentName: Bip001 Pelvis
+      position: {x: -0.07998288, y: -0.0081775, z: -0.09944594}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999976, z: 1.0000002}
+    - name: Bone033
+      parentName: Bone032
+      position: {x: -0.13194042, y: -0.0000014305115, z: 0.000000018626451}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone034
+      parentName: Bone033
+      position: {x: -0.1272952, y: -0.000000059604645, z: 0.000000017695129}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Bone035
+      parentName: Bone034
+      position: {x: -0.14378637, y: -0.000000029802322, z: 0.000000019557774}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone040
+      parentName: Bone035
+      position: {x: -0.14389443, y: 0.00000011920929, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Bone036
+      parentName: Bone040
+      position: {x: -0.14806086, y: 0.000000059604645, z: 0.000000053085387}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1}
+    - name: Bone037
+      parentName: Bone036
+      position: {x: -0.19787192, y: -0.000000059604645, z: 0.000000027939677}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone038
+      parentName: Bone037
+      position: {x: -0.20381714, y: 0.0000013709068, z: 0.000000027939677}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone104
+      parentName: Bone038
+      position: {x: -0.16444218, y: 0.000000059604645, z: -0.000000006519258}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: Bone105
+      parentName: Bone104
+      position: {x: -0.18861532, y: 0.000000029802322, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.99999994}
+    - name: Bone039
+      parentName: Bone105
+      position: {x: -0.16079092, y: -0.00000009080395, z: 0.000000084750354}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: Bone050
+      parentName: Bip001 Pelvis
+      position: {x: -0.07511914, y: -0.06114165, z: -0.026748417}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000004, z: 1}
+    - name: Bone051
+      parentName: Bone050
+      position: {x: -0.12162936, y: -0.000000029802322, z: 0.000000007450581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: Bone052
+      parentName: Bone051
+      position: {x: -0.13480073, y: -0.000000059604645, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999976, z: 0.9999998}
+    - name: Bone053
+      parentName: Bone052
+      position: {x: -0.13940543, y: 0, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000004, z: 1.0000001}
+    - name: Bone054
+      parentName: Bone053
+      position: {x: -0.15285408, y: 0.000000029802322, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999964, y: 0.9999995, z: 0.99999994}
+    - name: Bone055
+      parentName: Bone054
+      position: {x: -0.16967738, y: -0.00000008940697, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000001}
+    - name: Bone056
+      parentName: Bone055
+      position: {x: -0.16910711, y: 0.00000008940697, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999946, y: 0.9999998, z: 0.9999999}
+    - name: Bone057
+      parentName: Bone056
+      position: {x: -0.21045396, y: -0.00000020861626, z: -0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1.0000001}
+    - name: Bone106
+      parentName: Bone057
+      position: {x: -0.16090322, y: 0, z: 0.000000007450581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 1.0000002, z: 0.9999998}
+    - name: Bone107
+      parentName: Bone106
+      position: {x: -0.19040811, y: 0, z: -0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 0.99999994}
+    - name: Bone184
+      parentName: Bone107
+      position: {x: -0.25249708, y: 0.000000052154064, z: 0.000000052154064}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.9999999}
+    - name: Bone058
+      parentName: Bone184
+      position: {x: -0.2205553, y: 0.0000006631017, z: 0.00000031292439}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 0.99999964, z: 0.9999995}
+    - name: Bone081
+      parentName: Bip001 Pelvis
+      position: {x: -0.08732128, y: -0.05455167, z: -0.033987645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999995, y: 1.0000008, z: 0.99999994}
+    - name: Bone083
+      parentName: Bone081
+      position: {x: -0.14239234, y: 0, z: -0.00000011175871}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999998, z: 0.99999994}
+    - name: Bone084
+      parentName: Bone083
+      position: {x: -0.1587025, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 0.99999994}
+    - name: Bone085
+      parentName: Bone084
+      position: {x: -0.1345514, y: -0.000000059604645, z: -0.000000074505806}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 0.9999998}
+    - name: Bone086
+      parentName: Bone085
+      position: {x: -0.14304847, y: -0.00000011920929, z: 0.000000007450581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+    - name: Bone087
+      parentName: Bone086
+      position: {x: -0.15531611, y: 0, z: 0.00000008195639}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.99999994, z: 0.9999999}
+    - name: Bone108
+      parentName: Bone087
+      position: {x: -0.16434942, y: -0.000000059604645, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1, z: 1.0000001}
+    - name: Bone109
+      parentName: Bone108
+      position: {x: -0.17674951, y: 0, z: -0.000000007450581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 1}
+    - name: Bone082
+      parentName: Bone109
+      position: {x: -0.17678939, y: -0.0000005662441, z: -0.00000020116568}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999994, y: 0.99999976, z: 1.0000008}
+    - name: Bone081(mirrored)
+      parentName: Bip001 Pelvis
+      position: {x: -0.08732116, y: -0.05455147, z: 0.034000266}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000001}
+    - name: Bone083(mirrored)
+      parentName: Bone081(mirrored)
+      position: {x: -0.14239204, y: 0.00000011920929, z: -0.00000022351742}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1.0000002, z: 1}
+    - name: Bone084(mirrored)
+      parentName: Bone083(mirrored)
+      position: {x: -0.15870237, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000001}
+    - name: Bone085(mirrored)
+      parentName: Bone084(mirrored)
+      position: {x: -0.13455158, y: -0.000000029802322, z: -0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999996, y: 0.9999999, z: 0.9999998}
+    - name: Bone086(mirrored)
+      parentName: Bone085(mirrored)
+      position: {x: -0.14304855, y: 0.000000059604645, z: -0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000001}
+    - name: Bone087(mirrored)
+      parentName: Bone086(mirrored)
+      position: {x: -0.15531611, y: 0, z: 0.000000044703484}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 0.9999998, z: 0.9999999}
+    - name: Bone108(mirrored)
+      parentName: Bone087(mirrored)
+      position: {x: -0.16434944, y: -0.000000059604645, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999976, z: 1}
+    - name: Bone109(mirrored)
+      parentName: Bone108(mirrored)
+      position: {x: -0.17674951, y: 0, z: -0.000000029802322}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 1.0000004, z: 0.99999994}
+    - name: Bone082(mirrored)
+      parentName: Bone109(mirrored)
+      position: {x: -0.17678957, y: 0.00000059604645, z: -0.00000015646219}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 0.9999998, z: 1.0000001}
+    - name: Bone032(mirrored)
+      parentName: Bip001 Pelvis
+      position: {x: -0.07998252, y: -0.008176952, z: 0.099000156}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 0.9999998, z: 1}
+    - name: Bone033(mirrored)
+      parentName: Bone032(mirrored)
+      position: {x: -0.13194036, y: 0.0000014901161, z: 0.00000011920929}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: Bone034(mirrored)
+      parentName: Bone033(mirrored)
+      position: {x: -0.12729508, y: -0.000000029802322, z: -0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: Bone035(mirrored)
+      parentName: Bone034(mirrored)
+      position: {x: -0.14378631, y: 0.000000059604645, z: -0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone040(mirrored)
+      parentName: Bone035(mirrored)
+      position: {x: -0.1438944, y: -0.000000029802322, z: 9.313226e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1.0000001}
+    - name: Bone036(mirrored)
+      parentName: Bone040(mirrored)
+      position: {x: -0.14806086, y: 0.000000059604645, z: 0.00000008940697}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: Bone037(mirrored)
+      parentName: Bone036(mirrored)
+      position: {x: -0.19787191, y: -0.000000059604645, z: 0.000000029802322}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 1}
+    - name: Bone038(mirrored)
+      parentName: Bone037(mirrored)
+      position: {x: -0.20381707, y: -0.0000013709068, z: 0.000000028871}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1}
+    - name: Bone104(mirrored)
+      parentName: Bone038(mirrored)
+      position: {x: -0.16444224, y: 0.000000029802322, z: -0.000000013038516}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.99999976, z: 0.9999999}
+    - name: Bone105(mirrored)
+      parentName: Bone104(mirrored)
+      position: {x: -0.1886155, y: 0.000000029802322, z: 0.000000027939677}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: Bone039(mirrored)
+      parentName: Bone105(mirrored)
+      position: {x: -0.16079068, y: 0.00000001816079, z: 0.000000109896064}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 0.9999997, z: 1}
+    - name: Bone041(mirrored)
+      parentName: Bip001 Pelvis
+      position: {x: -0.074094415, y: 0.09297884, z: 0.039999895}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1.0000004, z: 1}
+    - name: Bone043(mirrored)
+      parentName: Bone041(mirrored)
+      position: {x: -0.13436258, y: 0.000000029802322, z: -0.00000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999994, z: 0.9999998}
+    - name: Bone044(mirrored)
+      parentName: Bone043(mirrored)
+      position: {x: -0.107750356, y: 0.00000011920929, z: 0.00000015646219}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999994, z: 0.9999999}
+    - name: Bone045(mirrored)
+      parentName: Bone044(mirrored)
+      position: {x: -0.15065557, y: -0.00000008940697, z: -0.000000044703484}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999998, z: 1.0000004}
+    - name: Bone046(mirrored)
+      parentName: Bone045(mirrored)
+      position: {x: -0.15981835, y: 0.000000029802322, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 0.99999994, z: 0.9999998}
+    - name: Bone047(mirrored)
+      parentName: Bone046(mirrored)
+      position: {x: -0.16367155, y: -0.00000011920929, z: 0.00000010430813}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1, z: 0.9999999}
+    - name: Bone048(mirrored)
+      parentName: Bone047(mirrored)
+      position: {x: -0.14353271, y: 0.00000008940697, z: -0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999964, y: 0.99999994, z: 1.0000001}
+    - name: Bone049(mirrored)
+      parentName: Bone048(mirrored)
+      position: {x: -0.15256572, y: -0.000000029802322, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000001}
+    - name: Bone102(mirrored)
+      parentName: Bone049(mirrored)
+      position: {x: -0.18956518, y: 0, z: -0.000000052154064}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 1, z: 0.99999964}
+    - name: Bone182
+      parentName: Bone102(mirrored)
+      position: {x: -0.19842017, y: -0.000000059604645, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 0.9999999}
+    - name: Bone141(mirrored)
+      parentName: Bip001 Pelvis
+      position: {x: -0.028422952, y: 0.10038647, z: 0.032999877}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999964, y: 1.0000005, z: 0.99999994}
+    - name: Bone142(mirrored)
+      parentName: Bone141(mirrored)
+      position: {x: -0.1079998, y: 0.00000020861626, z: 0.000000007450581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999964, y: 1, z: 0.9999999}
+    - name: Bone143(mirrored)
+      parentName: Bone142(mirrored)
+      position: {x: -0.1014806, y: 0.000000059604645, z: -0.000000067055225}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: Bone144(mirrored)
+      parentName: Bone143(mirrored)
+      position: {x: -0.1312269, y: -0.000000029802322, z: 0.000000052154064}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999964, y: 0.9999995, z: 0.9999998}
+    - name: Bone145(mirrored)
+      parentName: Bone144(mirrored)
+      position: {x: -0.1512196, y: -0.000000029802322, z: 0.0000000037252903}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000002}
+    - name: Bone146(mirrored)
+      parentName: Bone145(mirrored)
+      position: {x: -0.14334697, y: 0.00000017881393, z: -0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1.0000001, z: 0.9999998}
+    - name: Bone147(mirrored)
+      parentName: Bone146(mirrored)
+      position: {x: -0.16478887, y: -0.000000059604645, z: 0.00000013411045}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 1.0000002, z: 1.0000001}
+    - name: Bone148(mirrored)
+      parentName: Bone147(mirrored)
+      position: {x: -0.120086506, y: 0.000000044703484, z: -0.000000018626451}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999997, z: 1.0000004}
+    - name: Bone149(mirrored)
+      parentName: Bone148(mirrored)
+      position: {x: -0.1153472, y: 0, z: 0.000000011175871}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999997, y: 0.99999994, z: 0.99999964}
+    - name: Bone150(mirrored)
+      parentName: Bone149(mirrored)
+      position: {x: -0.09560105, y: 0.000000029802322, z: -0.0000000055879354}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1, z: 1.0000002}
+    - name: Bone151(mirrored)
+      parentName: Bone150(mirrored)
+      position: {x: -0.13983274, y: -0.000000029802322, z: -0.000000024214387}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.99999964}
+    - name: Bone141
+      parentName: Bip001 Pelvis
+      position: {x: -0.028422952, y: 0.10038629, z: -0.033078905}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: Bone142
+      parentName: Bone141
+      position: {x: -0.1079998, y: -0.0000002682209, z: -0.000000018626451}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999964, y: 0.9999994, z: 1}
+    - name: Bone143
+      parentName: Bone142
+      position: {x: -0.1014806, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000004, z: 0.99999976}
+    - name: Bone144
+      parentName: Bone143
+      position: {x: -0.13122684, y: -0.000000014901161, z: -0.0000000037252903}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1}
+    - name: Bone145
+      parentName: Bone144
+      position: {x: -0.15121949, y: -0.000000029802322, z: 0.000000007450581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone146
+      parentName: Bone145
+      position: {x: -0.14334702, y: -0.00000013411045, z: 0.0000000037252903}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999976, z: 1}
+    - name: Bone147
+      parentName: Bone146
+      position: {x: -0.16478884, y: 0, z: -0.0000000037252903}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Bone148
+      parentName: Bone147
+      position: {x: -0.12008649, y: 0, z: 0.000000007450581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1.0000001, z: 1.0000001}
+    - name: Bone149
+      parentName: Bone148
+      position: {x: -0.11534721, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.99999976, z: 0.99999994}
+    - name: Bone150
+      parentName: Bone149
+      position: {x: -0.09560102, y: -0.000000029802322, z: 0.000000018626451}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999964, y: 0.9999999, z: 1}
+    - name: Bone151
+      parentName: Bone150
+      position: {x: -0.1398327, y: -0.0000000037252903, z: 0.0000000018626451}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Bone118
+      parentName: Bip001 Pelvis
+      position: {x: -0.053503156, y: 0.015870363, z: -0.09543848}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1.0000001}
+    - name: Bone119
+      parentName: Bone118
+      position: {x: -0.11654854, y: 0.0000004172325, z: 0.000000009313226}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 0.99999994}
+    - name: Bone120
+      parentName: Bone119
+      position: {x: -0.11361718, y: 0.000000059604645, z: 0.000000006519258}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999997, y: 0.99999946, z: 0.99999994}
+    - name: Bone121
+      parentName: Bone120
+      position: {x: -0.15159881, y: -0.00000029802322, z: -9.313226e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: Bone122
+      parentName: Bone121
+      position: {x: -0.14473134, y: 0, z: 0.0000000037252903}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Bone123
+      parentName: Bone122
+      position: {x: -0.14770299, y: -0.00000008940697, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: Bone124
+      parentName: Bone123
+      position: {x: -0.12961772, y: 0.000000029802322, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000002, z: 0.99999994}
+    - name: Bone125
+      parentName: Bone124
+      position: {x: -0.15483992, y: -0.000000059604645, z: 0.000000007450581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999998, z: 1}
+    - name: Bone126
+      parentName: Bone125
+      position: {x: -0.13724351, y: 0, z: 0.0000000018626451}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000001}
+    - name: Bone127
+      parentName: Bone126
+      position: {x: -0.13093543, y: 0, z: 0.000000007450581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1}
+    - name: Bone128
+      parentName: Bone127
+      position: {x: -0.1602993, y: 0.000000029802322, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.9999999}
+    - name: Bone118(mirrored)
+      parentName: Bip001 Pelvis
+      position: {x: -0.05350268, y: 0.015870888, z: 0.09500015}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000001}
+    - name: Bone119(mirrored)
+      parentName: Bone118(mirrored)
+      position: {x: -0.11654842, y: -0.00000035762787, z: -0.0000000037252903}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1}
+    - name: Bone120(mirrored)
+      parentName: Bone119(mirrored)
+      position: {x: -0.1136173, y: -0.000000059604645, z: 0.00000006053597}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 0.99999976, z: 1}
+    - name: Bone121(mirrored)
+      parentName: Bone120(mirrored)
+      position: {x: -0.15159869, y: 0.00000035762787, z: -0.0000000027939677}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 1.0000002, z: 1}
+    - name: Bone122(mirrored)
+      parentName: Bone121(mirrored)
+      position: {x: -0.14473128, y: -0.000000059604645, z: 9.313226e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1.0000005}
+    - name: Bone123(mirrored)
+      parentName: Bone122(mirrored)
+      position: {x: -0.14770311, y: 0.00000008940697, z: -0.000000027939677}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 0.9999999, z: 1}
+    - name: Bone124(mirrored)
+      parentName: Bone123(mirrored)
+      position: {x: -0.12961772, y: 0.000000059604645, z: -0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999995, y: 1, z: 0.99999964}
+    - name: Bone125(mirrored)
+      parentName: Bone124(mirrored)
+      position: {x: -0.1548399, y: -0.000000059604645, z: 0.000000070780516}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999964, y: 0.99999994, z: 0.99999994}
+    - name: Bone126(mirrored)
+      parentName: Bone125(mirrored)
+      position: {x: -0.1372435, y: 0.000000029802322, z: -0.000000009313226}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000005}
+    - name: Bone127(mirrored)
+      parentName: Bone126(mirrored)
+      position: {x: -0.13093552, y: -0.000000014901161, z: 0.000000022351742}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.99999946, z: 0.9999995}
+    - name: Bone128(mirrored)
+      parentName: Bone127(mirrored)
+      position: {x: -0.16029918, y: -0.000000033527613, z: 0.000000009313226}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999976, z: 1}
+    - name: Bone129(mirrored)
+      parentName: Bip001 Pelvis
+      position: {x: -0.046498418, y: -0.04013846, z: 0.040000204}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999991, y: 1.0000006, z: 1.0000001}
+    - name: Bone130(mirrored)
+      parentName: Bone129(mirrored)
+      position: {x: -0.093307495, y: 0.000000059604645, z: 0.000000007450581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 0.9999999}
+    - name: Bone131(mirrored)
+      parentName: Bone130(mirrored)
+      position: {x: -0.1187346, y: 0.00000008940697, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999964, y: 0.9999999, z: 0.99999976}
+    - name: Bone132(mirrored)
+      parentName: Bone131(mirrored)
+      position: {x: -0.12846893, y: -0.00000008940697, z: 0.000000057742}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 0.99999976, z: 0.99999976}
+    - name: Bone133(mirrored)
+      parentName: Bone132(mirrored)
+      position: {x: -0.14634985, y: -0.000000029802322, z: 0.0000000018626451}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000004}
+    - name: Bone134(mirrored)
+      parentName: Bone133(mirrored)
+      position: {x: -0.15111053, y: 0.0000009834766, z: -0.000000027939677}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Bone135(mirrored)
+      parentName: Bone134(mirrored)
+      position: {x: -0.13576406, y: 0.00000008940697, z: 0.000000011175871}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1.0000002}
+    - name: Bone136(mirrored)
+      parentName: Bone135(mirrored)
+      position: {x: -0.14727896, y: 0.000000059604645, z: 0.000000067055225}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999946, y: 0.99999976, z: 0.9999997}
+    - name: Bone137(mirrored)
+      parentName: Bone136(mirrored)
+      position: {x: -0.1475683, y: -0.000000059604645, z: 0.000000013038516}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000004}
+    - name: Bone138(mirrored)
+      parentName: Bone137(mirrored)
+      position: {x: -0.124779016, y: 0.000000059604645, z: 0.000000024214387}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.99999976}
+    - name: Bone139(mirrored)
+      parentName: Bone138(mirrored)
+      position: {x: -0.12227544, y: 0.000000044703484, z: 0.000000024214387}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999976, z: 0.9999997}
+    - name: Bone140(mirrored)
+      parentName: Bone139(mirrored)
+      position: {x: -0.13687593, y: -0.0000001937151, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1.0000004, z: 1.0000001}
+    - name: Bone129
+      parentName: Bip001 Pelvis
+      position: {x: -0.046498418, y: -0.04013869, z: -0.040402766}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000006}
+    - name: Bone130
+      parentName: Bone129
+      position: {x: -0.093307555, y: -0.000000059604645, z: 0.000000007450581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.99999994}
+    - name: Bone131
+      parentName: Bone130
+      position: {x: -0.11873454, y: -0.000000029802322, z: 0.0000000018626451}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.9999999, z: 1.0000001}
+    - name: Bone132
+      parentName: Bone131
+      position: {x: -0.12846905, y: 0.000000014901161, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000001}
+    - name: Bone133
+      parentName: Bone132
+      position: {x: -0.14634997, y: 0.000000029802322, z: 0.0000000018626451}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999995, y: 0.99999976, z: 0.99999994}
+    - name: Bone134
+      parentName: Bone133
+      position: {x: -0.15111044, y: -0.0000009834766, z: 0.000000018626451}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 0.99999994}
+    - name: Bone135
+      parentName: Bone134
+      position: {x: -0.13576397, y: -0.000000059604645, z: 0.000000013038516}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: Bone136
+      parentName: Bone135
+      position: {x: -0.147279, y: 0.000000059604645, z: 0.000000020489097}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 0.99999994, z: 1}
+    - name: Bone137
+      parentName: Bone136
+      position: {x: -0.14756824, y: -0.00000008940697, z: 0.000000007450581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999997, z: 1}
+    - name: Bone138
+      parentName: Bone137
+      position: {x: -0.124779046, y: -0.000000029802322, z: 0.000000011175871}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 0.99999994, z: 0.9999998}
+    - name: Bone139
+      parentName: Bone138
+      position: {x: -0.12227544, y: 0, z: 0.000000009313226}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1}
+    - name: Bone140
+      parentName: Bone139
+      position: {x: -0.13687587, y: 0.000000014901161, z: 0.000000033527613}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999998, z: 0.9999998}
+    - name: Bone152
+      parentName: Bip001 Pelvis
+      position: {x: -0.08488166, y: 0.10514266, z: -0.000000025968575}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone154
+      parentName: Bone152
+      position: {x: -0.09693259, y: -0.000000029802322, z: 0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone155
+      parentName: Bone154
+      position: {x: -0.099099636, y: 0, z: 5.684342e-14}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone156
+      parentName: Bone155
+      position: {x: -0.13043892, y: 0, z: -0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Bone157
+      parentName: Bone156
+      position: {x: -0.1315273, y: -0.000000029802322, z: -0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.9999998, z: 1}
+    - name: Bone158
+      parentName: Bone157
+      position: {x: -0.1314561, y: 0.000000029802322, z: 0.000000029802436}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Bone159
+      parentName: Bone158
+      position: {x: -0.12194058, y: -0.000000029802322, z: 0.000000029802209}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1}
+    - name: Bone160
+      parentName: Bone159
+      position: {x: -0.11670965, y: 0, z: 0.000000029802322}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Bone153
+      parentName: Bone160
+      position: {x: -0.115831256, y: -0.00000008940697, z: -0.00000010465965}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone161
+      parentName: Bip001 Pelvis
+      position: {x: -0.08471286, y: 0.10484835, z: -0.034540746}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.9999997}
+    - name: Bone162
+      parentName: Bone161
+      position: {x: -0.09693253, y: 0.000000029802322, z: 0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000001}
+    - name: Bone163
+      parentName: Bone162
+      position: {x: -0.099099696, y: -0.000000059604645, z: -0.0000000037252903}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.9999997, z: 0.99999976}
+    - name: Bone164
+      parentName: Bone163
+      position: {x: -0.13043886, y: 0, z: -0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: Bone165
+      parentName: Bone164
+      position: {x: -0.13152736, y: 0, z: -0.000000052154064}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.99999976, z: 0.9999998}
+    - name: Bone166
+      parentName: Bone165
+      position: {x: -0.13145605, y: 0, z: 0.000000022351742}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Bone167
+      parentName: Bone166
+      position: {x: -0.12194064, y: 0.000000029802322, z: 0.000000022351742}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Bone168
+      parentName: Bone167
+      position: {x: -0.11670965, y: 0, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone169
+      parentName: Bone168
+      position: {x: -0.115831256, y: -0.000000059604645, z: -0.00000011920929}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+    - name: Bone161(mirrored)
+      parentName: Bip001 Pelvis
+      position: {x: -0.084713936, y: 0.10485008, z: 0.030088728}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 0.9999996, z: 0.9999999}
+    - name: Bone162(mirrored)
+      parentName: Bone161(mirrored)
+      position: {x: -0.09693253, y: -0.00000008940697, z: 0.000000055879354}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1.0000006, z: 1.0000002}
+    - name: Bone163(mirrored)
+      parentName: Bone162(mirrored)
+      position: {x: -0.099099636, y: 0.00000011920929, z: 0.00000012665987}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1, z: 1.0000001}
+    - name: Bone164(mirrored)
+      parentName: Bone163(mirrored)
+      position: {x: -0.1304391, y: 0.000000059604645, z: -0.000000115484}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 0.99999994}
+    - name: Bone165(mirrored)
+      parentName: Bone164(mirrored)
+      position: {x: -0.13152719, y: 0.000000029802322, z: -0.000000055879354}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999998, z: 0.9999999}
+    - name: Bone166(mirrored)
+      parentName: Bone165(mirrored)
+      position: {x: -0.13145605, y: 0.000000059604645, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: Bone167(mirrored)
+      parentName: Bone166(mirrored)
+      position: {x: -0.12194061, y: 0, z: 0.00000011175871}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999997, y: 0.9999997, z: 0.99999964}
+    - name: Bone168(mirrored)
+      parentName: Bone167(mirrored)
+      position: {x: -0.11670968, y: -0.000000029802322, z: 0.000000026077032}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: Bone169(mirrored)
+      parentName: Bone168(mirrored)
+      position: {x: -0.11583121, y: 0, z: -0.00000012665987}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1.0000001}
+    - name: Bone050(mirrored)
+      parentName: Bip001 Pelvis
+      position: {x: -0.07511902, y: -0.061141495, z: 0.027000261}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 0.99999976}
+    - name: Bone051(mirrored)
+      parentName: Bone050(mirrored)
+      position: {x: -0.1216293, y: 0.000000029802322, z: -0.000000007450581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999964, z: 0.99999994}
+    - name: Bone052(mirrored)
+      parentName: Bone051(mirrored)
+      position: {x: -0.13480073, y: 0.000000059604645, z: -0.000000007450581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1.0000004, z: 0.99999994}
+    - name: Bone053(mirrored)
+      parentName: Bone052(mirrored)
+      position: {x: -0.13940537, y: -0.000000059604645, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999996, z: 0.9999999}
+    - name: Bone054(mirrored)
+      parentName: Bone053(mirrored)
+      position: {x: -0.15285414, y: -0.00000014901161, z: 0.000000044703484}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000004}
+    - name: Bone055(mirrored)
+      parentName: Bone054(mirrored)
+      position: {x: -0.1696774, y: 0.000000029802322, z: 0.000000022351742}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 0.99999964}
+    - name: Bone056(mirrored)
+      parentName: Bone055(mirrored)
+      position: {x: -0.16910723, y: -0.000000029802322, z: -0.000000052154064}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999964, y: 1.0000001, z: 0.9999998}
+    - name: Bone057(mirrored)
+      parentName: Bone056(mirrored)
+      position: {x: -0.210454, y: 0.00000020861626, z: 0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 0.9999999, z: 1.0000004}
+    - name: Bone106(mirrored)
+      parentName: Bone057(mirrored)
+      position: {x: -0.1609033, y: 0, z: -0.000000044703484}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1, z: 1.0000001}
+    - name: Bone107(mirrored)
+      parentName: Bone106(mirrored)
+      position: {x: -0.19040793, y: 0.000000074505806, z: -0.000000037252903}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.9999994}
+    - name: Bone184(mirrored)
+      parentName: Bone107(mirrored)
+      position: {x: -0.2524972, y: -0.000000063329935, z: 0.00000014156103}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.99999964, z: 1.0000004}
+    - name: Bone058(mirrored)
+      parentName: Bone184(mirrored)
+      position: {x: -0.2205553, y: -0.00000058859587, z: 0.00000023841858}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 0.99999964, z: 0.9999997}
+    - name: Bone188
+      parentName: Bip001 Pelvis
+      position: {x: -0.1117357, y: 0.014344524, z: -0.08175394}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 0.99999964, z: 0.99999994}
+    - name: Bone189
+      parentName: Bone188
+      position: {x: -0.069123626, y: -0.00000017881393, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Bone190
+      parentName: Bone189
+      position: {x: -0.085086286, y: -0.00000011920929, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.9999998}
+    - name: Bone191
+      parentName: Bone190
+      position: {x: -0.08871597, y: -0.000000059604645, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1.0000001}
+    - name: Bone192
+      parentName: Bone191
+      position: {x: -0.10652506, y: 0, z: 0.000000022351742}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1}
+    - name: Bone208
+      parentName: Bone192
+      position: {x: -0.111509204, y: -0.000000059604645, z: -0.0000000018626451}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.9999999, z: 1.0000001}
+    - name: Bone209
+      parentName: Bone208
+      position: {x: -0.09562355, y: -0.000000059604645, z: -0.000000063329935}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: Bone193
+      parentName: Bone209
+      position: {x: -0.08845705, y: 0.00000017881393, z: 0.000000092200935}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000001}
+    - name: Bone188(mirrored)
+      parentName: Bip001 Pelvis
+      position: {x: -0.11173546, y: 0.014344974, z: 0.08200012}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000001}
+    - name: Bone189(mirrored)
+      parentName: Bone188(mirrored)
+      position: {x: -0.069123566, y: -0.00000017881393, z: -0.00000010430813}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000002}
+    - name: Bone190(mirrored)
+      parentName: Bone189(mirrored)
+      position: {x: -0.085086465, y: 0, z: 0.00000012665987}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: Bone191(mirrored)
+      parentName: Bone190(mirrored)
+      position: {x: -0.08871591, y: 0.000000059604645, z: 0.000000052154064}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 1.0000001, z: 0.9999998}
+    - name: Bone192(mirrored)
+      parentName: Bone191(mirrored)
+      position: {x: -0.106525004, y: 0, z: 0.0000000018626451}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Bone208(mirrored)
+      parentName: Bone192(mirrored)
+      position: {x: -0.111509204, y: 0.000000059604645, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 0.99999994, z: 1}
+    - name: Bone209(mirrored)
+      parentName: Bone208(mirrored)
+      position: {x: -0.09562361, y: 0.00000011920929, z: -0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1, z: 0.9999999}
+    - name: Bone193(mirrored)
+      parentName: Bone209(mirrored)
+      position: {x: -0.08845699, y: -0.00000011920929, z: 0.000000058673322}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1.0000001, z: 1.0000001}
+    - name: Bone194(mirrored)
+      parentName: Bip001 Pelvis
+      position: {x: -0.10454512, y: 0.09327559, z: 0.036000036}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999998, z: 1.0000002}
+    - name: Bone195(mirrored)
+      parentName: Bone194(mirrored)
+      position: {x: -0.067077756, y: -0.000000029802322, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Bone196(mirrored)
+      parentName: Bone195(mirrored)
+      position: {x: -0.07457447, y: 0.000000014901161, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000001}
+    - name: Bone197(mirrored)
+      parentName: Bone196(mirrored)
+      position: {x: -0.08081609, y: 0.00000040233135, z: 0.000000029802322}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Bone198(mirrored)
+      parentName: Bone197(mirrored)
+      position: {x: -0.091067195, y: 0, z: -0.000000074505806}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 0.9999998, z: 1}
+    - name: Bone210(mirrored)
+      parentName: Bone198(mirrored)
+      position: {x: -0.09424573, y: 0, z: -0.00000010430813}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000001}
+    - name: Bone211(mirrored)
+      parentName: Bone210(mirrored)
+      position: {x: -0.10198331, y: -0.000000059604645, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1.0000002, z: 0.99999994}
+    - name: Bone199(mirrored)
+      parentName: Bone211(mirrored)
+      position: {x: -0.097575575, y: -0.00000008940697, z: 0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1.0000004, z: 0.9999998}
+    - name: Bone194
+      parentName: Bip001 Pelvis
+      position: {x: -0.104545, y: 0.09327541, z: -0.036373593}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: Bone195
+      parentName: Bone194
+      position: {x: -0.067077875, y: 0, z: 0.000000029802322}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Bone196
+      parentName: Bone195
+      position: {x: -0.07457459, y: 0, z: -0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: Bone197
+      parentName: Bone196
+      position: {x: -0.08081603, y: -0.00000040233135, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: Bone198
+      parentName: Bone197
+      position: {x: -0.091067255, y: 0.000000029802322, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999997, y: 0.99999976, z: 0.99999994}
+    - name: Bone210
+      parentName: Bone198
+      position: {x: -0.09424585, y: -0.000000029802322, z: -0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000001}
+    - name: Bone211
+      parentName: Bone210
+      position: {x: -0.10198319, y: 0, z: -0.000000044703484}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: Bone199
+      parentName: Bone211
+      position: {x: -0.097575575, y: 0.00000014901161, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 0.9999997, z: 1.0000001}
+    - name: Bone200
+      parentName: Bip001 Pelvis
+      position: {x: -0.11119437, y: -0.03724154, z: -0.027275184}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 0.9999997, z: 1}
+    - name: Bone201
+      parentName: Bone200
+      position: {x: -0.07313931, y: 0, z: -0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Bone202
+      parentName: Bone201
+      position: {x: -0.086717546, y: -0.000000029802322, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Bone203
+      parentName: Bone202
+      position: {x: -0.08755618, y: 0, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999997, y: 1.0000001, z: 1}
+    - name: Bone204
+      parentName: Bone203
+      position: {x: -0.08940792, y: -0.0000002682209, z: -0.000000029802322}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Bone205
+      parentName: Bone204
+      position: {x: -0.10781819, y: 0.000000029802322, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000001}
+    - name: Bone206
+      parentName: Bone205
+      position: {x: -0.100841105, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1, z: 1}
+    - name: Bone207
+      parentName: Bone206
+      position: {x: -0.11791906, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 0.9999999}
+    - name: Bone200(mirrored)
+      parentName: Bip001 Pelvis
+      position: {x: -0.11119437, y: -0.03724139, z: 0.027000448}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 0.9999998, z: 0.99999994}
+    - name: Bone201(mirrored)
+      parentName: Bone200(mirrored)
+      position: {x: -0.07313943, y: 0.00000011920929, z: -0.00000010430813}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999964, y: 0.99999976, z: 0.9999999}
+    - name: Bone202(mirrored)
+      parentName: Bone201(mirrored)
+      position: {x: -0.086717546, y: 0, z: 0.00000013411045}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: Bone203(mirrored)
+      parentName: Bone202(mirrored)
+      position: {x: -0.087555945, y: 0.00000011920929, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1.0000004, z: 1.0000002}
+    - name: Bone204(mirrored)
+      parentName: Bone203(mirrored)
+      position: {x: -0.08940804, y: 0.00000020861626, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999996, z: 0.99999976}
+    - name: Bone205(mirrored)
+      parentName: Bone204(mirrored)
+      position: {x: -0.107818246, y: -0.000000059604645, z: -0.00000013411045}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000002}
+    - name: Bone206(mirrored)
+      parentName: Bone205(mirrored)
+      position: {x: -0.100841045, y: 0.000000059604645, z: 0.00000013411045}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999997, y: 0.9999996, z: 1.0000001}
+    - name: Bone207(mirrored)
+      parentName: Bone206(mirrored)
+      position: {x: -0.11791912, y: -0.00000008940697, z: -0.000000074505806}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999976, z: 0.9999997}
+    - name: Bone212(mirrored)
+      parentName: Bip001 Pelvis
+      position: {x: -0.11955297, y: 0.10508843, z: 0.037000068}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1}
+    - name: Bone214(mirrored)
+      parentName: Bone212(mirrored)
+      position: {x: -0.07800615, y: 0.000000059604645, z: -0.00000010430813}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: Bone215(mirrored)
+      parentName: Bone214(mirrored)
+      position: {x: -0.06885213, y: 0, z: 0.00000011920929}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1.0000001, z: 0.99999994}
+    - name: Bone216(mirrored)
+      parentName: Bone215(mirrored)
+      position: {x: -0.07564598, y: 0.000000059604645, z: -0.00000011920929}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000001}
+    - name: Bone217(mirrored)
+      parentName: Bone216(mirrored)
+      position: {x: -0.08615434, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: Bone218(mirrored)
+      parentName: Bone217(mirrored)
+      position: {x: -0.10055262, y: 0.000000059604645, z: -0.000000044703484}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999976, z: 0.99999994}
+    - name: Bone213(mirrored)
+      parentName: Bone218(mirrored)
+      position: {x: -0.10609704, y: 0, z: 0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.9999998}
+    - name: Bone212
+      parentName: Bip001 Pelvis
+      position: {x: -0.11955297, y: 0.10508822, z: -0.03680419}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 1.0000001, z: 1.0000006}
+    - name: Bone214
+      parentName: Bone212
+      position: {x: -0.07800615, y: 0.000000029802322, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999976, z: 1.0000001}
+    - name: Bone215
+      parentName: Bone214
+      position: {x: -0.06885183, y: 0.000000029802322, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 0.9999999}
+    - name: Bone216
+      parentName: Bone215
+      position: {x: -0.07564604, y: 0.000000029802322, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000002}
+    - name: Bone217
+      parentName: Bone216
+      position: {x: -0.08615416, y: -0.000000029802322, z: -0.000000044703484}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.9999998, z: 0.9999999}
+    - name: Bone218
+      parentName: Bone217
+      position: {x: -0.10055268, y: 0, z: -0.00000008940697}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1}
+    - name: Bone213
+      parentName: Bone218
+      position: {x: -0.10609704, y: -0.000000029802322, z: -0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999976, z: 1.0000001}
+    - name: Bone219
+      parentName: Bip001 Pelvis
+      position: {x: -0.11584437, y: 0.11244823, z: 0.00000012624605}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1}
+    - name: Bone221
+      parentName: Bone219
+      position: {x: -0.07652831, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone222
+      parentName: Bone221
+      position: {x: -0.06782913, y: -0.000000029802322, z: 0.00000011920923}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone223
+      parentName: Bone222
+      position: {x: -0.071312726, y: 0.000000029802322, z: 5.684342e-14}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone224
+      parentName: Bone223
+      position: {x: -0.084827304, y: -0.000000029802322, z: -5.684342e-14}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone225
+      parentName: Bone224
+      position: {x: -0.104911745, y: 0.000000029802322, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone220
+      parentName: Bone225
+      position: {x: -0.13191116, y: 0.000000029802322, z: -0.000000079683616}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: t_Bip001 Pelvis
+      parentName: Bip001 Pelvis
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Bip001 R Thigh
+      parentName: Bip001 Pelvis
+      position: {x: -0.00000011920929, y: -0.00000004896404, z: -0.068362}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 1, y: 1.0000004, z: 1}
+    - name: Bip001 R Calf
+      parentName: Bip001 R Thigh
+      position: {x: -0.43763894, y: 0, z: 0.0000000037252903}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Bip001 R Foot
+      parentName: Bip001 R Calf
+      position: {x: -0.50384706, y: 0, z: -0.0000000037252903}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.99999976, z: 1}
+    - name: Bip001 R Toe0
+      parentName: Bip001 R Foot
+      position: {x: -0.105963, y: 0.072170004, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000001}
+    - name: t_Bip001 R Calf
+      parentName: Bip001 R Calf
+      position: {x: -0, y: 0.0000000037252903, z: 0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 0.99999994}
+    - name: bone_yuwei02_00
+      parentName: Bip001 R Calf
+      position: {x: -0.33253124, y: -0.01814872, z: 0.06777995}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: bone_yuwei02_01
+      parentName: bone_yuwei02_00
+      position: {x: -0.14246112, y: -0.00000017881393, z: 0.000000040978193}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bone_yuwei02_02
+      parentName: bone_yuwei02_01
+      position: {x: -0.1256704, y: 0, z: -0.000000018626451}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: bone_yuwei02_03
+      parentName: bone_yuwei02_02
+      position: {x: -0.1429084, y: -0.000000044703484, z: 0.0000000037252903}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bone_yuwei02_04
+      parentName: bone_yuwei02_03
+      position: {x: -0.17310014, y: 0.000000014901161, z: 0.0000000037252903}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: bone_yuwei02_05
+      parentName: bone_yuwei02_04
+      position: {x: -0.17079622, y: 0.000000059604645, z: 0.000000063329935}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+    - name: bone_yuwei03_00
+      parentName: Bip001 R Calf
+      position: {x: -0.32266527, y: -0.13136062, z: 0.007299863}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: bone_yuwei03_01
+      parentName: bone_yuwei03_00
+      position: {x: -0.15787202, y: -0.00000017881393, z: 0.00000004656613}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bone_yuwei03_02
+      parentName: bone_yuwei03_01
+      position: {x: -0.13407138, y: 0, z: -0.000000022351742}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: bone_yuwei03_03
+      parentName: bone_yuwei03_02
+      position: {x: -0.14648843, y: 0, z: 0.000000008381903}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bone_yuwei03_04
+      parentName: bone_yuwei03_03
+      position: {x: -0.1652534, y: -0.000000014901161, z: -0.000000011641532}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: bone_yuwei03_05
+      parentName: bone_yuwei03_04
+      position: {x: -0.15397382, y: 0, z: 0.000000030267984}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 0.9999999}
+    - name: bone_yuwei03_06
+      parentName: bone_yuwei03_05
+      position: {x: -0.14191073, y: 0.00000011175871, z: 0.000000022118911}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999997, z: 1.0000002}
+    - name: bone_yuwei01_00
+      parentName: Bip001 R Calf
+      position: {x: -0.32659933, y: 0.078850135, z: 0.041681975}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: bone_yuwei01_01
+      parentName: bone_yuwei01_00
+      position: {x: -0.14246115, y: 0.00000017881393, z: 0.000000033527613}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1}
+    - name: bone_yuwei01_02
+      parentName: bone_yuwei01_01
+      position: {x: -0.1272808, y: -0.000000029802322, z: -0.000000007450581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: bone_yuwei01_03
+      parentName: bone_yuwei01_02
+      position: {x: -0.14315994, y: 0.000000059604645, z: -0.000000052154064}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 0.9999998, z: 1.0000001}
+    - name: bone_yuwei01_04
+      parentName: bone_yuwei01_03
+      position: {x: -0.14177227, y: -0.000000029802322, z: -0.000000011175871}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 0.9999998, z: 1.0000001}
+    - name: t_Bip001 R Thigh
+      parentName: Bip001 R Thigh
+      position: {x: -0.00000011920929, y: 0, z: -0.000000115484}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1}
+    - name: Bip001 L Thigh
+      parentName: Bip001 Pelvis
+      position: {x: 0.00000011920929, y: 0.00000014064483, z: 0.068362}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Bip001 L Calf
+      parentName: Bip001 L Thigh
+      position: {x: -0.437639, y: 0, z: 0.0000000037252903}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1.0000001}
+    - name: Bip001 L Foot
+      parentName: Bip001 L Calf
+      position: {x: -0.50384706, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: Bip001 L Toe0
+      parentName: Bip001 L Foot
+      position: {x: -0.105963, y: 0.072170004, z: -0.0000000037252903}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: t_Bip001 L Calf
+      parentName: Bip001 L Calf
+      position: {x: -0.000000059604645, y: 0.000000007450581, z: -0.000000063329935}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bone_yuwei01_00(mirrored)
+      parentName: Bip001 L Calf
+      position: {x: -0.32659924, y: 0.07885061, z: -0.04168624}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1.0000001}
+    - name: bone_yuwei01_01(mirrored)
+      parentName: bone_yuwei01_00(mirrored)
+      position: {x: -0.1424611, y: -0.00000023841858, z: -0.000000007450581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.99999994}
+    - name: bone_yuwei01_02(mirrored)
+      parentName: bone_yuwei01_01(mirrored)
+      position: {x: -0.1272808, y: 0, z: 0.000000026077032}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: bone_yuwei01_03(mirrored)
+      parentName: bone_yuwei01_02(mirrored)
+      position: {x: -0.14315991, y: 0, z: -0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.99999976, z: 1}
+    - name: bone_yuwei01_04(mirrored)
+      parentName: bone_yuwei01_03(mirrored)
+      position: {x: -0.1417723, y: 0.000000059604645, z: -0.000000040978193}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1}
+    - name: bone_yuwei02_00(mirrored)
+      parentName: Bip001 L Calf
+      position: {x: -0.3325312, y: -0.018148229, z: -0.067783296}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bone_yuwei02_01(mirrored)
+      parentName: bone_yuwei02_00(mirrored)
+      position: {x: -0.14246105, y: 0.00000020861626, z: 0.000000063329935}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: bone_yuwei02_02(mirrored)
+      parentName: bone_yuwei02_01(mirrored)
+      position: {x: -0.1256704, y: 0, z: -0.000000037252903}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: bone_yuwei02_03(mirrored)
+      parentName: bone_yuwei02_02(mirrored)
+      position: {x: -0.1429084, y: 0.000000029802322, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: bone_yuwei02_04(mirrored)
+      parentName: bone_yuwei02_03(mirrored)
+      position: {x: -0.1731002, y: 0.000000007450581, z: -0.0000000037252903}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: bone_yuwei02_05(mirrored)
+      parentName: bone_yuwei02_04(mirrored)
+      position: {x: -0.17079604, y: -0.00000008195639, z: 0.000000070780516}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999998, z: 1}
+    - name: bone_yuwei03_00(mirrored)
+      parentName: Bip001 L Calf
+      position: {x: -0.32266524, y: -0.13136041, z: -0.0073007382}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: bone_yuwei03_01(mirrored)
+      parentName: bone_yuwei03_00(mirrored)
+      position: {x: -0.1578719, y: 0.0000002682209, z: 0.000000007450581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1, z: 0.99999994}
+    - name: bone_yuwei03_02(mirrored)
+      parentName: bone_yuwei03_01(mirrored)
+      position: {x: -0.13407129, y: 0.000000029802322, z: -0.000000029802322}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 0.9999998}
+    - name: bone_yuwei03_03(mirrored)
+      parentName: bone_yuwei03_02(mirrored)
+      position: {x: -0.14648843, y: -0.00000008940697, z: 0.0000000121071935}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000002}
+    - name: bone_yuwei03_04(mirrored)
+      parentName: bone_yuwei03_03(mirrored)
+      position: {x: -0.16525328, y: 0, z: -0.000000024214387}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 0.9999999}
+    - name: bone_yuwei03_05(mirrored)
+      parentName: bone_yuwei03_04(mirrored)
+      position: {x: -0.15397394, y: 0, z: 0.000000074505806}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: bone_yuwei03_06(mirrored)
+      parentName: bone_yuwei03_05(mirrored)
+      position: {x: -0.14191073, y: -0.00000011920929, z: -0.000000007683411}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: t_Bip001 L Thigh
+      parentName: Bip001 L Thigh
+      position: {x: -0, y: -0.0000000018626451, z: -0.00000011920929}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 1, y: 1, z: 1}
+    - name: gd_tail
+      parentName: Bip001 Pelvis
+      position: {x: -0.06551528, y: -0.06941348, z: 0.00000025331963}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.99999976, z: 1}
+    - name: gd_rpendant
+      parentName: Bip001 Pelvis
+      position: {x: -0.05921936, y: 0.031591058, z: -0.1087804}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000006, y: 1.0000001, z: 1.0000004}
+    - name: gd_lpendant
+      parentName: Bip001 Pelvis
+      position: {x: -0.05921936, y: 0.03159166, z: 0.10878}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: Bip001
+    hasTranslationDoF: 1
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

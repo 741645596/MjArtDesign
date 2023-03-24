@@ -1,0 +1,259 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 1001_hair_01
+  m_Shader: {fileID: 4800000, guid: 8e7ea32f494b88c438de0409a288d1b1, type: 3}
+  m_ShaderKeywords: CHANNEL_ON _WRAP_DIFFUSE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: Detail0
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail1
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail2
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: Detail3
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Illum
+      second:
+        m_Texture: {fileID: 2800000, guid: 57be6099350be3a44a7b0a0eed6cd23c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: a4a3a3c907617df4d8ad98f47022a45b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Normal
+      second:
+        m_Texture: {fileID: 2800000, guid: 9476e399fcc6da946bc5a5f67220ee44, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _OcclusionMap
+      second:
+        m_Texture: {fileID: 2800000, guid: 20ec6213a9bf4b248ba4e7ad8a386143, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _RampTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 22bf9d232d5c4fc4b8e3a2ad202dd176, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: DEBUG_DIFFUSE
+      second: 0
+    - first:
+        name: Detail0ColorScale
+      second: 1
+    - first:
+        name: Detail0Gloss
+      second: 0
+    - first:
+        name: Detail0Metallic
+      second: 0
+    - first:
+        name: Detail0UVScale
+      second: 1
+    - first:
+        name: Detail0UVX
+      second: 0
+    - first:
+        name: Detail0UVY
+      second: 0
+    - first:
+        name: Detail1ColorScale
+      second: 1
+    - first:
+        name: Detail1Gloss
+      second: 0
+    - first:
+        name: Detail1Metallic
+      second: 0
+    - first:
+        name: Detail1UVScale
+      second: 1
+    - first:
+        name: Detail1UVX
+      second: 0
+    - first:
+        name: Detail1UVY
+      second: 0
+    - first:
+        name: Detail2ColorScale
+      second: 1
+    - first:
+        name: Detail2Gloss
+      second: 0
+    - first:
+        name: Detail2Metallic
+      second: 0
+    - first:
+        name: Detail2UVScale
+      second: 1
+    - first:
+        name: Detail2UVX
+      second: 0
+    - first:
+        name: Detail2UVY
+      second: 0
+    - first:
+        name: Detail3ColorScale
+      second: 1
+    - first:
+        name: Detail3Gloss
+      second: 0
+    - first:
+        name: Detail3Metallic
+      second: 0
+    - first:
+        name: Detail3UVScale
+      second: 1
+    - first:
+        name: Detail3UVX
+      second: 0
+    - first:
+        name: Detail3UVY
+      second: 0
+    - first:
+        name: Main0Gloss
+      second: 1
+    - first:
+        name: Main0Metallic
+      second: 1
+    - first:
+        name: Main1Gloss
+      second: 1
+    - first:
+        name: Main1Metallic
+      second: 1
+    - first:
+        name: Main2Gloss
+      second: 1
+    - first:
+        name: Main2Metallic
+      second: 1
+    - first:
+        name: Main3Gloss
+      second: 1
+    - first:
+        name: Main3Metallic
+      second: 1
+    - first:
+        name: MainColorAdd
+      second: 0
+    - first:
+        name: MainColorScale0
+      second: 1
+    - first:
+        name: MainColorScale1
+      second: 1
+    - first:
+        name: MainColorScale2
+      second: 1
+    - first:
+        name: MainColorScale3
+      second: 1
+    - first:
+        name: WRAP_DIFFUSE
+      second: 1
+    - first:
+        name: _AnisoGloss
+      second: 0.7
+    - first:
+        name: _BumpScale
+      second: 1
+    - first:
+        name: _DiffuseScale
+      second: 1
+    - first:
+        name: _FresnelPower
+      second: 1
+    - first:
+        name: _FresnelScale
+      second: 0
+    - first:
+        name: _OcclusionPower
+      second: 1
+    - first:
+        name: _OcclusionScale
+      second: 0
+    - first:
+        name: _OcclusionStrength
+      second: 0.15
+    - first:
+        name: _UniqueShadowLocalDepthBias
+      second: 0
+    - first:
+        name: _WrapOffset
+      second: 0.5
+    - first:
+        name: _WrapPower
+      second: 1
+    - first:
+        name: _WrapScale
+      second: 0.5
+    m_Colors:
+    - first:
+        name: Detail0Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: Detail1Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: Detail2Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: Detail3Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: MainColor0
+      second: {r: 0.15294118, g: 0.15294118, b: 0.15294118, a: 1}
+    - first:
+        name: MainColor1
+      second: {r: 0.078431375, g: 0.078431375, b: 0.09411766, a: 1}
+    - first:
+        name: MainColor2
+      second: {r: 0.13333334, g: 0.13333334, b: 0.13333334, a: 1}
+    - first:
+        name: MainColor3
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _FresnelColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _OcclusionColor
+      second: {r: 1, g: 1, b: 1, a: 1}

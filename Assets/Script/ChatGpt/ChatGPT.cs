@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
+using LitJson;
 
 
 public class ChatGPT : MonoBehaviour
@@ -16,16 +17,16 @@ public class ChatGPT : MonoBehaviour
 
     public void GenerateResponse(string inputText)
     {
-        //StartCoroutine(RequestAPI(inputText));
+        StartCoroutine(RequestAPI(inputText));
     }
 
-    /*private IEnumerator RequestAPI(string inputText)
+    private IEnumerator RequestAPI(string inputText)
     {
         // Construct the API request payload
-        JSONObject payload = new JSONObject();
-        payload.AddField("prompt", inputText);
-        payload.AddField("max_tokens", 256);
-        payload.AddField("temperature", 0.7f);
+        JsonData payload = new JsonData();
+        payload["prompt"] = inputText;
+        payload["max_tokens"] = 256;
+        payload["temperature"] = 0.7f;
 
         UnityWebRequest request = UnityWebRequest.Post(API_URL, payload.ToString());
         request.SetRequestHeader("Content-Type", "application/json");
@@ -35,9 +36,9 @@ public class ChatGPT : MonoBehaviour
 
         if (request.result == UnityWebRequest.Result.Success)
         {
-            JSONObject responseJson = new JSONObject(request.downloadHandler.text);
-            string responseText = responseJson.GetField("choices")[0].GetField("text").str;
-            Debug.Log("ChatGPT response: " + responseText);
+            JsonData responseJson = new JsonData(request.downloadHandler.text);
+            //string responseText = responseJson.GetField("choices")[0].GetField("text").str;
+            //Debug.Log("ChatGPT response: " + responseText);
 
             // Do something with the response text, e.g. update the Unity scene
         }
@@ -45,6 +46,6 @@ public class ChatGPT : MonoBehaviour
         {
             Debug.LogError("ChatGPT API request failed: " + request.error);
         }
-    }*/
+    }
 }
 

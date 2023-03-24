@@ -1,0 +1,853 @@
+fileFormatVersion: 2
+guid: 2777d578ecfb4db498341d96e100f914
+timeCreated: 1489394885
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bip001
+    100002: Bip001 Head
+    100004: Bip001 L Calf
+    100006: Bip001 L Clavicle
+    100008: Bip001 L Finger0
+    100010: Bip001 L Finger01
+    100012: Bip001 L Finger02
+    100014: Bip001 L Finger1
+    100016: Bip001 L Finger11
+    100018: Bip001 L Finger12
+    100020: Bip001 L Finger2
+    100022: Bip001 L Finger21
+    100024: Bip001 L Finger22
+    100026: Bip001 L Finger3
+    100028: Bip001 L Finger31
+    100030: Bip001 L Finger32
+    100032: Bip001 L Finger4
+    100034: Bip001 L Finger41
+    100036: Bip001 L Finger42
+    100038: Bip001 L Foot
+    100040: Bip001 L Forearm
+    100042: Bip001 L ForeTwist
+    100044: Bip001 L ForeTwist1
+    100046: Bip001 L Hand
+    100048: Bip001 L Thigh
+    100050: Bip001 L Toe0
+    100052: Bip001 L UpperArm
+    100054: Bip001 LUpArmTwist
+    100056: Bip001 LUpArmTwist1
+    100058: Bip001 Neck
+    100060: Bip001 Pelvis
+    100062: Bip001 R Calf
+    100064: Bip001 R Clavicle
+    100066: Bip001 R Finger0
+    100068: Bip001 R Finger01
+    100070: Bip001 R Finger02
+    100072: Bip001 R Finger1
+    100074: Bip001 R Finger11
+    100076: Bip001 R Finger12
+    100078: Bip001 R Finger2
+    100080: Bip001 R Finger21
+    100082: Bip001 R Finger22
+    100084: Bip001 R Finger3
+    100086: Bip001 R Finger31
+    100088: Bip001 R Finger32
+    100090: Bip001 R Finger4
+    100092: Bip001 R Finger41
+    100094: Bip001 R Finger42
+    100096: Bip001 R Foot
+    100098: Bip001 R Forearm
+    100100: Bip001 R ForeTwist
+    100102: Bip001 R ForeTwist1
+    100104: Bip001 R Hand
+    100106: Bip001 R Thigh
+    100108: Bip001 R Toe0
+    100110: Bip001 R UpperArm
+    100112: Bip001 RUpArmTwist
+    100114: Bip001 RUpArmTwist1
+    100116: Bip001 Spine
+    100118: Bip001 Spine1
+    100120: Bone001
+    100122: Bone001(mirrored)
+    100124: Bone032
+    100126: Bone032(mirrored)
+    100128: Bone033
+    100130: Bone033(mirrored)
+    100132: Bone034
+    100134: Bone034(mirrored)
+    100136: Bone035
+    100138: Bone035(mirrored)
+    100140: Bone036
+    100142: Bone036(mirrored)
+    100144: Bone037
+    100146: Bone037(mirrored)
+    100148: Bone038
+    100150: Bone038(mirrored)
+    100152: Bone040
+    100154: Bone040(mirrored)
+    100156: Bone041
+    100158: Bone041(mirrored)
+    100160: Bone043
+    100162: Bone043(mirrored)
+    100164: Bone044
+    100166: Bone044(mirrored)
+    100168: Bone045
+    100170: Bone045(mirrored)
+    100172: Bone046
+    100174: Bone046(mirrored)
+    100176: Bone047
+    100178: Bone047(mirrored)
+    100180: Bone048
+    100182: Bone048(mirrored)
+    100184: Bone049
+    100186: Bone049(mirrored)
+    100188: Bone050
+    100190: Bone050(mirrored)
+    100192: Bone051
+    100194: Bone051(mirrored)
+    100196: Bone052
+    100198: Bone052(mirrored)
+    100200: Bone053
+    100202: Bone053(mirrored)
+    100204: Bone054
+    100206: Bone054(mirrored)
+    100208: Bone055
+    100210: Bone055(mirrored)
+    100212: Bone056
+    100214: Bone056(mirrored)
+    100216: Bone057
+    100218: Bone057(mirrored)
+    100220: Bone067
+    100222: Bone069
+    100224: Bone070
+    100226: Bone071
+    100228: Bone072
+    100230: Bone073
+    100232: Bone073(mirrored)
+    100234: Bone075
+    100236: Bone075(mirrored)
+    100238: Bone076
+    100240: Bone076(mirrored)
+    100242: Bone077
+    100244: Bone077(mirrored)
+    100246: Bone078
+    100248: Bone078(mirrored)
+    100250: Bone079
+    100252: Bone079(mirrored)
+    100254: Bone080
+    100256: Bone080(mirrored)
+    100258: Bone081
+    100260: Bone081(mirrored)
+    100262: Bone082(mirrored)
+    100264: Bone083
+    100266: Bone083(mirrored)
+    100268: Bone084
+    100270: Bone084(mirrored)
+    100272: Bone085
+    100274: Bone085(mirrored)
+    100276: Bone086
+    100278: Bone086(mirrored)
+    100280: Bone087
+    100282: Bone087(mirrored)
+    100284: Bone089
+    100286: Bone090
+    100288: Bone102
+    100290: Bone102(mirrored)
+    100292: Bone104
+    100294: Bone104(mirrored)
+    100296: Bone105
+    100298: Bone105(mirrored)
+    100300: Bone106
+    100302: Bone106(mirrored)
+    100304: Bone107
+    100306: Bone107(mirrored)
+    100308: Bone108
+    100310: Bone108(mirrored)
+    100312: Bone109
+    100314: Bone109(mirrored)
+    100316: Bone118
+    100318: Bone118(mirrored)
+    100320: Bone119
+    100322: Bone119(mirrored)
+    100324: Bone120
+    100326: Bone120(mirrored)
+    100328: Bone121
+    100330: Bone121(mirrored)
+    100332: Bone122
+    100334: Bone122(mirrored)
+    100336: Bone123
+    100338: Bone123(mirrored)
+    100340: Bone124
+    100342: Bone124(mirrored)
+    100344: Bone125
+    100346: Bone125(mirrored)
+    100348: Bone126
+    100350: Bone126(mirrored)
+    100352: Bone127
+    100354: Bone127(mirrored)
+    100356: Bone129
+    100358: Bone129(mirrored)
+    100360: Bone130
+    100362: Bone130(mirrored)
+    100364: Bone131
+    100366: Bone131(mirrored)
+    100368: Bone132
+    100370: Bone132(mirrored)
+    100372: Bone133
+    100374: Bone133(mirrored)
+    100376: Bone134
+    100378: Bone134(mirrored)
+    100380: Bone135
+    100382: Bone135(mirrored)
+    100384: Bone136
+    100386: Bone136(mirrored)
+    100388: Bone137
+    100390: Bone137(mirrored)
+    100392: Bone138
+    100394: Bone138(mirrored)
+    100396: Bone139
+    100398: Bone139(mirrored)
+    100400: Bone141
+    100402: Bone141(mirrored)
+    100404: Bone142
+    100406: Bone142(mirrored)
+    100408: Bone143
+    100410: Bone143(mirrored)
+    100412: Bone144
+    100414: Bone144(mirrored)
+    100416: Bone145
+    100418: Bone145(mirrored)
+    100420: Bone146
+    100422: Bone146(mirrored)
+    100424: Bone147
+    100426: Bone147(mirrored)
+    100428: Bone148
+    100430: Bone148(mirrored)
+    100432: Bone149
+    100434: Bone149(mirrored)
+    100436: Bone150
+    100438: Bone150(mirrored)
+    100440: Bone152
+    100442: Bone153
+    100444: Bone154
+    100446: Bone155
+    100448: Bone156
+    100450: Bone157
+    100452: Bone158
+    100454: Bone159
+    100456: Bone160
+    100458: Bone161
+    100460: Bone161(mirrored)
+    100462: Bone162
+    100464: Bone162(mirrored)
+    100466: Bone163
+    100468: Bone163(mirrored)
+    100470: Bone164
+    100472: Bone164(mirrored)
+    100474: Bone165
+    100476: Bone165(mirrored)
+    100478: Bone166
+    100480: Bone166(mirrored)
+    100482: Bone167
+    100484: Bone167(mirrored)
+    100486: Bone168
+    100488: Bone168(mirrored)
+    100490: Bone169
+    100492: Bone169(mirrored)
+    100494: Bone184
+    100496: Bone184(mirrored)
+    100498: Bone188
+    100500: Bone188(mirrored)
+    100502: Bone189
+    100504: Bone189(mirrored)
+    100506: Bone190
+    100508: Bone190(mirrored)
+    100510: Bone191
+    100512: Bone191(mirrored)
+    100514: Bone192
+    100516: Bone192(mirrored)
+    100518: Bone194
+    100520: Bone194(mirrored)
+    100522: Bone195
+    100524: Bone195(mirrored)
+    100526: Bone196
+    100528: Bone196(mirrored)
+    100530: Bone197
+    100532: Bone197(mirrored)
+    100534: Bone198
+    100536: Bone198(mirrored)
+    100538: Bone200
+    100540: Bone200(mirrored)
+    100542: Bone201
+    100544: Bone201(mirrored)
+    100546: Bone202
+    100548: Bone202(mirrored)
+    100550: Bone203
+    100552: Bone203(mirrored)
+    100554: Bone204
+    100556: Bone204(mirrored)
+    100558: Bone205
+    100560: Bone205(mirrored)
+    100562: Bone206
+    100564: Bone206(mirrored)
+    100566: Bone208
+    100568: Bone208(mirrored)
+    100570: Bone209
+    100572: Bone209(mirrored)
+    100574: Bone210
+    100576: Bone210(mirrored)
+    100578: Bone211
+    100580: Bone211(mirrored)
+    100582: Bone212
+    100584: Bone212(mirrored)
+    100586: Bone214
+    100588: Bone214(mirrored)
+    100590: Bone215
+    100592: Bone215(mirrored)
+    100594: Bone216
+    100596: Bone216(mirrored)
+    100598: Bone217
+    100600: Bone217(mirrored)
+    100602: Bone218
+    100604: Bone218(mirrored)
+    100606: Bone219
+    100608: Bone221
+    100610: Bone222
+    100612: Bone223
+    100614: Bone224
+    100616: Bone225
+    100618: Bone245
+    100620: Bone245(mirrored)
+    100622: Bone246
+    100624: Bone247
+    100626: Bone248
+    100628: Bone249
+    100630: Bone250
+    100632: Bone251
+    100634: bone_sleeve_00
+    100636: bone_sleeve_00(mirrored)
+    100638: bone_sleeve_01
+    100640: bone_sleeve_01(mirrored)
+    100642: bone_sleeve_02
+    100644: bone_sleeve_02(mirrored)
+    100646: bone_sleeve_03
+    100648: bone_sleeve_03(mirrored)
+    100650: bone_sleeve_04
+    100652: bone_sleeve_04(mirrored)
+    100654: bone_sleeve_06
+    100656: bone_sleeve_06(mirrored)
+    100658: bone_sleeve_07
+    100660: bone_sleeve_07(mirrored)
+    100662: bone_sleeve_08
+    100664: bone_sleeve_08(mirrored)
+    100666: bone_sleeve_09
+    100668: bone_sleeve_09(mirrored)
+    100670: bone_sleeve_10
+    100672: bone_sleeve_10(mirrored)
+    100674: bone_sleeve_12
+    100676: bone_sleeve_12(mirrored)
+    100678: bone_sleeve_13
+    100680: bone_sleeve_13(mirrored)
+    100682: bone_sleeve_14
+    100684: bone_sleeve_14(mirrored)
+    100686: bone_sleeve_15
+    100688: bone_sleeve_15(mirrored)
+    100690: bone_sleeve_16
+    100692: bone_sleeve_16(mirrored)
+    100694: bone_sleeve_18
+    100696: bone_sleeve_18(mirrored)
+    100698: bone_sleeve_19
+    100700: bone_sleeve_19(mirrored)
+    100702: bone_sleeve_20
+    100704: bone_sleeve_20(mirrored)
+    100706: bone_sleeve_21
+    100708: bone_sleeve_21(mirrored)
+    100710: bone_sleeve_22
+    100712: bone_sleeve_22(mirrored)
+    100714: bone_sleeve_23
+    100716: bone_sleeve_23(mirrored)
+    100718: bone_sleeve_24
+    100720: bone_sleeve_24(mirrored)
+    100722: bone_sleeve_25
+    100724: bone_sleeve_25(mirrored)
+    100726: eyeleft
+    100728: eyeright
+    100730: gd_head
+    100732: gd_leftprop
+    100734: gd_lshoulder
+    100736: gd_mantle
+    100738: gd_mask
+    100740: gd_rightprop
+    100742: gd_rshoulder
+    100744: //RootNode
+    100746: Bip001 Footsteps
+    400000: Bip001
+    400002: Bip001 Head
+    400004: Bip001 L Calf
+    400006: Bip001 L Clavicle
+    400008: Bip001 L Finger0
+    400010: Bip001 L Finger01
+    400012: Bip001 L Finger02
+    400014: Bip001 L Finger1
+    400016: Bip001 L Finger11
+    400018: Bip001 L Finger12
+    400020: Bip001 L Finger2
+    400022: Bip001 L Finger21
+    400024: Bip001 L Finger22
+    400026: Bip001 L Finger3
+    400028: Bip001 L Finger31
+    400030: Bip001 L Finger32
+    400032: Bip001 L Finger4
+    400034: Bip001 L Finger41
+    400036: Bip001 L Finger42
+    400038: Bip001 L Foot
+    400040: Bip001 L Forearm
+    400042: Bip001 L ForeTwist
+    400044: Bip001 L ForeTwist1
+    400046: Bip001 L Hand
+    400048: Bip001 L Thigh
+    400050: Bip001 L Toe0
+    400052: Bip001 L UpperArm
+    400054: Bip001 LUpArmTwist
+    400056: Bip001 LUpArmTwist1
+    400058: Bip001 Neck
+    400060: Bip001 Pelvis
+    400062: Bip001 R Calf
+    400064: Bip001 R Clavicle
+    400066: Bip001 R Finger0
+    400068: Bip001 R Finger01
+    400070: Bip001 R Finger02
+    400072: Bip001 R Finger1
+    400074: Bip001 R Finger11
+    400076: Bip001 R Finger12
+    400078: Bip001 R Finger2
+    400080: Bip001 R Finger21
+    400082: Bip001 R Finger22
+    400084: Bip001 R Finger3
+    400086: Bip001 R Finger31
+    400088: Bip001 R Finger32
+    400090: Bip001 R Finger4
+    400092: Bip001 R Finger41
+    400094: Bip001 R Finger42
+    400096: Bip001 R Foot
+    400098: Bip001 R Forearm
+    400100: Bip001 R ForeTwist
+    400102: Bip001 R ForeTwist1
+    400104: Bip001 R Hand
+    400106: Bip001 R Thigh
+    400108: Bip001 R Toe0
+    400110: Bip001 R UpperArm
+    400112: Bip001 RUpArmTwist
+    400114: Bip001 RUpArmTwist1
+    400116: Bip001 Spine
+    400118: Bip001 Spine1
+    400120: Bone001
+    400122: Bone001(mirrored)
+    400124: Bone032
+    400126: Bone032(mirrored)
+    400128: Bone033
+    400130: Bone033(mirrored)
+    400132: Bone034
+    400134: Bone034(mirrored)
+    400136: Bone035
+    400138: Bone035(mirrored)
+    400140: Bone036
+    400142: Bone036(mirrored)
+    400144: Bone037
+    400146: Bone037(mirrored)
+    400148: Bone038
+    400150: Bone038(mirrored)
+    400152: Bone040
+    400154: Bone040(mirrored)
+    400156: Bone041
+    400158: Bone041(mirrored)
+    400160: Bone043
+    400162: Bone043(mirrored)
+    400164: Bone044
+    400166: Bone044(mirrored)
+    400168: Bone045
+    400170: Bone045(mirrored)
+    400172: Bone046
+    400174: Bone046(mirrored)
+    400176: Bone047
+    400178: Bone047(mirrored)
+    400180: Bone048
+    400182: Bone048(mirrored)
+    400184: Bone049
+    400186: Bone049(mirrored)
+    400188: Bone050
+    400190: Bone050(mirrored)
+    400192: Bone051
+    400194: Bone051(mirrored)
+    400196: Bone052
+    400198: Bone052(mirrored)
+    400200: Bone053
+    400202: Bone053(mirrored)
+    400204: Bone054
+    400206: Bone054(mirrored)
+    400208: Bone055
+    400210: Bone055(mirrored)
+    400212: Bone056
+    400214: Bone056(mirrored)
+    400216: Bone057
+    400218: Bone057(mirrored)
+    400220: Bone067
+    400222: Bone069
+    400224: Bone070
+    400226: Bone071
+    400228: Bone072
+    400230: Bone073
+    400232: Bone073(mirrored)
+    400234: Bone075
+    400236: Bone075(mirrored)
+    400238: Bone076
+    400240: Bone076(mirrored)
+    400242: Bone077
+    400244: Bone077(mirrored)
+    400246: Bone078
+    400248: Bone078(mirrored)
+    400250: Bone079
+    400252: Bone079(mirrored)
+    400254: Bone080
+    400256: Bone080(mirrored)
+    400258: Bone081
+    400260: Bone081(mirrored)
+    400262: Bone082(mirrored)
+    400264: Bone083
+    400266: Bone083(mirrored)
+    400268: Bone084
+    400270: Bone084(mirrored)
+    400272: Bone085
+    400274: Bone085(mirrored)
+    400276: Bone086
+    400278: Bone086(mirrored)
+    400280: Bone087
+    400282: Bone087(mirrored)
+    400284: Bone089
+    400286: Bone090
+    400288: Bone102
+    400290: Bone102(mirrored)
+    400292: Bone104
+    400294: Bone104(mirrored)
+    400296: Bone105
+    400298: Bone105(mirrored)
+    400300: Bone106
+    400302: Bone106(mirrored)
+    400304: Bone107
+    400306: Bone107(mirrored)
+    400308: Bone108
+    400310: Bone108(mirrored)
+    400312: Bone109
+    400314: Bone109(mirrored)
+    400316: Bone118
+    400318: Bone118(mirrored)
+    400320: Bone119
+    400322: Bone119(mirrored)
+    400324: Bone120
+    400326: Bone120(mirrored)
+    400328: Bone121
+    400330: Bone121(mirrored)
+    400332: Bone122
+    400334: Bone122(mirrored)
+    400336: Bone123
+    400338: Bone123(mirrored)
+    400340: Bone124
+    400342: Bone124(mirrored)
+    400344: Bone125
+    400346: Bone125(mirrored)
+    400348: Bone126
+    400350: Bone126(mirrored)
+    400352: Bone127
+    400354: Bone127(mirrored)
+    400356: Bone129
+    400358: Bone129(mirrored)
+    400360: Bone130
+    400362: Bone130(mirrored)
+    400364: Bone131
+    400366: Bone131(mirrored)
+    400368: Bone132
+    400370: Bone132(mirrored)
+    400372: Bone133
+    400374: Bone133(mirrored)
+    400376: Bone134
+    400378: Bone134(mirrored)
+    400380: Bone135
+    400382: Bone135(mirrored)
+    400384: Bone136
+    400386: Bone136(mirrored)
+    400388: Bone137
+    400390: Bone137(mirrored)
+    400392: Bone138
+    400394: Bone138(mirrored)
+    400396: Bone139
+    400398: Bone139(mirrored)
+    400400: Bone141
+    400402: Bone141(mirrored)
+    400404: Bone142
+    400406: Bone142(mirrored)
+    400408: Bone143
+    400410: Bone143(mirrored)
+    400412: Bone144
+    400414: Bone144(mirrored)
+    400416: Bone145
+    400418: Bone145(mirrored)
+    400420: Bone146
+    400422: Bone146(mirrored)
+    400424: Bone147
+    400426: Bone147(mirrored)
+    400428: Bone148
+    400430: Bone148(mirrored)
+    400432: Bone149
+    400434: Bone149(mirrored)
+    400436: Bone150
+    400438: Bone150(mirrored)
+    400440: Bone152
+    400442: Bone153
+    400444: Bone154
+    400446: Bone155
+    400448: Bone156
+    400450: Bone157
+    400452: Bone158
+    400454: Bone159
+    400456: Bone160
+    400458: Bone161
+    400460: Bone161(mirrored)
+    400462: Bone162
+    400464: Bone162(mirrored)
+    400466: Bone163
+    400468: Bone163(mirrored)
+    400470: Bone164
+    400472: Bone164(mirrored)
+    400474: Bone165
+    400476: Bone165(mirrored)
+    400478: Bone166
+    400480: Bone166(mirrored)
+    400482: Bone167
+    400484: Bone167(mirrored)
+    400486: Bone168
+    400488: Bone168(mirrored)
+    400490: Bone169
+    400492: Bone169(mirrored)
+    400494: Bone184
+    400496: Bone184(mirrored)
+    400498: Bone188
+    400500: Bone188(mirrored)
+    400502: Bone189
+    400504: Bone189(mirrored)
+    400506: Bone190
+    400508: Bone190(mirrored)
+    400510: Bone191
+    400512: Bone191(mirrored)
+    400514: Bone192
+    400516: Bone192(mirrored)
+    400518: Bone194
+    400520: Bone194(mirrored)
+    400522: Bone195
+    400524: Bone195(mirrored)
+    400526: Bone196
+    400528: Bone196(mirrored)
+    400530: Bone197
+    400532: Bone197(mirrored)
+    400534: Bone198
+    400536: Bone198(mirrored)
+    400538: Bone200
+    400540: Bone200(mirrored)
+    400542: Bone201
+    400544: Bone201(mirrored)
+    400546: Bone202
+    400548: Bone202(mirrored)
+    400550: Bone203
+    400552: Bone203(mirrored)
+    400554: Bone204
+    400556: Bone204(mirrored)
+    400558: Bone205
+    400560: Bone205(mirrored)
+    400562: Bone206
+    400564: Bone206(mirrored)
+    400566: Bone208
+    400568: Bone208(mirrored)
+    400570: Bone209
+    400572: Bone209(mirrored)
+    400574: Bone210
+    400576: Bone210(mirrored)
+    400578: Bone211
+    400580: Bone211(mirrored)
+    400582: Bone212
+    400584: Bone212(mirrored)
+    400586: Bone214
+    400588: Bone214(mirrored)
+    400590: Bone215
+    400592: Bone215(mirrored)
+    400594: Bone216
+    400596: Bone216(mirrored)
+    400598: Bone217
+    400600: Bone217(mirrored)
+    400602: Bone218
+    400604: Bone218(mirrored)
+    400606: Bone219
+    400608: Bone221
+    400610: Bone222
+    400612: Bone223
+    400614: Bone224
+    400616: Bone225
+    400618: Bone245
+    400620: Bone245(mirrored)
+    400622: Bone246
+    400624: Bone247
+    400626: Bone248
+    400628: Bone249
+    400630: Bone250
+    400632: Bone251
+    400634: bone_sleeve_00
+    400636: bone_sleeve_00(mirrored)
+    400638: bone_sleeve_01
+    400640: bone_sleeve_01(mirrored)
+    400642: bone_sleeve_02
+    400644: bone_sleeve_02(mirrored)
+    400646: bone_sleeve_03
+    400648: bone_sleeve_03(mirrored)
+    400650: bone_sleeve_04
+    400652: bone_sleeve_04(mirrored)
+    400654: bone_sleeve_06
+    400656: bone_sleeve_06(mirrored)
+    400658: bone_sleeve_07
+    400660: bone_sleeve_07(mirrored)
+    400662: bone_sleeve_08
+    400664: bone_sleeve_08(mirrored)
+    400666: bone_sleeve_09
+    400668: bone_sleeve_09(mirrored)
+    400670: bone_sleeve_10
+    400672: bone_sleeve_10(mirrored)
+    400674: bone_sleeve_12
+    400676: bone_sleeve_12(mirrored)
+    400678: bone_sleeve_13
+    400680: bone_sleeve_13(mirrored)
+    400682: bone_sleeve_14
+    400684: bone_sleeve_14(mirrored)
+    400686: bone_sleeve_15
+    400688: bone_sleeve_15(mirrored)
+    400690: bone_sleeve_16
+    400692: bone_sleeve_16(mirrored)
+    400694: bone_sleeve_18
+    400696: bone_sleeve_18(mirrored)
+    400698: bone_sleeve_19
+    400700: bone_sleeve_19(mirrored)
+    400702: bone_sleeve_20
+    400704: bone_sleeve_20(mirrored)
+    400706: bone_sleeve_21
+    400708: bone_sleeve_21(mirrored)
+    400710: bone_sleeve_22
+    400712: bone_sleeve_22(mirrored)
+    400714: bone_sleeve_23
+    400716: bone_sleeve_23(mirrored)
+    400718: bone_sleeve_24
+    400720: bone_sleeve_24(mirrored)
+    400722: bone_sleeve_25
+    400724: bone_sleeve_25(mirrored)
+    400726: eyeleft
+    400728: eyeright
+    400730: gd_head
+    400732: gd_leftprop
+    400734: gd_lshoulder
+    400736: gd_mantle
+    400738: gd_mask
+    400740: gd_rightprop
+    400742: gd_rshoulder
+    400744: //RootNode
+    400746: Bip001 Footsteps
+    7400000: skill_mantle
+    11100000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 1
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: skill_mantle
+      takeName: skill_mantle
+      firstFrame: 0
+      lastFrame: 110
+      wrapMode: 8
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
