@@ -100,12 +100,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
-    - _BaseName: 1
+    - _BaseName: 0
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _CtrlName: 1
+    - _CtrlName: 0
     - _Cull: 2
     - _CullMode: 2
     - _Cutoff: 0.5

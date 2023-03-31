@@ -33,10 +33,15 @@ Shader "HappyMJ/PBRBase"
 		[FoldoutItem] _u_MetalMapScale("_u_MetalMapScale", Float) = 1   // 金属度
 		[FoldoutItem] _u_MetallicMapIndirectDiffuseIntensity("_u_MetallicMapIndirectDiffuseIntensity", Float) = 1.53
 			
-		[FoldoutItem] _u_Albedo("_u_Albedo", 2D) = "white" {}
-		[FoldoutItem] _u_Bump("_u_Bump", 2D) = "bump" {}
-		[FoldoutItem] _u_GM("_u_GM( [ R : 光滑]  [G : 金属]  [B : AO])", 2D) = "white" {}
+		[FoldoutItem][NoScaleOffset] _u_Albedo("_u_Albedo", 2D) = "white" {}
+		[FoldoutItem][NoScaleOffset] _u_Bump("_u_Bump", 2D) = "bump" {}
+		[FoldoutItem][NoScaleOffset] _u_GM("_u_GM( [ R : 光滑]  [G : 金属]  [B : AO])", 2D) = "white" {}
 		[FoldoutItem][NoScaleOffset] _ucustom_SpecCube("_ucustom_SpecCube   (HDR)", Cube) = "grey" {}
+
+		[Foldout] _EmissionName("自发光控制面板",Range(0,1)) = 0
+		[FoldoutItem][Toggle] _Emission("自发光控制开关开关", Float) = 0.0
+		[FoldoutItem][NoScaleOffset] _u_Emission("_u_Emission( [ 自发光])", 2D) = "white" {}
+		[FoldoutItem]_u_EmissionScale("_u_EmissionScale( [ 自发光强度])", Range(0, 2)) = 1.0
 		
 
 		[Foldout] _RimName("RIM边缘光控制面板",Range(0,1)) = 0
@@ -97,7 +102,7 @@ Shader "HappyMJ/PBRBase"
 
 				#define _RECEIVE_SHADOWS_OFF 1
 
-
+			    #pragma multi_compile __ _EMISSION_ON
 				#pragma multi_compile _ _MAIN_LIGHT_SHADOWS
 				#pragma multi_compile _ _MAIN_LIGHT_SHADOWS_CASCADE
 				#pragma multi_compile _ _ADDITIONAL_LIGHTS_VERTEX _ADDITIONAL_LIGHTS
@@ -161,10 +166,15 @@ Shader "HappyMJ/PBRBase"
 				float _u_RimIntensity;
 				float _u_RimPower;
                 //
+				float4 _u_Emission_ST;
+				float _u_EmissionScale;
 				CBUFFER_END
 				sampler2D _u_Albedo;
 				sampler2D _u_Bump;
 				sampler2D _u_GM;
+#if			_EMISSION_ON
+				sampler2D _u_Emission;
+#endif
 				samplerCUBE _ucustom_SpecCube;
 
 
@@ -235,7 +245,10 @@ Shader "HappyMJ/PBRBase"
 
 					float4 tex2DNode11 = tex2D(_u_GM, uv_MixMap);
 
-					float4 emission = float4(0,0,0,0);
+					float3 emission = float3(0,0,0);
+#if			_EMISSION_ON
+					emission = tex2D(_u_Emission, uv_BaseMap).rgb * _u_EmissionScale;
+#endif
 
 					float3 Albedo = tex2D(_u_Albedo, uv_BaseMap).rgb * _u_Color.rgb;
 
@@ -315,7 +328,7 @@ Shader "HappyMJ/PBRBase"
 					// 得到间接高光。
 					float3 result = DirectColor + inDirectSpecularColor;
                     // AO 处理
-					result = lerp(_u_AOColor.xyz, 1, occlusion) * result * _MainLightColor.xyz;
+					result = (lerp(_u_AOColor.xyz, 1, occlusion) * result + emission) * _MainLightColor.xyz;
 
 					half4 color = half4(result, 1.0f);
 					return color;

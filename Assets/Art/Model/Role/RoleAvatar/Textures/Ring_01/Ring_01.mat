@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Ring_01
-  m_Shader: {fileID: 4800000, guid: 7729e43e2f962ad499b82dfdb982887f, type: 3}
+  m_Shader: {fileID: 4800000, guid: d06c11d51c00bd843b17a01ff8828e65, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -68,12 +68,28 @@ Material:
         m_Texture: {fileID: 2800000, guid: f4dc52a4b55d5624f8b64375a2b44d78, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _u_BaseTex:
+        m_Texture: {fileID: 2800000, guid: f4dc52a4b55d5624f8b64375a2b44d78, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _u_Bump:
         m_Texture: {fileID: 2800000, guid: 0aecb5d47ab97af40878c257a2d4ae93, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _u_DispersionTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _u_EnvTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _u_GM:
         m_Texture: {fileID: 2800000, guid: 9ce82e475a83923499c604fb93e27205, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _u_Normal:
+        m_Texture: {fileID: 2800000, guid: 0aecb5d47ab97af40878c257a2d4ae93, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ucustom_SpecCube:
@@ -111,6 +127,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _MainName: 1
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _OffsetFactor: 0
@@ -138,13 +155,17 @@ Material:
     - _ZTestMode: 4
     - _ZWrite: 1
     - _ZWriteMode: 1
+    - _u_BaseTexStrength: 0.788
     - _u_DirectLightIntensity: 1
     - _u_DirectSpecularScale: 5.96
+    - _u_DispersionTexStrength: 5
+    - _u_EnvTexStrength: 0.873
     - _u_GlossMapScale: 0.637
     - _u_InDirectLightIntensity: 2
     - _u_IndirectDiffuseIntensity: 0.7
     - _u_MetalMapScale: 1
     - _u_MetallicMapIndirectDiffuseIntensity: 1
+    - _u_ReflectStrength: 1
     - _u_RimIntensity: 1
     - _u_RimPower: 0.4
     m_Colors:

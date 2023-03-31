@@ -64,7 +64,7 @@ Shader "MJ/TextureColor"
                 Varyings output = (Varyings)0;
                 output.worldPos = TransformObjectToWorld(input.positionOS.xyz);
                 output.vertex = TransformWorldToHClip(output.worldPos);
-                output.uv = input.uv;
+                output.uv = input.uv * _MainTex_ST.xy + _MainTex_ST.zw;
 #if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR)
                 output.shadowCoord = TransformWorldToShadowCoord(output.worldPos);
 #endif

@@ -39,7 +39,6 @@ public class RotateWithMouse : MonoBehaviour
                 transform.Rotate(Vector3.right, dis);
             }
         }
-
         lastMousePosition = Input.mousePosition;
     }
 

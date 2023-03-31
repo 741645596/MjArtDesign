@@ -82,7 +82,7 @@ public class MJAction : MonoBehaviour
     /// <summary>
     /// 设置麻将本体
     /// </summary>
-    private void SetMjBody(MJConfigData data, bool isSeclect = false)
+    public void SetMjBody(MJConfigData data, bool isSeclect = false)
     {
         if (listMJ != null && listMJ.Count > 0)
         {

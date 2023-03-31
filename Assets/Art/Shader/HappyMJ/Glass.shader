@@ -7,7 +7,7 @@ Shader "HappyMJ/Glass"
         [FoldoutItem] _u_BumpMap("_u_BumpMap", 2D) = "white" {}
         [FoldoutItem] _u_CubeMap("_u_CubeMap   (HDR)", Cube) = "grey" {}
         [FoldoutItem] _u_Distortion("_u_Distortion", Float) = 66.60
-        [FoldoutItem] _u_RefractAmount("_u_RefractAmount", Float) = 0.80
+        [FoldoutItem] _u_RefractAmount("_u_RefractAmount", Range(0,1)) = 0.80
     }
 
     SubShader
@@ -21,7 +21,7 @@ Shader "HappyMJ/Glass"
             ZTest LEqual
             ZWrite 	On
             Cull Back
-            Blend SrcAlpha OneMinusSrcAlpha
+    //        Blend SrcAlpha OneMinusSrcAlpha
         HLSLPROGRAM
         #pragma vertex vert
         #pragma fragment frag
@@ -31,6 +31,8 @@ Shader "HappyMJ/Glass"
         CBUFFER_START(UnityPerMaterial)
         float4 _u_MainTex_ST;
         float4 _u_BumpMap_ST;
+        float4 _CameraOpaqueTexture_ST;
+        float4 _CameraOpaqueTexture_TexelSize;
         float4 _u_CubeMap_HDR;
         float _u_Distortion;
         float _u_RefractAmount;
@@ -38,6 +40,7 @@ Shader "HappyMJ/Glass"
         sampler2D _u_MainTex;
         sampler2D _u_BumpMap;
         samplerCUBE _u_CubeMap;
+        sampler2D _CameraOpaqueTexture;
 
     struct Attributes
     {
@@ -55,6 +58,7 @@ Shader "HappyMJ/Glass"
         float4 tSpace2 : TEXCOORD2;
         float3 worldView: TEXCOORD3;
         float4 uv      : TEXCOORD4;
+        float4 screenPos : TEXCOORD5;
     };
 
     Varyings vert(Attributes input)
@@ -75,6 +79,7 @@ Shader "HappyMJ/Glass"
         output.vertex = TransformObjectToHClip(input.positionOS.xyz);
         output.uv.xy = input.uv.xy * _u_MainTex_ST.xy + _u_MainTex_ST.zw;
         output.uv.zw = input.uv.xy * _u_BumpMap_ST.xy + _u_BumpMap_ST.zw;
+        output.screenPos = ComputeScreenPos(output.vertex);
 
         return output;
     }
@@ -96,16 +101,12 @@ Shader "HappyMJ/Glass"
         //
         float3 mainColor = tex2D(_u_MainTex, input.uv.xy).rgb ;
         float3 resultColor = envColor * envColor;
-        return float4(resultColor, _u_RefractAmount);
+        // 屏幕
+        float2 screenUV = (Normal.xy * _u_Distortion * _CameraOpaqueTexture_TexelSize.xy + input.screenPos.xy) / input.screenPos.w;
+        float3 screenColor = tex2D(_CameraOpaqueTexture, screenUV).rgb;
 
-
-        // 先不做屏幕扰动，
-        // 扰动
-        //(_uu_xlat3.xy = (_uu_xlat16_2.xy * vec2(_u_Distortion)));
-        //(_uu_xlat3.xy = ((_uu_xlat3.xy * _u_RefractionTex_TexelSize.xy) + _uvs_TEXCOORD4.xy));
-        //(_uu_xlat3.xy = (_uu_xlat3.xy / _uvs_TEXCOORD4.ww));
-        //(_uu_xlat10_3.xyz = texture(_u_RefractionTex, _uu_xlat3.xy).xyz);
-        //
+        resultColor = resultColor * (1.0f - _u_RefractAmount) + screenColor * _u_RefractAmount;
+        return float4(resultColor, 1.0f);
     }
     ENDHLSL
     }

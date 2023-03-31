@@ -2,7 +2,7 @@ Shader "HappyMJ/Diamond"
 {
     Properties
     {
-        [Foldout] _MainName("Ö÷ÄÚÈİ¿ØÖÆÃæ°å",Range(0,1)) = 0
+        [Foldout] _MainName("ä¸»å†…å®¹æ§åˆ¶é¢æ¿",Range(0,1)) = 0
         [FoldoutItem] _u_BaseTex("_u_BaseTex", 2D) = "white" {}
         [FoldoutItem] _u_Normal("_u_Normal", 2D) = "white" {}
         [FoldoutItem] _u_BaseTexStrength("_u_BaseTexStrength", Range(0, 1)) = 0.788
@@ -99,7 +99,7 @@ Shader "HappyMJ/Diamond"
                 float3 WorldNormal = normalize(input.tSpace0.xyz);
                 float3 WorldTangent = input.tSpace1.xyz;
                 float3 WorldBiTangent = input.tSpace2.xyz;
-                // µÃµ½·¨Ïß¡£
+                // å¾—åˆ°æ³•çº¿ã€‚
                 float3 normalWS = TransformTangentToWorld(Normal, half3x3(WorldTangent, WorldBiTangent, WorldNormal));
                 normalWS = normalize(normalWS);
                 //
@@ -210,7 +210,7 @@ Shader "HappyMJ/Diamond"
                 float3 WorldNormal = normalize(input.tSpace0.xyz);
                 float3 WorldTangent = input.tSpace1.xyz;
                 float3 WorldBiTangent = input.tSpace2.xyz;
-                // µÃµ½·¨Ïß¡£
+                // å¾—åˆ°æ³•çº¿ã€‚
                 float3 normalWS = TransformTangentToWorld(Normal, half3x3(WorldTangent, WorldBiTangent, WorldNormal));
                 normalWS = normalize(normalWS);
                 //

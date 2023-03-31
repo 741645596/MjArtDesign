@@ -185,7 +185,7 @@ Shader "HappyDDZ/PBR"
 			{
 				return VertexFunction(v);
 			}
-			/*
+			
 			// 计算一个混合色
 			float3 CalcBlendColor(float normalY)
 			{
@@ -197,13 +197,14 @@ Shader "HappyDDZ/PBR"
 
 				float3 result = diffNormalY * saturate(3.0 - max_AmbientSkyColor - max_AmbientGroundColor) * _AmbientEquatorColor.rgb;
 				result = result + control.r * _AmbientSkyColor.rgb + control.g * _AmbientGroundColor.rgb;
+				result = result * _AmbientIntensity;
 
 				return result;
 			}
 
 
 
-			half4 frag(VertexOutput IN) : SV_Target
+			/*half4 frag(VertexOutput IN) : SV_Target
 			{
 				float4 AlbedoColor = tex2D(_Basemap, IN.uv.xy);
 				float3 Albedo = AlbedoColor.rgb * _BaseColor.rgb;
@@ -293,8 +294,6 @@ Shader "HappyDDZ/PBR"
 				float smoothValue = smoothstep(0, 1, NoRim);
 				float3 rimColor = saturate(nov_Pow * smoothValue * _HalfRimLightIntensity) * _HalfRimLightColor.rgb;
 
-				emission = emission * _mul;
-
 				float gray = 0.2125 * emission.r + 0.7154 * emission.g + 0.0721 * emission.b;
 
 				float3 grayColor = float3(gray, gray, gray);
@@ -304,11 +303,17 @@ Shader "HappyDDZ/PBR"
 				float3 avgColor = float3(0.5, 0.5, 0.5);
 				emission = lerp(avgColor, emission, _Contrast);
 
+
+				result.rgb = colorAdjust(result.rgb,_Saturation,_Contrast);
+
+				result.rgb = result.rgb * _ColorIntensity;
+
+
 				float4 result = float4(emission + rimColor, 1.0f);
 				
 				return result;
-			}
-*/
+			}*/
+
 			half4 frag(VertexOutput IN, float facing : VFACE) : SV_Target
 			{
 				float4 u_xlat16_0;
