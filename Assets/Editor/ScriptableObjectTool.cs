@@ -8,7 +8,7 @@ using UnityEditor;
 public class ScriptableObjectTool
 {
     //Asset文件保存路径
-    private const string assetPath = "Assets/Data/Config/";
+    private const string assetPath = "Assets/Art/Data/Config/";
 
     [MenuItem("Tools/CameriaData")]
     public static void CreateTestAsset()
