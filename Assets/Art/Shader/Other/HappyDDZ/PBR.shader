@@ -192,13 +192,12 @@ Shader "HappyDDZ/PBR"
 				float2 control = normalY * float2(0.7f, -0.7f) + 0.3f;
 				float diffNormalY = saturate(1.6f - abs(normalY));
 
-				float max_AmbientSkyColor = max(_AmbientSkyColor.r,max(_AmbientSkyColor.b, _AmbientSkyColor.g));
+				float max_AmbientSkyColor = max(_AmbientSkyColor.r, max(_AmbientSkyColor.b, _AmbientSkyColor.g));
 				float max_AmbientGroundColor = max(_AmbientGroundColor.r, max(_AmbientGroundColor.b, _AmbientGroundColor.g));
 
 				float3 result = diffNormalY * saturate(3.0 - max_AmbientSkyColor - max_AmbientGroundColor) * _AmbientEquatorColor.rgb;
 				result = result + control.r * _AmbientSkyColor.rgb + control.g * _AmbientGroundColor.rgb;
 				result = result * _AmbientIntensity;
-
 				return result;
 			}
 

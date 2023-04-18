@@ -17,7 +17,7 @@ Shader "HappyDDZ/Skin"
 		_LightRange("_LightRange", Float) = 1.0
 		// sss
 		_SSS("_SSS", Float) = 1.0
-		_SSSIntensity("_SSSIntensity", Float) = 1.0
+		_SSSIntensity("_SSSIntensity", Range(0, 1)) = 1.0
 		_Wrap("_Wrap", Float) = 1.0
         // pbr
 		_Metallic("_Metallic", Range(0, 1)) = 0
@@ -205,218 +205,70 @@ Shader "HappyDDZ/Skin"
 
 				float3 result = diffNormalY * saturate(3.0 - max_AmbientSkyColor - max_AmbientGroundColor) * _AmbientEquatorColor.rgb;
 				result = result + control.r * _AmbientSkyColor.rgb + control.g * _AmbientGroundColor.rgb;
-
+				result = result * _AmbientIntensity;
 				return result;
 			}
-			/*
 			half4 frag(VertexOutput IN) : SV_Target
-			{
-				float4 AlbedoColor = tex2D(_Basemap, IN.uv.xy);
-				float3 Albedo = AlbedoColor.rgb * _BaseColor.rgb;
-				float gray = dot(Albedo, float3(0.299f, 0.587f, 0.114f));
+            {
+			    float3  Albedo  = tex2D(_Basemap, IN.uv.xy).rgb * _BaseColor.rgb;
+				float gray = dot(Albedo, float3(0.298999995, 0.587000012, 0.114));
 				Albedo = lerp(Albedo, gray, _DesaturateScale);
-
-				float4 controlData = tex2D(_Configmap, IN.uv.xy);
+				// pbr 混合贴图
+				float4 configData = tex2D(_Configmap, IN.uv.xy);
 				float3 sparkColor = tex2D(_Sparklemap, IN.uv.xy).rgb;
-
+				// normal
 				float3 Normal = UnpackNormalScale(tex2D(_Normalmap, IN.uv.xy), _NormalScale);
-
-
 				float3 WorldNormal = normalize(IN.tSpace0.xyz);
 				float3 WorldTangent = IN.tSpace1.xyz;
 				float3 WorldBiTangent = IN.tSpace2.xyz;
-
-				float3 WorldPosition = float3(IN.tSpace0.w,IN.tSpace1.w,IN.tSpace2.w);
-				float3 WorldViewDirection = _WorldSpaceCameraPos.xyz - WorldPosition;
-				float4 ShadowCoords = float4(0, 0, 0, 0);
-
-				//----------------------
-
-				WorldViewDirection = SafeNormalize(WorldViewDirection);
+				float3 NormalWS = TransformTangentToWorld(Normal, half3x3(WorldTangent, WorldBiTangent, WorldNormal));
+                //
+				float3 WorldPosition = float3(IN.tSpace0.w, IN.tSpace1.w, IN.tSpace2.w);
+				float3 viewWS = normalize(_WorldSpaceCameraPos.xyz - WorldPosition);
 
 
-				float meta = _Metallic * controlData.r;
-				float smooth = _Smoothness * controlData.g;
-				float ao = controlData.a;
-				smooth = saturate(smooth + dot(sparkColor, float3(_LipSmoothness, _EyeSmoothness, _TattooASmoothness)));
-
-				float3 Specular = 0.5;
-				float Metallic = meta;
-				float Smoothness = smooth;
-				float Occlusion = lerp(_Occlusion, 1, ao);
-				float Alpha = 1;
-				float AlphaClipThreshold = 0.5;
-				float AlphaClipThresholdShadow = 0.5;
-				float3 BakedGI = 0;
-				float3 RefractionColor = 1;
-				float RefractionIndex = 1;
-				float3 Transmission = 1;
-				float3 Translucency = 1;
-
-				#ifdef _ALPHATEST_ON
-					clip(Alpha - AlphaClipThreshold);
-				#endif
-
-				InputData inputData;
-				inputData.positionWS = WorldPosition;
-				inputData.viewDirectionWS = WorldViewDirection;
-				inputData.shadowCoord = ShadowCoords;
-
-				inputData.normalWS = TransformTangentToWorld(Normal, half3x3(WorldTangent, WorldBiTangent, WorldNormal));
-				float3 normalWS = normalize(inputData.normalWS);
-				float3 lightDir = normalize(_MainLightPosition.xyz);
-				float3 NoL = dot(normalWS, _MainLightPosition.xyz);
-				// 不知道是个啥来着。
-				float halfLanbettXXX = NoL * 0.5f + 0.47f;
-				//float v1 = saturate((halfLanbettXXX - _LightRange) / (1 - _LightRange));
-				//float f = v1 * v1 * (3.0f - v1 * 2.0f);
+				float NoL = dot(_MainLightPosition.xyz, NormalWS);
+				float halfLanbettXXX = NoL * 0.5 + 0.469999999;
 				float f = smoothstep(_LightRange, 1, halfLanbettXXX);
-				Albedo = lerp(Albedo, Albedo * _LightColor.rgb, f);
-				//
-				float skuvX = saturate((NoL + _Wrap) / (1 + _Wrap));
-				float2 skinUV = float2(skuvX, _SSS * controlData.b);
-				float3 sssColor = tex2D(_SkinProfile, skinUV).rgb;
-				sssColor = lerp(skuvX, sssColor, _SSSIntensity);
-				// 新加入的
-				float3 AmbientCol = CalcBlendColor(normalWS.y);
-
-
-				#if defined(ENABLE_TERRAIN_PERPIXEL_NORMAL)
-					float3 SH = SampleSH(inputData.normalWS.xyz);
-				#else
-					float3 SH = IN.lightmapUVOrVertexSH.xyz;
-				#endif
-
-				inputData.bakedGI = SAMPLE_GI(IN.lightmapUVOrVertexSH.xy, SH, inputData.normalWS);
-
-
-				inputData.normalizedScreenSpaceUV = GetNormalizedScreenSpaceUV(IN.clipPos);
-				inputData.shadowMask = SAMPLE_SHADOWMASK(IN.lightmapUVOrVertexSH.xy);
-
-				half4 color = UniversalFragmentPBR(
-					inputData,
-					Albedo,
-					Metallic,
-					Specular,
-					Smoothness,
-					Occlusion,
-					0,
-					Alpha,
-					AmbientCol, sssColor);
-
-
-				float3 RimLightDir = normalize(_HalfRimLightDir);
-				float Nov = saturate(dot(WorldViewDirection, normalWS));
-				float nov_Pow = pow(saturate(1 - Nov), _HalfRimLightPower);
-
-
-				float NoRim = saturate(dot(normalWS, RimLightDir) * 0.5f);
-				float smoothValue = smoothstep(0, 1, NoRim);
-				float3 rimColor = saturate(nov_Pow * smoothValue * _HalfRimLightIntensity) * _HalfRimLightColor.rgb;
-
-				float4 result = float4(color.rgb + rimColor, 1.0f);
-				return result;
-			}
-			*/
-            half4 frag(VertexOutput IN) : SV_Target
-            {
-	            float4 u_xlat16_0;
-				u_xlat16_0.xyz = tex2D(_Basemap, IN.uv.xy).xyz;
-				float4 u_xlat1;
-				u_xlat1.xyz = u_xlat16_0.xyz * _BaseColor.xyz;
-				float4 u_xlat16_2;
-				u_xlat16_2.x = dot(u_xlat1.xyz, float3(0.298999995, 0.587000012, 0.114));
-				u_xlat16_2.xyz = (-u_xlat16_0.xyz) * _BaseColor.xyz + u_xlat16_2.xxx;
-				u_xlat16_2.xyz = _DesaturateScale * u_xlat16_2.xyz + u_xlat1.xyz;
-	            u_xlat16_0 = tex2D(_Configmap, IN.uv.xy);
-				float4 u_xlat10_1;
-				u_xlat10_1.xyz = tex2D(_Sparklemap, IN.uv.xy).xyz;
-				float4 u_xlat16_3;
-				u_xlat16_3.xyz = tex2D(_Normalmap, IN.uv.xy).xyz;
-				float4 u_xlat16_4;
-				u_xlat16_4.xyz = u_xlat16_3.xyz * float3(2.0, 2.0, 2.0) + float3(-1.0, -1.0, -1.0);
-				u_xlat16_4.xy = u_xlat16_4.xy * float2(_NormalScale, _NormalScale);
+				Albedo = lerp(Albedo, Albedo * _LightColor.xyz, f);
+				// pbr 部分
+				float metallic = configData.r * _Metallic;
+				float Smoothness = configData.b * _Smoothness + dot(sparkColor, float3(_LipSmoothness, _EyeSmoothness, _TattooASmoothness));
+				Smoothness = saturate(Smoothness);
+				float Occlusion = lerp(_Occlusion, 1, configData.a);
 				float4 u_xlat16_5;
-				u_xlat16_5.xyz = u_xlat16_4.yyy * IN.tSpace1.xyz;
-				u_xlat16_4.xyw = u_xlat16_4.xxx * IN.tSpace0.xyz + u_xlat16_5.xyz;
-				u_xlat16_4.xyz = u_xlat16_4.zzz * IN.tSpace2.xyz + u_xlat16_4.xyw;
-				u_xlat16_5.x = IN.tSpace0.w;
-				u_xlat16_5.y = IN.tSpace1.w;
-				u_xlat16_5.z = IN.tSpace2.w;
-				float4 u_xlat3;
-				u_xlat3.xyz = (-u_xlat16_5.xyz) + _WorldSpaceCameraPos.xyz;
-				float u_xlat31 = dot(u_xlat3.xyz, u_xlat3.xyz);
-				u_xlat31 = max(u_xlat31, 1.17549435e-38);
-				float u_xlat16_32 = 1/sqrt(u_xlat31);
-				u_xlat3.xyz = u_xlat16_32 * u_xlat3.xyz;
-				u_xlat31 = dot(_MainLightPosition.xyz, u_xlat16_4.xyz);
-				u_xlat31 = u_xlat31 * 0.5 + 0.469999999;
-				u_xlat16_32 = (-_LightRange) + 1.0;
-				float u_xlat16_34 = u_xlat31 + (-_LightRange);
-				u_xlat16_32 = float(1.0) / u_xlat16_32;
-				u_xlat16_32 = u_xlat16_32 * u_xlat16_34;
+				float u_xlat16_16;
+				float u_xlat16_36;
 
-				u_xlat16_32 = clamp(u_xlat16_32, 0.0, 1.0);
-				u_xlat16_34 = u_xlat16_32 * -2.0 + 3.0;
-				u_xlat16_32 = u_xlat16_32 * u_xlat16_32;
-				u_xlat16_32 = u_xlat16_32 * u_xlat16_34;
-				u_xlat16_5.xyz = u_xlat16_2.xyz * _LightColor.xyz + (-u_xlat16_2.xyz);
-				u_xlat16_2.xyz = u_xlat16_32 * u_xlat16_5.xyz + u_xlat16_2.xyz;
-				u_xlat16_5.xy = u_xlat16_0.xy * float2(_Metallic, _Smoothness);
-				u_xlat16_32 = u_xlat10_1.x * _LipSmoothness + u_xlat16_5.y;
-				u_xlat16_32 = u_xlat10_1.y * _EyeSmoothness + u_xlat16_32;
-				u_xlat16_32 = u_xlat10_1.z * _TattooASmoothness + u_xlat16_32;
-
-				u_xlat16_32 = clamp(u_xlat16_32, 0.0, 1.0);
-				u_xlat16_34 = (-_Occlusion) + 1.0;
-				float4 u_xlat16_6;
-				u_xlat16_6.z = u_xlat16_0.z * _SSS;
-				u_xlat16_34 = u_xlat16_0.w * _Occlusion + u_xlat16_34;
-				float4 u_xlat16_15;
-				u_xlat16_15.xy = u_xlat16_4.yy * float2(0.699999988, -0.699999988) + float2(0.300000012, 0.300000012);
-	            u_xlat16_15.xy = clamp(u_xlat16_15.xy, 0.0, 1.0);
-	            float u_xlat16_35 = -abs(u_xlat16_4.y) + 1.60000002;
-				u_xlat16_35 = clamp(u_xlat16_35, 0.0, 1.0);
-				float u_xlat16_16 = max(_AmbientSkyColor.z, _AmbientSkyColor.y);
-				u_xlat16_16 = max(u_xlat16_16, _AmbientSkyColor.x);
-				float u_xlat16_36 = max(_AmbientGroundColor.z, _AmbientGroundColor.y);
-				u_xlat16_36 = max(u_xlat16_36, _AmbientGroundColor.x);
-				u_xlat16_16 = (-u_xlat16_16) + 3.0;
-				u_xlat16_16 = (-u_xlat16_36) + u_xlat16_16;
-				u_xlat16_16 = clamp(u_xlat16_16, 0.0, 1.0);
-				u_xlat16_35 = u_xlat16_35 * u_xlat16_16;
-				float4 u_xlat16_7;
-				u_xlat16_7.xyz = u_xlat16_35 * _AmbientEquatorColor.xyz;
-				u_xlat16_7.xyz = _AmbientSkyColor.xyz * u_xlat16_15.xxx + u_xlat16_7.xyz;
-				u_xlat16_15.xyz = _AmbientGroundColor.xyz * u_xlat16_15.yyy + u_xlat16_7.xyz;
-				u_xlat16_15.xyz = u_xlat16_15.xyz * _AmbientIntensity;
-				u_xlat16_15.xyz = u_xlat16_34 * u_xlat16_15.xyz;
-				u_xlat16_16 = dot(u_xlat16_4.xyz, _MainLightPosition.xyz);
-				u_xlat16_16 = u_xlat16_16 + _Wrap;
-				u_xlat16_36 = _Wrap + 1.0;
-				u_xlat16_6.x = u_xlat16_16 / u_xlat16_36;
-				u_xlat16_6.x = clamp(u_xlat16_6.x, 0.0, 1.0);
-				u_xlat16_0.xyz = tex2D(_SkinProfile, u_xlat16_6.xz).xyz;
-				u_xlat16_16 = (-u_xlat16_5.x) * 0.959999979 + 0.959999979;
-				float u_xlat16_26 = u_xlat16_32 + (-u_xlat16_16);
-				u_xlat16_7.xyz = u_xlat16_2.xyz * u_xlat16_16;
-				u_xlat16_2.xyz = u_xlat16_2.xyz + float3(-0.0399999991, -0.0399999991, -0.0399999991);
-				u_xlat16_2.xyz = u_xlat16_5.xxx * u_xlat16_2.xyz + float3(0.0399999991, 0.0399999991, 0.0399999991);
-				u_xlat16_32 = (-u_xlat16_32) + 1.0;
+				
+				float3 addAmbientColor = CalcBlendColor(NormalWS.y) * 0.3f * Occlusion;
+				// 3s 部分
+				float skuvX = saturate((NoL + _Wrap) / (1 + _Wrap));
+				float2 skinUV = float2(skuvX, _SSS * configData.b);
+				float3 sssColor = tex2D(_SkinProfile, skinUV).rgb;
+				
+				u_xlat16_16 = (-metallic) * 0.959999979 + 0.959999979;
+				float3 baseDiffuseColor = Albedo * u_xlat16_16;
+				float3 u_xlat16_2;
+				
+				float u_xlat16_26 = Smoothness + (-u_xlat16_16);
+				u_xlat16_2.xyz = Albedo + float3(-0.0399999991, -0.0399999991, -0.0399999991);
+				u_xlat16_2.xyz = metallic * u_xlat16_2.xyz + float3(0.0399999991, 0.0399999991, 0.0399999991);
+				float u_xlat16_32 = (-Smoothness) + 1.0;
 				u_xlat16_5.x = u_xlat16_32 * u_xlat16_32;
 				u_xlat16_5.x = max(u_xlat16_5.x, 0.0078125);
 				u_xlat16_16 = u_xlat16_26 + 1.0;
 				u_xlat16_16 = clamp(u_xlat16_16, 0.0, 1.0);
-				u_xlat16_26 = dot((-u_xlat3.xyz), u_xlat16_4.xyz);
+				u_xlat16_26 = dot((-viewWS), NormalWS);
 				u_xlat16_26 = u_xlat16_26 + u_xlat16_26;
 				float4 u_xlat16_8;
-				u_xlat16_8.xyz = u_xlat16_4.xyz * (-u_xlat16_26) + (-u_xlat3.xyz);
-				u_xlat16_26 = dot(u_xlat16_4.xyz, u_xlat3.xyz);
+				u_xlat16_8.xyz = NormalWS * (-u_xlat16_26) + (-viewWS);
+				u_xlat16_26 = dot(NormalWS, viewWS);
 				u_xlat16_26 = clamp(u_xlat16_26, 0.0, 1.0);
 				u_xlat16_26 = (-u_xlat16_26) + 1.0;
 				u_xlat16_36 = u_xlat16_26 * u_xlat16_26;
 				u_xlat16_36 = u_xlat16_36 * u_xlat16_36;
-				u_xlat16_15.xyz = u_xlat16_15.xyz * u_xlat16_7.xyz;
+				
 				float u_xlat16_37 = (-u_xlat16_32) * 0.699999988 + 1.70000005;
 				u_xlat16_32 = u_xlat16_32 * u_xlat16_37;
 				u_xlat16_32 = u_xlat16_32 * 6.0;
@@ -429,50 +281,32 @@ Shader "HappyDDZ/Skin"
 				u_xlat16_32 = exp2(u_xlat16_32);
 				u_xlat16_32 = u_xlat16_32 * unity_SpecCube0_HDR.x;
 				u_xlat16_8.xyz = u_xlat16_1.xyz * u_xlat16_32;
-				u_xlat16_8.xyz = u_xlat16_34 * u_xlat16_8.xyz;
+				u_xlat16_8.xyz = Occlusion * u_xlat16_8.xyz;
 				u_xlat16_32 = u_xlat16_5.x * u_xlat16_5.x + 1.0;
 				u_xlat16_32 = float(1.0) / u_xlat16_32;
 				float4 u_xlat16_9;
 				u_xlat16_9.xyz = (-u_xlat16_2.xyz) + u_xlat16_16;
 				u_xlat16_2.xyz = u_xlat16_36 * u_xlat16_9.xyz + u_xlat16_2.xyz;
+				float3 u_xlat1;
 				u_xlat1.xyz = u_xlat16_2.xyz * u_xlat16_32;
 				u_xlat16_2.xyz = u_xlat1.xyz * u_xlat16_8.xyz;
-				u_xlat16_2.xyz = u_xlat16_15.xyz * float3(0.300000012, 0.300000012, 0.300000012) + u_xlat16_2.xyz;
-				u_xlat16_32 = _SSSIntensity;
-				u_xlat16_32 = clamp(u_xlat16_32, 0.0, 1.0);
-				u_xlat16_5.xyz = (-u_xlat16_6.xxx) + u_xlat16_0.xyz;
-				u_xlat16_5.xyz = u_xlat16_32 * u_xlat16_5.xyz + u_xlat16_6.xxx;
+				addAmbientColor = addAmbientColor * baseDiffuseColor;
+				u_xlat16_2.xyz = addAmbientColor + u_xlat16_2.xyz;
+				u_xlat16_5.xyz = lerp(skuvX, sssColor, _SSSIntensity);
 				//u_xlat16_5.xyz = u_xlat16_5.xyz * unity_LightData.zzz;
-				u_xlat16_5.xyz = u_xlat16_5.xyz * _MainLightColor.xyz;
-				u_xlat16_2.xyz = u_xlat16_7.xyz * u_xlat16_5.xyz + u_xlat16_2.xyz;
-
-				u_xlat16_32 = dot(_HalfRimLightDir.xyz, _HalfRimLightDir.xyz);
-				u_xlat16_32 = 1/sqrt(u_xlat16_32);
-				u_xlat16_5.xyz = u_xlat16_32 * _HalfRimLightDir.xyz;
-				u_xlat16_32 = log2(u_xlat16_26);
-				u_xlat16_32 = u_xlat16_32 * _HalfRimLightPower;
-				u_xlat16_32 = exp2(u_xlat16_32);
-				u_xlat16_34 = dot(u_xlat16_4.xyz, u_xlat16_5.xyz);
-				u_xlat16_34 = u_xlat16_34 * 0.5;
-				u_xlat16_34 = clamp(u_xlat16_34, 0.0, 1.0);
-				u_xlat16_5.x = u_xlat16_34 * -2.0 + 3.0;
-				u_xlat16_34 = u_xlat16_34 * u_xlat16_34;
-				u_xlat16_34 = u_xlat16_34 * u_xlat16_5.x;
-				u_xlat16_5.xyz = u_xlat16_32 * _HalfRimLightColor.xyz;
-				u_xlat16_5.xyz = u_xlat16_34 * u_xlat16_5.xyz;
-				u_xlat16_5.xyz = u_xlat16_5.xyz * _HalfRimLightIntensity;
-				u_xlat16_5.xyz = u_xlat16_5.xyz;
-				u_xlat16_5.xyz = clamp(u_xlat16_5.xyz, 0.0, 1.0);
-
-				u_xlat16_2.rgb = colorAdjust(u_xlat16_2.rgb,_Saturation,_Contrast);
+				u_xlat16_5.xyz = u_xlat16_5.xyz * _MainLightColor.xyz * baseDiffuseColor;
+				u_xlat16_2.xyz =  u_xlat16_5.xyz +  u_xlat16_2.xyz;
 
 
-				u_xlat16_2.xyz = u_xlat16_2.xyz * _ColorIntensity;
+				float3 RimLightDir = normalize(_HalfRimLightDir);
+				float Nov = saturate(dot(viewWS, NormalWS));
+				float nov_Pow = pow(saturate(1 - Nov), _HalfRimLightPower);
+				float NoRim = saturate(dot(NormalWS, RimLightDir) * 0.5f);
+				float smoothValue = smoothstep(0, 1, NoRim);
+				float3 rimColor = saturate(nov_Pow * smoothValue * _HalfRimLightIntensity) * _HalfRimLightColor.rgb;
 
-				
-				
-
-				return float4(u_xlat16_2.xyz + u_xlat16_5.xyz,1);
+				u_xlat16_2.rgb = colorAdjust(u_xlat16_2.rgb,_Saturation,_Contrast) * _ColorIntensity;
+				return float4(u_xlat16_2.xyz  + rimColor, 1);
 			}
 			ENDHLSL
 		}

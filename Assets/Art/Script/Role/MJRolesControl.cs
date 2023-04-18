@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class MJRolesControl : MonoBehaviour
 {
-    public List<MJHandControl> listRole = new List<MJHandControl>();
-    public GUIStyle style = new GUIStyle();
+    private List<MJHandControl> listRole = new List<MJHandControl>();
+    private int selRoleIndex = -1;
+    private string[] selStrings = new string[] { "Self", "Right", "Face", "Left" };
 
-    public int selRoleIndex = 0;
-    public string[] selStrings = new string[] { "Self", "Right", "Face", "Left" };
+
+    public GUIStyle style = new GUIStyle();
     public int ButtonWidth = 200;
     public int ButtonHeight = 30;
     public int ButtonWidthStep = 220;
@@ -16,7 +17,37 @@ public class MJRolesControl : MonoBehaviour
     public Vector2Int topRightPos;
 
     public float intervalTime = 0.5f;
-    // Start is called before the first frame update
+    /// <summary>
+    /// ×ø×À½ÇÉ«preab
+    /// </summary>
+    public GameObject SeatPrefab;
+    /// <summary>
+    /// ÅÆµÄ°ÚÉè
+    /// </summary>
+    public List<int> listPaiNum = new List<int>();
+
+    private void Awake()
+    {
+        List<string> listStr = new List<string>();
+        if (SeatPrefab != null)
+        {
+            foreach (SeatConfigData s in transform.GetComponentsInChildren<SeatConfigData>())
+            {
+                if (s != null)
+                {
+                    GameObject go = GameObject.Instantiate(SeatPrefab);
+                    go.transform.parent = s.transform;
+                    MJHandControl mh = go.GetComponent<MJHandControl>();
+                    mh.SetSeatConfig(s, listPaiNum);
+                    listRole.Add(mh);
+                    listStr.Add(s.gameObject.name);
+                }
+            }
+        }
+        selStrings = listStr.ToArray();
+    }
+
+
 
     private void OnGUI()
     {
@@ -53,6 +84,45 @@ public class MJRolesControl : MonoBehaviour
         if (GUI.Button(new Rect(10 + 2 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[push all]", style))
         {
             mc.playAllMj();
+        }
+
+        height = height + ButtonHeight + 5;
+
+        if (GUI.Button(new Rect(10 + 0 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[Æô¶¯°´Å¥]", style))
+        {
+            mc.QiDongAnniu();
+        }
+
+        if (GUI.Button(new Rect(10 + 1 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[»»ÅÆ]", style))
+        {
+            mc.HuanPai();
+        }
+
+        if (GUI.Button(new Rect(10 + 2 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[Åö³Ô¸Ü]", style))
+        {
+            mc.PengChiGang();
+        }
+
+        if (GUI.Button(new Rect(10 + 3 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[Ì¯ÅÆ]", style))
+        {
+            mc.TanPai();
+        }
+
+        height = height + ButtonHeight + 5;
+
+        if (GUI.Button(new Rect(10 + 0 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[ºúÅÆ]", style))
+        {
+            mc.HuPai();
+        }
+
+        if (GUI.Button(new Rect(10 + 1 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[ÀíÅÆ]", style))
+        {
+            mc.LiPai();
+        }
+
+        if (GUI.Button(new Rect(10 + 2 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[emoji]", style))
+        {
+            mc.Emoji();
         }
     }
 

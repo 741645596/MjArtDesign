@@ -134,7 +134,7 @@ Material:
     - _Offset: {r: 0, g: 0.3, b: 1, a: 0}
     - _Offset2: {r: 0, g: 0, b: 2.96, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _u_MainColor: {r: 0.84559, g: 0.84559, b: 0.84559, a: 1}
+    - _u_MainColor: {r: 0.99265, g: 0.99265, b: 0.99265, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &284629453532663700
 MonoBehaviour:

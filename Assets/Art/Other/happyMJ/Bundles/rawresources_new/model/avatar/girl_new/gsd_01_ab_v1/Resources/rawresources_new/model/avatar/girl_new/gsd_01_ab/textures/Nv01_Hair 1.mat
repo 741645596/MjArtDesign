@@ -113,7 +113,7 @@ Material:
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _CtrlName: 0
+    - _CtrlName: 1
     - _Cull: 2
     - _CullMode: 0
     - _CutOff: 0.99

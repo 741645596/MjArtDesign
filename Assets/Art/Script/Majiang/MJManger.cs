@@ -131,13 +131,4 @@ public class MJManger
         g_DicOutMJ.Clear();
     }
 }
-/// <summary>
-/// ×ùÎ»
-/// </summary>
-public enum Seat:int
-{
-    Self  = 0,
-    Right = 1,
-    Face  = 2,
-    Left  = 3,
-}
+

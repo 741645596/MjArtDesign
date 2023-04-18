@@ -135,7 +135,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _HalfRimLightIntensity: 2.6
+    - _HalfRimLightIntensity: 1
     - _HalfRimLightPower: 3.46
     - _LightRange: 0.99
     - _LipSmoothness: 0

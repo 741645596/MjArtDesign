@@ -1,0 +1,207 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1120967552210296589
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Nv06_Cloth_05_#Twinkle
+  m_Shader: {fileID: 4800000, guid: 8b2ad29bb3badaf44ad597a5f6695704, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 89d4af4ad181eaa4db708d0828659490, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Basemap:
+        m_Texture: {fileID: 2800000, guid: ba2bb5b99f5d3464b964f0676b8220bc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Detailmap:
+        m_Texture: {fileID: 2800000, guid: 5a81a897451d20145965dccdd7e26ca5, type: 3}
+        m_Scale: {x: -0.3, y: -0.15}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Emissionmap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlobalCubemap:
+        m_Texture: {fileID: 8900000, guid: 9501df0ecc724884b4410dfcbe64cc8f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 89d4af4ad181eaa4db708d0828659490, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask0:
+        m_Texture: {fileID: 2800000, guid: 3019b0114e82b0f4ca0cc1b87fe24b88, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: ab1adab5a1ea35b4793e04930a48f308, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normalmap:
+        m_Texture: {fileID: 2800000, guid: 11d913ec9043061468880dd7a972be92, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Twinklemap:
+        m_Texture: {fileID: 2800000, guid: efb5f8c3a98a9af4690f431bc63ec4d8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaClip: 0
+    - _AmbientIntensity: 1
+    - _AnisoDirection: 0.235
+    - _AnisoDirection2: 0.251
+    - _Anisotropy: 0.897
+    - _Anisotropy2: 0.75
+    - _Blend: 0
+    - _BlendOp: 0
+    - _BumpScale: 1
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
+    - _ColorIntensity: 1
+    - _Contrast: 1
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DetailAlbedoMapScale: 1
+    - _DetailNormalMapScale: 1
+    - _DetailScale: 0.15
+    - _DstBlend: 0
+    - _EnvReflIntensity: 0
+    - _EnvironmentReflections: 1
+    - _GlobalBackfaceBrightness: 0.521
+    - _GlobalCubemapIntensity: 0.1
+    - _GlobalCubemapRotation: 0.335
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _HalfRimLightIntensity: 0.75
+    - _HalfRimLightPower: 2
+    - _Metallic: 0.25
+    - _NormalScale: 1
+    - _Occlusion: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.005
+    - _Power1: 4.01
+    - _Power2: 44.7
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _RotateRate: 8.09
+    - _SampleGI: 0
+    - _Saturation: 1
+    - _ShineIntensity: 5
+    - _ShineIntensity2: 30
+    - _ShineMask: 0.2
+    - _ShineSpeed: 0
+    - _ShiningSpeed: 0.07
+    - _Smoothness: 0.489
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _TwinkleIntensity: 0.473
+    - _TwinklePower: 20
+    - _TwinkleSize: -3.2
+    - _TwinkleType: 2
+    - _UVFrequency: 0
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    - _mul: 1
+    m_Colors:
+    - _AmbientEquatorColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _AmbientGroundColor: {r: 0.07547, g: 0.02183, b: 0.02183, a: 1}
+    - _AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
+    - _AnisoColor: {r: 1, g: 0.43868, b: 0.43868, a: 1}
+    - _AnisoColor2: {r: 1, g: 0.3066, b: 0.3066, a: 1}
+    - _BaseColor: {r: 0.8962264, g: 0.31706125, b: 0.31706125, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DiamondCol: {r: 0.9622642, g: 0.3469107, b: 0.28595585, a: 1}
+    - _DiamondCol2: {r: 0.8584906, g: 0.60399085, b: 0.44139376, a: 1}
+    - _DiamondCol3: {r: 0.91629, g: 0.00391, b: 0.00035, a: 1}
+    - _Emission: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EnvReflAmbientColor: {r: 0.21403995, g: 0.21403995, b: 0.21403995, a: 1}
+    - _HalfRimLightColor: {r: 0.52497, g: 0.76705, b: 1, a: 1}
+    - _HalfRimLightDir: {r: 0.5, g: 74.3, b: -18.2, a: 0.18}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _TwinkleColor: {r: 0.67685, g: 0.39150998, b: 1, a: 1}
+  m_BuildTextureStacks: []

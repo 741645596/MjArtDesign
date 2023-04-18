@@ -276,7 +276,7 @@ inline void InitializeBRDFDataDirect(half3 diffuse, half3 specular, half reflect
 #endif
 }
 
-inline void InitializeBRDFData(half3 albedo, half metallic, half3 specular, half smoothness, inout half alpha, out BRDFData outBRDFData, half3 sssColor)
+inline void InitializeBRDFData(half3 albedo, half metallic, half3 specular, half smoothness, inout half alpha, out BRDFData outBRDFData)
 {
 #ifdef _SPECULAR_SETUP
     half reflectivity = ReflectivitySpecular(specular);
@@ -286,8 +286,7 @@ inline void InitializeBRDFData(half3 albedo, half metallic, half3 specular, half
 #else
     half oneMinusReflectivity = OneMinusReflectivityMetallic(metallic);
     half reflectivity = 1.0 - oneMinusReflectivity;
-    // 加上SSS部分
-    half3 brdfDiffuse = albedo * oneMinusReflectivity + sssColor;
+    half3 brdfDiffuse = albedo * oneMinusReflectivity;
     half3 brdfSpecular = lerp(kDieletricSpec.rgb, albedo, metallic);
 #endif
 
@@ -632,8 +631,7 @@ half3 LightingPhysicallyBased(BRDFData brdfData,
 //                      Fragment Functions                                   //
 //       Used by ShaderGraph and others builtin renderers                    //
 ///////////////////////////////////////////////////////////////////////////////
-half4 UniversalFragmentPBR(InputData inputData, SurfaceData surfaceData,
-    half3 _AmbientCol, half3 sssColor)
+half4 UniversalFragmentPBR(InputData inputData, SurfaceData surfaceData)
 {
 #ifdef _SPECULARHIGHLIGHTS_OFF
     bool specularHighlightsOff = true;
@@ -644,7 +642,7 @@ half4 UniversalFragmentPBR(InputData inputData, SurfaceData surfaceData,
     BRDFData brdfData;
 
     // NOTE: can modify alpha
-    InitializeBRDFData(surfaceData.albedo, surfaceData.metallic, surfaceData.specular, surfaceData.smoothness, surfaceData.alpha, brdfData, sssColor);
+    InitializeBRDFData(surfaceData.albedo, surfaceData.metallic, surfaceData.specular, surfaceData.smoothness, surfaceData.alpha, brdfData);
 
     // To ensure backward compatibility we have to avoid using shadowMask input, as it is not present in older shaders
 #if defined(SHADOWS_SHADOWMASK) && defined(LIGHTMAP_ON)
@@ -662,13 +660,11 @@ half4 UniversalFragmentPBR(InputData inputData, SurfaceData surfaceData,
     half3 color = GlobalIllumination(brdfData, 
                                      inputData.bakedGI, surfaceData.occlusion,
                                      inputData.normalWS, inputData.viewDirectionWS);
-    color = float3(0, 0, 0);
+
     color += LightingPhysicallyBased(brdfData,
                                      mainLight,
                                      inputData.normalWS, inputData.viewDirectionWS,
                                      specularHighlightsOff);
-
-    color += _AmbientCol * brdfData.diffuse * surfaceData.occlusion * 0.3f;
 
 
     color += surfaceData.emission;
@@ -677,8 +673,7 @@ half4 UniversalFragmentPBR(InputData inputData, SurfaceData surfaceData,
 }
 
 half4 UniversalFragmentPBR(InputData inputData, half3 albedo, half metallic, half3 specular,
-    half smoothness, half occlusion, half3 emission, half alpha,
-    half3 _AmbientCol, half3 sssColor)
+    half smoothness, half occlusion, half3 emission, half alpha)
 {
     SurfaceData s;
     s.albedo              = albedo;
@@ -690,7 +685,7 @@ half4 UniversalFragmentPBR(InputData inputData, half3 albedo, half metallic, hal
     s.alpha               = alpha;
     s.clearCoatMask       = 0.0;
     s.clearCoatSmoothness = 1.0;
-    return UniversalFragmentPBR(inputData, s, _AmbientCol, sssColor);
+    return UniversalFragmentPBR(inputData, s);
 }
 
 #endif

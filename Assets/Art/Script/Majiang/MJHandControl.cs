@@ -8,29 +8,31 @@ public class MJHandControl : MonoBehaviour
     public Animator ani;
     public float m_posx;
     public float m_posy;
-    public List<int> listPaiNum = new List<int>();
-    public int ButtonWidth = 200;
-    public int ButtonHeight = 30;
-    public int ButtonWidthStep = 220;
-    public int ButtonHeightStep = 35;
-    private bool isShowUI = false;
-    public GUIStyle style = new GUIStyle();
+    private List<int> listPaiNum = new List<int>();
 
     private Vector2Int mjBornPos = new Vector2Int(0,0);
 
     private float minPos = -1;
     private float maxPos = 1;
-    public Transform mjzNode;
-    public GameObject mjziPrefab;
+    public Transform OutMajiang
+    {
+        get 
+        {
+            return pgData.GetHandNode(PaiGroupInHand.OutMajiang);
+        }
+    }
     public float waitShowTime = 0.5f;
     /// <summary>
     /// 循环打牌间隔时间
     /// </summary>
     public float intervalTime = 0.5f;
-    public MJConfigData tParentPutMajiang;
     public bool isLoadFinish = true;
     public bool isRandom = false;
-    public Seat seat;
+    private Seat seat;
+    /// <summary>
+    /// 牌组数据
+    /// </summary>
+    public PaiGroupData pgData = new PaiGroupData();
 
     void Awake()
     {
@@ -44,7 +46,7 @@ public class MJHandControl : MonoBehaviour
         {
             ani.SetFloat("PosX", posX);
             ani.SetFloat("PosY", posY);
-            ani.SetBool("isPlay", true);
+            ani.SetInteger("actionType", (int)DaPaiActionType.DaPai);
             float ret = UnityEngine.Random.Range(0.0f, 1.0f);
             isRandom = (ret >= 0.5f) ? true : false;
             ani.SetBool("isRandom", isRandom);
@@ -62,23 +64,26 @@ public class MJHandControl : MonoBehaviour
     private IEnumerator WaitShowMj()
     {
         yield return new WaitForSeconds(waitShowTime);
-        if (mjzNode != null)
+        if (OutMajiang != null)
         {
-            mjzNode.gameObject.SetActive(true);
+            OutMajiang.gameObject.SetActive(true);
         }
     }
 
     private IEnumerator WaitLoadMj()
     {
         MJAction mj = MJManger.GetOutLastMJ(this.seat);
-        if(mj != null)
+        /*if(mj != null)
         {
             mj.SetMjBody(tParentPutMajiang, false);
-        }
+        }*/
         //
-        int layer = LayerMask.NameToLayer("Default");
-        Vector3 pos = Vector3.zero + new Vector3(tParentPutMajiang.MjStepHeight * (this.mjBornPos.x), 0, tParentPutMajiang.mjStepWidth * (-this.mjBornPos.x + this.mjBornPos.y));
-        LoadMajiang(tParentPutMajiang, pos, layer, tParentPutMajiang.isShowMjShadow, true);
+        MJAction newmj = pgData.GetNode(PaiGroupInHand.OutMajiang).LoadMJ(this.mjBornPos);
+        if (mj != null)
+        {
+            MJManger.AddOutMJ(this.seat, newmj);
+        }
+
         yield return new WaitForSeconds(intervalTime);
         isLoadFinish = true;
     }
@@ -87,78 +92,7 @@ public class MJHandControl : MonoBehaviour
         StartCoroutine(WaitLoadMj());
     }
 
-    /// <summary>
-    /// 加载麻将
-    /// </summary>
-    /// <param name="parent"></param>
-    /// <param name="startPos"></param>
-    /// <param name="layer"></param>
-    private void LoadMajiang(MJConfigData parentNode, Vector3 pos, int layer, bool isShowShadow = true, bool isSeclect = false)
-    {
-        if (mjziPrefab != null)
-        {
-            GameObject go = GameObject.Instantiate(mjziPrefab);
-            go.transform.parent = tParentPutMajiang.transform;
-            MJAction action = go.GetComponent<MJAction>();
-            action.SetPos(pos);
-            action.SetRotation(0);
-            action.SetMJViewData(parentNode, isShowShadow, isSeclect);
-            action.SetLayer(layer);
-            //listMJ.Add(action);
-            MJManger.AddOutMJ(this.seat,action);
-        }
-    }
-    private void OnGUI()
-    {
-        return;
-        int height = 20;
-        if (GUI.Button(new Rect(10 + 0 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[clear one]", style))
-        {
-            ClearUpMj();
-        }
 
-        if (GUI.Button(new Rect(10 + 1 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[clear all]", style))
-        {
-            ClearAll();
-        }
-
-        if (GUI.Button(new Rect(10 + 2 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[push all]", style))
-        {
-            playAllMj();
-        }
-
-        isShowUI = GUI.Toggle(new Rect(30 + 3 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), isShowUI, "显示定位发麻将", style);
-
-        if (isShowUI == true)
-        {
-            height += ButtonHeightStep;
-            if (listPaiNum == null || listPaiNum.Count == 0)
-                return;
-            float Ystep = (maxPos - minPos) / (listPaiNum.Count - 1);
-            for (int line = 0; line < listPaiNum.Count; line++)
-            {
-                int paiNum = listPaiNum[line];
-                if (paiNum <= 1)
-                    continue;
-                m_posy = minPos + Ystep * line;
-
-                for (int j = 0; j < paiNum; j++)
-                {
-                    if (GUI.Button(new Rect(10 + j * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[" + line.ToString() + "," + j.ToString() + "]", style))
-                    {
-                        if (isLoadFinish == true)
-                        {
-                            float Xstep = (maxPos - minPos) / (paiNum - 1);
-                            m_posx = minPos + Xstep * j;
-                            this.mjBornPos = new Vector2Int(line, j);
-                            OnControllerHandAni(m_posx, m_posy);
-                        }
-                    }
-                }
-                height += ButtonHeightStep;
-            }
-        }
-    }
 
     public void ClearUpMj()
     {
@@ -219,4 +153,106 @@ public class MJHandControl : MonoBehaviour
         this.mjBornPos = new Vector2Int(line, j);
         OnControllerHandAni(m_posx, m_posy);
     }
+
+
+    public void TanPai()
+    {
+        if (ani != null)
+        {
+            OutMajiang.gameObject.SetActive(false);
+            ani.SetInteger("actionType", (int)DaPaiActionType.TanPai);
+        }
+    }
+
+    public void QiDongAnniu()
+    {
+        if (ani != null)
+        {
+            OutMajiang.gameObject.SetActive(false);
+            ani.SetInteger("actionType", (int)DaPaiActionType.QidongAnAniu);
+        }
+    }
+
+    public void HuanPai()
+    {
+        if (ani != null)
+        {
+            OutMajiang.gameObject.SetActive(false);
+            ani.SetInteger("actionType", (int)DaPaiActionType.HuanPai);
+        }
+    }
+
+    public void Emoji()
+    {
+        if (ani != null)
+        {
+            OutMajiang.gameObject.SetActive(false);
+            ani.SetInteger("actionType", (int)DaPaiActionType.Emoji);
+            int ret = UnityEngine.Random.Range(0, 4);
+            ani.SetInteger("EmojiType", ret);
+        }
+    }
+
+    public void PengChiGang()
+    {
+        if (ani != null)
+        {
+            OutMajiang.gameObject.SetActive(false);
+            ani.SetInteger("actionType", (int)DaPaiActionType.PengChiGang);
+        }
+    }
+
+    public void LiPai()
+    {
+        if (ani != null)
+        {
+            OutMajiang.gameObject.SetActive(false);
+            ani.SetInteger("actionType", (int)DaPaiActionType.LiPai);
+        }
+    }
+
+    public void HuPai()
+    {
+        if (ani != null)
+        {
+            OutMajiang.gameObject.SetActive(false);
+            ani.SetInteger("actionType", (int)DaPaiActionType.HuPai);
+        }
+    }
+    /// <summary>
+    /// 设置角色座位数据
+    /// </summary>
+    /// <param name="data"></param>
+    public void SetSeatConfig(SeatConfigData data, List<int> listPM)
+    {
+        transform.localPosition = Vector3.zero;
+        transform.localEulerAngles = Vector3.zero;
+        this.pgData.SetHandNode(PaiGroupInHand.OutMajiang, data.mjData.transform);
+        this.listPaiNum.Clear();
+        this.listPaiNum.AddRange(listPM);
+        this.seat = data.seat;
+        foreach (string part in data.listHidePart)
+        {
+            Transform t = transform.Find(part);
+            if (t != null)
+            {
+                t.gameObject.SetActive(false);
+            }
+        }
+    }
+
 }
+
+public enum DaPaiActionType:int 
+{
+    DaPai        = 1,
+    HuPai        = 2,
+    LiPai        = 3,
+    PengChiGang  = 4,
+    Emoji        = 7,
+    HuanPai      = 8,
+    QidongAnAniu = 9,
+    TanPai       = 10,
+}
+
+

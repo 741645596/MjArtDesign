@@ -204,4 +204,13 @@ inline float4 GetSaturation (float4 inColor,float _Saturation)
 	return inColor;
 }
 
+
+void roateUV(float2 _UVRotate, float calcTime, half2 pivot, inout float2 uv)
+{
+	half cosAngle = cos(_UVRotate.x + calcTime * _UVRotate.y);
+	half sinAngle = sin(_UVRotate.x + calcTime * _UVRotate.y);
+	half2x2 roation = half2x2(cosAngle, -sinAngle, sinAngle, cosAngle);
+	uv.xy = mul(roation, uv.xy -= pivot) + pivot;
+}
+
 #endif // COLOR_CORE_INCLUDED

@@ -9,7 +9,7 @@ public class MJAnimationState_fixedMJPosCtrol : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.SetBool("isPlay", false);
+        animator.SetInteger("actionType", 0);
         MJHandControl mc = animator.GetComponent<MJHandControl>();
         if (mc != null)
         {
@@ -29,7 +29,7 @@ public class MJAnimationState_fixedMJPosCtrol : StateMachineBehaviour
         MJHandControl mc = animator.GetComponent<MJHandControl>();
         if (mc != null)
         {
-            mc.mjzNode.gameObject.SetActive(false);
+            mc.OutMajiang.gameObject.SetActive(false);
         }
     }
 
