@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Weile.Core;
 public class RoleBindBones : MonoBehaviour
 {
     public Animator ani;
@@ -54,6 +54,15 @@ public class RoleBindBones : MonoBehaviour
 
     private void OnGUI()
     {
+        if (GameLogic.g_IsInGame == false)
+        {
+            GUI.Label(new Rect(Screen.width / 2 - 150, 10, 300, 40), "局外全骨骼测试",style);
+        }
+        else 
+        {
+            GUI.Label(new Rect(Screen.width / 2 - 150, 10, 300, 40), "局内全骨骼测试",style);
+        }
+
         int height = 70;
         if (clothData == null)
             return;
@@ -100,6 +109,36 @@ public class RoleBindBones : MonoBehaviour
                 }
             }
         }
+
+        // save
+        if (GameLogic.g_IsInGame == false)
+        {
+            if (GUI.Button(new Rect(10, height, ButtonWidth, ButtonHeight), "Save", style))
+            {
+                Save();
+            }
+        }
+        else
+        {
+            if (GUI.Button(new Rect(10, height, ButtonWidth, ButtonHeight), "Exit", style))
+            {
+                Exit();
+            }
+        }
+    }
+    /// <summary>
+    /// 保存选定好的衣服进入游戏内
+    /// </summary>
+    private void Save()
+    {
+        EventCenter.DispatchEvent(EventCenterType.InGame, -1, 0);
+    }
+    /// <summary>
+    /// 退出游戏
+    /// </summary>
+    private void Exit()
+    {
+        EventCenter.DispatchEvent(EventCenterType.OutGame, -1, 0);
     }
     /// <summary>
     /// 
@@ -134,6 +173,14 @@ public class RoleBindBones : MonoBehaviour
             go.transform.parent = ParentNode;
             go.transform.localPosition = Vector3.zero;
             go.transform.localEulerAngles = Vector3.zero;
+            if (GameLogic.g_IsInGame == true)
+            {
+               Transform hide  = go.transform.Find("hide");
+                if (hide != null)
+                {
+                    hide.gameObject.SetActive(false);
+                }
+            }
             // 同步动画
             if (rootBody != null)
             {

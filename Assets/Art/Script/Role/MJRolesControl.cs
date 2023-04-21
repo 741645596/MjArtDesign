@@ -78,7 +78,11 @@ public class MJRolesControl : MonoBehaviour
 
         if (GUI.Button(new Rect(10 + 1 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[clear all]", style))
         {
-            mc.ClearAll();
+            //mc.ClearAll();
+            foreach (MJHandControl v in listRole)
+            {
+                v.ClearAll();
+            }
         }
 
         if (GUI.Button(new Rect(10 + 2 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[push all]", style))
@@ -90,29 +94,49 @@ public class MJRolesControl : MonoBehaviour
 
         if (GUI.Button(new Rect(10 + 0 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[Æô¶¯°´Å¥]", style))
         {
-            mc.QiDongAnniu();
+            foreach (MJHandControl v in listRole)
+            {
+                v.QiDongAnniu(); 
+            }
+            //mc.QiDongAnniu();
         }
 
         if (GUI.Button(new Rect(10 + 1 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[»»ÅÆ]", style))
         {
-            mc.HuanPai();
+            foreach (MJHandControl v in listRole)
+            {
+                v.HuanPai();
+            }
+            //mc.HuanPai();
         }
 
         if (GUI.Button(new Rect(10 + 2 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[Åö³Ô¸Ü]", style))
         {
-            mc.PengChiGang();
+            //mc.PengChiGang();
+            foreach (MJHandControl v in listRole)
+            {
+                v.PengChiGang();
+            }
         }
 
         if (GUI.Button(new Rect(10 + 3 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[Ì¯ÅÆ]", style))
         {
-            mc.TanPai();
+            //mc.TanPai();
+            foreach (MJHandControl v in listRole)
+            {
+                v.TanPai();
+            }
         }
 
         height = height + ButtonHeight + 5;
 
         if (GUI.Button(new Rect(10 + 0 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[ºúÅÆ]", style))
         {
-            mc.HuPai();
+            //mc.HuPai();
+            foreach (MJHandControl v in listRole)
+            {
+                v.HuPai();
+            }
         }
 
         if (GUI.Button(new Rect(10 + 1 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[ÀíÅÆ]", style))
@@ -122,7 +146,11 @@ public class MJRolesControl : MonoBehaviour
 
         if (GUI.Button(new Rect(10 + 2 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[emoji]", style))
         {
-            mc.Emoji();
+            //mc.Emoji();
+            foreach (MJHandControl v in listRole)
+            {
+                v.Emoji();
+            }
         }
     }
 

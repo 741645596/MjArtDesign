@@ -18,7 +18,7 @@ public class RoleAniHelp
         }
 
         // 新增骨骼  --> 屏蔽掉，跟骨骼规范有关，云裳羽衣的不应该添加。
-        //UpdateBones(selfChangeBone, targetSmr.rootBone);
+        UpdateBones(selfChangeBone, targetSmr.rootBone);
 
         var selfBones = selfRoot.GetComponentsInChildren<Transform>(true);
         List<Transform> newBones = GetSameNameBones(selfBones, targetSmr.bones, targetSmr.rootBone.name);

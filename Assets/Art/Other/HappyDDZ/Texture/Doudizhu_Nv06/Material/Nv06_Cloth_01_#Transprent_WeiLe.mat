@@ -143,7 +143,7 @@ Material:
     - _HalfRimLightIntensity: 0.75
     - _HalfRimLightPower: 1.2
     - _Metallic: 1
-    - _NormalScale: 1.4
+    - _NormalScale: 1
     - _Occlusion: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005

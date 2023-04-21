@@ -10,9 +10,9 @@ public class SeatConfigData : MonoBehaviour
     /// </summary>
     public List<string> listHidePart = new List<string>();
     /// <summary>
-    /// 控制的麻将属性
+    /// 桌面挂载节点数据
     /// </summary>
-    public MJConfigData mjData;
+    public List<PaiGroupNodeBaseData> listNodeBaseData = new List<PaiGroupNodeBaseData>();
 }
 /// <summary>
 /// 座位

@@ -28,13 +28,29 @@ public class PaiGroupData
     /// </summary>
     /// <param name="type"></param>
     /// <param name="Parent"></param>
-    public void SetHandNode(PaiGroupInHand type, Transform Parent)
+    public void SetNodeData(List<PaiGroupNodeBaseData> listNodeBaseData)
     {
+        if (listNodeBaseData != null && listNodeBaseData.Count > 0)
+        {
+            foreach (PaiGroupNodeBaseData ph in listNodeBaseData)
+            {
+                SetNodeData(ph);
+            }
+        }
+    }
+    /// <summary>
+    /// 设置数据关联
+    /// </summary>
+    /// <param name="data"></param>
+    private void SetNodeData(PaiGroupNodeBaseData data)
+    {
+        if (data == null)
+            return;
         foreach (PaiGroupNodeData ph in listHandNode)
         {
-            if (ph.Type == type)
+            if (ph.Type == data.Type)
             {
-                ph.ParentNodeInTable = Parent;
+                ph.ParentNodeInTable = data.ParentNodeInTable;
             }
         }
     }
@@ -58,24 +74,20 @@ public class PaiGroupData
 
 
 [System.Serializable]
-public class PaiGroupNodeData
+public class PaiGroupNodeData: PaiGroupNodeBaseData
 {
     /// <summary>
     /// 挂载节点
     /// </summary>
     public Transform ParentNodeInHand;
     /// <summary>
-    /// 部件类型
-    /// </summary>
-    public PaiGroupInHand Type;
-    /// <summary>
-    /// 放置到桌面的节点
-    /// </summary>
-    public Transform ParentNodeInTable;
-    /// <summary>
     /// 挂载对象
     /// </summary>
     public GameObject Prefab;
+    /// <summary>
+    /// 备份的父节点
+    /// </summary>
+    private Transform BakeParent;
     /// <summary>
     /// 加载麻将组
     /// </summary>
@@ -84,8 +96,37 @@ public class PaiGroupNodeData
         if (Prefab != null)
         {
             GameObject go = GameObject.Instantiate(Prefab);
-            go.transform.parent = ParentNodeInTable.transform;
+            go.transform.parent = ParentNodeInHand.transform;
+            go.transform.localPosition = Vector3.zero;
         }
+    }
+    /// <summary>
+    /// 切换到桌面
+    /// </summary>
+    public void Change2Table()
+    {
+       Transform t = ParentNodeInHand.GetChild(0);
+       if (t != null)
+       {
+            t.parent = ParentNodeInTable;
+            t.localPosition = Vector3.zero;
+            t.localEulerAngles = Vector3.zero;
+       }
+    }
+    /// <summary>
+    /// 绑定麻将组
+    /// </summary>
+    public void BindMjGroup()
+    {
+        BakeParent = ParentNodeInTable.parent;
+        ParentNodeInTable.parent = ParentNodeInHand;
+    }
+    /// <summary>
+    /// 释放绑定麻将组
+    /// </summary>
+    public void FreeBindMjGroup()
+    {
+        ParentNodeInTable.parent = BakeParent;
     }
     /// <summary>
     /// 加载麻将子
@@ -125,5 +166,20 @@ public class PaiGroupNodeData
         }
         return null;
     }
+
+}
+
+
+[System.Serializable]
+public class PaiGroupNodeBaseData
+{
+    /// <summary>
+    /// 部件类型
+    /// </summary>
+    public PaiGroupInHand Type;
+    /// <summary>
+    /// 放置到桌面的节点
+    /// </summary>
+    public Transform ParentNodeInTable;
 
 }

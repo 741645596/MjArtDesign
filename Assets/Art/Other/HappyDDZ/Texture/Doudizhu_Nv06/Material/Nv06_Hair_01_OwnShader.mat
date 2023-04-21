@@ -119,7 +119,7 @@ Material:
     - _BumpScale: 2
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _CtrlName: 0
+    - _CtrlName: 1
     - _Cull: 2
     - _Cutoff: 0.967
     - _DetailAlbedoMapScale: 1
@@ -132,7 +132,7 @@ Material:
     - _HalfRimLightIntensity: 2
     - _HalfRimLightPower: 3.5
     - _IndirectDiffuseIntensity: 0.7
-    - _KkSpecName: 0
+    - _KkSpecName: 1
     - _LambertBrightness: 0.08
     - _MPrimaryShift: 0.092
     - _Metallic: 0

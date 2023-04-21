@@ -33,7 +33,7 @@ public enum PaiGroupDestination : int
 }
 
 /// <summary>
-/// 牌组来源
+/// 牌组动作
 /// </summary>
 public enum PaiGroupInHand : int
 {
@@ -41,4 +41,5 @@ public enum PaiGroupInHand : int
     ChiPengGang = 1,       // 吃碰杠手中拿牌
     HuPai       = 2,       // 胡牌时手中拿牌
     Exchange    = 3,       // 换牌时手中拿牌
+    Showdown    = 4,       // 摊牌时
 }

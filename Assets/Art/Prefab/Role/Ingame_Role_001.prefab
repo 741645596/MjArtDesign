@@ -1186,14 +1186,26 @@ MonoBehaviour:
   isRandom: 0
   pgData:
     listHandNode:
-    - ParentNodeInHand: {fileID: 6755326201213320237}
-      Type: 0
+    - Type: 0
       ParentNodeInTable: {fileID: 0}
+      ParentNodeInHand: {fileID: 6755326201213320237}
       Prefab: {fileID: 6018917178191519925, guid: 66f3228803bcf444aba0d1f56766ad3d, type: 3}
-    - ParentNodeInHand: {fileID: 1510229555894969576}
-      Type: 3
+    - Type: 3
       ParentNodeInTable: {fileID: 0}
+      ParentNodeInHand: {fileID: 1510229555894969576}
       Prefab: {fileID: 6018917178191519925, guid: 7362bd2e59922b444b551555d48e8060, type: 3}
+    - Type: 1
+      ParentNodeInTable: {fileID: 0}
+      ParentNodeInHand: {fileID: 7314093710236516147}
+      Prefab: {fileID: 6018917178191519925, guid: 7362bd2e59922b444b551555d48e8060, type: 3}
+    - Type: 2
+      ParentNodeInTable: {fileID: 0}
+      ParentNodeInHand: {fileID: 1510229555894969576}
+      Prefab: {fileID: 6018917178191519925, guid: 66f3228803bcf444aba0d1f56766ad3d, type: 3}
+    - Type: 4
+      ParentNodeInTable: {fileID: 0}
+      ParentNodeInHand: {fileID: 1510229555894969576}
+      Prefab: {fileID: 0}
 --- !u!1 &3255339369294518436
 GameObject:
   m_ObjectHideFlags: 0

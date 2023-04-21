@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Weile.Core;
 
 public class MJHandControl : MonoBehaviour
 {
@@ -73,13 +74,14 @@ public class MJHandControl : MonoBehaviour
     private IEnumerator WaitLoadMj()
     {
         MJAction mj = MJManger.GetOutLastMJ(this.seat);
-        /*if(mj != null)
+        if(mj != null)
         {
-            mj.SetMjBody(tParentPutMajiang, false);
-        }*/
+            MJConfigData  mfg= mj.transform.parent.GetComponent<MJConfigData>();
+            mj.SetMjBody(mfg, false);
+        }
         //
         MJAction newmj = pgData.GetNode(PaiGroupInHand.OutMajiang).LoadMJ(this.mjBornPos);
-        if (mj != null)
+        if (newmj != null)
         {
             MJManger.AddOutMJ(this.seat, newmj);
         }
@@ -163,6 +165,22 @@ public class MJHandControl : MonoBehaviour
             ani.SetInteger("actionType", (int)DaPaiActionType.TanPai);
         }
     }
+    /// <summary>
+    /// 摊牌时绑定手牌
+    /// </summary>
+    public void Event_TanPaiStart()
+    {
+        Debug.Log("Event_TanPaiStart");
+        pgData.GetNode(PaiGroupInHand.Showdown).BindMjGroup();
+    }
+    /// <summary>
+    /// 摊牌时放弃绑定手牌
+    /// </summary>
+    public void Event_TanPaiEnd()
+    {
+        Debug.Log("Event_TanPaiEnd");
+        pgData.GetNode(PaiGroupInHand.Showdown).FreeBindMjGroup();
+    }
 
     public void QiDongAnniu()
     {
@@ -178,7 +196,20 @@ public class MJHandControl : MonoBehaviour
         if (ani != null)
         {
             OutMajiang.gameObject.SetActive(false);
+            pgData.GetNode(PaiGroupInHand.Exchange).LoadMJGroup();
             ani.SetInteger("actionType", (int)DaPaiActionType.HuanPai);
+        }
+    }
+    /// <summary>
+    /// 换牌到桌面
+    /// </summary>
+    public void Event_HuanPai2Table()
+    {
+        pgData.GetNode(PaiGroupInHand.Exchange).Change2Table();
+        if (this.seat == Seat.Self)
+        {
+            float angle = 180.0f;
+            EventCenter.DispatchEvent(EventCenterType.ExchangMajiang, 0, angle);
         }
     }
 
@@ -198,8 +229,17 @@ public class MJHandControl : MonoBehaviour
         if (ani != null)
         {
             OutMajiang.gameObject.SetActive(false);
+            pgData.GetNode(PaiGroupInHand.ChiPengGang).LoadMJGroup();
             ani.SetInteger("actionType", (int)DaPaiActionType.PengChiGang);
         }
+    }
+
+    /// <summary>
+    /// 吃碰杠到桌面
+    /// </summary>
+    public void Event_PengChiGang2Table()
+    {
+        pgData.GetNode(PaiGroupInHand.ChiPengGang).Change2Table();
     }
 
     public void LiPai()
@@ -216,9 +256,21 @@ public class MJHandControl : MonoBehaviour
         if (ani != null)
         {
             OutMajiang.gameObject.SetActive(false);
+            pgData.GetNode(PaiGroupInHand.HuPai).LoadMJGroup();
             ani.SetInteger("actionType", (int)DaPaiActionType.HuPai);
         }
     }
+
+    /// <summary>
+    /// 吃碰杠到桌面
+    /// </summary>
+    public void Event_HuPai2Table()
+    {
+        pgData.GetNode(PaiGroupInHand.HuPai).Change2Table();
+    }
+
+
+
     /// <summary>
     /// 设置角色座位数据
     /// </summary>
@@ -227,7 +279,7 @@ public class MJHandControl : MonoBehaviour
     {
         transform.localPosition = Vector3.zero;
         transform.localEulerAngles = Vector3.zero;
-        this.pgData.SetHandNode(PaiGroupInHand.OutMajiang, data.mjData.transform);
+        this.pgData.SetNodeData(data.listNodeBaseData);
         this.listPaiNum.Clear();
         this.listPaiNum.AddRange(listPM);
         this.seat = data.seat;

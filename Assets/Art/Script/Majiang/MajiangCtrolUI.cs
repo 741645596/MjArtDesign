@@ -19,18 +19,6 @@ public class MajiangCtrolUI : MonoBehaviour
     /// </summary>
     public List<MJConfigData> ListmajiangHandNode = new List<MJConfigData>();
     /// <summary>
-    /// 已出牌节点
-    /// </summary>
-    public List<MJConfigData> ListmajiangOutNode = new List<MJConfigData>();
-    /// <summary>
-    /// 已胡牌节点
-    /// </summary>
-    public List<MJConfigData> ListmajiangHuNode = new List<MJConfigData>();
-    /// <summary>
-    /// 已碰牌节点
-    /// </summary>
-    public List<MJConfigData> ListmajiangPengNode = new List<MJConfigData>();
-    /// <summary>
     /// 加载间隔时间
     /// </summary>
     public float loadTimeStep = 0.05f;
@@ -67,9 +55,6 @@ public class MajiangCtrolUI : MonoBehaviour
         //StartCoroutine(LoadSelfHand());
         yield return StartCoroutine(LoadMjHand());
         yield return StartCoroutine(LoadMjWall());
-        yield return StartCoroutine(LoadMjOutMajiang());
-        yield return StartCoroutine(LoadMjHuMajiang());
-        yield return StartCoroutine(LoadMjPengMajiang());
     }
     /// <summary>
     /// 释放所有麻将
@@ -87,20 +72,6 @@ public class MajiangCtrolUI : MonoBehaviour
         yield return LoadHandCardTeam(SelfHandNode, startPos, LayerMask.NameToLayer("HandCard"));
     }
     /// <summary>
-    /// 加载所有胡牌
-    /// </summary>
-    private IEnumerator LoadMjPengMajiang()
-    {
-        Vector3 startPos = new Vector3(0.3242994f, 0.01372704f, 0.0f);
-        if (ListmajiangPengNode != null && ListmajiangPengNode.Count > 0)
-        {
-            foreach (MJConfigData node in ListmajiangPengNode)
-            {
-                yield return LoadMjPengTeam(node, startPos);
-            }
-        }
-    }
-    /// <summary>
     /// 加载胡牌墙
     /// </summary>
     private IEnumerator LoadMjPengTeam(MJConfigData parentNode, Vector3 startPos)
@@ -110,20 +81,6 @@ public class MajiangCtrolUI : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             yield return LoadMajiang(parentNode, startPos - diff * i, layer);
-        }
-    }
-    /// <summary>
-    /// 加载所有胡牌
-    /// </summary>
-    private IEnumerator LoadMjHuMajiang()
-    {
-        Vector3 startPos = new Vector3(0.3242994f, 0.01372704f, 0.0f);
-        if (ListmajiangHuNode != null && ListmajiangHuNode.Count > 0)
-        {
-            foreach (MJConfigData node in ListmajiangHuNode)
-            {
-                yield return LoadMjHuTeam(node, startPos);
-            }
         }
     }
     /// <summary>
@@ -148,38 +105,7 @@ public class MajiangCtrolUI : MonoBehaviour
     {
         Application.quitting -= OnQuitting;
     }
-    /// <summary>
-    /// 加载所有已出牌
-    /// </summary>
-    private IEnumerator LoadMjOutMajiang()
-    {
-        Vector3 startPos = new Vector3(0.3242994f, 0.01372704f, 0.0f);
-        if (ListmajiangOutNode != null && ListmajiangOutNode.Count > 0)
-        {
-            foreach (MJConfigData node in ListmajiangOutNode)
-            {
-                yield return LoadMjOutTeam(node, startPos);
-            }
-        }
-    }
 
-    /// <summary>
-    /// 加载已出牌墙
-    /// </summary>
-    private IEnumerator LoadMjOutTeam(MJConfigData parentNode, Vector3 startPos)
-    {
-        int layer = LayerMask.NameToLayer("Default");
-        Vector3 diff = parentNode.mjStepWidth * ((parentNode.c != MJDir.Horizontal) ? new Vector3(1, 0, 0) : new Vector3(0, 0, 1));
-        Vector3 Hdiff = parentNode.MjStepHeight * ((parentNode.c != MJDir.Horizontal) ? new Vector3(0, 0, 1)  : new Vector3(-1, 0, 0) );
-        for (int i = 0; i < 6; i++)
-        {
-            yield return  LoadMajiang(parentNode, startPos - diff * i, layer);
-        }
-        for (int i = 0; i < 2; i++)
-        {
-            yield return LoadMajiang(parentNode, startPos - diff * i - Hdiff, layer, true, true);
-        }
-    }
     /// <summary>
     /// 加载所有麻将墙
     /// </summary>
