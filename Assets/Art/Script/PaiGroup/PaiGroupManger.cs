@@ -24,7 +24,6 @@ public enum PaiGroupSource: int
 /// </summary>
 public enum PaiGroupDestination : int
 {
-
     HandMajiangArea = 0,          // 手牌区域
     OutArea         = 1,          // 出牌区域
     ChiPengGangArea = 2,          // 玩家打出去的牌，吃碰杠胡
@@ -42,4 +41,6 @@ public enum PaiGroupInHand : int
     HuPai       = 2,       // 胡牌时手中拿牌
     Exchange    = 3,       // 换牌时手中拿牌
     Showdown    = 4,       // 摊牌时
+    LiPai       = 5,       // 理牌时
+    MoPai       = 6,       // 打牌时
 }

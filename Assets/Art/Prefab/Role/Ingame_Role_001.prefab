@@ -1178,11 +1178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ani: {fileID: 0}
-  m_posx: 0
-  m_posy: 0
-  waitShowTime: 0.5
-  intervalTime: 0.5
-  isLoadFinish: 1
+  DaPaigo: {fileID: 3744114709141033856}
   isRandom: 0
   pgData:
     listHandNode:
@@ -1206,6 +1202,14 @@ MonoBehaviour:
       ParentNodeInTable: {fileID: 0}
       ParentNodeInHand: {fileID: 1510229555894969576}
       Prefab: {fileID: 0}
+    - Type: 5
+      ParentNodeInTable: {fileID: 0}
+      ParentNodeInHand: {fileID: 1510229555894969576}
+      Prefab: {fileID: 0}
+    - Type: 6
+      ParentNodeInTable: {fileID: 0}
+      ParentNodeInHand: {fileID: 0}
+      Prefab: {fileID: 6018917178191519925, guid: 66f3228803bcf444aba0d1f56766ad3d, type: 3}
 --- !u!1 &3255339369294518436
 GameObject:
   m_ObjectHideFlags: 0
@@ -4179,8 +4183,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Majiang
       objectReference: {fileID: 0}
+    - target: {fileID: 6018917178191519925, guid: 66f3228803bcf444aba0d1f56766ad3d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66f3228803bcf444aba0d1f56766ad3d, type: 3}
+--- !u!1 &3744114709141033856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6018917178191519925, guid: 66f3228803bcf444aba0d1f56766ad3d, type: 3}
+  m_PrefabInstance: {fileID: 6949820812642792245}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3744114709141033863 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6018917178191519922, guid: 66f3228803bcf444aba0d1f56766ad3d, type: 3}

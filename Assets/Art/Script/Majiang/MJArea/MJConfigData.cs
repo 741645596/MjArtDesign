@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class MJConfigData : MonoBehaviour
 {
+    public Seat seat;
     public MJMesh a;
     public MJGesture b;
     public MJDir c;
     public Material mjMaterial;
     /// <summary>
-    /// 麻将间隔宽度距离
+    /// 麻将间隔宽度距离, 同一列相邻2个麻将的距离。
     /// </summary>
     public float mjStepWidth= 0.0354f;
     /// <summary>
-    /// 麻将间隔长度距离
+    /// 麻将间隔长度距离，两列麻将之间的距离
     /// </summary>
     public float MjStepHeight = 0.0485f;
     /// <summary>
@@ -37,14 +38,4 @@ public class MJConfigData : MonoBehaviour
     /// </summary>
     public bool isShowMjShadow = true;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

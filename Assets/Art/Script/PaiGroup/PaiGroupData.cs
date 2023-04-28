@@ -89,83 +89,63 @@ public class PaiGroupNodeData: PaiGroupNodeBaseData
     /// </summary>
     private Transform BakeParent;
     /// <summary>
+    /// 加载管理的对象
+    /// </summary>
+    private Transform targetGO;
+    /// <summary>
     /// 加载麻将组
     /// </summary>
-    public void LoadMJGroup()
+    public GameObject LoadMJGroup()
     {
         if (Prefab != null)
         {
             GameObject go = GameObject.Instantiate(Prefab);
-            go.transform.parent = ParentNodeInHand.transform;
-            go.transform.localPosition = Vector3.zero;
-            go.transform.localEulerAngles = Vector3.zero;
+            this.targetGO = go.transform;
+            this.targetGO.parent = ParentNodeInHand.transform;
+            this.targetGO.localPosition = Vector3.zero;
+            this.targetGO.localEulerAngles = Vector3.zero;
+            return go;
         }
+        return null;
     }
     /// <summary>
     /// 切换到桌面
     /// </summary>
     public void Change2Table()
     {
-       Transform t = ParentNodeInHand.GetChild(0);
-       if (t != null)
+       if (this.targetGO != null)
        {
-            t.parent = ParentNodeInTable;
+            this.targetGO.parent = ParentNodeInTable;
             //t.localPosition = Vector3.zero;
-            t.localEulerAngles = Vector3.zero;
-       }
+            //t.localEulerAngles = Vector3.zero;
+            MJTypePosition mp = this.targetGO.GetComponent<MJTypePosition>();
+            if (mp != null)
+            {
+                mp.DoPostion();
+            }
+        }
     }
     /// <summary>
     /// 绑定麻将组
     /// </summary>
     public void BindMjGroup()
     {
-        BakeParent = ParentNodeInTable.parent;
-        ParentNodeInTable.parent = ParentNodeInHand;
+        if (ParentNodeInTable != null)
+        {
+            BakeParent = ParentNodeInTable.parent;
+            ParentNodeInTable.parent = ParentNodeInHand;
+        }
+
     }
     /// <summary>
     /// 释放绑定麻将组
     /// </summary>
     public void FreeBindMjGroup()
     {
-        ParentNodeInTable.parent = BakeParent;
-    }
-    /// <summary>
-    /// 加载麻将子
-    /// </summary>
-    /// <param name="mjBornPos"></param>
-    /// <returns></returns>
-    public MJAction LoadMJ(Vector2Int mjBornPos)
-    {
-        int layer = LayerMask.NameToLayer("Default");
-        MJConfigData mcd = ParentNodeInTable.GetComponent<MJConfigData>();
-        if (mcd != null)
+        if (ParentNodeInTable != null)
         {
-            Vector3 pos = Vector3.zero + new Vector3(mcd.MjStepHeight * (mjBornPos.x), 0, mcd.mjStepWidth * (-mjBornPos.x + mjBornPos.y));
-            return LoadMajiang(mcd, pos, layer, mcd.isShowMjShadow, true);
+            ParentNodeInTable.parent = BakeParent;
         }
-        return null;
-    }
-
-    /// <summary>
-    /// 加载麻将
-    /// </summary>
-    /// <param name="parent"></param>
-    /// <param name="startPos"></param>
-    /// <param name="layer"></param>
-    private MJAction LoadMajiang(MJConfigData parentNode, Vector3 pos, int layer, bool isShowShadow = true, bool isSeclect = false)
-    {
-        if (Prefab != null)
-        {
-            GameObject go = GameObject.Instantiate(Prefab);
-            go.transform.parent = parentNode.transform;
-            MJAction action = go.GetComponent<MJAction>();
-            action.SetPos(pos);
-            action.SetRotation(0);
-            action.SetMJViewData(parentNode, isShowShadow, isSeclect);
-            action.SetLayer(layer);
-            return action;
-        }
-        return null;
     }
 
 }

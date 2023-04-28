@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MJRolesControl : MonoBehaviour
 {
+    public MajiangAreaCtrl ctrlUI;
     private List<MJHandControl> listRole = new List<MJHandControl>();
     private int selRoleIndex = -1;
     private string[] selStrings = new string[] { "Self", "Right", "Face", "Left" };
@@ -15,7 +16,7 @@ public class MJRolesControl : MonoBehaviour
     public int ButtonHeightStep = 35;
     public Vector2Int topRightPos;
 
-    public float intervalTime = 0.5f;
+    private float intervalTime = 0.7f;
     /// <summary>
     /// ×ø×À½ÇÉ«preab
     /// </summary>
@@ -52,6 +53,29 @@ public class MJRolesControl : MonoBehaviour
     {
         if (listRole == null || listRole.Count == 0)
             return;
+        if (GUI.Button(new Rect(10 + 2 * ButtonWidthStep, 10, ButtonWidth, ButtonHeight), "[emoji]", skin.button))
+        {
+            foreach (MJHandControl v in listRole)
+            {
+                v.Emoji();
+            }
+        }
+
+        if (GUI.Button(new Rect(10 + 3 * ButtonWidthStep, 10, ButtonWidth, ButtonHeight), "[·¢ÅÆ]", skin.button))
+        {
+            listRole[0].QiDongAnniu();
+        }
+
+
+        if (GUI.Button(new Rect(10 + 4 * ButtonWidthStep, 10, ButtonWidth, ButtonHeight), "[»»ÅÆ]", skin.button))
+        {
+            for (int i = 0; i < listRole.Count; i++)
+            {
+                listRole[i].HuanPai();
+            }
+        }
+
+        //
         selRoleIndex = GUI.SelectionGrid(new Rect(topRightPos.x, topRightPos.y, 600, 30), selRoleIndex, selStrings, 4, skin.toggle);
 
         if (selRoleIndex < 0 || selRoleIndex >= listRole.Count)
@@ -61,15 +85,15 @@ public class MJRolesControl : MonoBehaviour
         {
             StartCoroutine(PlayAll());
         }
-
-
-
+        //
+        int height = topRightPos.y + 10;
+        //
 
         MJHandControl mc = listRole[selRoleIndex];
         if (mc == null)
             return;
-
-        int height = topRightPos.y + 70;
+        //
+        height = height + ButtonHeight + 5;
         if (GUI.Button(new Rect(10 + 0 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[clear one]", skin.button))
         {
             mc.ClearUpMj();
@@ -86,69 +110,73 @@ public class MJRolesControl : MonoBehaviour
 
         if (GUI.Button(new Rect(10 + 2 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[push all]", skin.button))
         {
-            mc.playAllMj();
+            mc.playAllMj(2.0f);
         }
+
+
 
         height = height + ButtonHeight + 5;
 
-        if (GUI.Button(new Rect(10 + 0 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[Æô¶¯°´Å¥]", skin.button))
+
+
+        HandMJNode hn = ctrlUI.GetHandNode(mc.seat);
+        if (hn != null)
         {
-            foreach (MJHandControl v in listRole)
+
+
+            if (GUI.Button(new Rect(10 + 0 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[Ì¯ÅÆ]", skin.button))
             {
-                v.QiDongAnniu(); 
+                foreach (MJHandControl v in listRole)
+                {
+                    v.TanPai();
+                }
             }
-            //mc.QiDongAnniu();
-        }
 
-        if (GUI.Button(new Rect(10 + 1 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[»»ÅÆ]", skin.button))
-        {
-            foreach (MJHandControl v in listRole)
+            if (GUI.Button(new Rect(10 + 1 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[ºúÅÆ]", skin.button))
             {
-                v.HuanPai();
+                mc.HuPai();
+                /*foreach (MJHandControl v in listRole)
+                {
+                    v.HuPai();
+                }*/
             }
-            //mc.HuanPai();
-        }
 
-        if (GUI.Button(new Rect(10 + 2 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[Åö³Ô¸Ü]", skin.button))
-        {
-            //mc.PengChiGang();
-            foreach (MJHandControl v in listRole)
+            if (GUI.Button(new Rect(10 + 2 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[Åö³Ô¸Ü]", skin.button))
             {
-                v.PengChiGang();
+                //mc.PengChiGang();
+                foreach (MJHandControl v in listRole)
+                {
+                    v.PengChiGang();
+                }
             }
-        }
 
-        if (GUI.Button(new Rect(10 + 3 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[Ì¯ÅÆ]", skin.button))
-        {
-            //mc.TanPai();
-            foreach (MJHandControl v in listRole)
+            if (GUI.Button(new Rect(10 + 3 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[¼Ó¸Ü]", skin.button))
             {
-                v.TanPai();
             }
-        }
 
-        height = height + ButtonHeight + 5;
 
-        if (GUI.Button(new Rect(10 + 0 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[ºúÅÆ]", skin.button))
-        {
-            //mc.HuPai();
-            foreach (MJHandControl v in listRole)
+
+
+            height = height + ButtonHeight + 5;
+            if (GUI.Button(new Rect(10 + 0 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[ÃþÅÆ]", skin.button))
             {
-                v.HuPai();
+                mc.MoPai();
             }
-        }
 
-        if (GUI.Button(new Rect(10 + 1 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[ÀíÅÆ]", skin.button))
-        {
-            mc.LiPai();
-        }
-
-        if (GUI.Button(new Rect(10 + 2 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[emoji]", skin.button))
-        {
-            //mc.Emoji();
-            foreach (MJHandControl v in listRole)
+            if (hn.HaveMoPai() == true)
             {
-                v.Emoji();
+                if (GUI.Button(new Rect(10 + 1 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[´òÅÆ]", skin.button))
+                {
+                    hn.DaHandPai();
+                    OutMJNode on = ctrlUI.GetOutNode(mc.seat);
+                    mc.DaPai(on.GetNextMJ());
+                }
+
+
+                if (GUI.Button(new Rect(10 + 2 * ButtonWidthStep, height, ButtonWidth, ButtonHeight), "[ÀíÅÆ]", skin.button))
+                {
+                    mc.LiPai();
+                }
             }
         }
     }
@@ -170,7 +198,7 @@ public class MJRolesControl : MonoBehaviour
         if (index >= 0 && index < listRole.Count)
         {
             yield return new WaitForSeconds(intervalTime * index);
-            listRole[index].playAllMjWithoutClear();
+            listRole[index].playAllMjWithoutClear(5.0f);
         }
     }
 }

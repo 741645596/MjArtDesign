@@ -10,11 +10,11 @@ public class MJAnimationState_fixedMJPosCtrol : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetInteger("actionType", 0);
-        MJHandControl mc = animator.GetComponent<MJHandControl>();
+        /*MJHandControl mc = animator.GetComponent<MJHandControl>();
         if (mc != null)
         {
             mc.ShowMJ();
-        }
+        }*/
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -26,11 +26,12 @@ public class MJAnimationState_fixedMJPosCtrol : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        MJHandControl mc = animator.GetComponent<MJHandControl>();
+        // œ»∆¡±Œ
+        /*MJHandControl mc = animator.GetComponent<MJHandControl>();
         if (mc != null)
         {
             mc.OutMajiang.gameObject.SetActive(false);
-        }
+        }*/
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

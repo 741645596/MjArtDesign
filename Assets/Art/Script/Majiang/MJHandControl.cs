@@ -7,29 +7,17 @@ public class MJHandControl : MonoBehaviour
 {
     // Start is called before the first frame update
     public Animator ani;
-    public float m_posx;
-    public float m_posy;
+    /// <summary>
+    /// 手中持牌,用于控制显示隐藏。
+    /// </summary>
+    public GameObject DaPaigo;
     private List<int> listPaiNum = new List<int>();
 
-    private Vector2Int mjBornPos = new Vector2Int(0,0);
-
-    private float minPos = -1;
-    private float maxPos = 1;
-    public Transform OutMajiang
-    {
-        get 
-        {
-            return pgData.GetHandNode(PaiGroupInHand.OutMajiang);
-        }
-    }
-    public float waitShowTime = 0.5f;
-    /// <summary>
-    /// 循环打牌间隔时间
-    /// </summary>
-    public float intervalTime = 0.5f;
-    public bool isLoadFinish = true;
+    private Vector2Int mjBornPos = new Vector2Int(0, 0);
     public bool isRandom = false;
-    private Seat seat;
+    public Seat seat;
+
+    private float DaPaiIntervalTime = 2.0f;
     /// <summary>
     /// 牌组数据
     /// </summary>
@@ -40,80 +28,49 @@ public class MJHandControl : MonoBehaviour
         ani = gameObject.GetComponent<Animator>();
     }
 
-    private void OnControllerHandAni(float posX, float posY)
-    {
-        isLoadFinish = false;
-        if (ani != null)
-        {
-            ani.SetFloat("PosX", posX);
-            ani.SetFloat("PosY", posY);
-            ani.SetInteger("actionType", (int)DaPaiActionType.DaPai);
-            float ret = UnityEngine.Random.Range(0.0f, 1.0f);
-            isRandom = (ret >= 0.5f) ? true : false;
-            ani.SetBool("isRandom", isRandom);
-        }
-    }
 
-
-    public void ShowMJ()
+    public void LoadMJ()
     {
-        StartCoroutine(WaitShowMj());
-    }
-    /// <summary>
-    /// 加载所有麻将墙
-    /// </summary>
-    private IEnumerator WaitShowMj()
-    {
-        yield return new WaitForSeconds(waitShowTime);
-        if (OutMajiang != null)
+        MJAction mj = MJManger.GetLastMJ(MJArea.Out, this.seat);
+        if (mj != null)
         {
-            OutMajiang.gameObject.SetActive(true);
-        }
-    }
-
-    private IEnumerator WaitLoadMj()
-    {
-        MJAction mj = MJManger.GetOutLastMJ(this.seat);
-        if(mj != null)
-        {
-            MJConfigData  mfg= mj.transform.parent.GetComponent<MJConfigData>();
+            MJConfigData mfg = mj.transform.parent.GetComponent<MJConfigData>();
             mj.SetMjBody(mfg, false);
         }
         //
-        MJAction newmj = pgData.GetNode(PaiGroupInHand.OutMajiang).LoadMJ(this.mjBornPos);
-        if (newmj != null)
+        MJRolesControl mjr = transform.parent.parent.GetComponent<MJRolesControl>();
+        if (mjr != null && mjr.ctrlUI != null)
         {
-            MJManger.AddOutMJ(this.seat, newmj);
+            OutMJNode on = mjr.ctrlUI.GetOutNode(this.seat);
+            if (on != null)
+            {
+                on.LoadMJ(pgData.GetNode(PaiGroupInHand.OutMajiang).Prefab, this.mjBornPos, true);
+            }
         }
-
-        yield return new WaitForSeconds(intervalTime);
-        isLoadFinish = true;
-    }
-    public void LoadMJ()
-    {
-        StartCoroutine(WaitLoadMj());
     }
 
 
 
     public void ClearUpMj()
     {
-        MJManger.ClearOutLastMJ(this.seat);
+        MJManger.ClearLastMJ(MJArea.Out,this.seat);
     }
 
     public void ClearAll()
     {
-        MJManger.ClearOutMJ(this.seat);
+        MJManger.ClearAllMJ(MJArea.Out,this.seat);
     }
 
-    public void playAllMj()
+    public void playAllMj(float interval)
     {
+        this.DaPaiIntervalTime = interval;
         ClearAll();
         StartCoroutine(PushAll());
     }
 
-    public void playAllMjWithoutClear()
+    public void playAllMjWithoutClear(float interval)
     {
+        this.DaPaiIntervalTime = interval;
         StartCoroutine(PushAll());
     }
 
@@ -121,16 +78,11 @@ public class MJHandControl : MonoBehaviour
     {
         if (listPaiNum != null && listPaiNum.Count > 0)
         {
-            float Ystep = (maxPos - minPos) / (listPaiNum.Count - 1);
             for (int line = 0; line < listPaiNum.Count; line++)
             {
-                int paiNum = listPaiNum[line];
-                if (paiNum <= 1)
-                    continue;
-               
-                for (int j = 0; j < paiNum; j++)
+                for (int j = 0; j < listPaiNum[line]; j++)
                 {
-                    yield return StartCoroutine(pushMJ(paiNum, Ystep, line, j));
+                    yield return StartCoroutine(pushMJ(line, j));
                 }
             }
         }
@@ -143,59 +95,100 @@ public class MJHandControl : MonoBehaviour
     /// <param name="line"></param>
     /// <param name="j"></param>
     /// <returns></returns>
-    private IEnumerator pushMJ(int paiNum, float Ystep,int line, int j)
+    private IEnumerator pushMJ(int line, int j)
     {
-        while (!isLoadFinish)
+        yield return new WaitForSeconds(this.DaPaiIntervalTime);
+        int paiNum = listPaiNum[line];
+        if (paiNum > 1)
         {
-            yield return new WaitForEndOfFrame();
+            float Ystep = 1.0f / (listPaiNum.Count - 1);
+            float Xstep = 1.0f / (paiNum - 1);
+            float DaPaiX = Xstep * j;
+            float DaPaiPage = Ystep * line;
+            this.mjBornPos = new Vector2Int(line, j);
+
+            if (ani != null)
+            {
+                ani.SetFloat("DaPaiX", DaPaiX);
+                ani.SetFloat("DaPaiPage", DaPaiPage);
+                ani.SetInteger("actionType", (int)DaPaiActionType.DaPai);
+                float ret = UnityEngine.Random.Range(0.0f, 1.0f);
+                isRandom = (ret >= 0.5f) ? true : false;
+                ani.SetBool("isRandom", isRandom);
+            }
         }
-        float Xstep = (maxPos - minPos) / (paiNum - 1);
-        m_posx = minPos + Xstep * j;
-        m_posy = minPos + Ystep * line;
-        this.mjBornPos = new Vector2Int(line, j);
-        OnControllerHandAni(m_posx, m_posy);
     }
 
+    public void Event_DaPaiStart(AnimationEvent ev)
+    {
+        if (ev.animatorClipInfo.weight >= 0.5f)
+        {
+            DaPaigo.SetActive(true);
+        }
+    }
+    public void Event_DaPaiEnd(AnimationEvent ev)
+    {
+        if (ev.animatorClipInfo.weight >= 0.5f)
+        {
+            DaPaigo.SetActive(false);
+            LoadMJ();
+        }
+    }
 
     public void TanPai()
     {
-        if (ani != null)
+        if (MJManger.GetTanPaiState(this.seat) == true && ani != null)
         {
-            OutMajiang.gameObject.SetActive(false);
+            float[] array = new float[5] { 0, 1, 2, 3, 4 };
+            int index = UnityEngine.Random.Range(0, 5);
+            index = 4;
+            ani.SetFloat("PosX", array[index]);
             ani.SetInteger("actionType", (int)DaPaiActionType.TanPai);
         }
     }
     /// <summary>
     /// 摊牌时绑定手牌
     /// </summary>
-    public void Event_TanPaiStart()
+    public void Event_TanPaiStart(AnimationEvent ev)
     {
-        Debug.Log("Event_TanPaiStart");
-        pgData.GetNode(PaiGroupInHand.Showdown).BindMjGroup();
+        if (ev.animatorClipInfo.weight >= 0.5f)
+        {
+            pgData.GetNode(PaiGroupInHand.Showdown).BindMjGroup();
+        }
     }
     /// <summary>
     /// 摊牌时放弃绑定手牌
     /// </summary>
-    public void Event_TanPaiEnd()
+    public void Event_TanPaiEnd(AnimationEvent ev)
     {
-        Debug.Log("Event_TanPaiEnd");
-        pgData.GetNode(PaiGroupInHand.Showdown).FreeBindMjGroup();
+        if (ev.animatorClipInfo.weight >= 0.5f)
+        {
+            pgData.GetNode(PaiGroupInHand.Showdown).FreeBindMjGroup();
+            MJManger.SetTanPaiState(this.seat, false);
+        }
     }
 
     public void QiDongAnniu()
     {
         if (ani != null)
         {
-            OutMajiang.gameObject.SetActive(false);
             ani.SetInteger("actionType", (int)DaPaiActionType.QidongAnAniu);
         }
+    }
+
+    /// <summary>
+    /// 发牌
+    /// </summary>
+    /// <param name="ev"></param>
+    public void Event_FaPai(AnimationEvent ev)
+    {
+        EventCenter.DispatchEvent(EventCenterType.FaMajiang, -1, null);
     }
 
     public void HuanPai()
     {
         if (ani != null)
         {
-            OutMajiang.gameObject.SetActive(false);
             pgData.GetNode(PaiGroupInHand.Exchange).LoadMJGroup();
             ani.SetInteger("actionType", (int)DaPaiActionType.HuanPai);
         }
@@ -203,78 +196,209 @@ public class MJHandControl : MonoBehaviour
     /// <summary>
     /// 换牌到桌面
     /// </summary>
-    public void Event_HuanPai2Table()
+    public void Event_HuanPai2Table(AnimationEvent ev)
     {
-        if (this.seat == Seat.Self)
+        if (ev.animatorClipInfo.weight >= 0.5f)
         {
-            float angle = 180.0f;
-            EventCenter.DispatchEvent(EventCenterType.ExchangMajiang, 0, angle);
+            pgData.GetNode(PaiGroupInHand.Exchange).Change2Table();
+            float angle = -180.0f;
+            EventCenter.DispatchEvent(EventCenterType.ExchangMajiang, (int)this.seat, angle);
         }
-        pgData.GetNode(PaiGroupInHand.Exchange).Change2Table();
     }
 
     public void Emoji()
     {
         if (ani != null)
         {
-            OutMajiang.gameObject.SetActive(false);
             ani.SetInteger("actionType", (int)DaPaiActionType.Emoji);
             int ret = UnityEngine.Random.Range(0, 4);
             ani.SetInteger("EmojiType", ret);
         }
     }
+    /// <summary>
+    /// 摸牌
+    /// </summary>
+    public void MoPai()
+    {
+        MJAction mj = MJManger.GetLastMJ(MJArea.Wall, true);
+        if (mj != null)
+        {
+            GameObject.Destroy(mj.gameObject);
+        }
+        // 执行摸牌动作
+        if (ani != null)
+        {
+            ani.SetInteger("actionType", (int)DaPaiActionType.MoPai);
+        }
+        // 牌出现。
+        PaiGroupNodeData pd = pgData.GetNode(PaiGroupInHand.MoPai);
+        if (pd != null)
+        {
+            MJRolesControl mjr = transform.parent.parent.GetComponent<MJRolesControl>();
+            if (mjr == null || mjr.ctrlUI == null)
+                return;
+            HandMJNode hn = mjr.ctrlUI.GetHandNode(this.seat);
+            if (hn == null)
+                return;
+            hn.LoadMoPaiMajiang(pd.Prefab);
+        }
+    }
+
 
     public void PengChiGang()
     {
+        int index = MJManger.GetPcgPostion(this.seat);
+        float[] array = new float[4] { 0, 1, 2, 3 };
+        if (index >= array.Length)
+        {
+            MJManger.ClearPCGgo(this.seat);
+            index = MJManger.GetPcgPostion(this.seat);
+        }
+        //
         if (ani != null)
         {
-            OutMajiang.gameObject.SetActive(false);
-            pgData.GetNode(PaiGroupInHand.ChiPengGang).LoadMJGroup();
-
-            float[] array = new float[3] { 0,0.5f, 1.0f};
-            int index = UnityEngine.Random.Range(0, 3);
+            GameObject go = pgData.GetNode(PaiGroupInHand.ChiPengGang).LoadMJGroup();
+            if (go != null)
+            {
+                MJManger.AddPCGgo(this.seat, go);
+            }
             ani.SetFloat("PosX", array[index]);
             ani.SetInteger("actionType", (int)DaPaiActionType.PengChiGang);
+            MJManger.AddPcgPostion(this.seat, index);
         }
     }
 
     /// <summary>
     /// 吃碰杠到桌面
     /// </summary>
-    public void Event_PengChiGang2Table()
+    public void Event_PengChiGang2Table(AnimationEvent ev)
     {
-        pgData.GetNode(PaiGroupInHand.ChiPengGang).Change2Table();
-    }
-
-    public void LiPai()
-    {
-        if (ani != null)
+        if (ev.animatorClipInfo.weight >= 0.5f)
         {
-            OutMajiang.gameObject.SetActive(false);
-            ani.SetInteger("actionType", (int)DaPaiActionType.LiPai);
+            pgData.GetNode(PaiGroupInHand.ChiPengGang).Change2Table();
         }
     }
+    /// <summary>
+    /// 理牌
+    /// </summary>
+    public void LiPai()
+    {
+        if (ani == null)
+            return;
+        MJRolesControl mjr = transform.parent.parent.GetComponent<MJRolesControl>();
+        if (mjr == null || mjr.ctrlUI == null)
+            return;
+        HandMJNode hn = mjr.ctrlUI.GetHandNode(this.seat);
+        if (hn == null)
+            return;
+        if (hn.CheckCanLiPai() == false)
+            return;
+        //
+        int insertTargetPos = UnityEngine.Random.Range(0, 13);
+        hn.AddHandPai(insertTargetPos);
+
+        float aniParam = insertTargetPos * 1.0f / 13;
+        ani.SetFloat("LiPaiPos", aniParam);
+        ani.SetInteger("actionType", (int)DaPaiActionType.LiPai);
+    }
+    /// <summary>
+    /// 打牌
+    /// </summary>
+    public void DaPai(Vector2Int bornPos)
+    {
+        Debug.Log("bornPos:" + bornPos);
+        int paiNum = listPaiNum[bornPos.x];
+        if (paiNum > 1)
+        {
+            float Ystep = 1.0f / (listPaiNum.Count - 1);
+            float Xstep = 1.0f / (paiNum - 1);
+            float DaPaiX = Xstep * bornPos.y;
+            float DaPaiPage = Ystep * bornPos.x;
+            this.mjBornPos = bornPos;
+
+            if (ani != null)
+            {
+                ani.SetFloat("DaPaiX", DaPaiX);
+                ani.SetFloat("DaPaiPage", DaPaiPage);
+                ani.SetInteger("actionType", (int)DaPaiActionType.DaPai);
+                float ret = UnityEngine.Random.Range(0.0f, 1.0f);
+                isRandom = (ret >= 0.5f) ? true : false;
+                ani.SetBool("isRandom", isRandom);
+            }
+        }
+    }
+    /// <summary>
+    /// 摊牌时绑定手牌
+    /// </summary>
+    public void Event_LiPaiStart(AnimationEvent ev)
+    {
+        if (ev.animatorClipInfo.weight >= 0.5f)
+        {
+            pgData.GetNode(PaiGroupInHand.LiPai).BindMjGroup();
+
+            MJRolesControl mjr = transform.parent.parent.GetComponent<MJRolesControl>();
+            if (mjr == null || mjr.ctrlUI == null)
+                return;
+            HandMJNode hn = mjr.ctrlUI.GetHandNode(this.seat);
+            if (hn == null)
+                return;
+
+            hn.LiPaiStart();
+        }
+    }
+    /// <summary>
+    /// 摊牌时放弃绑定手牌
+    /// </summary>
+    public void Event_LiPaiEnd(AnimationEvent ev)
+    {
+        if (ev.animatorClipInfo.weight >= 0.5f)
+        {
+            pgData.GetNode(PaiGroupInHand.LiPai).FreeBindMjGroup();
+
+            MJRolesControl mjr = transform.parent.parent.GetComponent<MJRolesControl>();
+            if (mjr == null || mjr.ctrlUI == null)
+                return;
+            HandMJNode hn = mjr.ctrlUI.GetHandNode(this.seat);
+            if (hn == null)
+                return;
+
+            hn.LiPaiEnd();
+        }
+    }
+
 
     public void HuPai()
     {
         if (ani != null)
         {
-            OutMajiang.gameObject.SetActive(false);
-            pgData.GetNode(PaiGroupInHand.HuPai).LoadMJGroup();
+            int index = MJManger.GetHuPostion(this.seat);
+            GameObject go = pgData.GetNode(PaiGroupInHand.HuPai).LoadMJGroup();
+            if (go != null)
+            {
+                MJManger.AddPCGgo(this.seat, go);
+                MJTypePosition mp = go.AddComponent<MJTypePosition>();
+                mp.SetParam(this.seat,index, PaiGroupDestination.HuArea);
+            }
+            Vector3 pos = MJManger.GetHuPaiAniParam(index);
+            ani.SetFloat("HuPaiX", pos.z);
+            ani.SetFloat("HuPaiLayer", pos.y);
+            ani.SetFloat("HuPaiPage", pos.x);
             ani.SetInteger("actionType", (int)DaPaiActionType.HuPai);
+            MJManger.AddHuPostion(this.seat, index);
         }
     }
 
     /// <summary>
     /// 吃碰杠到桌面
     /// </summary>
-    public void Event_HuPai2Table()
+    public void Event_HuPai2Table(AnimationEvent ev)
     {
-        pgData.GetNode(PaiGroupInHand.HuPai).Change2Table();
+        if (ev.animatorClipInfo.weight >= 0.5f)
+        {
+            pgData.GetNode(PaiGroupInHand.HuPai).Change2Table();
+        }
+            
     }
-
-
-
     /// <summary>
     /// 设置角色座位数据
     /// </summary>
@@ -309,6 +433,5 @@ public enum DaPaiActionType:int
     HuanPai      = 8,
     QidongAnAniu = 9,
     TanPai       = 10,
+    MoPai        = 11,
 }
-
-

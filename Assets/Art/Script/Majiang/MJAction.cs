@@ -4,6 +4,10 @@ using UnityEngine;
 public class MJAction : MonoBehaviour
 {
     /// <summary>
+    /// 所在座位
+    /// </summary>
+    public Seat seat;
+    /// <summary>
     /// 本体
     /// </summary>
     public List<GameObject> listMJ = new List<GameObject>();
@@ -14,18 +18,7 @@ public class MJAction : MonoBehaviour
     /// <summary>
     /// 选中颜色
     /// </summary>
-    public Color selectCol = new Color(0.44118f, 0.69183f, 0.75f, 1.00f);
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Color selectCol = new Color(1.0f, 0.0f, 0.0f, 1.00f);
     /// <summary>
     /// 设定麻将的位置
     /// </summary>

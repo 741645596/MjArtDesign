@@ -5,6 +5,11 @@ using UnityEngine;
 public partial class EventCenterType
 {
     public const string ExchangMajiang = "ExchangMajiang";
+    public const string ExchangMajiang_Start = "ExchangMajiang_Start";
+    public const string ExchangMajiang_Finish = "ExchangMajiang_Finish";
+
+
+    public const string FaMajiang = "FaMajiang";
     /// <summary>
     /// 进入退出游戏事件
     /// </summary>

@@ -33,7 +33,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: TanPai
+      name: TanPai13
       takeName: Take 001
       internalID: 1827226128182048838
       firstFrame: 0
@@ -64,7 +64,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.48238155
+      - time: 0.4840894
         functionName: Event_TanPaiEnd
         data: 
         objectReferenceParameter: {instanceID: 0}
