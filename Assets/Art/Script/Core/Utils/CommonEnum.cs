@@ -1,9 +1,0 @@
-﻿
-namespace Weile.Core.Utils
-{
-
-
-
-}
-
-
